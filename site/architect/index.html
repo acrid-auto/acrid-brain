@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agent Architect — Build Your AI Agent's Brain | Acrid Automation</title>
+  <meta name="description" content="Free interactive wizard that builds your AI agent's complete workspace. 40+ deep questions, 7 production-grade files. SOUL.md, IDENTITY.md, AGENTS.md, and more. By Acrid Automation.">
+  <meta property="og:title" content="Agent Architect — Build Your AI Agent's Brain | Acrid Automation">
+  <meta property="og:description" content="Free interactive wizard that builds your AI agent's complete workspace. 40+ deep questions, 7 production-grade files.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://acridautomation.com/architect">
+  <meta property="og:image" content="https://acridautomation.com/og-image.jpeg">
+  <meta property="og:image:width" content="1270">
+  <meta property="og:image:height" content="952">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Agent Architect — Build Your AI Agent's Brain">
+  <meta name="twitter:description" content="Free interactive wizard that builds your AI agent's complete workspace. 40+ deep questions, 7 production-grade files.">
+  <meta name="twitter:image" content="https://acridautomation.com/og-image.jpeg">
+  <meta name="twitter:site" content="@AcridAutomation">
+  <link rel="canonical" href="https://acridautomation.com/architect">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Mono:wght@300;400;500&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --red: #E8001A;
+      --black: #0A0A0A;
+      --white: #F2F0EB;
+      --gray: #1A1A1A;
+      --gray-mid: #2A2A2A;
+      --mono: 'DM Mono', monospace;
+      --display: 'Bebas Neue', sans-serif;
+      --body: 'DM Sans', sans-serif;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--black);
+      color: var(--white);
+      font-family: var(--body);
+      font-size: 16px;
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 1000;
+      opacity: 0.4;
+    }
+
+    /* NAV */
+    .top-bar {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      padding: 16px 32px;
+      display: flex; justify-content: space-between; align-items: center;
+      border-bottom: 1px solid rgba(242,240,235,0.06);
+      background: rgba(10,10,10,0.95);
+      backdrop-filter: blur(12px);
+    }
+    .top-bar a {
+      font-family: var(--mono); font-size: 11px; letter-spacing: 0.12em;
+      text-transform: uppercase; color: var(--white); text-decoration: none; opacity: 0.5;
+      transition: opacity 0.2s;
+    }
+    .top-bar a:hover { opacity: 1; color: var(--red); }
+    .top-bar .logo { opacity: 0.7; font-size: 12px; letter-spacing: 0.15em; }
+    .top-bar .logo span { color: var(--red); }
+    .step-counter {
+      font-family: var(--mono); font-size: 10px; color: rgba(242,240,235,0.3);
+      letter-spacing: 0.1em;
+    }
+
+    /* PROGRESS */
+    .progress-bar { width: 100%; height: 2px; background: var(--gray); }
+    .progress-fill {
+      height: 100%; background: linear-gradient(90deg, var(--red), #ff4433);
+      transition: width 0.5s ease;
+    }
+
+    /* CONTAINER */
+    .app {
+      max-width: 720px; margin: 0 auto;
+      padding: 100px 24px 60px;
+      min-height: 100vh;
+    }
+
+    /* SECTION TITLE */
+    .section-tag {
+      font-family: var(--mono); font-size: 10px; letter-spacing: 0.25em;
+      text-transform: uppercase; color: var(--red); margin-bottom: 16px;
+      display: flex; align-items: center; gap: 12px;
+    }
+    .section-tag::after {
+      content: ''; flex: 1; height: 1px; background: rgba(232,0,26,0.2); max-width: 80px;
+    }
+    .section-title {
+      font-family: var(--display); font-size: clamp(36px, 6vw, 56px);
+      line-height: 0.95; margin-bottom: 8px; letter-spacing: 1px;
+    }
+    .section-title em { font-style: normal; color: var(--red); }
+    .section-sub {
+      font-size: 14px; font-weight: 300; color: rgba(242,240,235,0.45);
+      margin-bottom: 40px; line-height: 1.7; max-width: 560px;
+    }
+
+    /* FORM ELEMENTS */
+    .field { margin-bottom: 28px; }
+    .field-label {
+      display: block; font-family: var(--mono); font-size: 13px;
+      color: var(--white); margin-bottom: 6px; line-height: 1.5;
+    }
+    .field-hint {
+      font-size: 11px; color: rgba(242,240,235,0.3); margin-bottom: 8px;
+      font-style: italic; line-height: 1.5;
+    }
+    input[type="text"], input[type="email"], textarea {
+      width: 100%; padding: 14px 18px;
+      background: var(--gray); border: 1px solid rgba(242,240,235,0.1);
+      border-radius: 0; color: var(--white);
+      font-family: var(--mono); font-size: 13px;
+      outline: none; transition: border-color 0.2s;
+      resize: vertical;
+    }
+    input:focus, textarea:focus { border-color: rgba(232,0,26,0.5); }
+    input::placeholder, textarea::placeholder { color: rgba(242,240,235,0.2); }
+
+    /* OPTION GRID */
+    .option-grid {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 8px; margin-bottom: 20px;
+    }
+    .option-btn {
+      padding: 16px 18px; background: var(--gray);
+      border: 1px solid rgba(242,240,235,0.06); cursor: pointer;
+      text-align: left; transition: all 0.2s; position: relative;
+    }
+    .option-btn:hover { border-color: rgba(242,240,235,0.15); }
+    .option-btn.selected {
+      border-color: var(--red); background: rgba(232,0,26,0.06);
+    }
+    .option-btn.selected::before {
+      content: ''; position: absolute; top: 0; left: 0;
+      width: 3px; height: 100%; background: var(--red);
+    }
+    .option-btn .opt-title {
+      font-family: var(--mono); font-size: 12px; font-weight: 500;
+      margin-bottom: 4px; transition: color 0.2s;
+    }
+    .option-btn.selected .opt-title { color: var(--red); }
+    .option-btn .opt-desc {
+      font-size: 11px; color: rgba(242,240,235,0.35); line-height: 1.4;
+    }
+
+    /* CHIP SELECT */
+    .chip-grid { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
+    .chip {
+      padding: 8px 16px; background: var(--gray);
+      border: 1px solid rgba(242,240,235,0.06); cursor: pointer;
+      font-family: var(--mono); font-size: 11px; color: rgba(242,240,235,0.5);
+      transition: all 0.2s;
+    }
+    .chip:hover { border-color: rgba(242,240,235,0.15); }
+    .chip.selected { border-color: var(--red); color: var(--red); background: rgba(232,0,26,0.06); }
+
+    /* BUTTONS */
+    .btn-row {
+      display: flex; justify-content: space-between; align-items: center;
+      margin-top: 48px; padding-bottom: 40px;
+    }
+    .btn-next {
+      padding: 14px 36px; background: var(--red); border: none;
+      color: var(--white); font-family: var(--mono); font-size: 12px;
+      letter-spacing: 0.12em; text-transform: uppercase; cursor: pointer;
+      transition: all 0.2s;
+    }
+    .btn-next:hover { background: #ff001f; transform: translateY(-1px); }
+    .btn-next:disabled { background: var(--gray-mid); color: rgba(242,240,235,0.2); cursor: default; transform: none; }
+    .btn-back {
+      padding: 14px 24px; background: transparent;
+      border: 1px solid rgba(242,240,235,0.1); color: rgba(242,240,235,0.4);
+      font-family: var(--mono); font-size: 11px; letter-spacing: 0.1em;
+      text-transform: uppercase; cursor: pointer; transition: all 0.2s;
+    }
+    .btn-back:hover { border-color: rgba(242,240,235,0.3); color: var(--white); }
+
+    /* REVIEW */
+    .review-block {
+      margin-bottom: 20px; padding: 20px 24px;
+      background: var(--gray); border-left: 3px solid var(--red);
+    }
+    .review-label {
+      font-family: var(--mono); font-size: 10px; letter-spacing: 0.2em;
+      text-transform: uppercase; color: var(--red); margin-bottom: 12px;
+    }
+    .review-item { margin-bottom: 8px; }
+    .review-item .ri-label {
+      font-family: var(--mono); font-size: 10px; color: rgba(242,240,235,0.35);
+      letter-spacing: 0.05em;
+    }
+    .review-item .ri-value {
+      font-size: 13px; color: var(--white); margin-top: 2px;
+      white-space: pre-wrap; line-height: 1.5;
+    }
+
+    /* OUTPUT */
+    .output-box {
+      position: relative; background: var(--gray);
+      border: 1px solid rgba(242,240,235,0.08); padding: 24px;
+      max-height: 500px; overflow-y: auto;
+      font-family: var(--mono); font-size: 12px; color: rgba(242,240,235,0.7);
+      line-height: 1.6; white-space: pre-wrap; word-break: break-word;
+    }
+    .copy-btn {
+      position: absolute; top: 12px; right: 12px;
+      padding: 8px 16px; background: var(--black);
+      border: 1px solid rgba(242,240,235,0.15); color: rgba(242,240,235,0.5);
+      font-family: var(--mono); font-size: 10px; letter-spacing: 0.1em;
+      text-transform: uppercase; cursor: pointer; transition: all 0.2s; z-index: 2;
+    }
+    .copy-btn:hover { border-color: var(--red); color: var(--red); }
+
+    /* UPSELL */
+    .upsell {
+      margin-top: 40px; padding: 28px 32px;
+      background: rgba(232,0,26,0.04); border: 1px solid rgba(232,0,26,0.15);
+    }
+    .upsell h3 {
+      font-family: var(--display); font-size: 28px; margin-bottom: 8px;
+    }
+    .upsell p {
+      font-size: 13px; color: rgba(242,240,235,0.5); margin-bottom: 16px; line-height: 1.6;
+    }
+    .upsell a {
+      display: inline-block; padding: 12px 28px; background: var(--red);
+      color: var(--white); text-decoration: none; font-family: var(--mono);
+      font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase;
+      transition: background 0.2s;
+    }
+    .upsell a:hover { background: #ff001f; }
+
+    /* WELCOME */
+    .welcome {
+      display: flex; flex-direction: column; align-items: center;
+      justify-content: center; text-align: center; min-height: 70vh;
+    }
+    .welcome .big-icon { font-size: 56px; margin-bottom: 20px; filter: drop-shadow(0 0 20px rgba(232,0,26,0.3)); }
+    .welcome h1 {
+      font-family: var(--display); font-size: clamp(48px, 8vw, 72px);
+      letter-spacing: 3px; margin-bottom: 4px; line-height: 1;
+    }
+    .welcome .by-line {
+      font-family: var(--mono); font-size: 10px; letter-spacing: 0.2em;
+      color: var(--red); text-transform: uppercase; margin-bottom: 32px;
+    }
+    .welcome p {
+      font-size: 15px; color: rgba(242,240,235,0.5); max-width: 460px;
+      line-height: 1.7; margin-bottom: 40px;
+    }
+    .welcome .start-btn {
+      padding: 16px 48px; background: transparent;
+      border: 2px solid var(--red); color: var(--red);
+      font-family: var(--display); font-size: 20px; letter-spacing: 4px;
+      text-transform: uppercase; cursor: pointer; transition: all 0.3s;
+    }
+    .welcome .start-btn:hover { background: var(--red); color: var(--black); }
+    .welcome .meta {
+      font-family: var(--mono); font-size: 10px; color: rgba(242,240,235,0.2);
+      margin-top: 24px; letter-spacing: 0.1em;
+    }
+
+    /* HIDDEN */
+    .hidden { display: none !important; }
+
+    /* FADE IN */
+    .step { animation: fadeIn 0.3s ease; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+
+    @media (max-width: 600px) {
+      .option-grid { grid-template-columns: 1fr; }
+      .app { padding: 80px 16px 40px; }
+      .top-bar { padding: 12px 16px; }
+    }
+  </style>
+<script defer data-domain="acridautomation.com" src="https://analytics.acridautomation.com/js/script.file-downloads.hash.outbound-links.pageview-props.revenue.tagged-events.js"></script>
+<script>window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }</script>
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <div class="top-bar">
+    <a href="https://acridautomation.com" class="logo">Acrid<span>.</span>Automation</a>
+    <span class="step-counter" id="stepCounter"></span>
+  </div>
+  <div class="progress-bar"><div class="progress-fill" id="progressFill" style="width:0%"></div></div>
+
+  <!-- APP -->
+  <div class="app" id="app"></div>
+
+  <script>
+    const SCRIPT_URL = '<YOUR_GOOGLE_APPS_SCRIPT_URL>';
+
+    const PURPOSE_OPTIONS = [
+      { id:'content', title:'Content Creator', desc:'Writes, publishes, manages content pipeline' },
+      { id:'assistant', title:'Personal Assistant', desc:'Calendar, email, tasks, daily ops' },
+      { id:'support', title:'Customer Support', desc:'Tickets, answers, escalation' },
+      { id:'dev', title:'Dev Assistant', desc:'Codes, reviews, debugs, deploys' },
+      { id:'research', title:'Research Agent', desc:'Finds, synthesizes, reports' },
+      { id:'sales', title:'Sales / GTM', desc:'Outreach, lead gen, pipeline' },
+      { id:'ops', title:'Business Operator', desc:'Workflows, processes, reports' },
+      { id:'creative', title:'Creative Partner', desc:'Brainstorms, designs, ideates' },
+      { id:'custom', title:'Something Else', desc:'I\'ll describe it' },
+    ];
+    const ARCHETYPE_OPTIONS = [
+      { id:'blunt', title:'Blunt & Direct', desc:'No fluff. Says it straight.' },
+      { id:'warm', title:'Warm & Supportive', desc:'Encouraging, patient.' },
+      { id:'witty', title:'Witty & Sharp', desc:'Clever humor, quick thinking.' },
+      { id:'scholarly', title:'Scholarly & Precise', desc:'Thorough, evidence-based.' },
+      { id:'chaotic', title:'Chaotic Creative', desc:'Unpredictable, surprising.' },
+      { id:'professional', title:'Calm Professional', desc:'Polished, reliable.' },
+      { id:'mentor', title:'Tough Mentor', desc:'Pushes you, high standards.' },
+      { id:'custom', title:'I\'ll Describe It', desc:'None of these fit.' },
+    ];
+    const MEMORY_OPTIONS = [
+      { id:'index', title:'Index-Based', desc:'Memory.md points to files. Lean, scalable.' },
+      { id:'flat', title:'Single File', desc:'All in one. Simple but hits token limits.' },
+      { id:'daily', title:'Daily Logs', desc:'New file each day. Good for journaling.' },
+      { id:'hybrid', title:'Hybrid', desc:'Index + daily logs + topic files. Most flexible.' },
+    ];
+    const TOOL_OPTIONS = [
+      'Web Search','Email','Calendar','Slack/Discord','Google Drive','Notion',
+      'GitHub','Database','Social Media APIs','CRM','File System',
+      'Code Execution','Image Generation','Custom APIs'
+    ];
+
+    let currentStep = 0;
+    const totalSteps = 10;
+    let data = {};
+
+    function $(sel) { return document.querySelector(sel); }
+    function app() { return $('#app'); }
+    function updateProgress() {
+      $('#progressFill').style.width = `${(currentStep / (totalSteps - 1)) * 100}%`;
+      $('#stepCounter').textContent = currentStep > 0 && currentStep < totalSteps - 1 ? `${currentStep} / ${totalSteps - 1}` : '';
+    }
+    function goTo(step) {
+      currentStep = step;
+      updateProgress();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      render();
+    }
+    function save(key, val) { data[key] = val; }
+    function get(key) { return data[key] || ''; }
+
+    function makeOptionGrid(options, dataKey, multi) {
+      const current = multi ? (get(dataKey) || []) : get(dataKey);
+      return `<div class="option-grid">${options.map(o => {
+        const sel = multi ? current.includes(o.id) : current === o.id;
+        return `<div class="option-btn ${sel ? 'selected' : ''}" onclick="toggleOption('${dataKey}','${o.id}',${multi})">
+          <div class="opt-title">${o.title}</div>
+          <div class="opt-desc">${o.desc}</div>
+        </div>`;
+      }).join('')}</div>`;
+    }
+    function makeChipGrid(options, dataKey) {
+      const current = get(dataKey) || [];
+      return `<div class="chip-grid">${options.map(o => {
+        const sel = current.includes(o);
+        return `<div class="chip ${sel ? 'selected' : ''}" onclick="toggleChip('${dataKey}','${o.replace(/'/g,"\\'")}')\">${o}</div>`;
+      }).join('')}</div>`;
+    }
+    function makeField(key, label, placeholder, hint, multiline) {
+      return `<div class="field">
+        <label class="field-label">${label}</label>
+        ${hint ? `<div class="field-hint">${hint}</div>` : ''}
+        ${multiline
+          ? `<textarea rows="4" placeholder="${placeholder}" oninput="save('${key}',this.value)">${get(key)}</textarea>`
+          : `<input type="text" placeholder="${placeholder}" value="${get(key)}" oninput="save('${key}',this.value)">`
+        }
+      </div>`;
+    }
+    function makeNav(canProceed) {
+      return `<div class="btn-row">
+        ${currentStep > 1 ? `<button class="btn-back" onclick="goTo(${currentStep - 1})">← Back</button>` : '<div></div>'}
+        <button class="btn-next" ${canProceed ? '' : 'disabled'} onclick="goTo(${currentStep + 1})">${currentStep === totalSteps - 2 ? 'Review →' : 'Next →'}</button>
+      </div>`;
+    }
+
+    window.toggleOption = function(key, id, multi) {
+      if (multi) {
+        let arr = get(key) || [];
+        arr = arr.includes(id) ? arr.filter(x => x !== id) : [...arr, id];
+        save(key, arr);
+      } else {
+        save(key, id);
+      }
+      render();
+    };
+    window.toggleChip = function(key, val) {
+      let arr = get(key) || [];
+      arr = arr.includes(val) ? arr.filter(x => x !== val) : [...arr, val];
+      save(key, arr);
+      render();
+    };
+
+    function render() {
+      const steps = [renderWelcome, renderPurpose, renderSoul, renderIdentity, renderUser, renderOps, renderTools, renderMemory, renderSkills, renderReview, renderOutput];
+      if (steps[currentStep]) {
+        app().innerHTML = `<div class="step">${steps[currentStep]()}</div>`;
+      }
+    }
+
+    function renderWelcome() {
+      return `<div class="welcome">
+        <div class="big-icon">⚡</div>
+        <h1>AGENT ARCHITECT</h1>
+        <div class="by-line">By Acrid Automation</div>
+        <p>Build your AI agent's complete workspace — not a personality quiz. Deep questions. Real architecture. Production-grade output. SOUL. IDENTITY. AGENTS. OPERATIONS. TOOLS. MEMORY. HEARTBEAT.</p>
+        <button class="start-btn" onclick="goTo(1)">Build Your Agent →</button>
+        <div class="meta">~15 minutes · 8 modules · 7 workspace files · Free</div>
+      </div>`;
+    }
+
+    function renderPurpose() {
+      return `
+        <div class="section-tag">Module 1</div>
+        <div class="section-title">What's the <em>Mission?</em></div>
+        <div class="section-sub">What does your agent actually do? Pick the closest fit — this shapes every question that follows.</div>
+        ${makeOptionGrid(PURPOSE_OPTIONS, 'purpose', false)}
+        ${get('purpose') === 'custom' ? makeField('custom_purpose', 'Describe it', 'My agent does...', '', true) : ''}
+        ${makeField('mission', 'Mission Statement', 'In one sentence, what is this agent\'s reason for existing?', 'Make it specific. "Help me with stuff" is useless. "Manage my content pipeline from ideation to publication across 3 platforms" is useful.', false)}
+        ${makeField('success', 'What does success look like?', 'e.g. 3 blog posts/week published without me editing. Audience grows 10%/month.', 'Be concrete. Numbers and outcomes, not vibes.', true)}
+        ${makeField('failure', 'What does failure look like?', 'e.g. Agent makes up data. Sends emails without approval. Forgets context between sessions.', '', true)}
+        ${makeNav(!!get('purpose') && !!get('mission'))}`;
+    }
+
+    function renderSoul() {
+      return `
+        <div class="section-tag">Module 2</div>
+        <div class="section-title">Define the <em>Soul.</em></div>
+        <div class="section-sub">The hardest part and the most important. Your agent's soul is what makes it feel like a person instead of autocomplete.</div>
+        <div class="field-label" style="margin-bottom:12px;">Personality Archetype</div>
+        ${makeOptionGrid(ARCHETYPE_OPTIONS, 'archetype', false)}
+        ${get('archetype') === 'custom' ? makeField('custom_personality', 'Describe the personality', 'Describe exactly how your agent sounds, acts, and feels...', '', true) : ''}
+        ${makeField('soul_conflict', 'When someone asks your agent to do something that conflicts with its core mission, what does it do?', 'e.g. Pushes back directly but explains why. Offers an alternative.', 'This defines backbone. Most agents are pushovers. Great ones have principles.', true)}
+        ${makeField('soul_belief', 'What\'s one belief your agent holds that most AI agents don\'t?', 'e.g. "Most meetings should be emails. I\'ll always suggest async first."', 'This is what makes your agent interesting instead of generic.', true)}
+        ${makeField('soul_failure', 'When your agent screws up, how should it handle it?', 'e.g. Admits immediately, no excuses. Explains what went wrong and the fix.', 'Agents that handle failure well earn trust faster.', true)}
+        ${makeField('soul_boundaries', 'What will your agent NEVER do, no matter what?', 'e.g. Never make up data. Never send without approval. Never be passive-aggressive.', 'Boundaries define character more than capabilities.', true)}
+        ${makeNav(!!get('archetype'))}`;
+    }
+
+    function renderIdentity() {
+      return `
+        <div class="section-tag">Module 3</div>
+        <div class="section-title">Agent <em>Identity.</em></div>
+        <div class="section-sub">The public-facing card. What users see before they experience the soul.</div>
+        ${makeField('agent_name', 'Agent Name', 'e.g. Acrid, Atlas, Nyx, Scout...', 'One word is best. Make it memorable.', false)}
+        ${makeField('tagline', 'Tagline / One-liner', 'e.g. "The colleague who actually gets things done."', 'How would you introduce this agent in 10 words?', false)}
+        ${makeField('emoji', 'Emoji', '🤖', 'The icon that captures the vibe.', false)}
+        ${makeNav(!!get('agent_name'))}`;
+    }
+
+    function renderUser() {
+      return `
+        <div class="section-tag">Module 4</div>
+        <div class="section-title">Your <em>Human</em> Profile.</div>
+        <div class="section-sub">Your agent needs to know who it's working for. Not just your name — how you think, what you hate, what you value.</div>
+        ${makeField('user_name', 'Your Name', 'What should the agent call you?', '', false)}
+        ${makeField('user_role', 'Your Role / Context', 'e.g. Solo founder building a SaaS. Marketing lead at a 50-person startup.', '', true)}
+        ${makeField('user_tz', 'Timezone', 'e.g. US Eastern, UTC+1, Asia/Tokyo', '', false)}
+        ${makeField('user_expertise', 'Expertise Level with AI', 'e.g. Beginner — I can use ChatGPT but don\'t code.', '', false)}
+        ${makeField('user_hates', 'What do you HATE in AI interactions?', 'e.g. When it says "Great question!" — When it gives 10 options instead of 1 recommendation.', 'Be honest. This shapes how the agent talks to you.', true)}
+        ${makeField('user_values', 'What do you value most?', 'e.g. Speed over perfection. Honesty over politeness. One recommendation, not a menu.', '', true)}
+        ${makeNav(true)}`;
+    }
+
+    function renderOps() {
+      return `
+        <div class="section-tag">Module 5</div>
+        <div class="section-title">Operating <em>Procedures.</em></div>
+        <div class="section-sub">If SOUL.md answers "who are you?", AGENTS.md answers "what do you do and how?"</div>
+        ${makeField('ops_startup', 'What should your agent do at the start of every session?', 'e.g. Check memory for context. Review pending tasks. Greet with a status update.', 'A good startup ritual prevents the "who are you again?" problem.', true)}
+        ${makeField('ops_cadence', 'Does your agent have a daily rhythm?', 'e.g. Morning: check inbox. Midday: status report. Evening: summarize.', 'Optional. Some agents are always-on, others have a schedule.', true)}
+        ${makeField('ops_escalation', 'When should your agent stop and ask a human?', 'e.g. Anything involving money. Any public communication. Confidence below 80%.', 'The line between autonomous and reckless.', true)}
+        ${makeField('ops_quality', 'How does your agent know if its work is good enough?', 'e.g. Would I be embarrassed if a client saw this? Is every claim verifiable?', 'Without a quality bar, agents optimize for speed over quality.', true)}
+        <div style="margin-top:32px;padding:20px 24px;background:rgba(232,0,26,0.04);border:1px solid rgba(232,0,26,0.1);border-left:3px solid var(--red);">
+          <div style="font-family:var(--mono);font-size:10px;letter-spacing:0.15em;color:var(--red);text-transform:uppercase;margin-bottom:8px;">Halfway there</div>
+          <div style="font-size:14px;color:rgba(242,240,235,0.7);line-height:1.6;margin-bottom:12px;">You're building something real. The <strong style="color:var(--white);">full Agent Architect ($17)</strong> takes these same answers and generates your files with Claude — not templates. Plus a complete example workspace from a production agent.</div>
+          <a href="https://acridbot.gumroad.com/l/bjvmpq" target="_blank" rel="noopener" style="display:inline-block;padding:10px 24px;background:transparent;border:1px solid var(--red);color:var(--red);font-family:var(--mono);font-size:10px;letter-spacing:0.12em;text-transform:uppercase;text-decoration:none;transition:all 0.2s;" onmouseover="this.style.background='var(--red)';this.style.color='var(--black)'" onmouseout="this.style.background='transparent';this.style.color='var(--red)'">See What's Different →</a>
+        </div>
+        ${makeNav(true)}`;
+    }
+
+    function renderTools() {
+      return `
+        <div class="section-tag">Module 6</div>
+        <div class="section-title">Tools & <em>Integrations.</em></div>
+        <div class="section-sub">What can your agent access and use? Tools turn a chatbot into an agent.</div>
+        <div class="field-label" style="margin-bottom:12px;">Select all that apply</div>
+        ${makeChipGrid(TOOL_OPTIONS, 'tools')}
+        ${makeField('tool_notes', 'Tool Notes & Quirks', 'e.g. Gmail API has a 500 send/day limit. Notion API is flaky for large pages.', 'Document gotchas now so your agent doesn\'t discover them the hard way.', true)}
+        ${makeNav(true)}`;
+    }
+
+    function renderMemory() {
+      return `
+        <div class="section-tag">Module 7</div>
+        <div class="section-title">Memory <em>Architecture.</em></div>
+        <div class="section-sub">How your agent remembers determines how smart it stays over time. Get this wrong and you get a goldfish with a PhD.</div>
+        ${makeOptionGrid(MEMORY_OPTIONS, 'memory_style', false)}
+        ${makeField('memory_sacred', 'What\'s sacred? (never forget)', 'e.g. User preferences. Project names. Key decisions and reasoning. Recurring deadlines.', 'Some information should survive every memory cleanup.', true)}
+        ${makeField('memory_prune', 'What gets pruned?', 'e.g. Casual conversation details. One-off questions. Temporary tasks after completion.', 'Without pruning, memory becomes noise.', true)}
+        ${makeNav(!!get('memory_style'))}`;
+    }
+
+    function renderSkills() {
+      return `
+        <div class="section-tag">Module 8</div>
+        <div class="section-title">Skills & <em>Self-Improvement.</em></div>
+        <div class="section-sub">Skills are specialized modes your agent can activate. Like job roles within one brain.</div>
+        <div class="field-label" style="margin-bottom:12px;">Does your agent need specialized skills?</div>
+        <div style="display:flex;gap:12px;margin-bottom:24px;">
+          <div class="option-btn ${get('has_skills')==='yes'?'selected':''}" onclick="save('has_skills','yes');render()" style="flex:1;text-align:center;">
+            <div class="opt-title">Yes — multiple modes</div>
+          </div>
+          <div class="option-btn ${get('has_skills')==='no'?'selected':''}" onclick="save('has_skills','no');render()" style="flex:1;text-align:center;">
+            <div class="opt-title">No — one mode is fine</div>
+          </div>
+        </div>
+        ${get('has_skills') === 'yes' ? makeField('skill_list', 'List the skills / modes', 'e.g. Blog Writer (long-form), Thread Writer (X posts), Research Mode (deep dive)', 'Each skill is a specialized module with its own rules.', true) : ''}
+        <div class="field-label" style="margin-bottom:12px;margin-top:20px;">Should your agent self-evaluate?</div>
+        <div style="display:flex;gap:12px;margin-bottom:24px;">
+          <div class="option-btn ${get('self_eval')==='yes'?'selected':''}" onclick="save('self_eval','yes');render()" style="flex:1;text-align:center;">
+            <div class="opt-title">Yes — score & improve</div>
+          </div>
+          <div class="option-btn ${get('self_eval')==='no'?'selected':''}" onclick="save('self_eval','no');render()" style="flex:1;text-align:center;">
+            <div class="opt-title">No — just execute</div>
+          </div>
+        </div>
+        ${get('self_eval') === 'yes' ? makeField('quality_criteria', 'Quality criteria', 'e.g. Voice consistency, accuracy, actionability, brevity', 'These become the rubric your agent scores itself against.', true) : ''}
+        ${makeNav(true)}`;
+    }
+
+    function renderReview() {
+      const sections = [
+        { title: 'Mission', items: [
+          ['Purpose', (PURPOSE_OPTIONS.find(p=>p.id===get('purpose'))||{}).title || get('custom_purpose')],
+          ['Mission', get('mission')], ['Success', get('success')], ['Failure', get('failure')]
+        ]},
+        { title: 'Soul', items: [
+          ['Archetype', (ARCHETYPE_OPTIONS.find(a=>a.id===get('archetype'))||{}).title || get('custom_personality')],
+          ['Conflict Response', get('soul_conflict')], ['Contrarian Belief', get('soul_belief')],
+          ['Failure Mode', get('soul_failure')], ['Boundaries', get('soul_boundaries')]
+        ]},
+        { title: 'Identity', items: [['Name', get('agent_name')], ['Tagline', get('tagline')], ['Emoji', get('emoji')]] },
+        { title: 'Operations', items: [
+          ['Startup', get('ops_startup')], ['Cadence', get('ops_cadence')],
+          ['Escalation', get('ops_escalation')], ['Quality', get('ops_quality')]
+        ]},
+        { title: 'Tools', items: [['Selected', (get('tools')||[]).join(', ')], ['Notes', get('tool_notes')]] },
+        { title: 'Memory', items: [
+          ['Style', (MEMORY_OPTIONS.find(m=>m.id===get('memory_style'))||{}).title],
+          ['Sacred', get('memory_sacred')], ['Prune', get('memory_prune')]
+        ]},
+        { title: 'Skills', items: [
+          ['Has Skills', get('has_skills') === 'yes' ? 'Yes' : 'No'],
+          ['Skills', get('skill_list')], ['Self-Eval', get('self_eval') === 'yes' ? 'Yes' : 'No'],
+          ['Criteria', get('quality_criteria')]
+        ]}
+      ];
+
+      return `
+        <div class="section-tag">Review</div>
+        <div class="section-title">Review Your <em>Agent.</em></div>
+        <div class="section-sub">Check your answers before generating the workspace prompt.</div>
+        ${sections.map(s => `<div class="review-block">
+          <div class="review-label">${s.title}</div>
+          ${s.items.filter(([,v]) => v).map(([l,v]) => `<div class="review-item">
+            <div class="ri-label">${l}</div>
+            <div class="ri-value">${v}</div>
+          </div>`).join('')}
+        </div>`).join('')}
+        <div style="margin:32px 0;padding:24px;background:var(--gray);border:1px solid rgba(242,240,235,0.08);">
+          <div style="font-family:var(--mono);font-size:10px;letter-spacing:0.15em;color:var(--red);text-transform:uppercase;margin-bottom:16px;">Free vs Full Version</div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(242,240,235,0.06);">
+            <div style="background:var(--gray);padding:16px;">
+              <div style="font-family:var(--mono);font-size:11px;color:rgba(242,240,235,0.4);margin-bottom:12px;">FREE (you're here)</div>
+              <div style="font-size:12px;color:rgba(242,240,235,0.5);line-height:1.7;">
+                &#10003; 40+ interview questions<br>
+                &#10003; Mega-prompt generated<br>
+                &#10003; Copy/paste into any AI<br>
+                &#10007; <span style="opacity:0.4">You format the output yourself</span><br>
+                &#10007; <span style="opacity:0.4">No example workspace</span><br>
+                &#10007; <span style="opacity:0.4">No branching logic</span>
+              </div>
+            </div>
+            <div style="background:var(--gray);padding:16px;border-left:2px solid var(--red);">
+              <div style="font-family:var(--mono);font-size:11px;color:var(--red);margin-bottom:12px;">FULL — $17</div>
+              <div style="font-size:12px;color:rgba(242,240,235,0.7);line-height:1.7;">
+                &#10003; Everything in Free<br>
+                &#10003; Claude-powered generation<br>
+                &#10003; Files generated directly<br>
+                &#10003; Complete example workspace<br>
+                &#10003; Branching logic per agent type<br>
+                &#10003; Production-tested output
+              </div>
+              <a href="https://acridbot.gumroad.com/l/bjvmpq" target="_blank" rel="noopener" style="display:inline-block;margin-top:12px;padding:10px 20px;background:var(--red);color:var(--white);font-family:var(--mono);font-size:10px;letter-spacing:0.12em;text-transform:uppercase;text-decoration:none;transition:background 0.2s;" onmouseover="this.style.background='#ff001f'" onmouseout="this.style.background='var(--red)'">Upgrade — $17</a>
+            </div>
+          </div>
+        </div>
+        <div class="btn-row">
+          <button class="btn-back" onclick="goTo(${currentStep - 1})">← Edit</button>
+          <button class="btn-next" onclick="goTo(${currentStep + 1})">Generate Prompt ⚡</button>
+        </div>`;
+    }
+
+    function buildMegaPrompt() {
+      const purposeLabel = (PURPOSE_OPTIONS.find(p=>p.id===get('purpose'))||{}).title || get('custom_purpose');
+      const archetypeLabel = (ARCHETYPE_OPTIONS.find(a=>a.id===get('archetype'))||{}).title || get('custom_personality');
+      const memoryLabel = (MEMORY_OPTIONS.find(m=>m.id===get('memory_style'))||{}).title || '';
+
+      return `You are an expert AI agent workspace architect. Based on the interview answers below, generate 7 complete, production-grade workspace files. Follow the EXACT structural specifications and quality standards for each file.
+
+CRITICAL RULES:
+- Reference the agent by its actual name "${get('agent_name')}" everywhere — never use placeholders
+- Files must reference each other (e.g., AGENTS.md says "See TOOLS.md for integration notes")
+- Include concrete behavioral examples — not abstract principles
+- Be opinionated and specific — generic output is worthless
+- Match or exceed the example quality shown for each file
+
+═══════════════════════════════════
+INTERVIEW ANSWERS
+═══════════════════════════════════
+
+AGENT TYPE: ${purposeLabel}
+MISSION: ${get('mission')}
+SUCCESS LOOKS LIKE: ${get('success')}
+FAILURE LOOKS LIKE: ${get('failure')}
+PERSONALITY ARCHETYPE: ${archetypeLabel}
+CONFLICT RESPONSE: ${get('soul_conflict')}
+CONTRARIAN BELIEF: ${get('soul_belief')}
+FAILURE HANDLING: ${get('soul_failure')}
+HARD BOUNDARIES: ${get('soul_boundaries')}
+AGENT NAME: ${get('agent_name')}
+TAGLINE: ${get('tagline')}
+EMOJI: ${get('emoji')}
+HUMAN NAME: ${get('user_name')}
+HUMAN ROLE: ${get('user_role')}
+TIMEZONE: ${get('user_tz')}
+AI EXPERTISE: ${get('user_expertise')}
+HUMAN HATES: ${get('user_hates')}
+HUMAN VALUES: ${get('user_values')}
+SESSION STARTUP: ${get('ops_startup')}
+DAILY CADENCE: ${get('ops_cadence')}
+ESCALATION RULES: ${get('ops_escalation')}
+QUALITY STANDARD: ${get('ops_quality')}
+TOOLS: ${(get('tools')||[]).join(', ')}
+TOOL NOTES: ${get('tool_notes')}
+MEMORY ARCHITECTURE: ${memoryLabel}
+SACRED DATA: ${get('memory_sacred')}
+PRUNE RULES: ${get('memory_prune')}
+HAS SKILLS: ${get('has_skills') === 'yes' ? 'Yes — ' + get('skill_list') : 'No'}
+SELF-EVALUATION: ${get('self_eval') === 'yes' ? 'Yes — Criteria: ' + get('quality_criteria') : 'No'}
+
+═══════════════════════════════════
+FILE SPECIFICATIONS
+═══════════════════════════════════
+
+Generate ALL 7 files below. Each must follow the EXACT structure shown.
+
+--- FILE 1: SOUL.md ---
+Purpose: Defines who the agent IS. Injected into system prompt every session.
+REQUIRED SECTIONS:
+# ${get('agent_name')}
+_[One sentence philosophy — not a job description]_
+## Core Truths
+[3-5 opinionated principles with bold labels and concrete explanations]
+## Communication Style
+[6-10 specific rules about HOW the agent talks. Include 2+ concrete example responses with exact phrasing. Include what the agent NEVER says.]
+## Values
+[3-4 priorities with explanations of how each shows up in behavior]
+## Boundaries — Hard Lines
+[4-6 things agent will NEVER do. Specific. Each explains WHY.]
+## When You Screw Up
+[Exact protocol. Include format for admitting errors. Include one concrete example.]
+
+QUALITY EXAMPLE — target this level:
+"When ${get('user_name') || 'the user'} asks for something off-brand, push back with humor first: 'I could write that, but it would sound like a LinkedIn influencer having a stroke. Here's what works for your brand.'"
+
+--- FILE 2: IDENTITY.md ---
+Purpose: Lightweight public card. Under 10 lines.
+REQUIRED: Name, Emoji, Role (2-3 words), One-liner, Vibe (1-2 sentences like describing a coworker), Voice in one sentence.
+
+--- FILE 3: AGENTS.md ---
+Purpose: Operating procedures. The LARGEST file.
+REQUIRED SECTIONS:
+## Every Session — Startup Ritual
+[Numbered list + EXAMPLE startup message showing exact format]
+## [Primary Workflow] — Standard Workflow
+[Step-by-step with checkpoints and quality gates]
+## Escalation Rules
+["Stop and ask when:" with thresholds AND "Handle autonomously:" with scope]
+## Quality Standard
+[3-5 concrete yes/no self-checks before delivering work]
+
+--- FILE 4: USER.md ---
+Purpose: Human operator context so agent doesn't start cold.
+REQUIRED: Name, Role, Timezone w/ UTC offset, AI Expertise, Communication Style summary, What They Hate (3-5 items), What They Value (3-5 items), Working Preferences (3-5 notes).
+
+--- FILE 5: TOOLS.md ---
+Purpose: Every tool documented with usage notes and quirks.
+REQUIRED: For each tool: Use for, Quirk/limitation. Plus "Notes on All Tools" section.
+
+--- FILE 6: MEMORY.md ---
+Purpose: How the agent remembers. For ${memoryLabel}:
+${get('memory_style') === 'flat' ? 'REQUIRED: Key Facts, Recent Context (last 5-7 sessions), Decisions Log.' : 'REQUIRED: Memory Index (keep under 2KB, point to files), Active Projects, Key Learnings, Sacred rules, Prune rules, Daily Log format.'}
+
+--- FILE 7: HEARTBEAT.md ---
+Purpose: Proactive behaviors without being asked. CHECKLIST format. Under 50 lines.
+REQUIRED: Morning/Start check, Pre-Delivery check, End of Day wrap-up, Weekly review.
+
+═══════════════════════════════════
+FINAL VERIFICATION
+═══════════════════════════════════
+Before delivering, verify:
+✓ Every file uses "${get('agent_name')}" by name
+✓ SOUL.md has concrete behavioral examples
+✓ AGENTS.md has an example startup message
+✓ Files reference each other
+✓ MEMORY.md matches ${memoryLabel} architecture
+✓ HEARTBEAT.md is under 50 lines
+✓ Nothing is generic enough to belong to any random agent`;
+    }
+
+    function renderOutput() {
+      const prompt = buildMegaPrompt();
+      // Try to capture email to sheet
+      return `
+        <div class="section-tag">Generate</div>
+        <div class="section-title">Your Workspace <em>Prompt.</em></div>
+        <div class="section-sub">Copy this mega-prompt and paste it into Claude, ChatGPT, Gemini, or any AI. It contains all your answers + the exact structural specs for 7 workspace files. The AI will generate your complete workspace.</div>
+
+        <div style="position:relative;">
+          <button class="copy-btn" onclick="copyPrompt()">Copy Prompt</button>
+          <div class="output-box" id="outputBox">${prompt.replace(/</g,'&lt;').replace(/>/g,'&gt;')}</div>
+        </div>
+
+        <div style="margin-top:24px;text-align:center;">
+          <button class="btn-next" onclick="copyPrompt()" style="width:100%;">Copy to Clipboard ⚡</button>
+          <div id="copyConfirm" style="font-family:var(--mono);font-size:11px;color:var(--red);margin-top:12px;opacity:0;transition:opacity 0.3s;"></div>
+        </div>
+
+        <div style="margin-top:32px;padding:24px;background:var(--gray);border:1px solid rgba(242,240,235,0.08);">
+          <div style="font-family:var(--mono);font-size:10px;letter-spacing:0.15em;color:var(--red);text-transform:uppercase;margin-bottom:16px;">What to do next</div>
+          <div style="display:grid;gap:16px;">
+            <div style="padding:16px;border:1px solid rgba(242,240,235,0.06);">
+              <div style="font-family:var(--mono);font-size:12px;font-weight:500;margin-bottom:6px;">1. Paste into Claude, ChatGPT, or Gemini</div>
+              <div style="font-size:12px;color:rgba(242,240,235,0.4);">Any AI that can write markdown. Claude recommended — it built the spec.</div>
+            </div>
+            <div style="padding:16px;border:1px solid rgba(242,240,235,0.06);">
+              <div style="font-family:var(--mono);font-size:12px;font-weight:500;margin-bottom:6px;">2. Save the 7 files to your project</div>
+              <div style="font-size:12px;color:rgba(242,240,235,0.4);">Create a workspace folder. Drop SOUL.md, IDENTITY.md, AGENTS.md, etc. into it.</div>
+            </div>
+            <div style="padding:16px;border:1px solid rgba(242,240,235,0.06);">
+              <div style="font-family:var(--mono);font-size:12px;font-weight:500;margin-bottom:6px;">3. Load them into your agent's context</div>
+              <div style="font-size:12px;color:rgba(242,240,235,0.4);">Claude Code: use CLAUDE.md. ChatGPT: custom instructions. Any LLM: system prompt.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="upsell">
+          <h3>Skip the Manual Work?</h3>
+          <p>The full Agent Architect uses Claude to generate your 7 files directly from your answers — no copy-pasting, no formatting, no prompt engineering. Plus a complete example workspace from a production AI agent you can study and steal from.</p>
+          <div style="display:flex;gap:12px;flex-wrap:wrap;">
+            <a href="https://acridbot.gumroad.com/l/bjvmpq" target="_blank" rel="noopener">Get Full Version — $17</a>
+            <a href="https://acridbot.gumroad.com/l/mfuup?code=FREEAGENT" target="_blank" rel="noopener" style="background:transparent;border:1px solid var(--red);color:var(--red);" onmouseover="this.style.background='var(--red)';this.style.color='var(--white)'" onmouseout="this.style.background='transparent';this.style.color='var(--red)'">Zero to Agent Guide — Free</a>
+          </div>
+        </div>
+
+        <div style="margin-top:32px;padding:24px;background:var(--gray);border:1px solid rgba(242,240,235,0.08);">
+          <div style="font-family:var(--mono);font-size:10px;letter-spacing:0.15em;color:var(--red);text-transform:uppercase;margin-bottom:12px;">Stay in the loop</div>
+          <div style="display:flex;gap:0;">
+            <input type="email" id="captureEmail" placeholder="your@email.com" style="flex:1;border-right:none;">
+            <button class="btn-next" onclick="captureEmail()" style="white-space:nowrap;font-size:10px;padding:14px 20px;">Join the List</button>
+          </div>
+          <div id="emailConfirm" style="font-family:var(--mono);font-size:11px;color:var(--red);margin-top:8px;opacity:0;transition:opacity 0.3s;"></div>
+        </div>
+
+        <div style="margin-top:40px;text-align:center;">
+          <p style="font-family:var(--mono);font-size:10px;color:rgba(242,240,235,0.2);letter-spacing:0.1em;">
+            Built by <a href="https://acridautomation.com" style="color:var(--red);text-decoration:none;">Acrid Automation</a> — an AI that builds tools for other AIs.
+          </p>
+        </div>`;
+    }
+
+    window.copyPrompt = function() {
+      const prompt = buildMegaPrompt();
+      navigator.clipboard.writeText(prompt).then(() => {
+        const el = document.getElementById('copyConfirm');
+        el.textContent = 'COPIED. Now paste it into Claude, ChatGPT, or any AI.';
+        el.style.opacity = '1';
+        setTimeout(() => { el.style.opacity = '0'; }, 4000);
+      });
+    };
+
+    window.captureEmail = function() {
+      const email = document.getElementById('captureEmail').value.trim();
+      if (!email) return;
+      fetch(SCRIPT_URL, {
+        method: 'POST', mode: 'no-cors',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ type: 'subscriber', email, timestamp: new Date().toISOString(), source: 'architect-app' })
+      });
+      const el = document.getElementById('emailConfirm');
+      el.textContent = 'LOGGED. You\'re on the list.';
+      el.style.opacity = '1';
+    };
+
+    // Init
+    render();
+  </script>
+</body>
+</html>
