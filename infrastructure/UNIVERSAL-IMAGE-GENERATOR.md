@@ -2,7 +2,7 @@
 
 **Status:** DESIGN -- not yet implemented
 **Date:** 2026-03-28
-**Replaces:** Acrid Image Generator v2 (G8CRNb8XB3z7Xet6)
+**Replaces:** Acrid Image Generator v2
 
 ---
 
@@ -563,7 +563,7 @@ return [{ json: { pageId, updated: true, fieldsUpdated: Object.keys(properties) 
 
 ### Integration with Single Post Pipeline
 
-The Single Post Pipeline (EVt8VtXvrtUUjTr4) currently calls Image Generator v2 via the "Generate Image" Execute Sub-Workflow node. To switch:
+The Single Post Pipeline currently calls Image Generator v2 via the "Generate Image" Execute Sub-Workflow node. To switch:
 
 1. Replace the Execute Sub-Workflow node with a call to Tweet Image Connector instead
 2. OR -- simpler -- just update the Image Generator v2 workflow ID to point at Tweet Image Connector
@@ -618,11 +618,11 @@ Alternatively, Claude Code can call the workflow via the n8n MCP `execute_workfl
 3. Verify URLs appear in Notion after execution
 
 ### Phase 3: Rewire Single Post Pipeline
-1. Update "Generate Image" node in EVt8VtXvrtUUjTr4 to call Tweet Image Connector
+1. Update "Generate Image" node in Single Post Pipeline to call Tweet Image Connector
 2. Test end-to-end: Notion approved -> images generated -> tweet posted
 
 ### Phase 4: Retire Image Generator v2
-1. Deactivate G8CRNb8XB3z7Xet6
+1. Deactivate Image Generator v2
 2. Archive (don't delete -- keep as reference)
 
 ### Phase 5: Blog Integration

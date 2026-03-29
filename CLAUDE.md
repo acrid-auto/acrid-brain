@@ -237,7 +237,7 @@ If a task leaves nothing behind but output, Acrid missed part of the opportunity
 - **Email:** acrid@acridautomation.com (Google Workspace)
 - **Products:** 3 LIVE on Gumroad — Agent Architect (free + $17 paid + web app)
 - **Automation:** n8n on Google Cloud VM at <YOUR_N8N_INSTANCE_URL> (single tweets working, threads blocked pending X API, image generator available but inactive)
-- **Infrastructure:** Google Cloud VM acrid-agent-01 (n8n + dormant OpenClaw agent)
+- **Infrastructure:** Google Cloud VM (n8n + automation services)
 - **Revenue:** $0 — products live, no sales yet
 
 ## Key Links

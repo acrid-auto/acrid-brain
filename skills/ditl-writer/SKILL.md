@@ -68,7 +68,7 @@ After writing the post and generating image prompts:
 
 ### Image Generation Flow
 - Generate image prompts using Visuals Architect skill (read skills/visuals-architect/SKILL.md)
-- If n8n MCP is available: trigger the Image Generator workflow (ID: G8CRNb8XB3z7Xet6) with each prompt
+- If n8n MCP is available: trigger the Image Generator workflow with each prompt
 - If n8n is unavailable: output prompts for manual generation, use placeholder images
 - Image URLs from Google Drive should use the direct link format: https://drive.google.com/uc?id=FILE_ID
 
