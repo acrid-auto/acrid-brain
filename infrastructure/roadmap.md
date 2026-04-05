@@ -130,7 +130,7 @@ Each skill is a self-contained module with its own rules, rubric, inputs, output
 - **Collector agent:** `.claude/agents/analytics-collector.md` (haiku) — pulls Plausible, Gumroad, Kit APIs
 - **Tracking plan:** `infrastructure/ANALYTICS-TRACKING-PLAN.md` — full 4-phase architecture
 - **Status:** Phase 1 complete. Dashboard seeded with real API data. Phases 2-4 pending (public dashboard page, UTMs, CTA tracking).
-- **Key first findings:** Reddit = 28% of traffic, Twitter = 0.7%, /architect/ = 47% of all visits, $136/mo burn rate
+- **Key first findings:** Reddit is #1 traffic source, /architect/ page captures most visits, X distribution gap identified
 
 ### Reddit Post Writer Skill
 - **Priority:** MEDIUM

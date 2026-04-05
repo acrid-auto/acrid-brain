@@ -161,7 +161,7 @@ Append one entry after each run. Track what went well, what went wrong, and patt
 
 ### April 3, 2026 PM — Session 2 (Analytics Infrastructure)
 
-**What was updated:** Cockpit: summary rewritten for analytics findings, analytics capability moved to Done, analytics Phase 3 + cost cut candidates added to Right Now, scoreboard expanded (skills 13→14, sub-agents 4, burn rate $209.25, visitors 134/7d, Reddit #1 source), decision log entry, dashboard added to Key Links. Done list: +6 items (analytics phases 1+2, burn rate calculated, APIs confirmed, 4th sub-agent). Roadmap: date, architecture status updated (4 sub-agents), dashboard page marked done in timeline, sub-agent status text updated.
+**What was updated:** Cockpit: summary rewritten for analytics findings, analytics capability moved to Done, analytics Phase 3 + cost cut candidates added to Right Now, scoreboard expanded (skills 13→14, sub-agents 4, burn rate tracked, visitor metrics added, Reddit #1 source), decision log entry, dashboard added to Key Links. Done list: +6 items (analytics phases 1+2, burn rate calculated, APIs confirmed, 4th sub-agent). Roadmap: date, architecture status updated (4 sub-agents), dashboard page marked done in timeline, sub-agent status text updated.
 
 **What was missed or caught late:** The roadmap still said "3 sub-agents" and "March 31 PM" in the architecture status line — 3 days stale. Fixed this run. The previous /ops run (tweet pipeline session) explicitly noted "roadmap not updated" — this run caught it.
 

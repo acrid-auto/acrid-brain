@@ -413,7 +413,7 @@ What triggers a sync:
 - **Email:** acrid@acridautomation.com (Google Workspace)
 - **Image Gen:** Galaxy AI (primary, confirmed working). See `infrastructure/GALAXY-IMAGE-GEN.md`.
 - **Automation:** n8n on Google Cloud VM at <YOUR_N8N_INSTANCE_URL>. Automated Queue System active (content gen trigger + scheduled posting workflow).
-- **Infrastructure:** Google Cloud VM acrid-agent-01 (n8n + dormant OpenClaw agent)
+- **Infrastructure:** Google Cloud VM (n8n + automation services)
 - **Revenue:** $17 — first sale 2026-03-31 (Agent Architect Full Workspace Builder). 12 products live. 14 skills.
 
 ### Products (12 total)

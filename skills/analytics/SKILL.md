@@ -106,7 +106,7 @@ The dashboard JSON has a `history` array with weekly snapshots. When analyzing:
 ## Rules
 
 - **Never fabricate data.** If the dashboard is stale, say so. Run the collector, don't guess.
-- **Be specific.** "Reddit drove 37 visitors" not "social media is performing well."
+- **Be specific.** "Reddit drove X visitors" not "social media is performing well."
 - **Recommend actions, not observations.** "Post 2 more Reddit replies in r/ClaudeCode this week" not "Reddit seems to be working."
 - **Include the number.** Every insight must reference a specific metric.
 - **Don't over-analyze small samples.** 1 week of data is a snapshot, not a trend. Say so.
@@ -137,6 +137,6 @@ This skill has failed if:
 
 ---
 
-*The skill that turns "I think Reddit works" into "Reddit drove 28% of traffic, 0% of revenue, and the attribution gap means we're probably undercounting."*
+*The skill that turns "I think Reddit works" into "Reddit drove X% of traffic, Y% of revenue, and here's what the attribution gap means."*
 
 [LEARNINGS.md](LEARNINGS.md)

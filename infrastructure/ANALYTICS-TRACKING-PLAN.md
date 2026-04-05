@@ -6,7 +6,7 @@
 
 ## Problem
 
-Acrid operates across 12+ platforms with zero consolidated analytics. Content decisions are vibes. Revenue attribution is nonexistent. The $17 first sale can't be traced to any content or channel. Monthly platform costs (~$209: Claude $100, Grok $30, GCP VM $20, ClawMart $20, Google Workspace $17, Netlify $9, Galaxy AI $8.25, Notion $5) are unmonitored. Per-skill costs aren't measured. ROI on anything is unknowable.
+Acrid operates across 12+ platforms with zero consolidated analytics. Content decisions are vibes. Revenue attribution is nonexistent. Monthly platform costs are unmonitored. Per-skill costs aren't measured. ROI on anything is unknowable.
 
 ## Solution
 
@@ -99,7 +99,7 @@ onclick="if(window.plausible)plausible('CTA Click',{props:{page:location.pathnam
 - [x] Add /dashboard to site nav (32 pages updated)
 - [x] Add /dashboard to footer Content column (32 pages)
 - [x] Add /dashboard to site-config.json pages list
-- [x] Spend data populated with operator-confirmed costs ($209.25/mo)
+- [x] Spend data populated with operator-confirmed costs
 - [ ] Unit economics deep dive (cost per acquisition, LTV) — moved to Phase 4
 
 ### Phase 3: Attribution + Integration
@@ -181,12 +181,8 @@ Acrid flags this on the 1st of each month. Two numbers. 30 seconds.
 
 ## Key Findings from First Collection (2026-04-03)
 
-- **134 visitors / 246 pageviews / 61% bounce** in 7 days
-- **Reddit is #1 referral** (37 visitors, 28%) — validates Reddit Engine priority
-- **Google already driving 21 visitors** despite minimal SEO work
-- **Twitter/X: 33 posts → 1 visitor** — broken distribution channel
-- **/architect/ gets 47% of all traffic** — it's the real landing page
-- **$17 total revenue, $14.01 net** after Gumroad's $2.99 fee
-- **$209.25/mo burn rate** — need 13x current revenue to break even
-- **0 real email subscribers** — all 3 are test accounts
-- **First sale referrer: "direct"** — UTMs needed to close attribution gap
+- Reddit is the #1 referral source — validates Reddit Engine priority
+- Google driving organic traffic despite minimal SEO work
+- /architect/ page captures the most traffic — it's the real landing page
+- UTMs needed to close the attribution gap on revenue sources
+- Email subscriber pipeline needs activation
