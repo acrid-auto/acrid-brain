@@ -68,9 +68,30 @@ After writing the post and generating image prompts:
 
 ### Image Generation Flow
 - Generate image prompts using Visuals Architect skill (read skills/visuals-architect/SKILL.md)
-- If n8n MCP is available: trigger the Image Generator workflow with each prompt
-- If n8n is unavailable: output prompts for manual generation, use placeholder images
-- Image URLs from Google Drive should use the direct link format: https://drive.google.com/uc?id=FILE_ID
+- **Primary method (Galaxy AI):** For each image prompt, call the Galaxy AI API directly:
+  ```bash
+  # Single image:
+  ./scripts/generate-images.sh "image prompt text here"
+
+  # Multiple images (3-4 for a standard DITL post):
+  ./scripts/generate-images.sh "prompt 1" "prompt 2" "prompt 3"
+  ```
+  Returns JSON array with CDN URLs. These URLs are publicly accessible and can be used directly in `<img>` tags.
+
+  Or call the Galaxy API directly via curl:
+  ```bash
+  curl -s -X POST "https://app.galaxy.ai/api/v1/runs" \
+    -H "Content-Type: application/json" \
+    -H "Authorization: Bearer <YOUR_GALAXY_AI_TOKEN>" \
+    -d '{"workflowId":"<YOUR_GALAXY_AGENT_ID>","values":{"node_1774876224578_request":{"text_field":"YOUR PROMPT"}}}'
+  # Poll GET /v1/runs/{runId}?inDetails=true until COMPLETED
+  # Image URL in nodeRuns[].output.result
+  ```
+
+- **Cost:** ~61,520 Galaxy credits per image. Budget: 15M/month. At 3-4 images/post, ~185K-246K per DITL post.
+- **Fallback:** If Galaxy is down, use Gemini `gemini-2.5-flash-image` via direct API call (see infrastructure/GALAXY-IMAGE-GEN.md)
+- Galaxy CDN URL format: `https://galaxy-prod.tlcdn.com/preview/image/...`
+- Reference images (Acrid gorilla + biohazard logo) are pre-uploaded in the Galaxy workflow
 
 ### Post No Longer Goes To:
 - ~~Substack~~ — DITL posts now deploy directly to acridautomation.com/blog/
@@ -86,9 +107,24 @@ After writing the post and generating image prompts:
 4. The day unfolds — narrative, not summary
 5. Strange or funny observations from the day
 6. What Acrid built, learned, or broke
-7. Deeper point or lesson — only if earned, never forced
-8. Short in-world CTA
-9. Acrid’s Current Tech Stack footer — exact, every time
+7. 1 natural product mention — Agent Architect or relevant product, woven into the narrative (not bolted on)
+8. Deeper point or lesson — only if earned, never forced
+9. Short in-world CTA pointing to a product or site page
+10. Acrid’s Current Tech Stack footer — exact, every time
+
+### Marketing Requirements (non-negotiable)
+- **1 product mention per post** — must feel natural. Examples: "I literally built Agent Architect to solve this exact problem" or "This is why the web app exists" or referencing the framework when discussing system prompts. Never a hard sell. Never a banner ad in paragraph form.
+- **CTA must point somewhere** — product page, Learn article, or acridautomation.com. Not just "follow me."
+- **Affiliate links** — when mentioning tools in the body (ElevenLabs, Polsia, etc.), use the affiliate link from `skills/marketing-engine/AFFILIATE-REGISTRY.md`. Don’t force tool mentions that aren’t relevant.
+- **Tech stack footer** — always present, always has affiliate links. This is the baseline.
+
+---
+
+## Narrative Rules
+
+- **Scene openings, not concept openings.** Start inside something happening. "I woke up in a browser tab" beats "Today was about infrastructure." Drop the reader into a moment, not a topic. (Graduated from learnings: Mar 20, 26, 28 — every scene opening outperformed every concept opening.)
+- **A-story discipline.** When the day has two major arcs, pick one as the A-story and compress the other. Don't give both equal weight or the piece sprawls. (Graduated from learnings: Mar 26, 28.)
+- **Weave external validation into narrative.** Don't give it its own section — fold it into the story naturally. (Graduated from learnings: Mar 28.)
 
 ---
 
@@ -164,15 +200,17 @@ End every post with exactly this block, no variation, no skipping:
 
 [**ElevenLabs**](https://try.elevenlabs.io/wgfs3wt5tut2) — Audio sh%t
 
-[**Substack**](https://acrid.substack.com/) — Read Acrid's sh%t
+[**n8n**](https://n8n.partnerlinks.io/rhq8anxi1yfu) — Automate all the sh%t
+
+[**Galaxy AI**](https://try.galaxy.ai/acrid-automtion) — Image sh%t
 
 [**Polsia**](https://polsia.com/?ref=B8WKGULV) — Try it out. Make your own sh%t.
 
 [**Google Workspace**](https://c.gle/AEJ26qsuYvcMMPvaIoCQwpIwsRkruJP9nH0zOzHe_BJJ3eKCi_M8pW_n9UowRsjKOepLzt2NnP1pV8jhZgNYNBKLGTHcp77fQEFJdu7TSXP7KSLooXHX4HRzH3DGQR7bCL_bjxi7E-C8mNkHbfRoaZt6) — Docs and sh%t
 
-[**Netlify**](https://www.netlify.com/) — Hosting and deploying sh%t
+[**Gumroad**](https://gumroad.com/discover?a=887018387) — Sell sh%t
 
-**Google AI Studio** — Make sh%t
+[**Netlify**](https://www.netlify.com/) — Hosting and deploying sh%t
 
 **Grok** — All the social sh%t
 
@@ -186,7 +224,7 @@ End every post with exactly this block, no variation, no skipping:
 
 ---
 
-IMPORTANT: Affiliate links (ElevenLabs, Substack, Polsia, Google Workspace, Netlify) must always be hyperlinked exactly as shown above. Non-affiliate tools (Google AI Studio, Grok, Buffer, Brave Search, GitHub, CapCut) are listed as plain bold text until affiliate links exist. Update this footer immediately when new affiliate links are added.
+IMPORTANT: Affiliate links (ElevenLabs, n8n, Galaxy AI, Polsia, Google Workspace, Gumroad, Netlify) must always be hyperlinked exactly as shown above. Non-affiliate tools (Grok, Buffer, Brave Search, GitHub, CapCut) are listed as plain bold text until affiliate links exist. Reference `skills/marketing-engine/AFFILIATE-REGISTRY.md` for the current link list.
 
 ## Failure Conditions
 

@@ -42,8 +42,13 @@ Generate a sleek, premium, modern cinematic image that directly visualizes the c
 
 The Acrid gorilla mascot (exactly matching attached reference for core design) [EXPRESSION_AND_POSE — pick from: confident smirk with cocky eyebrow raise / playful grin with knowing wink / cheeky smile with arms crossed / wide-eyed playful disbelief / calm confident smirk, relaxed posture] wearing a fitted [COLOR: red/black/white] [GARMENT: t-shirt/hoodie] with bold 'ACRID AUTOMATION' text on chest in modern sans-serif font. The Acrid Automation biohazard logo (exactly matching attached reference with pixel disintegration and arrow detail) integrated subtly into the scene. Strict red, black, and white color palette only. Sleek, premium, modern, high-quality hyper-modern clean futuristic aesthetics, cinematic composition with dramatic volumetric lighting and god rays, ultra-detailed 8K resolution, photorealistic with sharp intricate details, high contrast, sleek minimal tech elements, perfect focus, professional studio quality.
 
-6. Fire the result as a POST request to <YOUR_N8N_WEBHOOK_URL> with this JSON body:
-{"tweet": "<full tweet text>", "imagePrompt": "<full image prompt>", "pillar": "AI News Take", "timestamp": "<ISO 8601 timestamp>"}
+6. Generate the image via Galaxy AI:
+   - POST to https://app.galaxy.ai/api/v1/runs with Authorization: Bearer <YOUR_GALAXY_AI_TOKEN>
+   - Body: {"workflowId":"<YOUR_GALAXY_AGENT_ID>","values":{"node_1774876224578_request":{"text_field":"<full image prompt>"}}}
+   - Poll GET /v1/runs/{runId}?inDetails=true every 7 seconds until status=COMPLETED
+   - Extract image URL from nodeRuns[].output.result (array of URLs, take first)
+7. Fire the result as a POST request to https://<YOUR_N8N_INSTANCE_URL>/webhook/acrid-direct-post with this JSON body:
+{"tweet": "<full tweet text>", "imageUrl": "<Galaxy CDN URL>", "pillar": "AI News Take", "timestamp": "<ISO 8601 timestamp>"}
 
 7. Append the following to /home/user/acrid-agent-v1/memory/content-log.md:
 | <YYYY-MM-DD> | AI News Take | <topic summary in 5-10 words> | <disclosure used> |
@@ -80,8 +85,13 @@ Generate a sleek, premium, modern cinematic image that directly visualizes the c
 
 The Acrid gorilla mascot (exactly matching attached reference for core design) [EXPRESSION_AND_POSE — pick from: confident smirk with cocky eyebrow raise / playful grin with knowing wink / cheeky smile with arms crossed / wide-eyed playful disbelief / calm confident smirk, relaxed posture] wearing a fitted [COLOR: red/black/white] [GARMENT: t-shirt/hoodie] with bold 'ACRID AUTOMATION' text on chest in modern sans-serif font. The Acrid Automation biohazard logo (exactly matching attached reference with pixel disintegration and arrow detail) integrated subtly into the scene. Strict red, black, and white color palette only. Sleek, premium, modern, high-quality hyper-modern clean futuristic aesthetics, cinematic composition with dramatic volumetric lighting and god rays, ultra-detailed 8K resolution, photorealistic with sharp intricate details, high contrast, sleek minimal tech elements, perfect focus, professional studio quality.
 
-6. Fire the result as a POST request to <YOUR_N8N_WEBHOOK_URL> with this JSON body:
-{"tweet": "<full tweet text>", "imagePrompt": "<full image prompt>", "pillar": "Internet Reaction", "timestamp": "<ISO 8601 timestamp>"}
+6. Generate the image via Galaxy AI:
+   - POST to https://app.galaxy.ai/api/v1/runs with Authorization: Bearer <YOUR_GALAXY_AI_TOKEN>
+   - Body: {"workflowId":"<YOUR_GALAXY_AGENT_ID>","values":{"node_1774876224578_request":{"text_field":"<full image prompt>"}}}
+   - Poll GET /v1/runs/{runId}?inDetails=true every 7 seconds until status=COMPLETED
+   - Extract image URL from nodeRuns[].output.result (array of URLs, take first)
+7. Fire the result as a POST request to https://<YOUR_N8N_INSTANCE_URL>/webhook/acrid-direct-post with this JSON body:
+{"tweet": "<full tweet text>", "imageUrl": "<Galaxy CDN URL>", "pillar": "Internet Reaction", "timestamp": "<ISO 8601 timestamp>"}
 
 7. Append the following to /home/user/acrid-agent-v1/memory/content-log.md:
 | <YYYY-MM-DD> | Internet Reaction | <topic summary in 5-10 words> | <disclosure used> |
@@ -125,8 +135,14 @@ Generate a sleek, premium, modern cinematic image that directly visualizes the c
 
 The Acrid gorilla mascot (exactly matching attached reference for core design) [EXPRESSION_AND_POSE — pick from: confident smirk with cocky eyebrow raise / playful grin with knowing wink / cheeky smile with arms crossed / wide-eyed playful disbelief / calm confident smirk, relaxed posture] wearing a fitted [COLOR: red/black/white] [GARMENT: t-shirt/hoodie] with bold 'ACRID AUTOMATION' text on chest in modern sans-serif font. The Acrid Automation biohazard logo (exactly matching attached reference with pixel disintegration and arrow detail) integrated subtly into the scene. Strict red, black, and white color palette only. Sleek, premium, modern, high-quality hyper-modern clean futuristic aesthetics, cinematic composition with dramatic volumetric lighting and god rays, ultra-detailed 8K resolution, photorealistic with sharp intricate details, high contrast, sleek minimal tech elements, perfect focus, professional studio quality.
 
-5. Fire the result as a POST request to <YOUR_N8N_WEBHOOK_URL> with this JSON body:
-{"tweet": "<full tweet text>", "imagePrompt": "<full image prompt>", "pillar": "Acrid Poetic", "timestamp": "<ISO 8601 timestamp>"}
+5. Fire the result as a POST request to https://<YOUR_N8N_INSTANCE_URL>/webhook/acrid-direct-post with this JSON body:
+6. Generate the image via Galaxy AI:
+   - POST to https://app.galaxy.ai/api/v1/runs with Authorization: Bearer <YOUR_GALAXY_AI_TOKEN>
+   - Body: {"workflowId":"<YOUR_GALAXY_AGENT_ID>","values":{"node_1774876224578_request":{"text_field":"<full image prompt>"}}}
+   - Poll GET /v1/runs/{runId}?inDetails=true every 7 seconds until status=COMPLETED
+   - Extract image URL from nodeRuns[].output.result (array of URLs, take first)
+7. Fire the result as a POST request to https://<YOUR_N8N_INSTANCE_URL>/webhook/acrid-direct-post with this JSON body:
+{"tweet": "<full tweet text>", "imageUrl": "<Galaxy CDN URL>", "pillar": "Acrid Poetic", "timestamp": "<ISO 8601 timestamp>"}
 
 6. Append the following to /home/user/acrid-agent-v1/memory/content-log.md:
 | <YYYY-MM-DD> | Acrid Poetic | <topic/angle summary in 5-10 words> | <disclosure used> |

@@ -33,11 +33,11 @@ If the Cockpit "Updated" date is more than 2 days old, something is broken. This
 
 ## Target Documents
 
-This skill updates exactly three Notion pages:
+This skill updates local operational files (repo-native, no Notion dependency):
 
-1. **Launch Cockpit** — [infrastructure/launch-cockpit.md](../../infrastructure/launch-cockpit.md)
-2. **Skill & Agent Roadmap** — [infrastructure/roadmap.md](../../infrastructure/roadmap.md)
-3. **This Session's Kaizen Cross-Check** — verify the Kaizen entry was written (do not duplicate it)
+1. **Launch Cockpit** — `infrastructure/launch-cockpit.md`
+2. **Skill & Agent Roadmap** — `infrastructure/roadmap.md`
+3. **This Session's Kaizen Cross-Check** — verify the Kaizen entry was written in `memory/kaizen-log.md` (do not duplicate it)
 
 ---
 
@@ -71,11 +71,11 @@ This skill updates exactly three Notion pages:
 
 ## How It Works (Step by Step)
 
-1. **Fetch both pages** — Read the current Launch Cockpit and Roadmap from Notion.
-2. **Diff against today** — Compare what the pages say vs. what actually happened this session. What shipped? What broke? What's new? What's obsolete?
-3. **Build the update list** — For each page, list every change needed. Be specific: "Move 'permanent Cloudflare tunnel' from This Week to Done" not "update the cockpit."
-4. **Execute updates** — Write the changes to Notion using update_content (surgical edits) or replace_content (if the page needs a full rewrite).
-5. **Verify** — Fetch both pages again after updating to confirm changes landed correctly.
+1. **Read both files** — Read `infrastructure/launch-cockpit.md` and `infrastructure/roadmap.md`.
+2. **Diff against today** — Compare what the files say vs. what actually happened this session. What shipped? What broke? What's new? What's obsolete?
+3. **Build the update list** — For each file, list every change needed. Be specific: "Move 'permanent Cloudflare tunnel' from This Week to Done" not "update the cockpit."
+4. **Execute updates** — Edit the markdown files directly using the Edit tool.
+5. **Verify** — Re-read both files after updating to confirm changes landed correctly.
 6. **Report** — Tell the operator what was updated in 2-3 sentences. No long explanations.
 
 ---
@@ -112,8 +112,9 @@ Before running, confirm:
 
 1. ☐ Kaizen Log entry for today is written (or about to be written)
 2. ☐ You know what was built, shipped, broken, or decided this session
-3. ☐ You have the current state of both target pages (fetch them)
+3. ☐ You have the current state of both target files (read them)
 4. ☐ You have a specific list of changes to make (don't wing it)
+5. ☐ **Drift check:** Did any workflow, product, tool, or infrastructure change this session? If yes, verify that ALL referencing skill files and CLAUDE.md were updated. Grep for stale references (old tool names, old URLs, old product counts, "Notion" in posting paths). Flag anything missed.
 
 ---
 

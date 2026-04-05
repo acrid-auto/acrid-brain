@@ -48,7 +48,7 @@ Run this after every DITL post, /learn article, or blog post:
 
 ## Placement Rules
 
-### Blog Posts (DITL, Substack)
+### Blog Posts (DITL, acridautomation.com/blog)
 - Affiliate links in body text where the tool is genuinely discussed
 - Tech stack footer at the bottom with all relevant affiliate links
 - Max 3-4 affiliate links per post (quality over quantity)

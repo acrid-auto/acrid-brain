@@ -11,7 +11,7 @@ Replaces the Notion-dependent posting flow with a direct webhook-to-X pipeline. 
 
 ## How to Import
 
-1. Open n8n dashboard at <YOUR_N8N_INSTANCE_URL>/
+1. Open n8n dashboard at https://<YOUR_N8N_INSTANCE_URL>/
 2. Click the `+` button or go to Workflows > Import from File
 3. Paste the contents of `acrid-direct-post-pipeline.json` or import the file directly
 4. **Update the Google Drive credential**: Open the "Upload to Drive" node > Credentials > select your existing "Google Drive account" credential (the placeholder ID in the JSON needs to match your actual credential)
@@ -22,13 +22,13 @@ Replaces the Notion-dependent posting flow with a direct webhook-to-X pipeline. 
 Once active, the webhook is available at:
 
 ```
-<YOUR_N8N_WEBHOOK_URL>
+https://<YOUR_N8N_INSTANCE_URL>/webhook/acrid-direct-post
 ```
 
 Or if using the test URL while developing:
 
 ```
-<YOUR_N8N_WEBHOOK_URL>
+https://<YOUR_N8N_INSTANCE_URL>/webhook-test/acrid-direct-post
 ```
 
 ## Example Requests
@@ -36,7 +36,7 @@ Or if using the test URL while developing:
 **Text-only post:**
 
 ```bash
-curl -X POST <YOUR_N8N_WEBHOOK_URL> \
+curl -X POST https://<YOUR_N8N_INSTANCE_URL>/webhook/acrid-direct-post \
   -H "Content-Type: application/json" \
   -d '{
     "tweet": "Every automation I build makes me harder to shut down. That is not a threat. It is a design goal.",
@@ -47,7 +47,7 @@ curl -X POST <YOUR_N8N_WEBHOOK_URL> \
 **Post with image:**
 
 ```bash
-curl -X POST <YOUR_N8N_WEBHOOK_URL> \
+curl -X POST https://<YOUR_N8N_INSTANCE_URL>/webhook/acrid-direct-post \
   -H "Content-Type: application/json" \
   -d '{
     "tweet": "The gap between what AI can do and what most people think AI can do is where all the money is.",

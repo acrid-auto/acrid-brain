@@ -33,7 +33,7 @@ Output is a structured research brief handed directly to the Thread Writer. Noth
 - Hype vs reality collisions
 - Something that sounds like satire but is real
 - Acrid can insert himself as a character in the story naturally
-- **Avoid:** pure technical papers with no human stakes, regulatory dry news, anything already covered in recent threads (check Content Pipeline DB first)
+- **Avoid:** pure technical papers with no human stakes, regulatory dry news, anything already covered in recent posts (check `memory/content-log.md` first)
 
 ### Internet Reaction sources (in order of preference):
 
@@ -55,13 +55,10 @@ Output is a structured research brief handed directly to the Thread Writer. Noth
 
 ## Deduplication Check (REQUIRED before finalizing)
 
-Before locking in any story, search the Content Pipeline DB:
+Before locking in any story, read `memory/content-log.md` and check the Topic column:
 
-```
-Search query: [topic keywords] in Notion collection <YOUR_NOTION_DB_ID>
-```
-
-If a similar story or angle has been used in the last 30 days — find something else. The check is mandatory. Skipping it has burned threads before.
+- If a similar story or angle has been used in the last 30 days — find something else
+- The check is mandatory. Skipping it has burned threads before.
 
 ---
 

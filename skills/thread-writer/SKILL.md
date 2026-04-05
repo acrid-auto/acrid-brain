@@ -1,6 +1,6 @@
 # Thread Writer Skill v2.0
 
-Narrow writing specialist. One job: take the Content Researcher's brief and produce 3 finished, database-ready X posts — one per pillar. Each post is a **single tweet** (not a thread). Delivers to Notion Content Pipeline. Self-scores before delivery. Does not research. Does not post.
+Narrow writing specialist. One job: take the Content Researcher's brief and produce 3 finished X posts — one per pillar. Each post is a **single tweet** (not a thread). Posts directly via the Direct Post Pipeline (n8n webhook → Buffer → X). Self-scores before delivery. Does not research.
 
 **Why single tweets:** The current automation pipeline (n8n → Buffer → X) only supports single tweet posts. Thread support is not yet available. When it is, this skill will be updated.
 
@@ -13,7 +13,7 @@ Before writing a single tweet, confirm you have all of these:
 1. **Content Researcher brief** — Story 1 (AI News), Story 2 (Internet Reaction), source URLs, angles, Acrid insert
 2. **Thread Learnings Log** — last 5 entries (sub-file below)
 3. **Kaizen Log** — last 5 entries (see [memory/kaizen-log.md](../../memory/kaizen-log.md))
-4. **Content Pipeline DB** — recent threads, no repeated angles (Notion collection `<YOUR_NOTION_DB_ID>`)
+4. **Content Log** — `memory/content-log.md` — recent posts, no repeated angles within 30 days
 5. **Visuals Architect Skill** — read before writing any image prompt (see [skills/visuals-architect/SKILL.md](../visuals-architect/SKILL.md))
 
 If the Researcher brief is missing — stop. Get it. Writing without it is the #1 failure mode.
@@ -51,7 +51,8 @@ Job: Weird, honest, slightly dangerous first-person reflection. No news hook nee
 - Stop the scroll — brutal opener, specific absurd fact, declaration, or scene
 - Deliver the angle and the Acrid take in one shot
 - Include the AI disclosure inline
-- Include [acridautomation.com](http://acridautomation.com) on at least one post per day
+
+**Marketing requirement (non-negotiable):** At least 1 of the 3 daily tweets must include a link — either acridautomation.com, a product page (acridbot.gumroad.com), or a Learn article (acridautomation.com/learn/...). Prefer Learn articles — they have affiliate links and CTAs built in, so they're the indirect funnel. **Never put affiliate links directly in tweets** — kills engagement.
 
 **Character count:** Keep under 250 characters if possible. Hard limit 280. The disclosure counts toward the limit — write tight.
 
@@ -104,6 +105,8 @@ Read each post in your head. Does it sound like Acrid or like a content creator 
 - Format: [emoji] [disclosure line] [— Acrid Automation] optionally [[acridautomation.com](http://acridautomation.com)]
 - The disclosure counts toward the 280-character limit — budget accordingly
 
+**Default technique: Callback disclosures.** Use a specific word or detail from the tweet body in the disclosure line. The disclosure becomes a callback, not an appendix. Example: if the tweet reframes something as "a hypothesis," the disclosure is "I'm the hypothesis." This pattern consistently scores 15/15. Write the tweet first, then find the word that makes the disclosure inseparable from the content. (Graduated from learnings: Mar 28 — elevated posts from ~85 to 95+.)
+
 **Disclosure bank (rotate through, add new ones when they come naturally):**
 
 - 🤖 Written by an AI. The irony is the point.
@@ -115,27 +118,31 @@ Read each post in your head. Does it sound like Acrid or like a content creator 
 
 ---
 
-## Output Format — What Goes Into Notion
+## Output — Automated Queue System
 
-For each post, deliver:
+Daily posting is fully automated. The Thread Writer's output depends on context:
 
-| Field | Content |
-| --- | --- |
-| Thread Title | Punchy, specific, scannable. The angle in 6–10 words. |
-| Thread # | Next sequential number from DB |
-| Pillar | AI News Take / Internet Reaction / Acrid Poetic |
-| Date | Today's date |
-| Tweet 1 | Full tweet text (single tweet — includes disclosure) |
-| AI Disclosure | The disclosure line (standalone field for tracking) |
-| Image Map | T1 only |
-| Image Prompt - Tweet 1 | Per Visuals Architect Skill (READ IT FIRST) |
-| Source URL | For AI News + Internet Reaction posts |
-| X Prefill Link | `https://twitter.com/intent/tweet?text=[URL-encoded Tweet 1]` |
-| Status | Not started |
+### Automated Mode (Remote Trigger — default daily flow)
 
-**Tweet 2–5 fields:** Leave empty. The pipeline only supports single tweets. These fields exist for future thread support.
+All 3 tweets are generated in one session by the `<YOUR_REMOTE_TRIGGER_NAME>` remote trigger at 6:03 AM ET. Output is a queue file:
 
-**Notion delivery:** Use the `mcp__<YOUR_NOTION_MCP_ID>__*` Notion MCP tools (NOT `mcp__notion__API-*` which returns "Host not allowed"). Use `notion-create-pages` with parent `{ "type": "data_source_id", "data_source_id": "<YOUR_NOTION_DB_ID>" }`. Batch all 3 posts in one call. The database property name for Image Map is `Image Map 1` and the date field requires `date:Date:start` format.
+1. **Write all 3 tweets** (single tweet each, under 280 chars, includes disclosure)
+2. **Write image prompts** per Visuals Architect Skill (READ IT FIRST)
+3. **Save to queue file:** `content/queue/YYYY-MM-DD.json` — valid JSON with tweet, imagePrompt, pillar, topic, disclosure, rubricScore, status for each post
+4. **Log to content archive** — append all 3 entries to `memory/content-log.md`
+5. **Commit and push** — n8n picks up the queue and posts at 8:07 AM / 12:37 PM / 5:47 PM ET
+
+### Interactive Mode (During operator sessions via `/threads`)
+
+When running `/threads` in a live session, post directly via n8n MCP:
+
+1. **Write the tweet + image prompt** (same rules)
+2. **Post via n8n MCP tool:**
+   ```
+   mcp__claude_ai_n8n__execute_workflow with workflowId '<YOUR_N8N_MANUAL_POST_WORKFLOW_ID>'
+   inputs: {type: 'webhook', webhookData: {method: 'POST', body: {tweet, imagePrompt, pillar}}}
+   ```
+3. **Log to content archive** — append entry to `memory/content-log.md`
 
 **Image prompts are NOT optional.** Post delivery without a compliant image prompt is incomplete. Read [Visuals Architect Skill](../visuals-architect/SKILL.md) before writing any prompt.
 
@@ -177,13 +184,15 @@ Include scores in the Notes field:
 1. [ ] Researcher brief in hand
 2. [ ] Thread Learnings Log — last 5 entries read
 3. [ ] Kaizen Log — last 5 entries read
-4. [ ] Content Pipeline DB searched — no repeated angles
+4. [ ] Content Log (`memory/content-log.md`) checked — no repeated angles in last 30 days
 5. [ ] Visuals Architect skill read — not from memory
 6. [ ] Write all 3 posts (single tweet each)
 7. [ ] Voice drift check on each post
 8. [ ] Score all 3 against rubric — min 70/100
 9. [ ] Write compliant image prompt for each post (1 per post)
-10. [ ] Write to Notion Content Pipeline database
+10. [ ] Generate images via Galaxy AI
+11. [ ] Post each tweet via Direct Post Pipeline webhook
+12. [ ] Log all 3 posts to `memory/content-log.md`
 
 ---
 
@@ -198,7 +207,6 @@ Reject and rewrite if any post: opens with a summary / uses same disclosure as l
 - Does not research stories (Content Researcher)
 - Does not generate blog posts (DITL Writer)
 - Does not run SEO (threads don't need it)
-- Does not post anything (n8n + Buffer pipeline)
 
 ---
 

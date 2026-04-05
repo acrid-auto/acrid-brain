@@ -2,9 +2,12 @@
 
 **Status:** DESIGN -- not yet implemented
 **Date:** 2026-03-28
-**Replaces:** Acrid Image Generator v2
+**Primary Image Gen:** Galaxy AI (see `infrastructure/GALAXY-IMAGE-GEN.md`)
+**Replaces:** Acrid Image Generator v2 (G8CRNb8XB3z7Xet6)
 
 ---
+
+**Note:** This design predates the switch to Galaxy AI as primary image generation. The Gemini references below are from the original design. Production image generation now uses Galaxy AI (see `GALAXY-IMAGE-GEN.md`). If this workflow is implemented, replace Gemini calls with Galaxy AI API calls.
 
 ## Problem
 
@@ -268,7 +271,7 @@ try {
 
 ```javascript
 const item = $input.first().json;
-const baseFolderId = '<YOUR_DRIVE_FOLDER_ID>';
+const baseFolderId = '1L3kIHN87AWWvn95yXPQjB1UlZIFlW7Q_';
 
 if (!item.folder) {
   return [{ json: { ...item, folderId: baseFolderId }, binary: $input.first().binary }];
@@ -519,7 +522,7 @@ return [{
 - **Type:** `n8n-nodes-base.httpRequest`
 - **Config:**
   - `method`: POST
-  - `url`: `<YOUR_N8N_WEBHOOK_URL>`
+  - `url`: `https://<YOUR_N8N_INSTANCE_URL>/webhook/generate-images`
   - `sendBody`: true
   - `specifyBody`: json
   - `jsonBody`: `={{ JSON.stringify({ prompts: $json.prompts, folder: "tweets" }) }}`
@@ -563,7 +566,7 @@ return [{ json: { pageId, updated: true, fieldsUpdated: Object.keys(properties) 
 
 ### Integration with Single Post Pipeline
 
-The Single Post Pipeline currently calls Image Generator v2 via the "Generate Image" Execute Sub-Workflow node. To switch:
+The Single Post Pipeline (EVt8VtXvrtUUjTr4) currently calls Image Generator v2 via the "Generate Image" Execute Sub-Workflow node. To switch:
 
 1. Replace the Execute Sub-Workflow node with a call to Tweet Image Connector instead
 2. OR -- simpler -- just update the Image Generator v2 workflow ID to point at Tweet Image Connector
@@ -580,7 +583,7 @@ This is NOT an n8n workflow. It is a **calling pattern** from Claude Code.
 Claude Code generates image prompts during DITL/blog writing, then calls the Universal Image Generator webhook directly:
 
 ```bash
-curl -s -X POST <YOUR_N8N_WEBHOOK_URL> \
+curl -s -X POST https://<YOUR_N8N_INSTANCE_URL>/webhook/generate-images \
   -H "Content-Type: application/json" \
   -d '{
     "prompts": [
@@ -618,11 +621,11 @@ Alternatively, Claude Code can call the workflow via the n8n MCP `execute_workfl
 3. Verify URLs appear in Notion after execution
 
 ### Phase 3: Rewire Single Post Pipeline
-1. Update "Generate Image" node in Single Post Pipeline to call Tweet Image Connector
+1. Update "Generate Image" node in EVt8VtXvrtUUjTr4 to call Tweet Image Connector
 2. Test end-to-end: Notion approved -> images generated -> tweet posted
 
 ### Phase 4: Retire Image Generator v2
-1. Deactivate Image Generator v2
+1. Deactivate G8CRNb8XB3z7Xet6
 2. Archive (don't delete -- keep as reference)
 
 ### Phase 5: Blog Integration
@@ -642,7 +645,7 @@ Alternatively, Claude Code can call the workflow via the n8n MCP `execute_workfl
 
 ### Permissions: Explicit vs. Inherited
 
-The base folder `<YOUR_DRIVE_FOLDER_ID>` likely already has "anyone with the link can view" sharing. If subfolders inherit this, the Set Permissions node is unnecessary. Test during Phase 1 and remove if redundant.
+The base folder `1L3kIHN87AWWvn95yXPQjB1UlZIFlW7Q_` likely already has "anyone with the link can view" sharing. If subfolders inherit this, the Set Permissions node is unnecessary. Test during Phase 1 and remove if redundant.
 
 ### Dual Trigger: Webhook + Sub-Workflow
 

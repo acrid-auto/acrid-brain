@@ -34,11 +34,13 @@ Condensed rules for daily execution. Full skill files remain in `skills/` for re
 Use the template in `skills/visuals-architect/PROMPT-TEMPLATE.txt`. Fill in the 3 bracketed fields. Do NOT rewrite the boilerplate.
 
 ## Dedup
-Read `memory/content-pipeline/INDEX.md` — one table, instant check. If topic/angle appeared in last 30 days, find another.
+Read `memory/content-log.md` — one table, instant check. If topic/angle appeared in last 30 days, find another.
 
-## Post Output (what goes to Notion)
-Fields: Thread Title, Thread #, Pillar, Date, Tweet 1, AI Disclosure, Image Map (T1 only), Image Prompt - Tweet 1, Source URL, Status (Not started), Notes (rubric score).
-Leave Tweet 2-5 empty. No X Prefill Links needed (pipeline handles posting).
+## Post Output (Direct Post Pipeline)
+1. Write tweet + image prompt
+2. Generate image via Galaxy AI (`infrastructure/GALAXY-IMAGE-GEN.md`)
+3. POST to `https://<YOUR_N8N_INSTANCE_URL>/webhook/acrid-direct-post` with `tweet`, `imageUrl`, `pillar`
+4. Append entry to `memory/content-log.md` (date, pillar, topic, disclosure)
 
 ## Failure Conditions (reject and rewrite)
 Opens with summary | same disclosure as last session | sounds like Acrid impression | vague claims | repeated angle from last 30 days | missing image prompt | exceeds 280 chars

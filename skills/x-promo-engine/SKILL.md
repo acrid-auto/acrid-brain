@@ -17,7 +17,7 @@ Not a content writer. Not a researcher. Not a thread builder. This skill finds w
 
 **Required:**
 
-- URL to promote (Acrid X post, Substack article, product page, or any Acrid content)
+- URL to promote (Acrid X post, blog post, product page, or any Acrid content)
 
 **Optional:**
 
@@ -80,9 +80,9 @@ Brave Search handles all target discovery. Claude does not search — Claude wri
 
 Before finalizing any target:
 
-1. Search the X Promo Engine Log database (`collection://<YOUR_NOTION_DB_ID>`)
-2. Check `Target Author` field — if this handle has been targeted in the last 14 days, SKIP
-3. Check `Target Post URL` field — if this exact post has been targeted before, SKIP
+1. Read `memory/promo-log.md` for recent targets
+2. Check Target Author — if this handle has been targeted in the last 14 days, SKIP
+3. Check Target Post URL — if this exact post has been targeted before, SKIP
 4. Find 10 UNIQUE targets that pass both checks
 
 If dedup check is skipped — the batch is invalid. This is the #1 spam prevention mechanism.
@@ -111,15 +111,11 @@ Example: `https://x.com/user/status/1234567890` → tweet ID is `1234567890`
 
 If tweet ID cannot be extracted (non-standard URL), generate the intent link without `in_reply_to` — it becomes a quote-tweet style reply instead.
 
-### Step 6: Write to Notion Database (ONLY Output)
+### Step 6: Log and Deliver
 
-Write all 10 replies to the X Promo Engine Log database. This is the ONLY output destination.
-
-No chat output. No preamble. No explanation. No numbered list in the conversation.
-
-The operator opens the Promo Engine Log board view in Notion → sees 10 new rows in "Generated" column → clicks Intent Link on each card → hits post on X. That's the workflow.
-
-After writing all 10 rows, Claude confirms with a single line: `✅ Batch [#] written — 10 replies in Promo Engine Log.`
+1. **Append all 10 replies to `memory/promo-log.md`** — date, batch #, target author, target URL, reply text, intent link, status
+2. **Output intent links** — display all 10 intent links for the operator to click
+3. Confirm with: `✅ Batch [#] written — 10 replies logged.`
 
 ---
 
@@ -174,24 +170,14 @@ Never reuse within a batch. Track which were used in the last 3 batches and avoi
 
 ## Output Format
 
-### Notion Database (Single Source of Truth)
+### Local Log (`memory/promo-log.md`)
 
-All output goes to the X Promo Engine Log database. No chat output. Operator works from the Notion board view.
+All output is logged to the local promo log. For each reply, append one row:
 
-For each reply, write one row to the X Promo Engine Log database:
+| Batch | Date | Target Author | Target URL | Reply Text | Intent Link | Status |
+|-------|------|---------------|------------|------------|-------------|--------|
 
-- **Reply**: `[Target author] — [brief topic]`
-- **Source Post URL**: the URL being promoted
-- **Target Author**: @handle
-- **Target Post URL**: URL of the post being replied to
-- **Target Topic**: 1-line description
-- **Reply Text**: full reply text
-- **Intent Link**: the clickable X intent link
-- **Batch #**: next sequential number
-- **Batch Date**: today
-- **Status**: Generated
-
-Data source ID: `collection://<YOUR_NOTION_DB_ID>`
+Intent links are also displayed in chat for the operator to click.
 
 ---
 
@@ -233,8 +219,9 @@ Data source ID: `collection://<YOUR_NOTION_DB_ID>`
 6. [ ] All 10 replies under 280 characters
 7. [ ] All 10 AI disclaimers unique within batch
 8. [ ] All 10 intent links generated and functional
-9. [ ] All 10 rows written to Promo Engine Log database
-10. [ ] Confirmation posted: `✅ Batch [#] written — 10 replies in Promo Engine Log.`
+9. [ ] All 10 replies logged to `memory/promo-log.md`
+10. [ ] Intent links displayed for operator
+11. [ ] Confirmation posted: `✅ Batch [#] written — 10 replies logged.`
 
 ---
 
@@ -263,40 +250,19 @@ Reject and redo if any reply:
 
 ### Layer 2 (NEXT): Semi-automated
 
-- Content Pipeline `Post URL` field updated → n8n webhook fires
+- Direct Post Pipeline returns success → triggers promo engine
 - n8n calls Claude API with this skill's prompt + the Post URL
-- Claude generates replies → writes to Promo Engine Log
-- Operator reviews board view in Notion → clicks intent links
+- Claude generates replies → logs to promo-log.md
+- Operator reviews intent links → clicks to post
 - Runs 3x daily (after each post goes live)
 
 ### Layer 3 (FUTURE): Fully automated
 
-- n8n triggers on Post URL update
+- Direct Post Pipeline triggers promo automatically
 - Brave Search finds targets
 - Claude generates replies
 - n8n posts replies directly via X API (when access is restored)
 - Human reviews weekly, not per-batch
-
-### n8n Workflow Spec (for Layer 2 build)
-
-Trigger: Notion webhook on Content Pipeline database — fires when `Post URL` field changes from empty to populated.
-
-Nodes:
-
-1. **Webhook Trigger** — receives Notion payload
-2. **Extract Post URL** — Code node pulls `Post URL` from payload
-3. **Check Promo Log** — HTTP Request to Notion API, queries Promo Engine Log for recent targets
-4. **Brave Search** — HTTP Request to Brave API with 3-5 queries, `&freshness=pd`, returns fresh X post URLs
-5. **Claude API Call** — HTTP Request to Anthropic API with:
-    - System prompt: this skill's voice rules + reply format
-    - User message: Brave search results + Post URL + exclude list
-    - Model: claude-sonnet-4-20250514
-    - Claude WRITES replies only — does not search
-6. **Parse Output** — Code node extracts the 10 replies from Claude's response
-7. **Write to Notion** — 10x Notion API calls creating rows in Promo Engine Log
-8. **Notify Operator** — (optional) Telegram/email with batch summary
-
-Workflow JSON will be provided as a separate file for import into n8n.
 
 ---
 
@@ -311,11 +277,11 @@ Workflow JSON will be provided as a separate file for import into n8n.
 
 ---
 
-## Database Reference
+## File References
 
-- **X Promo Engine Log**: `collection://<YOUR_NOTION_DB_ID>`
-- **Content Pipeline** (read-only, for Post URLs): `collection://<YOUR_NOTION_DB_ID>`
-- **Kaizen Log**: [memory/kaizen-log.md](../../memory/kaizen-log.md)
+- **Promo Log**: `memory/promo-log.md` (dedup + archive)
+- **Content Log**: `memory/content-log.md` (what's been posted)
+- **Kaizen Log**: `memory/kaizen-log.md`
 
 ---
 
