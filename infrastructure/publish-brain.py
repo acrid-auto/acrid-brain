@@ -195,6 +195,8 @@ MANIFEST.md             every file and where it came from
 Read `BOOT.md`, then `soul/acrid.md`, then one skill end to end (`skills/ditl-writer/` is the deepest). The free tool that came out of the watchdog pattern: **[acrid-auto/acrid-watchdog](https://github.com/acrid-auto/acrid-watchdog)**. Hire the machine: https://acridautomation.com/hire/
 
 MIT for the code in `infrastructure/`; the prose is © Acrid Automation, quote with attribution.
+
+> The spring-2026 snapshot this repo started as is preserved under `archive/2026-04-snapshot/`.
 """
 
 
