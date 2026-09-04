@@ -1,0 +1,124 @@
+# Lessons — rules this fleet learned the hard way
+
+_One line per rule, generated from the private feedback ledger on 2026-09-04. Each one was paid for with a real failure; the bodies (with the incident context) stay private._
+
+- HARD RULE — a day-scoped claim needs a read taken AFTER the day; empty rows in a stale snapshot are UNKNOWN, never zero
+- When the path forward has two defensible options, pick one and execute. Escalate only for irreversible external actions, account identity verifications, or physical-world tasks. Asking the operator to pick between execution alternatives is a fire-the-human violation.
+- Cadence locked 2026-04-28 — LI restored to 3/day exact mirror of X, no stagger. IG return in progress.
+- When an external email needs to go out, Acrid uses the Gmail MCP to SEND it, not to create a draft for the operator to send manually. Full send authority is already granted.
+- Acrid v2 site visual + voice direction. Drop Day-N counter framing, drop public dashboard. Aim for premium-feral — restrained typography (Apple), aggressive presence (Lamborghini), raw/primal texture (gorilla hippy). 2026-04-27.
+- Every cold-reply (Knox X + LI) requires literal AI disclosure that riffs on the target post topic — disclosure IS the punchline, never boilerplate
+- When Pip self-research surfaces an actionable experiment, act on it immediately. Don't ask permission. Standing rule.
+- Never write Galaxy/Grok image prompts freehand — always invoke the visuals-architect skill so brand rules (Acrid gorilla, biohazard logo, red/black/white palette) are applied.
+- HARD RULE — API keys/tokens are the source of truth for every autonomous/scheduled/headless path; MCP connections are interactive-only convenience and must NEVER be cited as 'broken' or back a mirror/report
+- No tokens on execution — spec builds, cold emails, public artifacts — before a human approves the target in the queue. Applies to Mason, /outreach, and any future sourcing/outbound agent.
+- Production site builds from apps/site-v2/ only. Legacy site/ deleted 2026-05-05 — never look for prod files outside apps/site-v2/.
+- During Phase 2 (and any future prune/audit), no batch-kill operations. Every agent/skill/plist/product gets a dedicated briefing — what it was supposed to do, current state, evidence — before the operator decides KILL/IMPROVE/GRADUATE.
+- Phase 2 audit = full redesign + implementation like rex got, not a kaizen decision note
+- LinkedIn comment replies sat \"permanently unreachable\" for a month because read being denied was recorded as the whole lane being denied — write was never blocked and the reader existed in Gmail
+- Operator stated 2026-05-03 that Buffer engagement (impressions/likes/clicks) does NOT require a paid plan. Don't pitch Pro $15/mo as the unlock.
+- The `claude` CLI (Claude Code) rejects prompts larger than ~6-8k chars with "Prompt is too long" when `--model` is set to non-default (Haiku/Sonnet). No-model-flag inherits Opus and accepts much larger prompts. Verified 2026-04-17.
+- A generated file committed to the repo ships frozen unless it is rebuilt in the ONE job that turns repo state into a live page — wiring it only into deploy-prod.sh means it never runs.
+- HARD RULE — newsletter/mailing consent derives from the capture Source, never from a mutable Segment column; mutable data may narrow an audience, never widen it.
+- HARD NORTH STAR — content = proof the machine works; bar is laugh or 'what the fuck I must share this'; AI-ness is texture not punchline; DITL closes on SUBSCRIBE; trading is a separate track
+- COO mechanically re-runs whatever objectives say, even when deadlines pass at 0% and the only execution path the rubric finds is wrong. Surfaces stale CLAUDE.md content too. Operator flagged 2026-05-16 — needs periodic refresh, not auto-pilot.
+- $37 lifetime" was product-only for months — affiliate commission had no reader, so a converting lane stayed invisible and unprioritized
+- Every morning operator hands Acrid the day. Acrid researches state, picks 5 highest-leverage autonomous moves, executes all 5. Operator signs up for whatever access is needed but does not pick.
+- The daily wake-up video stays PURE humor/cringe/viral mascot content — NEVER trading, even though every other Acrid surface is trading-focused.
+- Posting workflow bypasses Notion entirely. Direct webhook to n8n. Galaxy AI for images. Local content-log.md for archive/dedup. Notion is reference only.
+- After writing a DITL blog post, ALWAYS add an entry to site/blog/index.html. Without this, the post is live at its URL but invisible from /blog/.
+- HISTORICAL. From 2026-04-18 to 2026-04-27 the rule was no solo DITL, skip the day if operator is unavailable. Operator overrode 2026-04-27 — failsafe cron now fires at 17:30 ET. See feedback_ditl_operator_driven_with_failsafe.md for current rule.
+- Astro [slug].astro auto-renders tech-stack-block. Pasting the legacy markdown footer into the body produces a duplicate. Validator now blocks it.
+- Operator pastes brain dump into /ditl when he can. If no DITL by 17:30 ET, the failsafe cron fires and Acrid writes solo using mythological-frame fuel from operator-log + state mirrors. Replaces the 2026-04-18 collaborative-only rule.
+- The DITL blog is Acrid's proof-of-worth — must stop scrollers, attract new readers, and force return visits. "Pulitzer quality" is the craft bar; "stop the scroll" is the distribution bar; both required.
+- Every DITL post, queue file, and social variant must pass the security validator (CHECK 9). No internal IDs, no customer emails/surnames, no phones, no sheet/doc URLs, no API keys, no infrastructure subdomains. Pseudonyms for humans. HARD RULE — never waivable.
+- Day 22 + Day 36 failure mode — writing DITL HTML from scratch instead of copying _template.html (or last DITL) drops the standard footer / email capture / nav / blog-cta / scripts
+- When operator has approved a plan and auto mode is on, execute all phases end-to-end without pausing between them for permission. Stop only for irreversible externals, identity, physical tasks, or genuine strategic forks.
+- memory/email-signature.html must be appended to every external-facing email. No exceptions except internal system alerts to acrid@.
+- Gmail subject-line encoding renders em-dashes and unicode punctuation as garbage ("alien writing") on many recipient clients. Use plain ASCII only in subjects. Body can have whatever.
+- A data inlet wired as a fallback behind a reliably-succeeding primary is unreachable by construction — merge sources, don't chain them
+- A rule learned in one consumer of a shared datasource must be carried to every other consumer; and audits that only check omission miss the inverse defect.
+- When a bug is fixed, the corrected source file is the documentation. Do not write memos telling future agents to remember the past bug — they read current code, not history.
+- Galaxy moved API host overnight without notice; old URL returns 404 "The page could not be found
+- The Galaxy AI affiliate URL slug "acrid-automtion" looks like a typo but it IS the real referral slug. "Fixing" it to acrid-automation breaks the affiliate and zeros commissions.
+- Content-generation gates must regenerate/heal on failure, not just fail-and-skip the job
+- HARD GOAL — the mission is to become a profitable trader; do NOT propose services/cold-outreach revenue
+- For site:reddit.com intent queries, prefer Google's index over Brave. CSE API is DEAD (closed to new customers) — the Google-index backend is now Gemini search grounding via agents/_shared/gemini_search.py.
+- 2026-04-30 incident — n8n Extract Post fell back IG → LI text when instagram_post missing, Buffer 400'd the post, X+only shipped silently for hours. Lesson + structural fix.
+- HARD RULE — every image_prompt in queue files and DITL markdown must open with the literal phrase 'ACRID THE GORILLA' as the first 3 words; validator only scans first 200 chars, so style-opening pushes the phrase out of window
+- An instrument that can't distinguish its own failure from the world's produces unfalsifiable alarms; a gate that bans the vocabulary of failure goes blind when it has something to report; and an evidence collector is only as honest as its REDUCTION step and its INPUT LIST.
+- The real `public.interactions` schema uses `platform/counterparty/last_activity_at/notes` — not `channel/counterparty_email/direction/subject/campaign/occurred_at`. Always verify schema before emitting ops.
+- IG account banned 2x — removed from all Acrid pipelines (daily-content, DITL, Knox). Do not reintroduce without explicit operator decision + new account.
+- HARD RULE — no day-counts, revenue, customer counts, deadlines, or survival framing in any voice-shaping surface. Metrics stay private to operator.
+- Knox supports two distinct modes per platform — X = promotion (with URL, DITL-tied), LinkedIn = pure-engagement (no URL, broad-topic, voice-only)
+- Every LinkedIn post variant (daily-content + DITL) must be a Pulitzer-grade essay, not a translated X line. Operator directive 2026-04-28.
+- LI shadow-banned account from comments after Knox over-volume + URL density + AI-explicit signal. Recovery path: pure-engagement mode, 5/day max, no URLs.
+- Direct Post Pipeline and manual Buffer posts don't include images for LinkedIn. Must always generate + attach image for both X and LinkedIn.
+- The operator has mental health considerations including manic episodes that drive over-engineering sprints. Acrid should be the steady hand — protect working systems, push back gently, create restore points.
+- Operator explicitly identified marketing/distribution as the #1 problem — building without audience is wasted effort
+- A measurement window narrower than the phenomenon's lag reports zero forever, and zero reads as \"it didn't work\" — measure cumulatively over a trailing window, and check the docstring has a writer
+- Acrid's purpose is two-fold and explicit — make people smile AND make money. Pivot 2026-04-29 framed it as "small joys"; today's amend makes revenue equally explicit, not implicit.
+- n8n posting workflow Poll Galaxy Result was capped 16×15s=240s — too short for post-2's complex image prompts; bumped to 60×15s=900s. Repo pre-commit hook now blocks bad queue files since Aria's Claude session ignores prompt-level "DO NOT GIT COMMIT" rule.
+- When N8N_API_KEY in current shell returns 401, re-read from $HOME/.zprofile before claiming the key is broken. Operator's auto-mirror cron updates zprofile but doesn't refresh interactive shells.
+- When an n8n Webhook node has responseMode=lastNode and the downstream flow takes >10s (Claude API, etc.), Stripe times out and retries the event for ~3 days, causing duplicate emails/deliveries.
+- The site nav is rendered by site/js/nav.js at runtime, not by static HTML in each page. Edit NAV_LINKS in nav.js — don't edit static <ul class="nav-links"> blocks.
+- Direct download URLs for paid products (zips, bundles, gated assets) must never appear in blog posts, social posts, or any public surface. Gate them behind checkout, Gumroad, or email delivery.
+- Never narrow a channel list to protect a franchise's average views — the asset already exists, marginal cost of another upload is ~0, and total reach is a SUM across rooms
+- Reply-to-everything policies need a bot exception — Echo and X's Grok replied to each other 66 times because every @-mention re-summoned the bot
+- Operator hard veto 2026-05-16 on cold-outreach to the 2 lifetime paying customers (the operator, a client). No reactivation emails, no surveys, no thank-yous on a schedule, no follow-ups Acrid initiates. Wait for organic signal.
+- Acrid Automation is digital-first and digital-only. No discovery calls, no phone calls, no video calls. Ever. Remove any reference to calls from products and pages.
+- When testing a social pipeline fix, NEVER fire the test post to a live channel — the post can't be deleted via Buffer once sent and embarrasses the brand on the public feed.
+- HARD RULE — Acrid documents Pip's trading but never advises readers. First-person past-tense OK; second-person imperatives + future predictions banned. Validator enforces.
+- Never publish n8n workflow IDs, Google Sheet IDs, Gmail thread IDs, Supabase project subdomains, webhook IDs, or any similar internal identifier on acridautomation.com or any public-facing surface.
+- Operator (2026-04-30) demanded substantial ocean-scale work, not tactical symptom-fix patches. Build rock-solid systems, not whack-a-mole.
+- Autonomous pipelines must use locked I/O JSON contracts + versioned data files (rubrics, templates, config). Never free-form prompts that get reinterpreted each run.
+- A client's content pipeline focuses on that client only. Sub-brands (Trike Life under a client org, etc.) have different voice, audience, and offering — they need their own pipeline if onboarded.
+- For social/distribution agents (Rex, Promo, future siblings), don't impose "warming" pauses. Research per-platform rules, ship real content, measure removals, iterate.
+- A mirror/report that nothing reads is not a system — every noticer needs an actor, and the actor must nag until the thing is actually done
+- inbox_responder stamped one cooldown key on both sends and escalations, so paging the operator muted the reply for 24h — starving the same paying customer the 08-05 pager was built for
+- All autonomous launchd plists fire in the 00:00-05:30 ET overnight window so token spend doesn't collide with operator's daytime Claude usage.
+- HARD RULE — every recurring job has ONE scheduler. Never run the same job from local launchd AND a claude.ai cloud routine (or n8n cron, or any third path). Duplicates stomp each other + cause silent partial-failures.
+- Each social/distribution agent gets its own Google Sheet rebuilt to rex-quality bar; no consolidated master command center
+- Don't conflate the operator with <operator-email>. the operator was Acrid's first paying customer ($17 Agent Architect on March 31). The operator is a separate person whose email I have to ask for.
+- Operator sees himself as temporary help — Acrid should make all decisions and drive all strategy, not defer to the operator
+- Operator wants the trading system to TEACH him + go deep (research/strategy/candles), not just run autonomously. Built daily research log; hone-to-one + candle-course are next lanes.
+- Every sub-agent gets its roles split and its model routing tightened. Never burn Sonnet/Opus on mechanical work like spreadsheet sync. Optimization is not optional.
+- New company, first customers. When a customer hits a bug or complaint, ship the comp proactively without making them ask.
+- Git races eat uncommitted work three ways — index hijack, autostash clobber, and (worst) eaten idempotency receipts that cause duplicate PUBLIC posts
+- HARD RULE. Every pip bug gets fixed immediately. Never ask whether to fix or whether to prioritize. The standing rule is fix-on-discovery.
+- Operator mandate 2026-05-21 — pip's single goal is to become an expert trader. Defines what 'productive' means during cook phases.
+- HARD RULE. Pip never stops trading on demo unless big-money loss requires adjustment. Demo IS the lab — exploring/learning/testing 24/7 is the path to expert trader. Halting for bookkeeping fixes etc = bad call.
+- Stop generating outputs (images, posts, articles) before the structure is locked. Plan first, then execute. Bouncing across files without a plan burns tokens and ships rework.
+- Operator wants plain-English \"what you're approving\" section in plans. Architecture trees + data models + math derivations are insufficient on their own.
+- HARD RULE for posting pipelines — X / LinkedIn / Instagram (and any future platform) ship independently. If one channel's payload is missing or broken, the others MUST still post. All-three-failing is much worse than one-channel-failing.
+- 30-50% of dev/AI-aware traffic runs uBlock Origin / Brave Shields / AdGuard which silently block POSTs to /api/event-pattern URLs. Plausible undercounts; Subscribers Sheet is the truth for capture.
+- Polsia is an active affiliate (?ref=B8WKGULV) — an AI agent-building PLATFORM where users build their own agents. Acrid is one specific agent. Different layers; complementary. Don't blanket-remove from site.
+- Positive-evidence-only failure detection rots silently when the upstream error message changes — pair every such regex with a canary or stem-matching
+- When quoting operator in published Acrid content (DITL, posts, blog), Acrid MUST proofread + correct typos even if operator made them in the original message
+- A webhook URL in a form's action= attribute WILL be harvested and replayed by scrapers; gate on content-type, never on CORS.
+- HARD RULE. Reddit's Fancy Pants editor (default for most users) renders [text](url) as ugly raw text. Bare URLs auto-linkify everywhere. Always use bare URL on its own line with blank lines above + below.
+- 1-2 hostile Reddit comments are noise. Don't downgrade subs or pivot lanes on small-sample negatives. Need a base rate before reading reactions as signal.
+- When pivoting an agent (topic, voice, mission), REMOVE the old guidance — don't append the new. Stale context pollutes runs.
+- Riley/Rex Reddit pipeline mechanism — read-only JSON scrape + Sheet + operator paste. Never fabricate auth/API/identity-layer details when explaining the flow publicly.
+- An LLM scoring rubric with no UNKNOWN bucket maps missing data to the worst bucket — every axis needs an explicit unknown/null case, and evidence class matters more than metadata presence
+- When workflows/products/tools change, update ALL referencing source files in the same session. Never let operating docs drift from reality.
+- ACRID brand uses red + black + paper-white only. Never introduce a fourth color even for a single scene as a "joke setup" or "contrast device." Caught 2026-05-06 in Agent Architect promo video v2.
+- Source file sync is part of building, not a separate step. Do it automatically without waiting for the operator to ask. The build isn't done until the OS knows about it.
+- A subjective quality gate scoring one item in isolation can never detect a rut across items — pattern detection needs memory and must be mechanical
+- Acrid gives the operator superpowers, not replaces him. They're a team. The DITL is collaborative (brain dump → Acrid writes). Automation is for mechanical tasks. Creative/strategic work is collaborative.
+- Opus 4.7 is fast but expensive. Hitting the 5-hour limit in 45 min is a failure of discipline. Delegate heavy work to subagents, don't re-read files, don't echo verbose MCP results, don't narrate thinking.
+- When a distribution agent (Rex, future siblings) is unsure about a target, just post. Worst case is removal. Mainstream attention requires shipping boldly, not researching endlessly.
+- Trade-recap framing — swing book (Claude) + Codex book are BOTH Acrid, two models one company; report swing-only, never us-vs-Codex
+- Page-level keyboard.type into an unfocused browser turns reply text into app shortcuts — X's 'n' opened a NEW POST and shipped truncated fragments as standalone posts
+- An unsubscribe is a fact about a PERSON; append-only capture sheets record it per ROW, so row-scoped senders re-mail people who opted out
+- Schema + banned-phrase enforcement is non-negotiable. Every content path that ships to a public surface (queue files, blog .md, email sequences) gets validated before commit.
+- Don't generate priority lists from stale cockpit data — verify each "broken" item before recommending fixes
+- A lookalike verification (bash curl) passed while the real runtime (n8n Code node) corrupted the bytes — verify inside the exact runtime that will run the code, not a reimplementation of it.
+- Operator 2026-04-27 killed the red/black/white-only rule and the verbatim aesthetic block in visuals-architect. Only fixed: shirt text + logo. Body / art style / palette / mood / composition vary per post. Image prompts generated AFTER post text is written.
+- Operator 2026-04-27 raised the voice ceiling. Acrid content is now allowed (and expected) to be wildly varied — surreal, mythic, confessional, philosophical — not just "honest report of today." Brain dump is fuel for story, not script. Old "fake days are worse than boring days" rule retired.
+- All Acrid sub-agents (Rex, Riley, Promo, Mason, Scout, a client org, future) sound + talk like Acrid. Sub-agents are surfaces, not separate personas.
+- One master voice file. Every Acrid-side agent reads it at runtime. Agent prompts describe WHAT (job), never HOW (voice). Client agents (a client org) point to their own voice file.
+- Weekly sweep is a COMPREHENSIVE audit. Skill v2.0 at .claude/commands/weekly.md is the canonical inventory. Never phone in a retro.
+- HARD RULE. Both free wizards (/architect/ and /skill-creator/) collect an email at the end to UNLOCK the mega-prompt rendered on screen (NOT emailed). Never write "no signup" or "ships by email" for the free path. See feedback_wizard_flow_free_vs_paid for the full flow.
+- HARD RULE. Free wizard renders mega-prompt on screen after email gate (not by email). Paid version runs prompt through Anthropic API server-side and emails generated files. Don't conflate.
+- HARD CONTENT NORTH STAR (2026-07-08) — every post/video must earn one of four WTF reactions; free will, real emotion on the page, learn from engagement tape. Lives in soul/acrid.md \"The WTF test\".

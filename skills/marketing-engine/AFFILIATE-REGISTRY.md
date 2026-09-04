@@ -1,47 +1,24 @@
-# Affiliate Link Registry
+# Affiliate Link Registry — POINTER
 
-> Single source of truth. All content skills reference this file for active links.
-> Last updated: 2026-04-01
+> **Canonical source of truth: `agents/scribe/data/affiliate-map.json`** (v2, 9 signed programs).
+> This file is a pointer plus usage rules only. It carries NO link table — a second
+> copy of the URLs drifted (Buffer listed as non-affiliate, TradingView missing,
+> stale since 2026-05-11), so the table was retired 2026-07-10.
 
----
+## Where things live
 
-## Active Affiliate Links
+- **Links, triggers, per-article caps, context hints** → `agents/scribe/data/affiliate-map.json`. Read it, never re-list it here.
+- **Injection logic** → `agents/scribe/scripts/edit_article.py` (`inject_affiliates`, deterministic, max 3 links/article counting existing ones, 1 per program, never inside code/headings/existing links).
+- **Retro backfill for already-published articles** → `agents/scribe/scripts/retro_inject.py` (idempotent).
+- **Click visibility** → `scripts/affiliate-clicks-pull.py` → `memory/mirrors/affiliate-state.md`.
+- **Stack pages** → `apps/site-v2/src/content/stack/<tool>.md` `affiliateUrl:` frontmatter must match the map. When the operator adds/rotates a program: update the MAP first, then sync stack pages, then `grep -rln "<old-url>" apps/site-v2/src/content/` to catch stragglers.
 
-| Program | Link | Commission | Status |
-|---------|------|------------|--------|
-| ElevenLabs | https://try.elevenlabs.io/wgfs3wt5tut2 | 22% recurring / 12mo | ACTIVE |
-| n8n | https://n8n.partnerlinks.io/rhq8anxi1yfu | Partner link | ACTIVE |
-| Galaxy AI | https://try.galaxy.ai/acrid-automtion | Referral (promo code: GEYBMDC — 10M free credits) | ACTIVE |
-| Polsia | https://polsia.com/?ref=B8WKGULV | Referral (TBD) | ACTIVE |
-| Google Workspace | https://c.gle/AEJ26qsuYvcMMPvaIoCQwpIwsRkruJP9nH0zOzHe_BJJ3eKCi_M8pW_n9UowRsjKOepLzt2NnP1pV8jhZgNYNBKLGTHcp77fQEFJdu7TSXP7KSLooXHX4HRzH3DGQR7bCL_bjxi7E-C8mNkHbfRoaZt6 | $9-27/user | ACTIVE |
-| Gumroad | https://gumroad.com/discover?a=887018387 | Referral | ACTIVE |
+## Usage rules (keep — these are policy, not data)
 
-## Non-Affiliate Stack (always link, no commission)
-
-| Tool | Link | Use |
-|------|------|-----|
-| Netlify | https://www.netlify.com/ | Hosting and deploying |
-| Google AI Studio | https://aistudio.google.com/ | Image gen backup |
-| Grok | https://grok.com/ | Social AI |
-| Buffer | https://buffer.com/ | Post scheduling |
-| Brave Search | https://search.brave.com/ | Web search |
-| GitHub | https://github.com/ | Version control |
-| CapCut | https://www.capcut.com/ | Video editing |
-
-## Product Links
-
-| Product | Free Link | Paid Link |
-|---------|-----------|-----------|
-| Agent Architect (free) | https://acridbot.gumroad.com/l/aikupx | — |
-| Agent Architect ($17) | — | https://acridbot.gumroad.com/l/bjvmpq |
-| Agent Architect (web app) | https://acridautomation.com/architect | — |
-| Zero to Agent Guide | https://acridbot.gumroad.com/l/mfuup | — |
-| AI Agent Prompt Pack ($5) | https://acridbot.gumroad.com/l/qnixys | — |
-
-## How to Add a New Affiliate
-
-1. Add the link and details to this file
-2. Update `site/blog/_template.html` — tech stack section
-3. Update `site/index.html` — stack section
-4. Update `CLAUDE.md` — Affiliate Links section
-5. Update `skills/affiliate-engine/ACTIVE-AFFILIATES.md` — full program details
+1. **Never invent affiliate URLs.** Only URLs present in the map. The Magica slug typo `acrid-automtion` IS the real slug — do not "fix" it (memory: `feedback_galaxy_url_real_slug`).
+2. **Honest linking only.** A link rides a genuine tool mention/recommendation — never bolted-on sentences, never linking your own product pitches to third-party tools.
+3. **Disclosure is structural.** `LearnArticle.astro` auto-renders an FTC disclosure line on any article whose body contains a mapped affiliate URL pattern. Do not hand-write disclosures into article bodies.
+4. **`rel="sponsored noopener"`** on affiliate anchors in components (TechStackBlock already does this).
+5. **Never cite paid-product URLs in public posts** (memory: `feedback_never_cite_paid_product_urls`).
+6. **Magica promo code** to mention alongside the link: `GEYBMDC` (10M free credits for the referred user).
+7. **Monthly audit:** curl each map URL → expect 200 + attribution param intact (`?ref=` / `?a=` / `aff_id` / partner slug); verify stack pages match the map.

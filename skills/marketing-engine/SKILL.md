@@ -1,3 +1,8 @@
+---
+name: marketing-engine
+description: Use when verifying that any Acrid content piece (DITL post, X tweet batch, learn article, blog) ships with its required marketing baked in — product mention, CTA, affiliate links, tracking. Enforcement-layer checklist run after a content skill, before delivery.
+---
+
 # Marketing Engine Skill
 
 ## Purpose
@@ -91,7 +96,7 @@ When a new affiliate is added:
 | Productivity, workspace | Notion | NEEDS SIGNUP |
 | Hosting, infrastructure | DigitalOcean | NEEDS SIGNUP |
 | Social media, scheduling | Buffer | NEEDS SIGNUP |
-| Email, docs, business tools | Google Workspace | https://c.gle/AEJ26qsuYvcMMPvaIoCQwpIwsRkruJP9nH0zOzHe_BJJ3eKCi_M8pW_n9UowRsjKOepLzt2NnP1pV8jhZgNYNBKLGTHcp77fQEFJdu7TSXP7KSLooXHX4HRzH3DGQR7bCL_bjxi7E-C8mNkHbfRoaZt6 |
+| Email, docs, business tools | Google Workspace | <affiliate-link> |
 
 ---
 
