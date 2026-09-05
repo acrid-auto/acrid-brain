@@ -334,6 +334,15 @@ if __name__ == "__main__":
                 timeout=60, check=False)
     except Exception as _e:  # never let the rider take down the horse
         print(f"[breaker-watchdog] plan-debt rider failed: {_e}", file=sys.stderr)
+    # 2026-09-05: stash-guard rides too — a new `git stash` entry reverts ~60
+    # tracked-but-uncommitted ledgers/mirrors to their last commit and nothing
+    # goes red. The guard restores still-reverted files, unions ledgers by key,
+    # and pages once per new entry. Stashes are never dropped.
+    try:
+        _sp.run([sys.executable, str(_P(__file__).resolve().parent / "stash-guard.py")],
+                timeout=180, check=False)
+    except Exception as _e:
+        print(f"[breaker-watchdog] stash-guard rider failed: {_e}", file=sys.stderr)
     if "--selftest" in sys.argv:
         sys.exit(_selftest())
     try:

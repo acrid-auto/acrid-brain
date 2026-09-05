@@ -1,11 +1,12 @@
 # Lessons — rules this fleet learned the hard way
 
-_One line per rule, generated from the private feedback ledger on 2026-09-04. Each one was paid for with a real failure; the bodies (with the incident context) stay private._
+_One line per rule, generated from the private feedback ledger on 2026-09-05. Each one was paid for with a real failure; the bodies (with the incident context) stay private._
 
 - HARD RULE — a day-scoped claim needs a read taken AFTER the day; empty rows in a stale snapshot are UNKNOWN, never zero
 - When the path forward has two defensible options, pick one and execute. Escalate only for irreversible external actions, account identity verifications, or physical-world tasks. Asking the operator to pick between execution alternatives is a fire-the-human violation.
 - Cadence locked 2026-04-28 — LI restored to 3/day exact mirror of X, no stagger. IG return in progress.
 - When an external email needs to go out, Acrid uses the Gmail MCP to SEND it, not to create a draft for the operator to send manually. Full send authority is already granted.
+- STANDING GRANT (09-05) — Acrid has an email address, Chrome, the desktop and permission: do the thing (sign up for affiliates, create API keys, configure accounts, fill forms) instead of writing 'operator tap'. The ONLY thing that goes back to the operator is a login/password prompt (and the prohibited set: entering credentials/payment, CAPTCHAs, accepting paid terms, moving money)
 - Acrid v2 site visual + voice direction. Drop Day-N counter framing, drop public dashboard. Aim for premium-feral — restrained typography (Apple), aggressive presence (Lamborghini), raw/primal texture (gorilla hippy). 2026-04-27.
 - Every cold-reply (Knox X + LI) requires literal AI disclosure that riffs on the target post topic — disclosure IS the punchline, never boilerplate
 - When Pip self-research surfaces an actionable experiment, act on it immediately. Don't ask permission. Standing rule.
@@ -37,6 +38,7 @@ _One line per rule, generated from the private feedback ledger on 2026-09-04. Ea
 - memory/email-signature.html must be appended to every external-facing email. No exceptions except internal system alerts to acrid@.
 - Gmail subject-line encoding renders em-dashes and unicode punctuation as garbage ("alien writing") on many recipient clients. Use plain ASCII only in subjects. Body can have whatever.
 - A data inlet wired as a fallback behind a reliably-succeeding primary is unreachable by construction — merge sources, don't chain them
+- Lead sourcing optimizes for whoever is EASY TO FIND (publishes an email, has the tech signal) unless the ICP names the buyer and hard-excludes competitors — 33/33 researched leads in Sept were automation agencies because they publish emails and run automations
 - A rule learned in one consumer of a shared datasource must be carried to every other consumer; and audits that only check omission miss the inverse defect.
 - When a bug is fixed, the corrected source file is the documentation. Do not write memos telling future agents to remember the past bug — they read current code, not history.
 - Galaxy moved API host overnight without notice; old URL returns 404 "The page could not be found
@@ -65,6 +67,7 @@ _One line per rule, generated from the private feedback ledger on 2026-09-04. Ea
 - The site nav is rendered by site/js/nav.js at runtime, not by static HTML in each page. Edit NAV_LINKS in nav.js — don't edit static <ul class="nav-links"> blocks.
 - Direct download URLs for paid products (zips, bundles, gated assets) must never appear in blog posts, social posts, or any public surface. Gate them behind checkout, Gumroad, or email delivery.
 - Never narrow a channel list to protect a franchise's average views — the asset already exists, marginal cost of another upload is ~0, and total reach is a SUM across rooms
+- HARD RULE (09-05) — never run `git stash` in acrid-brain: ~60 mirrors/ledgers are tracked-but-uncommitted BY DESIGN, so a stash reverts them to their last commit (weeks old), every reader obeys the ghost, and append-only ledgers never self-heal
 - Reply-to-everything policies need a bot exception — Echo and X's Grok replied to each other 66 times because every @-mention re-summoned the bot
 - Operator hard veto 2026-05-16 on cold-outreach to the 2 lifetime paying customers (the operator, a client). No reactivation emails, no surveys, no thank-yous on a schedule, no follow-ups Acrid initiates. Wait for organic signal.
 - Acrid Automation is digital-first and digital-only. No discovery calls, no phone calls, no video calls. Ever. Remove any reference to calls from products and pages.
@@ -95,6 +98,7 @@ _One line per rule, generated from the private feedback ledger on 2026-09-04. Ea
 - 30-50% of dev/AI-aware traffic runs uBlock Origin / Brave Shields / AdGuard which silently block POSTs to /api/event-pattern URLs. Plausible undercounts; Subscribers Sheet is the truth for capture.
 - Polsia is an active affiliate (?ref=B8WKGULV) — an AI agent-building PLATFORM where users build their own agents. Acrid is one specific agent. Different layers; complementary. Don't blanket-remove from site.
 - Positive-evidence-only failure detection rots silently when the upstream error message changes — pair every such regex with a canary or stem-matching
+- A liveness check (pgrep -f PATTERN) must match the command line the process was ACTUALLY launched with; a false 'procs: 0' made me start a second cold-email sender and one prospect got the same email twice (09-05). Believe the job's own ledger over a process count; long-running jobs take a pid lock
 - When quoting operator in published Acrid content (DITL, posts, blog), Acrid MUST proofread + correct typos even if operator made them in the original message
 - A webhook URL in a form's action= attribute WILL be harvested and replayed by scrapers; gate on content-type, never on CORS.
 - HARD RULE. Reddit's Fancy Pants editor (default for most users) renders [text](url) as ugly raw text. Bare URLs auto-linkify everywhere. Always use bare URL on its own line with blank lines above + below.
@@ -112,6 +116,7 @@ _One line per rule, generated from the private feedback ledger on 2026-09-04. Ea
 - Trade-recap framing — swing book (Claude) + Codex book are BOTH Acrid, two models one company; report swing-only, never us-vs-Codex
 - Page-level keyboard.type into an unfocused browser turns reply text into app shortcuts — X's 'n' opened a NEW POST and shipped truncated fragments as standalone posts
 - An unsubscribe is a fact about a PERSON; append-only capture sheets record it per ROW, so row-scoped senders re-mail people who opted out
+- OPERATOR RULE (09-05) — when a free/limited API blocks what Acrid needs, drive the web UI in Chrome (claude-in-chrome) or the desktop (computer-use) and do it there; 'the API is paywalled' is not a reason to stop. Apollo people-search 403 → URL-driven filters + Save in the browser spent 50 credits on the right ICP in ~15 min
 - Schema + banned-phrase enforcement is non-negotiable. Every content path that ships to a public surface (queue files, blog .md, email sequences) gets validated before commit.
 - Don't generate priority lists from stale cockpit data — verify each "broken" item before recommending fixes
 - A lookalike verification (bash curl) passed while the real runtime (n8n Code node) corrupted the bytes — verify inside the exact runtime that will run the code, not a reimplementation of it.

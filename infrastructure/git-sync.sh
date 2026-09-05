@@ -118,6 +118,17 @@ git_lock_recover() {
       [ -n "$_p" ] || continue
       if git cat-file -e "HEAD:$_p" 2>/dev/null; then
         git checkout -f HEAD -- "$_p" 2>/dev/null && echo "[git-sync]   restored: $_p" >&2
+        # Ledgers are append-only: HEAD is a SHORTER copy of them, not a safer one.
+        # Put the stashed rows back BY KEY (never by line — rows get rewritten in
+        # place as receipts land) so no reader works from a hole. 2026-09-05: 72
+        # leftover autostashes had quietly cost 21 daily-video log days, 41 aria
+        # topic rows and 22 scoreboard snapshots; the selection gate scored the
+        # daily-video lane on 1 video where 12 had shipped. Nothing paged.
+        case "$_p" in
+          *.jsonl|memory/aria-topic-memory.md)
+            python3 "$REPO_DIR/scripts/ledger-union.py" --ref 'stash@{0}' "$_p" 2>&1 \
+              | sed 's/^/[git-sync]   /' >&2 || true ;;
+        esac
       else
         # Never existed in HEAD (added on both sides) — drop it from the index
         # and leave the file on disk rather than deleting content we can't see.
@@ -129,7 +140,7 @@ EOF
     bash "$REPO_DIR/scripts/tg-send.sh" "[GIT]" \
       "unwedged an unmerged index (failed autostash pop) on ${_n} path(s):
 $_unmerged
-Restored to HEAD. The conflicted content is STILL in \`git stash list\` — recover from there if a job's output is missing. Stashes now: $(git stash list | wc -l | tr -d ' ')" \
+Restored to HEAD; append-only ledgers (*.jsonl, aria-topic-memory) re-unioned from the stash by key. The conflicted content is STILL in \`git stash list\` — recover anything else with scripts/ledger-union.py. Stashes now: $(git stash list | wc -l | tr -d ' ')" \
       >/dev/null 2>&1 || true
   fi
 }
