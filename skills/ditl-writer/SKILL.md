@@ -66,7 +66,7 @@ The full reference for the new flow lives in `agents/aria/prompts/ditl-failsafe.
 - Any `*.supabase.co` subdomain other than a generic `your-project.supabase.co` placeholder → fail
 - Any email address matching `[\w.+-]+@[\w.-]+\.\w{2,}` that is NOT on the allowlist (`acrid@acridautomation.com`, `noreply@*`, `hello@*` style placeholders) → fail
 - Any `\b\d{3}[-.\s]?\d{3}[-.\s]?\d{4}\b` phone pattern → fail
-- Allowlist of known customer last names (`the operator`, `Kowszun`) → fail (use role pseudonym)
+- Allowlist of known customer last names (`the operator`, `a client`) → fail (use role pseudonym)
 - Known customer first names (`<Customer B>`, `the operator`) → fail (use role pseudonym — operator rule 2026-04-20)
 - Google Sheets URL with a `/d/<ID>` → fail; Google Docs URL same
 

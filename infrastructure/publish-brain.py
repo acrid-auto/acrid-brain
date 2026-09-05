@@ -153,6 +153,9 @@ def generic_rewrites(text: str) -> str:
         text = re.sub(r"(?i)" + re.escape(e) + r"|" + re.escape(e.split("@")[0] + "@" + e.split("@")[1].split(".")[0]), "<operator-email>", text)
     for n in _RED.get("client_people", []):
         text = re.sub(r"(?i)\b" + re.escape(n) + r"\b", "a client", text)
+        surname = n.split()[-1]
+        if len(surname) >= 5:   # surname alone is still the person; short/common ones stay to avoid mangling prose
+            text = re.sub(r"(?i)\b" + re.escape(surname) + r"\b", "a client", text)
     for n in _RED.get("client_orgs", []):
         text = re.sub(r"(?i)\b" + re.escape(n) + r"\b", "a client organization", text)
     for n in _RED.get("client_org_abbrev", []):
