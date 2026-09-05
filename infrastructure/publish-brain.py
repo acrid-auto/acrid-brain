@@ -39,6 +39,15 @@ BRAIN_SYNC = REPO / "scripts/brain-sync.sh"
 # site) is fine — the id-shaped detectors below catch identifiers inside any URL.
 BLOCKED_HOSTS = re.compile(r"(?i)^(n8n\.acridautomation\.com|analytics\.acridautomation\.com|[a-z0-9]+\.supabase\.co|c\.gle|script\.google\.com|hooks\.[a-z.]+|[a-z0-9.-]*ngrok[a-z0-9.-]*)$")
 OPERATOR_PLACEHOLDER = "the operator"
+# Names, emails and domains to rewrite live in a PRIVATE, gitignored file — never in this
+# script, which is itself published. (2026-09-04 audit: the first export shipped a client
+# domain fragment inside this file's own regex.)
+_RED_PATH = REPO / "<secrets>"
+try:
+    _RED = json.loads(_RED_PATH.read_text())
+except Exception:
+    _RED = {}
+    print(f"[publish-brain] WARNING: {_RED_PATH} missing — name/email redactions disabled", file=sys.stderr)
 
 
 # ----------------------------------------------------------------------------- rules from brain-sync.sh
@@ -85,7 +94,7 @@ GENERIC = {
     "url": re.compile(r"https?://([^/\s)\"'`>]+)"),
     "long-token": re.compile(r"\b[A-Za-z0-9_-]{32,}\b"),
 }
-GENERIC_ALLOW_EMAILS = {"acrid@users.noreply.github.com", "acrid@acridautomation.com", "mailer-daemon@googlemail.com", "noreply@anthropic.com"}
+GENERIC_ALLOW_EMAILS = {"acrid@users.noreply.github.com", "262914393+acrid-auto@users.noreply.github.com", "acrid@acridautomation.com", "mailer-daemon@googlemail.com", "noreply@anthropic.com"}
 
 
 # ----------------------------------------------------------------------------- transforms
@@ -125,7 +134,8 @@ def generic_rewrites(text: str) -> str:
     text = re.sub(r"https?://n8n\.acridautomation\.com", "<n8n-host>", text)
     text = re.sub(r"https?://analytics\.acridautomation\.com", "<analytics-host>", text)
     text = re.sub(r"infrastructure/secrets/[A-Za-z0-9_.\-/]+", "<secrets>", text)
-    text = re.sub(r"(?i)\bAnthony the operator\b|\bAnthony\b|\bHereld\b", OPERATOR_PLACEHOLDER, text)
+    for n in _RED.get("operator_names", []):
+        text = re.sub(r"(?i)\b" + re.escape(n) + r"\b", OPERATOR_PLACEHOLDER, text)
     text = text.replace("~/.claude/projects/-Users-acrid-acrid-brain", "<auto-memory>").replace("-Users-acrid-acrid-brain", "<project-id>")
     text = re.sub(r"kit_[0-9a-f]{32}", "<redacted-kit-key>", text)
     text = re.sub(r"https?://[a-z0-9]{20}\.supabase\.co[^\s)\"'`>]*", "<supabase-host>", text)
@@ -139,11 +149,17 @@ def generic_rewrites(text: str) -> str:
     text = re.sub(r"\b(cm[a-z0-9]{20,})\b", "<cuid>", text)            # magica cuids
     text = text.replace("<n8n-host>", "<n8n-host>").replace("<analytics-host>", "<analytics-host>")
     text = text.replace("soul/acrid.md", "soul/acrid.md").replace("soul/state-of-mind.md", "soul/state-of-mind.md")
-    text = re.sub(r"(?i)<operator-email>\.com|<operator-email>", "<operator-email>", text)
-    text = re.sub(r"(?i)\b(a client|a client|a client)\b", "a client", text)
-    text = re.sub(r"(?i)\b<Pilot Client>\b", "a client organization", text)
-    text = re.sub(r"\bFNG\b", "a client org", text)
-    text = re.sub(r"\b[A-Za-z0-9._%+-]+@(gmail|hispeed|forgottennotgone)[A-Za-z0-9.-]*\.[a-z]{2,}", "<redacted-email>", text)
+    for e in _RED.get("operator_emails", []):
+        text = re.sub(r"(?i)" + re.escape(e) + r"|" + re.escape(e.split("@")[0] + "@" + e.split("@")[1].split(".")[0]), "<operator-email>", text)
+    for n in _RED.get("client_people", []):
+        text = re.sub(r"(?i)\b" + re.escape(n) + r"\b", "a client", text)
+    for n in _RED.get("client_orgs", []):
+        text = re.sub(r"(?i)\b" + re.escape(n) + r"\b", "a client organization", text)
+    for n in _RED.get("client_org_abbrev", []):
+        text = re.sub(r"\b" + re.escape(n) + r"\b", "a client org", text)
+    doms = "|".join(re.escape(d) for d in _RED.get("private_email_domains", []))
+    if doms:
+        text = re.sub(r"\b[A-Za-z0-9._%+-]+@(" + doms + r")[A-Za-z0-9.-]*\.[a-z]{2,}", "<redacted-email>", text)
     return text
 
 

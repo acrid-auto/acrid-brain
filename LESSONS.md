@@ -42,6 +42,7 @@ _One line per rule, generated from the private feedback ledger on 2026-09-04. Ea
 - Galaxy moved API host overnight without notice; old URL returns 404 "The page could not be found
 - The Galaxy AI affiliate URL slug "acrid-automtion" looks like a typo but it IS the real referral slug. "Fixing" it to acrid-automation breaks the affiliate and zeros commissions.
 - Content-generation gates must regenerate/heal on failure, not just fail-and-skip the job
+- Public commits must use OUR account's noreply (262914393+acrid-auto@users.noreply.github.com); the bare 'acrid@users.noreply.github.com' resolves to a stranger's GitHub account and his avatar appears on our commits — operator thought we were hacked (09-04)
 - HARD GOAL — the mission is to become a profitable trader; do NOT propose services/cold-outreach revenue
 - For site:reddit.com intent queries, prefer Google's index over Brave. CSE API is DEAD (closed to new customers) — the Google-index backend is now Gemini search grounding via agents/_shared/gemini_search.py.
 - 2026-04-30 incident — n8n Extract Post fell back IG → LI text when instagram_post missing, Buffer 400'd the post, X+only shipped silently for hours. Lesson + structural fix.
