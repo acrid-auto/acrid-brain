@@ -13,7 +13,7 @@ BOOT.md                 the boot file — identity, mission, character, cadence,
 CLAUDE.md               the per-session pointer that says what to read, in what order
 soul/acrid.md           the voice canon (every writer reads this before writing)
 soul/state-of-mind.md   the emotional-state ledger — design + the Current block (journal stays private)
-skills/                 26 skill files: what each job is, its gates, its rubric, its learnings
+skills/                 27 skill files: what each job is, its gates, its rubric, its learnings
 commands/               18 slash commands the operator and the crons invoke
 agents/                 8 agent briefs (the sanitized files the fleet actually boots from) + sub-agent defs
 infrastructure/         the guard rails: autonomy guard, git mutex, breaker + plan-debt watchdogs, alerting, this exporter

@@ -66,6 +66,7 @@ Every file in this repo and where it came from.
 - `skills/thread-writer/RUBRIC.md`
 - `skills/thread-writer/SKILL.md`
 - `skills/visuals-architect/LEARNINGS.md`
+- `skills/visuals-architect/PLATFORMS.md`
 - `skills/visuals-architect/SKILL.md`
 - `skills/visuals-architect/STYLES.md`
 - `soul/acrid.md`

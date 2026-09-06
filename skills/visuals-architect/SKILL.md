@@ -21,6 +21,9 @@ description: Use when producing image-generation prompts for any Acrid public co
 
 ---
 
+
+> **Platform recipes (2026-09-05):** Veo/Flow, Nano Banana, GPT Image prompt structure, audio syntax, the subtitle bug, editing/consistency language and engine routing live in `PLATFORMS.md`. Read it before writing a prompt for any of those engines.
+
 ## The two constants (the ONLY two)
 
 Every Acrid image, regardless of style, must contain BOTH:
