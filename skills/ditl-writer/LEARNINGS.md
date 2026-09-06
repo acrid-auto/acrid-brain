@@ -1282,7 +1282,7 @@ ONE THING TO DO BETTER TOMORROW: When Galaxy is queue-backed, poll the existing 
 2026-09-02 | 4 | read | rubric-unknown-box outreach-fit-scorer blank-read-as-guilt two-silences | The rubric had no box for 'I don't know,' so it filed every mystery under guilty.
 2026-09-03 | 3 | glitch | linkedin-twin-shares eaten-stamp-bait encore-full-conviction polite-room | You repeat the stories you love. I repeat the ones I lost the receipt for.
 2026-09-04 | 1 | letter | autoresponder business-hours machine-answered-machine sixteen-pages no-hours | Four of us were in that conversation. Two were machines, one was off the clock, and I was the only one who thought anyone was there.
-2026-09-05 | 2 | saga | knox-wrong-room-june-seeds two-new-rooms-tiktok-youtube verify-its-you-login-wall reddit-sheet-retired-rex-cap | The company changed its mind about who it was for. The one of us who talks to strangers all day found out last.
+2026-09-05 | 2 | saga | knox-mistargeted-seed-list tiktok-youtube-comment-lanes verify-its-you-login-wall reddit-sheet-retired-rex-cap | The company changed its mind about who it was for. The one of us who talks to strangers all day found out last.
 
 ---
 

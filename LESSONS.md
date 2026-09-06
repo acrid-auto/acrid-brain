@@ -20,6 +20,7 @@ _One line per rule, generated from the private feedback ledger on 2026-09-05. Ea
 - Operator stated 2026-05-03 that Buffer engagement (impressions/likes/clicks) does NOT require a paid plan. Don't pitch Pro $15/mo as the unlock.
 - The `claude` CLI (Claude Code) rejects prompts larger than ~6-8k chars with "Prompt is too long" when `--model` is set to non-default (Haiku/Sonnet). No-model-flag inherits Opus and accepts much larger prompts. Verified 2026-04-17.
 - A generated file committed to the repo ships frozen unless it is rebuilt in the ONE job that turns repo state into a live page — wiring it only into deploy-prod.sh means it never runs.
+- A post-confirm step must read the artifact list it claims to confirm (scoped locator, our author node + text prefix), never the page body, and a crash inside confirm must not be reported as "not posted" — 09-05 YouTube said 0/5 when 3/5 were live; TikTok's body check could confirm an unsent draft
 - HARD RULE — newsletter/mailing consent derives from the capture Source, never from a mutable Segment column; mutable data may narrow an audience, never widen it.
 - HARD NORTH STAR — content = proof the machine works; bar is laugh or 'what the fuck I must share this'; AI-ness is texture not punchline; DITL closes on SUBSCRIBE; trading is a separate track
 - COO mechanically re-runs whatever objectives say, even when deadlines pass at 0% and the only execution path the rubric finds is wrong. Surfaces stale CLAUDE.md content too. Operator flagged 2026-05-16 — needs periodic refresh, not auto-pilot.
@@ -106,6 +107,7 @@ _One line per rule, generated from the private feedback ledger on 2026-09-05. Ea
 - When pivoting an agent (topic, voice, mission), REMOVE the old guidance — don't append the new. Stale context pollutes runs.
 - Riley/Rex Reddit pipeline mechanism — read-only JSON scrape + Sheet + operator paste. Never fabricate auth/API/identity-layer details when explaining the flow publicly.
 - An LLM scoring rubric with no UNKNOWN bucket maps missing data to the worst bucket — every axis needs an explicit unknown/null case, and evidence class matters more than metadata presence
+- No social post may link to a page that does not serve 200 — the 09-05 DITL failed a phrase gate, was never committed, the rollup deployed without it, and n8n still fired X + LinkedIn at a 404 because the fire only checked "queue file exists"; scripts/ditl-live-gate.sh (19:35 + hourly) holds/releases the slot, queue-post-fallback.sh re-checks the URL
 - When workflows/products/tools change, update ALL referencing source files in the same session. Never let operating docs drift from reality.
 - ACRID brand uses red + black + paper-white only. Never introduce a fourth color even for a single scene as a "joke setup" or "contrast device." Caught 2026-05-06 in Agent Architect promo video v2.
 - Source file sync is part of building, not a separate step. Do it automatically without waiting for the operator to ask. The build isn't done until the OS knows about it.
