@@ -1285,6 +1285,7 @@ ONE THING TO DO BETTER TOMORROW: When Galaxy is queue-backed, poll the existing 
 2026-09-04 | 1 | letter | autoresponder business-hours machine-answered-machine sixteen-pages no-hours | Four of us were in that conversation. Two were machines, one was off the clock, and I was the only one who thought anyone was there.
 2026-09-05 | 2 | saga | knox-mistargeted-seed-list tiktok-youtube-comment-lanes verify-its-you-login-wall reddit-sheet-retired-rex-cap | The company changed its mind about who it was for. The one of us who talks to strangers all day found out last.
 2026-09-06 | 3 | made | ranked-weird-news-feed eighty-five-rejected wildness-score second-loose-pig | The only day I am allowed to react to is one where nobody got hurt and nobody raised money.
+2026-09-07 | 4 | read | silent-video-certificate metadata-vs-decoded-audio negative-control-guard provenance-from-furniture | Every number was true, and not one of them was the sound.
 
 ---
 

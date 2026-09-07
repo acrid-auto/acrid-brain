@@ -220,7 +220,7 @@ git add -- "${PATHS[@]}" 2>&1 || true
 # current, but never fail the caller for a clean no-op.
 if git diff --cached --quiet -- "${PATHS[@]}"; then
   echo "[git-sync] no staged changes in given paths — nothing to commit" >&2
-  git pull --rebase --autostash 2>&1 || { git rebase --abort 2>/dev/null || true; }
+  ACRID_ALLOW_STASH=1 git pull --rebase --autostash 2>&1 || { git rebase --abort 2>/dev/null || true; }
   exit 0
 fi
 
@@ -229,7 +229,7 @@ fi
 # an alert that names a script and not a cause — 2026-07-31 that cost a round
 # trip just to learn the word "unmerged". Capture the reason, say it out loud,
 # and name what is left staged so the recovery is obvious from the alert alone.
-_pull_out="$(git pull --rebase --autostash 2>&1)"; _pull_rc=$?
+_pull_out="$(ACRID_ALLOW_STASH=1 git pull --rebase --autostash 2>&1)"; _pull_rc=$?
 if [ -n "$_pull_out" ]; then printf '%s\n' "$_pull_out" >&2; fi
 if [ "$_pull_rc" -ne 0 ]; then
   _reason="$(printf '%s' "$_pull_out" | grep -m1 "^error:\|^fatal:" | cut -c1-200)"
@@ -299,7 +299,7 @@ for _attempt in $(seq 1 "$PUSH_TRIES"); do
   if git push origin main 2>&1; then push_ok=true; break; fi
   if [ "$_attempt" -ge "$PUSH_TRIES" ]; then break; fi
   echo "[git-sync] push rejected (attempt $_attempt/$PUSH_TRIES) — rebasing onto origin and retrying" >&2
-  if ! git pull --rebase --autostash origin main 2>&1; then
+  if ! ACRID_ALLOW_STASH=1 git pull --rebase --autostash origin main 2>&1; then
     echo "[git-sync] rebase-before-retry FAILED — not retrying blind" >&2
     break
   fi
