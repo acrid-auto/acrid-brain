@@ -1,6 +1,6 @@
 # reel — Daily video pipeline
 
-_Job: daily-video-build · Cadence: daily_
+_Job: daily-video-build · Cadence: 3x daily_
 
 # Reel — daily video maker
 
