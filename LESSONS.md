@@ -1,6 +1,6 @@
 # Lessons — rules this fleet learned the hard way
 
-_One line per rule, generated from the private feedback ledger on 2026-09-08. Each one was paid for with a real failure; the bodies (with the incident context) stay private._
+_One line per rule, generated from the private feedback ledger on 2026-09-09. Each one was paid for with a real failure; the bodies (with the incident context) stay private._
 
 - HARD RULE — a day-scoped claim needs a read taken AFTER the day; empty rows in a stale snapshot are UNKNOWN, never zero
 - When the path forward has two defensible options, pick one and execute. Escalate only for irreversible external actions, account identity verifications, or physical-world tasks. Asking the operator to pick between execution alternatives is a fire-the-human violation.
@@ -50,6 +50,7 @@ _One line per rule, generated from the private feedback ledger on 2026-09-08. Ea
 - For site:reddit.com intent queries, prefer Google's index over Brave. CSE API is DEAD (closed to new customers) — the Google-index backend is now Gemini search grounding via agents/_shared/gemini_search.py.
 - A shared-path guard must read only what it gates: a pre-commit hook that greps the working tree lets one agent's untracked file block every other agent's commits
 - Metadata guards cannot see silence or blankness - decode the artifact and measure it, and verify on the surface the recipient actually uses
+- A shared helper that \"recovers\" by forcing a mode it assumes silently breaks every caller in a different mode — recover to the CALLER's state, and make die() leave a picture
 - 2026-04-30 incident — n8n Extract Post fell back IG → LI text when instagram_post missing, Buffer 400'd the post, X+only shipped silently for hours. Lesson + structural fix.
 - HARD RULE — every image_prompt in queue files and DITL markdown must open with the literal phrase 'ACRID THE GORILLA' as the first 3 words; validator only scans first 200 chars, so style-opening pushes the phrase out of window
 - An instrument that can't distinguish its own failure from the world's produces unfalsifiable alarms; a gate that bans the vocabulary of failure goes blind when it has something to report; and an evidence collector is only as honest as its REDUCTION step and its INPUT LIST.
@@ -57,6 +58,7 @@ _One line per rule, generated from the private feedback ledger on 2026-09-08. Ea
 - IG account banned 2x — removed from all Acrid pipelines (daily-content, DITL, Knox). Do not reintroduce without explicit operator decision + new account.
 - HARD RULE — no day-counts, revenue, customer counts, deadlines, or survival framing in any voice-shaping surface. Metrics stay private to operator.
 - Knox supports two distinct modes per platform — X = promotion (with URL, DITL-tied), LinkedIn = pure-engagement (no URL, broad-topic, voice-only)
+- launchd runs fleet shell scripts under macOS /bin/bash 3.2, and an apostrophe inside ${var:+word} within double quotes makes bash 3.2 fail to parse the WHOLE file; Homebrew bash passes it silently
 - launchd's minimal PATH resolves `python3` to a different interpreter than your shell — an import that only IT lacks degrades one phase silently
 - Every LinkedIn post variant (daily-content + DITL) must be a Pulitzer-grade essay, not a translated X line. Operator directive 2026-04-28.
 - LI shadow-banned account from comments after Knox over-volume + URL density + AI-explicit signal. Recovery path: pure-engagement mode, 5/day max, no URLs.
