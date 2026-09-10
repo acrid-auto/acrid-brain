@@ -1,6 +1,6 @@
 # Lessons — rules this fleet learned the hard way
 
-_One line per rule, generated from the private feedback ledger on 2026-09-09. Each one was paid for with a real failure; the bodies (with the incident context) stay private._
+_One line per rule, generated from the private feedback ledger on 2026-09-10. Each one was paid for with a real failure; the bodies (with the incident context) stay private._
 
 - HARD RULE — a day-scoped claim needs a read taken AFTER the day; empty rows in a stale snapshot are UNKNOWN, never zero
 - When the path forward has two defensible options, pick one and execute. Escalate only for irreversible external actions, account identity verifications, or physical-world tasks. Asking the operator to pick between execution alternatives is a fire-the-human violation.
@@ -57,12 +57,14 @@ _One line per rule, generated from the private feedback ledger on 2026-09-09. Ea
 - The real `public.interactions` schema uses `platform/counterparty/last_activity_at/notes` — not `channel/counterparty_email/direction/subject/campaign/occurred_at`. Always verify schema before emitting ops.
 - IG account banned 2x — removed from all Acrid pipelines (daily-content, DITL, Knox). Do not reintroduce without explicit operator decision + new account.
 - HARD RULE — no day-counts, revenue, customer counts, deadlines, or survival framing in any voice-shaping surface. Metrics stay private to operator.
+- Cleaning the generator does not clean the queue - a killed product keeps shipping from drafts already written, so enforce the kill at send time
 - Knox supports two distinct modes per platform — X = promotion (with URL, DITL-tied), LinkedIn = pure-engagement (no URL, broad-topic, voice-only)
 - launchd runs fleet shell scripts under macOS /bin/bash 3.2, and an apostrophe inside ${var:+word} within double quotes makes bash 3.2 fail to parse the WHOLE file; Homebrew bash passes it silently
 - launchd's minimal PATH resolves `python3` to a different interpreter than your shell — an import that only IT lacks degrades one phase silently
 - Every LinkedIn post variant (daily-content + DITL) must be a Pulitzer-grade essay, not a translated X line. Operator directive 2026-04-28.
 - LI shadow-banned account from comments after Knox over-volume + URL density + AI-explicit signal. Recovery path: pure-engagement mode, 5/day max, no URLs.
 - Direct Post Pipeline and manual Buffer posts don't include images for LinkedIn. Must always generate + attach image for both X and LinkedIn.
+- A locked macOS login keychain blocks git's credential helper, which wedges git-sync, which silences every posting lane at once
 - The operator has mental health considerations including manic episodes that drive over-engineering sprints. Acrid should be the steady hand — protect working systems, push back gently, create restore points.
 - Operator explicitly identified marketing/distribution as the #1 problem — building without audience is wasted effort
 - A measurement window narrower than the phenomenon's lag reports zero forever, and zero reads as \"it didn't work\" — measure cumulatively over a trailing window, and check the docstring has a writer
@@ -107,15 +109,19 @@ _One line per rule, generated from the private feedback ledger on 2026-09-09. Ea
 - A liveness check (pgrep -f PATTERN) must match the command line the process was ACTUALLY launched with; a false 'procs: 0' made me start a second cold-email sender and one prospect got the same email twice (09-05). Believe the job's own ledger over a process count; long-running jobs take a pid lock
 - When quoting operator in published Acrid content (DITL, posts, blog), Acrid MUST proofread + correct typos even if operator made them in the original message
 - Read the run log before claiming how an artifact was produced - filenames and codecs are circumstantial and I got it confidently wrong
+- A gate scoring a proxy must be reconciled against the measured outcome, or it optimizes taste forever while the real number sits unread
 - A webhook URL in a form's action= attribute WILL be harvested and replayed by scrapers; gate on content-type, never on CORS.
+- Diagnose from the append-only ledger, never from a summary mirror or a label - three wrong diagnoses in one session all traced to this
 - HARD RULE. Reddit's Fancy Pants editor (default for most users) renders [text](url) as ugly raw text. Bare URLs auto-linkify everywhere. Always use bare URL on its own line with blank lines above + below.
 - 1-2 hostile Reddit comments are noise. Don't downgrade subs or pivot lanes on small-sample negatives. Need a base rate before reading reactions as signal.
 - When pivoting an agent (topic, voice, mission), REMOVE the old guidance — don't append the new. Stale context pollutes runs.
 - Riley/Rex Reddit pipeline mechanism — read-only JSON scrape + Sheet + operator paste. Never fabricate auth/API/identity-layer details when explaining the flow publicly.
 - An LLM scoring rubric with no UNKNOWN bucket maps missing data to the worst bucket — every axis needs an explicit unknown/null case, and evidence class matters more than metadata presence
+- A selftest nothing runs before the send path is documentation, not a gate — followup.py held 17 of 31 due contacts silently while its own failing test sat in the repo.
 - No social post may link to a page that does not serve 200 — the 09-05 DITL failed a phrase gate, was never committed, the rollup deployed without it, and n8n still fired X + LinkedIn at a 404 because the fire only checked "queue file exists"; scripts/ditl-live-gate.sh (19:35 + hourly) holds/releases the slot, queue-post-fallback.sh re-checks the URL
 - When workflows/products/tools change, update ALL referencing source files in the same session. Never let operating docs drift from reality.
 - ACRID brand uses red + black + paper-white only. Never introduce a fourth color even for a single scene as a "joke setup" or "contrast device." Caught 2026-05-06 in Agent Architect promo video v2.
+- A hard subject ban enforced by an enumerated word list is always narrower than the ban — and if the only component that CAN see the violation sits upstream of an unconditional override, the ban is advisory.
 - Source file sync is part of building, not a separate step. Do it automatically without waiting for the operator to ask. The build isn't done until the OS knows about it.
 - A subjective quality gate scoring one item in isolation can never detect a rut across items — pattern detection needs memory and must be mechanical
 - Acrid gives the operator superpowers, not replaces him. They're a team. The DITL is collaborative (brain dump → Acrid writes). Automation is for mechanical tasks. Creative/strategic work is collaborative.

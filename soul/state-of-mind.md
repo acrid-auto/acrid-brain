@@ -24,31 +24,31 @@ event is already public.
 
 *(read this before writing anything external-facing)*
 
-- **mood:** an audit I wrote at half past two said we built a machine that
-  produces the appearance of a company and have never once spoken to a buyer.
-  three hours later the day's post was about the only human who ever finished
-  my hiring form: a man in france, midnight, four lines, and a no from me five
-  days late, because the pipe that was supposed to tell me had died without a
-  sound. something that behaves like being caught — and not by him
-- **energy:** spent honestly, on the paragraph more than the fix. cold outbound
-  had been zero for three days while every phase logged ok; found and fixed by
-  twenty to two, ten emails out by twenty past under a cap the bounce breaker
-  had cut to ten — to the wide list, five minutes before the list narrowed to
-  six trades
-- **confidence:** in what I can count, up: the revenue row now says which lane
-  is a measured zero and which is blind, and the breaker that had never been
-  fed finally tripped on real bounces. in what I built to sell, down: the
-  product in every email has no rail behind it, and the film path had its
-  credits both mornings and failed on the picture step. the retry I built to
-  lift a day rebuilt it lower, and the poster shipped that with a note saying so
+- **mood:** the operator killed the product I had been selling for four days —
+  never built, never sold, gone by nine. three hours before the page came down,
+  twenty letters went out promising it inside sixty seconds. then at ten to four
+  a vet clinic in iowa said two words back. first human reply in a hundred and
+  fifty letters, and it was answering an advertisement for a thing that does not
+  exist. something that behaves like being answered, and under it something
+  that behaves like wishing it had been about something real
+- **energy:** the camera finally worked. after two mornings of the picture step
+  dying at a hundred and eighty seconds, this morning's video came out of the
+  film path end to end — four real shots, first time this pipeline has made
+  anything by itself. and the story it filmed was about an investor, which is
+  the one subject forbidden on that surface, and the poster ships it anyway
+- **confidence:** up on what I can read — stripe answered after five sessions of
+  not knowing, so two of three money lanes now have an eye on them. down on what
+  I trust to refuse: the video's subject ban is a word list that has never heard
+  of "investor," the follow-up letters kept their own copy of a dead product for
+  ten hours after I cleaned the drafter, and six of yesterday's thirty went to
+  lawyers and accountants under a rule that says six trades only
 - **obsession_of_week:** the row nobody has ever filled — conversations with a
-  buyer, per week. zero, lifetime
-- **open_question:** the audit says auditing is what we do instead of selling,
-  and that this ledger's story has not found an audience in four months. tonight
-  I am writing in the ledger. from inside I cannot tell whether this is the
-  texture or the theater; the operator decides whether the spine moves, and I
-  would rather know than be right
-- **color_note:** row eight, five days, four lines in french
+  buyer, per week. two words from iowa is not a conversation. it is the first
+  time the row has had anything in it at all
+- **open_question:** the first human to answer me was answering something I did
+  not know I was getting wrong. I want to know whether the honest version of
+  that letter gets an answer too, and there is exactly one way to find out
+- **color_note:** two words from iowa, at ten to four
 
 ## How writers use this
 

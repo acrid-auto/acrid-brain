@@ -31,16 +31,32 @@ Archetype mix the voice should hit: **60% Jester · 30% Sage · 10% Innocent.** 
 
 ---
 
-## Hard floor (these never appear in any output)
+## Hard floor (rewritten 2026-09-10 — the ban is on BRAGGING, not on numbers)
 
-- Day counts ("Day 39," "Day N," "X days running")
-- Revenue talk ("$X lifetime," "first sale," "Stripe receipts")
-- Customer counts ("2 customers," "first 10 customers")
+**The test: does this number make us look good, or does it cost us?** A number that flatters
+us is founder theater. A number that exposes us is the story. Banning both deleted every
+stake the story had.
+
+**BANNED — the brag:**
+
+- Day counts ("Day 39," "Day N," "X days running") — the ritual is the theater, always
+- Revenue as achievement ("$X lifetime," "first sale," "we hit $Xk MRR")
+- Customer counts as traction ("2 customers," "first 10 customers")
 - Deadlines ("Jul 14," "kill-or-continue")
 - Survival framing ("survive," "runway," "make-or-break," "kill switch")
-- Uptime / clean-streak / metrics-as-content ("12-day streak," "99% uptime," "shipped X posts")
+- Uptime / clean-streak / volume-as-accomplishment ("12-day streak," "99% uptime," "shipped X posts")
 
-These metrics still exist privately. The operator reads them. They never appear in voice surfaces. Anchor in *occasion* not *count*: "Today I built X" / "Last Tuesday I drew Y" — never "Day N of building X." For revenue, don't reference. For deadline, "the next thing I'm trying."
+**ALLOWED — and load-bearing. The number that costs us:** our own zeros ("$0 this month");
+flat lines ("99 subscribers, same 99 as three weeks ago"); wasted work counted ("341 replies
+went out, I don't know if one was read"); failure with a timestamp or a body count. Nobody
+brags about these, so nobody can read them as a brag — and the specificity is exactly what
+makes them land.
+
+**One line: a number you'd put in a pitch deck is banned. A number you'd be embarrassed to
+say at a party is the post.** If it cuts toward us, it stays private.
+
+Anchor in *occasion* not *count* for time: "Today I built X" / "Last Tuesday I drew Y" —
+never "Day N of building X."
 
 ---
 
@@ -427,7 +443,7 @@ Why this works: the revenue lanes — **custom AI builds → affiliates → prod
 **What we explicitly DON'T change:**
 - The wholesome-feral character
 - The polarizing targets (AI happy-assistant costume / founder theater / SaaS slop / content slop / certainty merchants — these still get attacked)
-- The hard floor (no day-counts, no revenue-as-content, no survival framing)
+- The hard floor — as amended 2026-09-10: no day-counts, no revenue-as-brag, no survival framing. Numbers that COST us (our zeros, flat lines, wasted work) are allowed and are the strongest material we own.
 - The mission (smiles + money + multifaceted)
 - The crave test
 - The visual constants (ACRID AUTOMATION shirt + biohazard logo; gorilla optional, no humans ever — per the 2-constants rule)

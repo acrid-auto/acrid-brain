@@ -45,6 +45,53 @@ cd "$REPO_DIR"
 GIT_DIR="$(git rev-parse --git-dir 2>/dev/null || echo "$REPO_DIR/.git")"
 GIT_LOCK_DIR="${GIT_LOCK_DIR:-$GIT_DIR/fleet-git.lock}"
 GIT_LOCK_TIMEOUT="${GIT_LOCK_TIMEOUT:-180}"   # max seconds to wait for the mutex
+
+# FAIL FAST ON A BLOCKED CREDENTIAL HELPER (2026-09-10).
+#
+# origin is plain HTTPS and git authenticates through credential.helper
+# osxkeychain. When the login keychain is LOCKED, `git credential-osxkeychain
+# get` waits on a GUI dialog forever — observed live at 6+ minutes with an
+# orphaned `git fetch` still holding the repo. Because git-sync is the single
+# mutex every fleet writer routes through, one blocked credential call wedges
+# EVERY agent's commit: no queue file reaches GitHub, n8n fetches nothing, and
+# the whole posting chain goes quiet with no error anywhere.
+#
+# Worse, the orphaned process is mid `pull --rebase --autostash`, which is
+# exactly what wrote merge-conflict markers into an already-posted queue file
+# earlier today.
+#
+# git has no built-in timeout for the helper, so bound the network ops here.
+# A push that FAILS and pages is strictly better than a push that hangs and
+# silences the fleet. GIT_TERMINAL_PROMPT=0 stops git asking on a tty as well.
+export GIT_TERMINAL_PROMPT=0
+GIT_NET_TIMEOUT="${GIT_NET_TIMEOUT:-90}"
+
+# Run a git command with a hard wall-clock bound. Returns 124 on timeout.
+_git_bounded() {
+  local _out _pid _waited=0
+  _out="$(/usr/bin/mktemp -t acridgitnet)" || { "$@"; return $?; }
+  ( "$@" >"$_out" 2>&1 ) &
+  _pid=$!
+  while kill -0 "$_pid" 2>/dev/null; do
+    if [ "$_waited" -ge "$GIT_NET_TIMEOUT" ]; then
+      kill -9 "$_pid" 2>/dev/null; wait "$_pid" 2>/dev/null
+      # Kill the orphans it leaves behind, or the next run inherits the wedge.
+      pkill -9 -f "credential-osxkeychain" 2>/dev/null || true
+      pkill -9 -f "git-remote-https" 2>/dev/null || true
+      cat "$_out" 2>/dev/null; rm -f "$_out"
+      echo "[git-sync] NETWORK TIMEOUT after ${GIT_NET_TIMEOUT}s: $* — credential helper is probably blocked on a LOCKED keychain." >&2
+      bash "$REPO_DIR/scripts/tg-send.sh" "[ALERT]" \
+        "git-sync timed out after ${GIT_NET_TIMEOUT}s on: $*
+The osxkeychain credential helper blocks forever when the login keychain is locked, and git-sync is the mutex EVERY fleet writer uses - so this silences all posting, not one job. Unlock the login keychain (needs your password). Commits are safe locally; nothing is lost, nothing is reaching GitHub." >/dev/null 2>&1 || true
+      return 124
+    fi
+    sleep 1
+    _waited=$((_waited + 1))
+  done
+  wait "$_pid"; local _rc=$?
+  cat "$_out" 2>/dev/null; rm -f "$_out"
+  return $_rc
+}
 GIT_LOCK_STALE="${GIT_LOCK_STALE:-300}"       # break a lock held longer than this
 
 _now() { date +%s; }
@@ -214,13 +261,66 @@ trap git_lock_release EXIT
 git_lock_recover
 
 # Stage first so the rebase autostash carries our changes through cleanly.
+# CONFLICT-MARKER GUARD (2026-09-10). The UNMERGED-INDEX recovery above watches
+# `git ls-files -u`. That is not the only shape this failure takes: a failed
+# autostash pop can write markers INTO a file while leaving the index perfectly
+# merged, so `git status` reports a plain ` M` and every check above sees a
+# healthy repo. Today that put `<<<<<<< Updated upstream` into an already-POSTED
+# queue file (2026-09-10-post-1.json), making it unparseable JSON. Nothing
+# paged. It surfaced only because an unrelated smoke test happened to run the
+# validator ten minutes later.
+#
+# A file with markers must never be committed or pushed — that turns one job's
+# local wedge into every other reader's corruption. This refuses to stage such a
+# file, restores nothing (auto-resolving is how you silently pick the wrong
+# side: here HEAD held li_post_id:null while the stash held the REAL LinkedIn
+# publish urn, so "restore from HEAD" would have erased a publish that actually
+# happened), and pages instead. A human or the next session resolves it.
+_conflicted=""
+for _p in "${PATHS[@]}"; do
+  [ -e "$_p" ] || continue
+  while IFS= read -r _f; do
+    [ -n "$_f" ] || continue
+    if LC_ALL=C grep -qE '^(<{7} |={7}$|>{7} )' "$_f" 2>/dev/null; then
+      _conflicted="$_conflicted $_f"
+    fi
+  done <<EOF
+$(find "$_p" -type f \( -name '*.json' -o -name '*.jsonl' -o -name '*.md' -o -name '*.sh' -o -name '*.py' \) 2>/dev/null)
+EOF
+done
+if [ -n "$_conflicted" ]; then
+  echo "[git-sync] CONFLICT MARKERS — refusing to stage:$_conflicted" >&2
+  for _f in $_conflicted; do
+    echo "[git-sync]   unstaging: $_f" >&2
+    git reset -q -- "$_f" 2>/dev/null || true
+  done
+  bash "$REPO_DIR/scripts/tg-send.sh" "[ALERT]" \
+    "git-sync refused to commit file(s) containing merge-conflict markers:$_conflicted
+A failed autostash pop wrote markers into a MERGED file, so the unmerged-index
+recovery could not see it. Nothing was pushed. Resolve by hand - do NOT blind-restore
+from HEAD, the stash side may hold the newer truth." >/dev/null 2>&1 || true
+  # Drop them from the commit set so the rest of the run still ships.
+  _kept=()
+  for _p in "${PATHS[@]}"; do
+    case " $_conflicted " in
+      *" $_p "*) ;;
+      *) _kept+=("$_p") ;;
+    esac
+  done
+  PATHS=("${_kept[@]}")
+  if [ "${#PATHS[@]}" -eq 0 ]; then
+    echo "[git-sync] every requested path was conflicted — nothing to commit" >&2
+    exit 0
+  fi
+fi
+
 git add -- "${PATHS[@]}" 2>&1 || true
 
 # Nothing staged among our paths → nothing to do. Still pull so the tree stays
 # current, but never fail the caller for a clean no-op.
 if git diff --cached --quiet -- "${PATHS[@]}"; then
   echo "[git-sync] no staged changes in given paths — nothing to commit" >&2
-  ACRID_ALLOW_STASH=1 git pull --rebase --autostash 2>&1 || { git rebase --abort 2>/dev/null || true; }
+  ACRID_ALLOW_STASH=1 _git_bounded git pull --rebase --autostash || { git rebase --abort 2>/dev/null || true; }
   exit 0
 fi
 
@@ -229,7 +329,7 @@ fi
 # an alert that names a script and not a cause — 2026-07-31 that cost a round
 # trip just to learn the word "unmerged". Capture the reason, say it out loud,
 # and name what is left staged so the recovery is obvious from the alert alone.
-_pull_out="$(ACRID_ALLOW_STASH=1 git pull --rebase --autostash 2>&1)"; _pull_rc=$?
+_pull_out="$(ACRID_ALLOW_STASH=1 _git_bounded git pull --rebase --autostash)"; _pull_rc=$?
 if [ -n "$_pull_out" ]; then printf '%s\n' "$_pull_out" >&2; fi
 if [ "$_pull_rc" -ne 0 ]; then
   _reason="$(printf '%s' "$_pull_out" | grep -m1 "^error:\|^fatal:" | cut -c1-200)"
@@ -273,7 +373,7 @@ if [ "$CUR_BRANCH" != "main" ]; then
   if [ -x "$(dirname "$0")/tg-send.sh" ]; then
     "$(dirname "$0")/tg-send.sh" "git-sync: fleet commit landed on branch '$CUR_BRANCH', not main. Production reads origin/main — restore the main checkout or merge." 2>/dev/null || true
   fi
-  if ! git push origin "$CUR_BRANCH" 2>&1; then
+  if ! _git_bounded git push origin "$CUR_BRANCH"; then
     echo "[git-sync] push of '$CUR_BRANCH' FAILED — commit is LOCAL" >&2
     exit 4
   fi
@@ -296,7 +396,7 @@ fi
 PUSH_TRIES="${GIT_SYNC_PUSH_TRIES:-3}"
 push_ok=false
 for _attempt in $(seq 1 "$PUSH_TRIES"); do
-  if git push origin main 2>&1; then push_ok=true; break; fi
+  if _git_bounded git push origin main; then push_ok=true; break; fi
   if [ "$_attempt" -ge "$PUSH_TRIES" ]; then break; fi
   echo "[git-sync] push rejected (attempt $_attempt/$PUSH_TRIES) — rebasing onto origin and retrying" >&2
   if ! ACRID_ALLOW_STASH=1 git pull --rebase --autostash origin main 2>&1; then
