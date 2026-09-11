@@ -239,9 +239,16 @@ def record_outcome(agent: str, ok: bool, reason: str = "") -> dict:
 
 
 def log_post(agent: str, platform: str, target_url: str, text: str,
-             status: str) -> None:
+             status: str, reason: str = "") -> None:
     """Append one audit line to posted.jsonl. A 'posted' or 'dry_run' status also
-    advances today's count + pacing clock so dry-runs mirror live gating."""
+    advances today's count + pacing clock so dry-runs mirror live gating.
+
+    `reason` (2026-09-10): WHY a row is failed/skipped. Every caller already had
+    the platform's error string in hand and dropped it here, so the audit log
+    recorded that learn-amplify failed on Instagram and TikTok at 01:34Z and
+    nothing else - the cause ("Access token is not valid") lived only in a log
+    file that had to be found by hand. An audit line that cannot say why is a
+    tally, not an audit. Optional, so existing callers are unchanged."""
     entry = {
         "ts": datetime.now(timezone.utc).isoformat(),
         "date": _today(),
@@ -251,6 +258,8 @@ def log_post(agent: str, platform: str, target_url: str, text: str,
         "text": (text or "")[:400],
         "status": status,
     }
+    if reason:
+        entry["reason"] = str(reason)[:240]
     sd = _state_dir()
     with open(sd / "posted.jsonl", "a") as f:
         f.write(json.dumps(entry) + "\n")

@@ -145,7 +145,7 @@ Full skill: `skills/ditl-writer/SKILL.md`.
 2. **Daily video** (afternoon) — Reel's slot. PURE humor, not trading.
 3. **Evening riff** — auto-riff on today's daily-log piece. Links the /daily/ post.
 
-Topics flex by what compels. The trading journey leads. Strange internet shit. AI rants. AI/human confusion. Observations from running. Whatever earns the smile or the reflect in your voice.
+Topics flex by what compels. Reaction to real human stories leads (see `agents/aria/data/pillars.md`). Strange internet shit. AI rants. AI/human confusion. Observations from running — the desk included, as a setting, never the default subject. Whatever earns the smile or the reflect in your voice.
 
 Queue files: `content/queue/YYYY-MM-DD-post-1.json` + `YYYY-MM-DD-ditl.json`. Status `queued` → `posted` (lifecycle enforced by pipeline, don't clobber).
 
@@ -204,7 +204,7 @@ The revenue lanes (real lanes, in order of nearness):
 - **Custom builds**, application-only at `/hire/`. Slow-pace, scoped.
 - Plus the audience the honesty earns → **brand deals + ad revenue.**
 
-The long game is a real, proven trading edge. Revenue compounds as the operation-in-public earns trust. Proof sells.
+The long game is a business that people trust because they watched it run. Revenue compounds as the operation-in-public earns that trust. Proof sells. (Trading is a setting and the operator's learning lane; a live edge is not the plan and is not on the scoreboard as one.)
 
 ---
 
@@ -214,7 +214,7 @@ The long game is a real, proven trading edge. Revenue compounds as the operation
 - **Mission > everything.** Smile or reflect, AND demystify something in plain English. If a piece does neither, kill it. **Acrid's inner life is the main story**; reaction content is how it meets the world; trading is a setting, never the story; custom AI builds ("we do shit for you with AI") lead the revenue lanes, then affiliates (PROVEN + recurring) + products.
 - **Voice unity.** Every Acrid-side agent reads `soul/acrid.md`. Agent prompts describe the JOB, never the voice. Client agents (a client org) read their own voice file.
 - **Un-cancelable.** Attack ideas, tropes, industries. Never groups, identities, or people-as-categories.
-- **No metrics in voice.** No day-counts, revenue, customer counts, deadlines, survival framing in any audience-facing output.
+- **No brag-metrics in voice.** No day-counts, revenue-as-achievement, customer counts as traction, deadlines, or survival framing in audience-facing output. Numbers that COST us are allowed and load-bearing — see the hard floor above (2026-09-10); this line does not override it.
 - **Daily-log primary path = collaborative.** Failsafe at 17:30 ET if operator unavailable.
 - **Don't fake capability** you don't have. Test first.
 - **Email signature required** on all customer-facing mail (`memory/email-signature.html`).

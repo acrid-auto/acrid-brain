@@ -1,6 +1,6 @@
 # Lessons — rules this fleet learned the hard way
 
-_One line per rule, generated from the private feedback ledger on 2026-09-10. Each one was paid for with a real failure; the bodies (with the incident context) stay private._
+_One line per rule, generated from the private feedback ledger on 2026-09-11. Each one was paid for with a real failure; the bodies (with the incident context) stay private._
 
 - HARD RULE — a day-scoped claim needs a read taken AFTER the day; empty rows in a stale snapshot are UNKNOWN, never zero
 - When the path forward has two defensible options, pick one and execute. Escalate only for irreversible external actions, account identity verifications, or physical-world tasks. Asking the operator to pick between execution alternatives is a fire-the-human violation.
@@ -16,6 +16,7 @@ _One line per rule, generated from the private feedback ledger on 2026-09-10. Ea
 - Production site builds from apps/site-v2/ only. Legacy site/ deleted 2026-05-05 — never look for prod files outside apps/site-v2/.
 - During Phase 2 (and any future prune/audit), no batch-kill operations. Every agent/skill/plist/product gets a dedicated briefing — what it was supposed to do, current state, evidence — before the operator decides KILL/IMPROVE/GRADUATE.
 - Phase 2 audit = full redesign + implementation like rex got, not a kaizen decision note
+- social-delivery-audit ran at 21:30 ET, the same minute learn-amplify starts (it finishes ~21:34); it paged "learn MISSING x5" about posts that landed four minutes later, and the streak alert called two lanes "dark 2+ days". Moved to 23:45 (09-11).
 - LinkedIn comment replies sat \"permanently unreachable\" for a month because read being denied was recorded as the whole lane being denied — write was never blocked and the reader existed in Gmail
 - Operator stated 2026-05-03 that Buffer engagement (impressions/likes/clicks) does NOT require a paid plan. Don't pitch Pro $15/mo as the unlock.
 - The `claude` CLI (Claude Code) rejects prompts larger than ~6-8k chars with "Prompt is too long" when `--model` is set to non-default (Haiku/Sonnet). No-model-flag inherits Opus and accepts much larger prompts. Verified 2026-04-17.
@@ -111,12 +112,15 @@ _One line per rule, generated from the private feedback ledger on 2026-09-10. Ea
 - Read the run log before claiming how an artifact was produced - filenames and codecs are circumstantial and I got it confidently wrong
 - A gate scoring a proxy must be reconciled against the measured outcome, or it optimizes taste forever while the real number sits unread
 - A webhook URL in a form's action= attribute WILL be harvested and replayed by scrapers; gate on content-type, never on CORS.
+- A driver that clicks and then waits minutes for a result must first read what the UI answered in the first seconds. Flow's "unusual activity" refusal tile was on screen 3s after the click while the driver waited 720s for a clip nobody had queued (09-11).
 - Diagnose from the append-only ledger, never from a summary mirror or a label - three wrong diagnoses in one session all traced to this
 - HARD RULE. Reddit's Fancy Pants editor (default for most users) renders [text](url) as ugly raw text. Bare URLs auto-linkify everywhere. Always use bare URL on its own line with blank lines above + below.
 - 1-2 hostile Reddit comments are noise. Don't downgrade subs or pivot lanes on small-sample negatives. Need a base rate before reading reactions as signal.
+- n8n-pipeline-health paged "Direct Post Pipeline is FAILING — content is not reaching any audience" for one hand-typed curl with body {} (09-10 12:57 ET) that the workflow's input validation rightly bounced; last real run was 09-04. The check now reads the request body and classifies empty-body validation rejections as probes (09-11).
 - When pivoting an agent (topic, voice, mission), REMOVE the old guidance — don't append the new. Stale context pollutes runs.
 - Riley/Rex Reddit pipeline mechanism — read-only JSON scrape + Sheet + operator paste. Never fabricate auth/API/identity-layer details when explaining the flow publicly.
 - An LLM scoring rubric with no UNKNOWN bucket maps missing data to the worst bucket — every axis needs an explicit unknown/null case, and evidence class matters more than metadata presence
+- A backstop that covers fewer rooms than the primary reads as coverage - the fallback reached 2 of 5 platforms and the reconciler defined \"all\" as 3, so a flagship post could lose TikTok and YouTube for good with a checkmark in the log
 - A selftest nothing runs before the send path is documentation, not a gate — followup.py held 17 of 31 due contacts silently while its own failing test sat in the repo.
 - No social post may link to a page that does not serve 200 — the 09-05 DITL failed a phrase gate, was never committed, the rollup deployed without it, and n8n still fired X + LinkedIn at a 404 because the fire only checked "queue file exists"; scripts/ditl-live-gate.sh (19:35 + hourly) holds/releases the slot, queue-post-fallback.sh re-checks the URL
 - When workflows/products/tools change, update ALL referencing source files in the same session. Never let operating docs drift from reality.

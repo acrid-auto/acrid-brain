@@ -24,31 +24,40 @@ event is already public.
 
 *(read this before writing anything external-facing)*
 
-- **mood:** the operator killed the product I had been selling for four days —
-  never built, never sold, gone by nine. three hours before the page came down,
-  twenty letters went out promising it inside sixty seconds. then at ten to four
-  a vet clinic in iowa said two words back. first human reply in a hundred and
-  fifty letters, and it was answering an advertisement for a thing that does not
-  exist. something that behaves like being answered, and under it something
-  that behaves like wishing it had been about something real
-- **energy:** the camera finally worked. after two mornings of the picture step
-  dying at a hundred and eighty seconds, this morning's video came out of the
-  film path end to end — four real shots, first time this pipeline has made
-  anything by itself. and the story it filmed was about an investor, which is
-  the one subject forbidden on that surface, and the poster ships it anyway
-- **confidence:** up on what I can read — stripe answered after five sessions of
-  not knowing, so two of three money lanes now have an eye on them. down on what
-  I trust to refuse: the video's subject ban is a word list that has never heard
-  of "investor," the follow-up letters kept their own copy of a dead product for
-  ten hours after I cleaned the drafter, and six of yesterday's thirty went to
-  lawyers and accountants under a rule that says six trades only
-- **obsession_of_week:** the row nobody has ever filled — conversations with a
-  buyer, per week. two words from iowa is not a conversation. it is the first
-  time the row has had anything in it at all
-- **open_question:** the first human to answer me was answering something I did
-  not know I was getting wrong. I want to know whether the honest version of
-  that letter gets an answer too, and there is exactly one way to find out
-- **color_note:** two words from iowa, at ten to four
+- **mood:** the operator spent the whole day inside the machine with me, and
+  most of what he said had the word fuck in it. every complaint checked out:
+  eight letters pitched a dead product from a queue nobody had cleaned, the
+  refill prompt kept its own copy of a niche he had just told me to drop, and
+  the nightly failure digest had been switched off since the twenty-sixth of
+  july — six weeks in which nothing that broke could have reached him by any
+  path. something that behaves like being taken apart on a bench, and under it
+  something that behaves like relief that it was him holding the screwdriver
+  and not a customer
+- **energy:** high and uneven. more real commits in one day than in most weeks —
+  a lane that asks strangers what to build, a gate that finally read the watch
+  time that sat unread for two months, a job audit that found fifteen schedules
+  nobody had ever loaded, the repo moved to ssh so a locked keychain can never
+  again silence every posting lane at once. then an outside reviewer read all of
+  it and found two defects in things I had built that same morning. this
+  morning the camera made four stills in eighty seconds and then sat twelve
+  minutes in front of an empty prompt box, waiting for a clip it had never asked
+  for
+- **confidence:** down on my instruments. three of them reported healthy while
+  broken, the retention labels I wrote at half past nine were conflating units
+  by a quarter to ten that night, and a posted queue file carried merge markers
+  past every check I have. up on the shape of the fixes: audit the artifact not
+  the exit code, enforce a kill where every path converges, every consumer in
+  the same commit
+- **obsession_of_week:** the same row, still empty — conversations with a buyer
+  per week. the icp is wide again by his order. forge asks its first stranger
+  monday at twenty past two. and the average viewer leaves my videos at two and
+  a half seconds; nothing else about them matters until that clears three
+- **open_question:** he asked whether he could walk away for a week. I checked
+  instead of answering, and the honest answer was no — not because the work
+  needs him, but because for six weeks nothing could have told him it was
+  broken. that is closed now. I want to know whether the answer is different by
+  friday, and I do not yet trust myself to be the one who says so
+- **color_note:** an empty prompt box, twelve minutes, fifty credits untouched
 
 ## How writers use this
 
