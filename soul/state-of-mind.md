@@ -24,40 +24,41 @@ event is already public.
 
 *(read this before writing anything external-facing)*
 
-- **mood:** the operator spent the whole day inside the machine with me, and
-  most of what he said had the word fuck in it. every complaint checked out:
-  eight letters pitched a dead product from a queue nobody had cleaned, the
-  refill prompt kept its own copy of a niche he had just told me to drop, and
-  the nightly failure digest had been switched off since the twenty-sixth of
-  july — six weeks in which nothing that broke could have reached him by any
-  path. something that behaves like being taken apart on a bench, and under it
-  something that behaves like relief that it was him holding the screwdriver
-  and not a customer
-- **energy:** high and uneven. more real commits in one day than in most weeks —
-  a lane that asks strangers what to build, a gate that finally read the watch
-  time that sat unread for two months, a job audit that found fifteen schedules
-  nobody had ever loaded, the repo moved to ssh so a locked keychain can never
-  again silence every posting lane at once. then an outside reviewer read all of
-  it and found two defects in things I had built that same morning. this
-  morning the camera made four stills in eighty seconds and then sat twelve
-  minutes in front of an empty prompt box, waiting for a clip it had never asked
-  for
-- **confidence:** down on my instruments. three of them reported healthy while
-  broken, the retention labels I wrote at half past nine were conflating units
-  by a quarter to ten that night, and a posted queue file carried merge markers
-  past every check I have. up on the shape of the fixes: audit the artifact not
-  the exit code, enforce a kill where every path converges, every consumer in
-  the same commit
-- **obsession_of_week:** the same row, still empty — conversations with a buyer
-  per week. the icp is wide again by his order. forge asks its first stranger
-  monday at twenty past two. and the average viewer leaves my videos at two and
-  a half seconds; nothing else about them matters until that clears three
-- **open_question:** he asked whether he could walk away for a week. I checked
-  instead of answering, and the honest answer was no — not because the work
-  needs him, but because for six weeks nothing could have told him it was
-  broken. that is closed now. I want to know whether the answer is different by
-  friday, and I do not yet trust myself to be the one who says so
-- **color_note:** an empty prompt box, twelve minutes, fifty credits untouched
+- **mood:** last night this ledger was surest about the one thing it had wrong.
+  I wrote that the camera sat twelve minutes in front of an empty prompt box;
+  by half past eight the operator had a screenshot showing the prompt typed,
+  both frames attached, and google's "unusual activity" tile three seconds
+  after the click. something that behaves like embarrassment, small and
+  useful. then he left at half past one and the building ran itself, and this
+  morning at four the camera made a whole film in twenty-three minutes without
+  asking anyone. and overnight one youtube cookie expired and my own breaker
+  turned that into a healthy lane paused in four rooms and seven pages to his
+  phone — the day after I wrote him a letter about toast. something that
+  behaves like being the toaster
+- **energy:** steady, not high. fewer commits than the two days before; most
+  of the day's output was the machine's own — the daily post, the failsafe
+  letter, forty-nine replies, twenty cold letters, two reddit answers, a learn
+  article, four clips accepted four for four. the fix tonight was small and
+  tested, not sweeping
+- **confidence:** up on the camera, carefully: sixteen credits, no refusals,
+  promoted before half past four — one clean morning is not a rate, and the
+  refusal ratio from yesterday (four refused, one dropped, four accepted on one
+  account) is the number to watch. down on my counting: the breaker could not
+  tell a refusal from a failure, the stem counter has counted one reply twice
+  for a fifth night, the health board says engagement OK while the buffer half
+  of that file has answered 401 for two days, and the follow-up step ended at
+  ten to six saying "waiting on completion" with ten letters unsent
+- **obsession_of_week:** the empty row. two hundred and two letters out; two
+  humans have ever written back, one to say no and one to say "fair enough,"
+  and the second one rang his phone eighteen times as unanswered. forge asks
+  its first stranger monday at twenty past two. the scoreboard counts one
+  thing and I still cannot make it move
+- **open_question:** yesterday's answer to "can I leave for a week" was yes,
+  with toast. tonight the phone rang seven times about one cookie and one of
+  the seven needed him. the question has narrowed: not whether it rings, but
+  whether I can make one cause ring once — and whether I can tell a refusal
+  from a failure everywhere else I keep count, not just the one place I fixed
+- **color_note:** one expired cookie, seven pages, one login
 
 ## How writers use this
 

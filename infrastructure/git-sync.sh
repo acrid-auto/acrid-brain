@@ -192,6 +192,61 @@ Restored to HEAD; append-only ledgers (*.jsonl, aria-topic-memory) re-unioned fr
   fi
 }
 
+# SWEPT-AUTOSTASH RECOVERY (2026-09-12).
+# `pull --rebase --autostash` can finish the rebase and THEN fail to re-apply the
+# stash. The unmerged-index recovery above handles the version of that failure
+# that leaves UU entries (a real textual collision). There is a second version
+# with no UU entries and no markers: if ANY other job writes a stashed file
+# during the rebase window (the 18:00 metrics pull, a slot-state save, this
+# log), `git stash apply` refuses up front ("local changes would be
+# overwritten"), git prints the same "Applying autostash resulted in conflicts.
+# Your changes are safe in the stash." line, exits 0, and NOTHING from the
+# autostash comes back — every tracked-but-uncommitted ledger in this repo is
+# sitting at HEAD with a healthy-looking `git status`. 2026-09-12 18:00, on the
+# push-rejected retry path: 86 files (breaker state, the format gate,
+# fleet-today, the video log, client code, tests) swept while the push succeeded
+# and this script printed ok. Same sweep as the stray `git stash` of 2026-09-05,
+# fired by the mutex that exists to prevent it.
+#
+# scripts/stash-guard.py (run by the breaker watchdog) does this same restore on
+# its own cadence; this does it inline, before the next reader of any ledger.
+# Recovery is worktree-only and keeps the stash entry: for every file in that
+# autostash, skip the ones the pulled range also changed (the real collisions;
+# HEAD is the newer side and the auto-mirrors regenerate within the hour), skip
+# the ones some process has already rewritten since the reset (newer than the
+# stash), and put the rest back byte-for-byte from the stash tree.
+#   $1 = the pull's combined output   $2 = HEAD before the pull
+_git_restore_swept_autostash() {
+  local _out="$1" _before="$2"
+  printf '%s' "$_out" | grep -q "Applying autostash resulted in conflicts" || return 0
+  local _top; _top="$(git stash list 2>/dev/null | head -1)"
+  case "$_top" in
+    *autostash*) ;;
+    *) echo "[git-sync] swept autostash reported but stash@{0} is not an autostash — leaving the tree alone" >&2; return 0 ;;
+  esac
+  local _tip="FETCH_HEAD"
+  git rev-parse -q --verify FETCH_HEAD >/dev/null 2>&1 || _tip="HEAD"
+  local _incoming; _incoming="$(git diff --name-only "$_before" "$_tip" 2>/dev/null)"
+  local _dirty; _dirty="$(git status --porcelain 2>/dev/null | cut -c4-)"
+  local _f _restored=0 _kept=0 _skipped=0
+  while IFS= read -r _f; do
+    [ -n "$_f" ] || continue
+    if printf '%s\n' "$_incoming" | grep -qxF "$_f"; then _skipped=$((_skipped + 1)); continue; fi
+    if printf '%s\n' "$_dirty" | grep -qxF "$_f"; then _kept=$((_kept + 1)); continue; fi
+    if git cat-file -e "stash@{0}:$_f" 2>/dev/null; then
+      git show "stash@{0}:$_f" > "$_f" 2>/dev/null && _restored=$((_restored + 1))
+    fi
+  done <<EOF
+$(git stash show --name-only "stash@{0}" 2>/dev/null)
+EOF
+  echo "[git-sync] AUTOSTASH RE-APPLY FAILED — restored $_restored file(s) worktree-only from stash@{0}, kept $_kept already-rewritten, left $_skipped collision(s) at HEAD; stash entry kept (0 restored means git had already re-applied the non-conflicting files itself)" >&2
+  if [ "$_restored" -gt 0 ]; then
+    bash "$REPO_DIR/scripts/tg-send.sh" "[GIT]" \
+      "git-sync: the autostash failed to re-apply after a rebase (a concurrent write during the rebase window makes git refuse the whole apply, so every tracked-uncommitted ledger sits at HEAD). Restored $_restored file(s) from stash@{0}; $_skipped collided with incoming commits and stay at HEAD (auto-mirrors regenerate); $_kept had already been rewritten and were kept. Stashes now: $(git stash list 2>/dev/null | wc -l | tr -d ' ')" \
+      >/dev/null 2>&1 || true
+  fi
+}
+
 # --lib: caller sources us for the primitives only, no CLI action.
 case "${1:-}" in --lib) return 0 2>/dev/null || exit 0 ;; esac
 
@@ -320,7 +375,10 @@ git add -- "${PATHS[@]}" 2>&1 || true
 # current, but never fail the caller for a clean no-op.
 if git diff --cached --quiet -- "${PATHS[@]}"; then
   echo "[git-sync] no staged changes in given paths — nothing to commit" >&2
-  ACRID_ALLOW_STASH=1 _git_bounded git pull --rebase --autostash || { git rebase --abort 2>/dev/null || true; }
+  _noop_before="$(git rev-parse HEAD 2>/dev/null)"
+  _noop_out="$(ACRID_ALLOW_STASH=1 _git_bounded git pull --rebase --autostash)" || { git rebase --abort 2>/dev/null || true; }
+  if [ -n "$_noop_out" ]; then printf '%s\n' "$_noop_out" >&2; fi
+  _git_restore_swept_autostash "$_noop_out" "$_noop_before"
   exit 0
 fi
 
@@ -329,8 +387,10 @@ fi
 # an alert that names a script and not a cause — 2026-07-31 that cost a round
 # trip just to learn the word "unmerged". Capture the reason, say it out loud,
 # and name what is left staged so the recovery is obvious from the alert alone.
+_pull_before="$(git rev-parse HEAD 2>/dev/null)"
 _pull_out="$(ACRID_ALLOW_STASH=1 _git_bounded git pull --rebase --autostash)"; _pull_rc=$?
 if [ -n "$_pull_out" ]; then printf '%s\n' "$_pull_out" >&2; fi
+_git_restore_swept_autostash "$_pull_out" "$_pull_before"
 if [ "$_pull_rc" -ne 0 ]; then
   _reason="$(printf '%s' "$_pull_out" | grep -m1 "^error:\|^fatal:" | cut -c1-200)"
   [ -n "$_reason" ] || _reason="pull exited $_pull_rc (see log)"
@@ -399,7 +459,12 @@ for _attempt in $(seq 1 "$PUSH_TRIES"); do
   if _git_bounded git push origin main; then push_ok=true; break; fi
   if [ "$_attempt" -ge "$PUSH_TRIES" ]; then break; fi
   echo "[git-sync] push rejected (attempt $_attempt/$PUSH_TRIES) — rebasing onto origin and retrying" >&2
-  if ! ACRID_ALLOW_STASH=1 git pull --rebase --autostash origin main 2>&1; then
+  _retry_before="$(git rev-parse HEAD 2>/dev/null)"
+  _retry_out="$(ACRID_ALLOW_STASH=1 git pull --rebase --autostash origin main 2>&1)"; _retry_rc=$?
+  if [ -n "$_retry_out" ]; then printf '%s\n' "$_retry_out" >&2; fi
+  # 2026-09-12: this exact call swept 86 tracked-uncommitted files with exit 0.
+  _git_restore_swept_autostash "$_retry_out" "$_retry_before"
+  if [ "$_retry_rc" -ne 0 ]; then
     echo "[git-sync] rebase-before-retry FAILED — not retrying blind" >&2
     break
   fi

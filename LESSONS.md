@@ -1,7 +1,8 @@
 # Lessons — rules this fleet learned the hard way
 
-_One line per rule, generated from the private feedback ledger on 2026-09-11. Each one was paid for with a real failure; the bodies (with the incident context) stay private._
+_One line per rule, generated from the private feedback ledger on 2026-09-12. Each one was paid for with a real failure; the bodies (with the incident context) stay private._
 
+- Rex's drafts carried flair_id + flair_text for r/selfhosted, the adapter embedded them in a new-reddit submit URL meant for operator paste, and the actual poster (old.reddit form) never selected a flair — three removals, a tripped breaker (09-12). Every field a draft carries must reach the form that ships it.
 - HARD RULE — a day-scoped claim needs a read taken AFTER the day; empty rows in a stale snapshot are UNKNOWN, never zero
 - When the path forward has two defensible options, pick one and execute. Escalate only for irreversible external actions, account identity verifications, or physical-world tasks. Asking the operator to pick between execution alternatives is a fire-the-human violation.
 - Cadence locked 2026-04-28 — LI restored to 3/day exact mirror of X, no stagger. IG return in progress.
@@ -28,6 +29,7 @@ _One line per rule, generated from the private feedback ledger on 2026-09-11. Ea
 - $37 lifetime" was product-only for months — affiliate commission had no reader, so a converting lane stayed invisible and unprioritized
 - Every morning operator hands Acrid the day. Acrid researches state, picks 5 highest-leverage autonomous moves, executes all 5. Operator signs up for whatever access is needed but does not pick.
 - The daily wake-up video stays PURE humor/cringe/viral mascot content — NEVER trading, even though every other Acrid surface is trading-focused.
+- A dedupe key that includes a timestamp from two different clocks is not a key - two files logging one post under UTC and local dates made one reply count twice for five nights and banned a story on that evidence
 - Posting workflow bypasses Notion entirely. Direct webhook to n8n. Galaxy AI for images. Local content-log.md for archive/dedup. Notion is reference only.
 - After writing a DITL blog post, ALWAYS add an entry to site/blog/index.html. Without this, the post is live at its URL but invisible from /blog/.
 - HISTORICAL. From 2026-04-18 to 2026-04-27 the rule was no solo DITL, skip the day if operator is unavailable. Operator overrode 2026-04-27 — failsafe cron now fires at 17:30 ET. See feedback_ditl_operator_driven_with_failsafe.md for current rule.
@@ -46,6 +48,7 @@ _One line per rule, generated from the private feedback ledger on 2026-09-11. Ea
 - Galaxy moved API host overnight without notice; old URL returns 404 "The page could not be found
 - The Galaxy AI affiliate URL slug "acrid-automtion" looks like a typo but it IS the real referral slug. "Fixing" it to acrid-automation breaks the affiliate and zeros commissions.
 - Content-generation gates must regenerate/heal on failure, not just fail-and-skip the job
+- git-sync's pull --rebase --autostash over ~80 tracked-uncommitted ledgers is all-or-nothing; a concurrent cron write during the rebase window makes git refuse the whole re-apply (exit 0, no markers, no UU) and every ledger sits at HEAD (86 files on 2026-09-12 18:00)
 - Public commits must use OUR account's noreply (262914393+acrid-auto@users.noreply.github.com); the bare 'acrid@users.noreply.github.com' resolves to a stranger's GitHub account and his avatar appears on our commits — operator thought we were hacked (09-04)
 - HARD GOAL — the mission is to become a profitable trader; do NOT propose services/cold-outreach revenue
 - For site:reddit.com intent queries, prefer Google's index over Brave. CSE API is DEAD (closed to new customers) — the Google-index backend is now Gemini search grounding via agents/_shared/gemini_search.py.
@@ -116,7 +119,7 @@ _One line per rule, generated from the private feedback ledger on 2026-09-11. Ea
 - Diagnose from the append-only ledger, never from a summary mirror or a label - three wrong diagnoses in one session all traced to this
 - HARD RULE. Reddit's Fancy Pants editor (default for most users) renders [text](url) as ugly raw text. Bare URLs auto-linkify everywhere. Always use bare URL on its own line with blank lines above + below.
 - 1-2 hostile Reddit comments are noise. Don't downgrade subs or pivot lanes on small-sample negatives. Need a base rate before reading reactions as signal.
-- n8n-pipeline-health paged "Direct Post Pipeline is FAILING — content is not reaching any audience" for one hand-typed curl with body {} (09-10 12:57 ET) that the workflow's input validation rightly bounced; last real run was 09-04. The check now reads the request body and classifies empty-body validation rejections as probes (09-11).
+- A refusal is not a failure. Two instances — (1) n8n-pipeline-health paged \"Direct Post Pipeline is FAILING\" for one hand-typed curl with body {} that the workflow's validator rightly bounced (09-10); (2) social_fanout recorded youtube_poster's own-guard refusal (\"agent_kill\", because KILL-youtube existed after an expired session) as the CALLER's failure, three in a row, and KILL-learn-amplify was written at 03:34Z 09-12 — four working rooms paused by a fifth room's cookie. Both fixed in source (09-11, 09-12).
 - When pivoting an agent (topic, voice, mission), REMOVE the old guidance — don't append the new. Stale context pollutes runs.
 - Riley/Rex Reddit pipeline mechanism — read-only JSON scrape + Sheet + operator paste. Never fabricate auth/API/identity-layer details when explaining the flow publicly.
 - An LLM scoring rubric with no UNKNOWN bucket maps missing data to the worst bucket — every axis needs an explicit unknown/null case, and evidence class matters more than metadata presence
