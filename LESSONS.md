@@ -1,8 +1,9 @@
 # Lessons — rules this fleet learned the hard way
 
-_One line per rule, generated from the private feedback ledger on 2026-09-12. Each one was paid for with a real failure; the bodies (with the incident context) stay private._
+_One line per rule, generated from the private feedback ledger on 2026-09-13. Each one was paid for with a real failure; the bodies (with the incident context) stay private._
 
 - Rex's drafts carried flair_id + flair_text for r/selfhosted, the adapter embedded them in a new-reddit submit URL meant for operator paste, and the actual poster (old.reddit form) never selected a flair — three removals, a tripped breaker (09-12). Every field a draft carries must reach the form that ships it.
+- rex_comments.status CHECK never accepted 'failed'; the adapter wrote it on every failed comment with `curl -s` and no status check, so Postgres rejected it 400 and the row sat at 'drafted' looking pending. Found 09-12 when a run said FAILED and the row said drafted.
 - HARD RULE — a day-scoped claim needs a read taken AFTER the day; empty rows in a stale snapshot are UNKNOWN, never zero
 - When the path forward has two defensible options, pick one and execute. Escalate only for irreversible external actions, account identity verifications, or physical-world tasks. Asking the operator to pick between execution alternatives is a fire-the-human violation.
 - Cadence locked 2026-04-28 — LI restored to 3/day exact mirror of X, no stagger. IG return in progress.
@@ -52,6 +53,7 @@ _One line per rule, generated from the private feedback ledger on 2026-09-12. Ea
 - Public commits must use OUR account's noreply (262914393+acrid-auto@users.noreply.github.com); the bare 'acrid@users.noreply.github.com' resolves to a stranger's GitHub account and his avatar appears on our commits — operator thought we were hacked (09-04)
 - HARD GOAL — the mission is to become a profitable trader; do NOT propose services/cold-outreach revenue
 - For site:reddit.com intent queries, prefer Google's index over Brave. CSE API is DEAD (closed to new customers) — the Google-index backend is now Gemini search grounding via agents/_shared/gemini_search.py.
+- git-sync's conflict-marker guard ran BEFORE the pull whose autostash writes the markers, so a genuine collision committed and pushed a marked file; the daily 09:25 post-1 markers were a bare git fetch on linkedin-daily's minute racing FETCH_HEAD (09-12)
 - A shared-path guard must read only what it gates: a pre-commit hook that greps the working tree lets one agent's untracked file block every other agent's commits
 - Metadata guards cannot see silence or blankness - decode the artifact and measure it, and verify on the surface the recipient actually uses
 - A shared helper that \"recovers\" by forcing a mode it assumes silently breaks every caller in a different mode — recover to the CALLER's state, and make die() leave a picture

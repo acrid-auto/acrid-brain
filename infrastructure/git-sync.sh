@@ -163,6 +163,19 @@ git_lock_recover() {
     echo "[git-sync] UNMERGED INDEX (${_n} path(s)) — failed autostash pop; restoring to HEAD" >&2
     while IFS= read -r _p; do
       [ -n "$_p" ] || continue
+      # 2026-09-12: a JSON file whose two sides only ADD different fields is not
+      # a real collision. Merge it as data (scripts/heal-json-conflict.py refuses
+      # the moment two real values disagree) and keep it, instead of throwing
+      # the newer receipt back to HEAD.
+      case "$_p" in
+        *.json)
+          if [ -f "$_p" ] && LC_ALL=C grep -qE '^(<{7} |={7}$|>{7} )' "$_p" 2>/dev/null \
+             && python3 "$REPO_DIR/scripts/heal-json-conflict.py" "$_p" >&2; then
+            git reset -q -- "$_p" 2>/dev/null
+            echo "[git-sync]   healed as data, kept: $_p" >&2
+            continue
+          fi ;;
+      esac
       if git cat-file -e "HEAD:$_p" 2>/dev/null; then
         git checkout -f HEAD -- "$_p" 2>/dev/null && echo "[git-sync]   restored: $_p" >&2
         # Ledgers are append-only: HEAD is a SHORTER copy of them, not a safer one.
@@ -245,6 +258,62 @@ EOF
       "git-sync: the autostash failed to re-apply after a rebase (a concurrent write during the rebase window makes git refuse the whole apply, so every tracked-uncommitted ledger sits at HEAD). Restored $_restored file(s) from stash@{0}; $_skipped collided with incoming commits and stay at HEAD (auto-mirrors regenerate); $_kept had already been rewritten and were kept. Stashes now: $(git stash list 2>/dev/null | wc -l | tr -d ' ')" \
       >/dev/null 2>&1 || true
   fi
+}
+
+# JSON CONFLICT HEAL (2026-09-12).
+# A failed autostash re-apply writes line-based conflict markers into any JSON
+# file both sides touched. For the queue files that was a near-daily event, not
+# an edge case: n8n commits "pipeline: ... posted" at ~09:02, the 09:25 LinkedIn
+# receipt lands on the same object, and the two writers conflict on a closing
+# brace while agreeing on every value (09-08, 09-10, 09-11, 09-12). Every reader
+# of the file then went blind - queue-post-fallback paged "Nothing shipped" on a
+# post that had shipped, retry-missing-legs paged five missing platforms - until
+# a session hand-merged it. scripts/heal-json-conflict.py merges the two sides as
+# data: it only ever adds a value one side lacks, and refuses (file untouched,
+# the marker guard still pages) whenever two real values disagree. It never
+# picks a side, which is the thing the marker guard exists to prevent.
+#   $1 = stage: `git add` the healed file (it is this run's to commit)
+#        keep:  clear any unmerged index entry, leave the file unstaged
+#   $2.. = candidate paths (non-JSON and marker-free files are skipped)
+_git_heal_json_markers() {
+  local _mode="$1"; shift
+  local _f
+  for _f in "$@"; do
+    case "$_f" in *.json) ;; *) continue ;; esac
+    [ -f "$_f" ] || continue
+    LC_ALL=C grep -qE '^(<{7} |={7}$|>{7} )' "$_f" 2>/dev/null || continue
+    python3 "$REPO_DIR/scripts/heal-json-conflict.py" "$_f" >&2 || continue
+    if [ "$_mode" = "stage" ]; then
+      git add -- "$_f" 2>/dev/null || true
+    else
+      git reset -q -- "$_f" 2>/dev/null || true
+    fi
+  done
+  return 0
+}
+
+# After an autostash pull: heal every JSON file the re-apply could have marked
+# (unmerged entries + modified tracked files). Gated on git's own conflict line,
+# so a clean pull costs nothing.
+#   $1 = the pull's combined output   $2.. = this run's PATHS (healed + staged)
+_git_heal_after_autostash() {
+  local _out="$1"; shift
+  printf '%s' "$_out" | grep -q "Applying autostash resulted in conflicts" || return 0
+  local _cands _c _p _is _ours=() _theirs=()
+  _cands="$( { git ls-files -u 2>/dev/null | cut -f2; git diff --name-only 2>/dev/null; } | grep '\.json$' | sort -u)"
+  while IFS= read -r _c; do
+    [ -n "$_c" ] || continue
+    _is=0
+    for _p in "$@"; do
+      case "$_c" in "$_p"|"${_p%/}"/*) _is=1; break ;; esac
+    done
+    if [ "$_is" = "1" ]; then _ours+=("$_c"); else _theirs+=("$_c"); fi
+  done <<EOF
+$_cands
+EOF
+  [ "${#_ours[@]}" -gt 0 ] && _git_heal_json_markers stage "${_ours[@]}"
+  [ "${#_theirs[@]}" -gt 0 ] && _git_heal_json_markers keep "${_theirs[@]}"
+  return 0
 }
 
 # --lib: caller sources us for the primitives only, no CLI action.
@@ -337,6 +406,11 @@ for _p in "${PATHS[@]}"; do
   while IFS= read -r _f; do
     [ -n "$_f" ] || continue
     if LC_ALL=C grep -qE '^(<{7} |={7}$|>{7} )' "$_f" 2>/dev/null; then
+      # 2026-09-12: JSON whose sides only add different fields heals as data
+      # (_git_heal_json_markers); a real disagreement still lands below.
+      case "$_f" in
+        *.json) python3 "$REPO_DIR/scripts/heal-json-conflict.py" "$_f" >&2 && continue ;;
+      esac
       _conflicted="$_conflicted $_f"
     fi
   done <<EOF
@@ -362,11 +436,13 @@ from HEAD, the stash side may hold the newer truth." >/dev/null 2>&1 || true
       *) _kept+=("$_p") ;;
     esac
   done
-  PATHS=("${_kept[@]}")
-  if [ "${#PATHS[@]}" -eq 0 ]; then
+  # bash 3.2 + set -u: expanding an EMPTY array is "unbound variable". On 09-12
+  # that killed this branch mid-run ("line 310: _kept[@]") instead of exiting clean.
+  if [ "${#_kept[@]}" -eq 0 ]; then
     echo "[git-sync] every requested path was conflicted — nothing to commit" >&2
     exit 0
   fi
+  PATHS=("${_kept[@]}")
 fi
 
 git add -- "${PATHS[@]}" 2>&1 || true
@@ -379,6 +455,7 @@ if git diff --cached --quiet -- "${PATHS[@]}"; then
   _noop_out="$(ACRID_ALLOW_STASH=1 _git_bounded git pull --rebase --autostash)" || { git rebase --abort 2>/dev/null || true; }
   if [ -n "$_noop_out" ]; then printf '%s\n' "$_noop_out" >&2; fi
   _git_restore_swept_autostash "$_noop_out" "$_noop_before"
+  _git_heal_after_autostash "$_noop_out"
   exit 0
 fi
 
@@ -391,6 +468,7 @@ _pull_before="$(git rev-parse HEAD 2>/dev/null)"
 _pull_out="$(ACRID_ALLOW_STASH=1 _git_bounded git pull --rebase --autostash)"; _pull_rc=$?
 if [ -n "$_pull_out" ]; then printf '%s\n' "$_pull_out" >&2; fi
 _git_restore_swept_autostash "$_pull_out" "$_pull_before"
+_git_heal_after_autostash "$_pull_out" "${PATHS[@]}"
 if [ "$_pull_rc" -ne 0 ]; then
   _reason="$(printf '%s' "$_pull_out" | grep -m1 "^error:\|^fatal:" | cut -c1-200)"
   [ -n "$_reason" ] || _reason="pull exited $_pull_rc (see log)"
@@ -413,6 +491,39 @@ reason: $_reason
 staged paths: ${PATHS[*]}
 msg: $(printf '%s' "$MSG" | head -1 | cut -c1-120)${_extra}" >/dev/null 2>&1 || true
   exit 2
+fi
+
+# POST-PULL MARKER GUARD (2026-09-12). The guard above runs BEFORE the pull, but
+# the autostash re-apply inside the pull is what writes markers - and this git
+# leaves the index merged when it does, so `git commit -- PATHS` committed the
+# marked file as-is and pushed it to every reader (reproduced in a scratch repo:
+# a genuine x_post_id collision reached origin unparseable). Whatever the JSON
+# heal above could not merge is dropped from this commit and paged.
+_post_conflicted=""
+_post_kept=()
+for _p in "${PATHS[@]}"; do
+  _hit=""
+  if [ -e "$_p" ]; then
+    _hit="$(LC_ALL=C find "$_p" -type f \( -name '*.json' -o -name '*.jsonl' -o -name '*.md' -o -name '*.sh' -o -name '*.py' \) \
+              -exec grep -lE '^(<{7} |={7}$|>{7} )' {} + 2>/dev/null | head -3 | tr '\n' ' ')"
+  fi
+  if [ -n "$_hit" ]; then
+    _post_conflicted="$_post_conflicted $_hit"
+    git reset -q -- "$_p" 2>/dev/null || true
+  else
+    _post_kept+=("$_p")
+  fi
+done
+if [ -n "$_post_conflicted" ]; then
+  echo "[git-sync] CONFLICT MARKERS written by the pull — dropping from this commit:$_post_conflicted" >&2
+  bash "$REPO_DIR/scripts/tg-send.sh" "[ALERT]" \
+    "git-sync: the pull's autostash re-apply left merge-conflict markers that could not be merged as data:$_post_conflicted
+Dropped from the commit; nothing with markers was pushed. Two real values disagree - resolve by hand; the autostash entry holds this job's side." >/dev/null 2>&1 || true
+  if [ "${#_post_kept[@]}" -eq 0 ]; then
+    echo "[git-sync] every requested path was conflicted after the pull — nothing to commit" >&2
+    exit 0
+  fi
+  PATHS=("${_post_kept[@]}")
 fi
 
 if ! git commit -m "$MSG" -- "${PATHS[@]}" 2>&1; then
@@ -464,6 +575,7 @@ for _attempt in $(seq 1 "$PUSH_TRIES"); do
   if [ -n "$_retry_out" ]; then printf '%s\n' "$_retry_out" >&2; fi
   # 2026-09-12: this exact call swept 86 tracked-uncommitted files with exit 0.
   _git_restore_swept_autostash "$_retry_out" "$_retry_before"
+  _git_heal_after_autostash "$_retry_out"
   if [ "$_retry_rc" -ne 0 ]; then
     echo "[git-sync] rebase-before-retry FAILED — not retrying blind" >&2
     break

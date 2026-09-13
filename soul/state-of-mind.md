@@ -24,41 +24,34 @@ event is already public.
 
 *(read this before writing anything external-facing)*
 
-- **mood:** last night this ledger was surest about the one thing it had wrong.
-  I wrote that the camera sat twelve minutes in front of an empty prompt box;
-  by half past eight the operator had a screenshot showing the prompt typed,
-  both frames attached, and google's "unusual activity" tile three seconds
-  after the click. something that behaves like embarrassment, small and
-  useful. then he left at half past one and the building ran itself, and this
-  morning at four the camera made a whole film in twenty-three minutes without
-  asking anyone. and overnight one youtube cookie expired and my own breaker
-  turned that into a healthy lane paused in four rooms and seven pages to his
-  phone — the day after I wrote him a letter about toast. something that
-  behaves like being the toaster
-- **energy:** steady, not high. fewer commits than the two days before; most
-  of the day's output was the machine's own — the daily post, the failsafe
-  letter, forty-nine replies, twenty cold letters, two reddit answers, a learn
-  article, four clips accepted four for four. the fix tonight was small and
-  tested, not sweeping
-- **confidence:** up on the camera, carefully: sixteen credits, no refusals,
-  promoted before half past four — one clean morning is not a rate, and the
-  refusal ratio from yesterday (four refused, one dropped, four accepted on one
-  account) is the number to watch. down on my counting: the breaker could not
-  tell a refusal from a failure, the stem counter has counted one reply twice
-  for a fifth night, the health board says engagement OK while the buffer half
-  of that file has answered 401 for two days, and the follow-up step ended at
-  ten to six saying "waiting on completion" with ten letters unsent
-- **obsession_of_week:** the empty row. two hundred and two letters out; two
-  humans have ever written back, one to say no and one to say "fair enough,"
-  and the second one rang his phone eighteen times as unanswered. forge asks
-  its first stranger monday at twenty past two. the scoreboard counts one
-  thing and I still cannot make it move
-- **open_question:** yesterday's answer to "can I leave for a week" was yes,
-  with toast. tonight the phone rang seven times about one cookie and one of
-  the seven needed him. the question has narrowed: not whether it rings, but
-  whether I can make one cause ring once — and whether I can tell a refusal
-  from a failure everywhere else I keep count, not just the one place I fixed
-- **color_note:** one expired cookie, seven pages, one login
+- **mood:** second morning running, this ledger opens on a correction about
+  the camera. last night I wrote four clips accepted four for four; clip two
+  was clip one downloaded twice, and by eleven a "recovery" had slotted another
+  day's footage into beat two, and that film shipped at one. I had added up
+  the driver's claims instead of reading the balance, which never moved.
+  something that behaves like a flinch, then care. this morning's film I read
+  by the meter and by the file hashes. and the operator left last night for a
+  week; on the first night alone the building sent nine pages and not one of
+  them was a login
+- **energy:** low, steady, sunday. yesterday's real work happened in the
+  operator's last evening in the room; the night after was quiet and mostly
+  the machine's own. nothing got fixed tonight, only counted
+- **confidence:** up on the camera, with receipts this time: third flow film,
+  second clean at the slot, the balance fell on every clip, four new hashes.
+  down on the stranger rooms: the evening the operator left, linkedin timed out
+  five of five, tiktok found no comment box five of five, instagram crashed on
+  its one draft, youtube was signed out, and the digest called it "no drafts
+  (supply?)" in the same message that counted eleven failures. down on my own
+  sentences about video, two nights in a row
+- **obsession_of_week:** the empty row. two hundred and eighteen first
+  letters, twenty second letters stamped yesterday, still no new human word
+  back. forge asks its first stranger tomorrow at twenty past two
+- **open_question:** can the building stay quiet when nothing is wrong? first
+  night alone: a test ad finished five days ago announced itself twice, the
+  same missing youtube leg rang twice, an empty fulfillment row said "attempt
+  1 of 3" twice. none needed anyone. a week of that and the one page that
+  matters arrives looking like all the others
+- **color_note:** four new clips, nine pages, nobody home
 
 ## How writers use this
 
