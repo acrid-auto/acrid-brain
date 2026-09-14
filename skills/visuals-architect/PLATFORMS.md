@@ -221,7 +221,7 @@ odd words. If it misspells, tighten wording and re-run — small tweaks fix it.
 | Roast / quote cards with text | Nano Banana Pro → fallback GPT Image | text fidelity |
 | Cut-outs / overlays for video | GPT Image (transparent RGBA) | only one that does clean alpha on request |
 | Volume social images when Flow is rate-limited | GPT Image | second free lane |
-| Anything unattended in cron today | Magica API (generate-images.sh) | the browser paths need the saved profile; keep Magica as fallback until the Flow path is proven for 7 nights |
+| Anything unattended in cron today | `scripts/generate-images.sh` — Magica → Flow → ChatGPT → metered Gemini, automatic (2026-09-14) | Flow stills have run nightly in the daily-video lane since 09-07; ChatGPT verified 09-14. A browser-made image comes back as a `file://` path, not an https URL |
 
 Budget the 3 Gemini-app video generations/day: 1 for the reaction clip, 1 for a retry, 1 held
 for a same-day news hit; Flow's 50 free daily credits (≈8 clips at 360p/8s) are the overflow. Never spend one before the still is approved. Measured 09-05: Flow image

@@ -343,6 +343,13 @@ if __name__ == "__main__":
                 timeout=180, check=False)
     except Exception as _e:
         print(f"[breaker-watchdog] stash-guard rider failed: {_e}", file=sys.stderr)
+    # 2026-09-14: meter-watchdog rides too (capability #19) — Magica went negative in the
+    # middle of the daily video's fallback render at 04:17 with nothing reading the balance.
+    try:
+        _sp.run([sys.executable, str(_P(__file__).resolve().parent / "meter-watchdog.py")],
+                timeout=240, check=False)
+    except Exception as _e:
+        print(f"[breaker-watchdog] meter-watchdog rider failed: {_e}", file=sys.stderr)
     if "--selftest" in sys.argv:
         sys.exit(_selftest())
     try:
