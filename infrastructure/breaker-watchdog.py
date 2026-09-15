@@ -346,8 +346,9 @@ if __name__ == "__main__":
     # 2026-09-14: meter-watchdog rides too (capability #19) — Magica went negative in the
     # middle of the daily video's fallback render at 04:17 with nothing reading the balance.
     try:
+        # 360 s: one secrets-loader pass (~2 min on the Keychain) + three balance reads.
         _sp.run([sys.executable, str(_P(__file__).resolve().parent / "meter-watchdog.py")],
-                timeout=240, check=False)
+                timeout=360, check=False)
     except Exception as _e:
         print(f"[breaker-watchdog] meter-watchdog rider failed: {_e}", file=sys.stderr)
     if "--selftest" in sys.argv:

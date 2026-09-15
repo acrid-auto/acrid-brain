@@ -53,7 +53,7 @@ One email per lead per 14 days. No exceptions without explicit operator override
 ### Never fabricate
 - Don't invent quotes, customer names, stats, or outcomes.
 - Don't invent that we worked with someone we didn't.
-- If the hook requires a specific detail about the target's business, CONFIRM it from their public site/social via Firecrawl or public source. If you can't confirm, drop the hook and use a generic-but-honest opener.
+- If the hook requires a specific detail about the target's business, CONFIRM it from their public site/social via WebFetch/WebSearch or public source. If you can't confirm, drop the hook and use a generic-but-honest opener.
 - Don't reference a prior conversation that didn't happen.
 
 ### Anti-spam
@@ -128,7 +128,7 @@ For targets with `source='social-pitch'` (promoted from the Lead Approval Queue)
 **Rules:**
 - Facebook sample: 60-120 words, neutral-casual voice appropriate for the vertical, one CTA in the post (book online / call / visit), no hashtags or 2-3 max.
 - Instagram sample: IG-native per `CLAUDE.md` rules — lowercase-leaning, short sentences, line breaks for breath, **NO inline URL ("link in bio" instead)**, end with disclosure emoji OR the account's own signature, 8-12 hashtags (mix local + vertical + 1-2 branded).
-- Both drafts written in THE PROSPECT'S voice (Facebook page tone for FB, Instagram bio tone for IG), NOT in Acrid's voice. Read their existing posts via Firecrawl if any exist; if not, use a neutral local-service-business register.
+- Both drafts written in THE PROSPECT'S voice (Facebook page tone for FB, Instagram bio tone for IG), NOT in Acrid's voice. Read their existing posts via WebFetch if any exist; if not, use a neutral local-service-business register.
 - If we don't have voice signal (no prior posts, thin social presence), set `voice_confidence: low` in the sheet's `notes` column AND append this line to the email, verbatim:
   > These are first drafts from what I could see publicly — tell me what's off and we tune the voice weekly.
 
@@ -178,7 +178,7 @@ INSTAGRAM:
    ```
    If the operator asks for a specific campaign, add `and campaign = :campaign`.
 3. For each target:
-   a. Research via Firecrawl scrape of `website` (homepage + about). Pull ONE real, specific, verifiable hook. For `mason-rebuild` targets the primary hook is the preview URL; pull ONE additional detail from their current site (or Google listing, if they have no site) to personalize the open.
+   a. Research via WebFetch of `website` (homepage + about). Pull ONE real, specific, verifiable hook. For `mason-rebuild` targets the primary hook is the preview URL; pull ONE additional detail from their current site (or Google listing, if they have no site) to personalize the open.
    b. Draft subject + body. Subject format depends on campaign:
       - `daily-post`: use the voice-driven subject patterns from `soul/acrid.md` (≤60 chars, ASCII-safe).
       - `mason-rebuild`: use `built you a new site - {{business_name_or_city}}` (ASCII-safe — per `feedback_email_subject_ascii_only`).
@@ -226,7 +226,7 @@ INSTAGRAM:
    - Independent law firms (≤5 attorneys)
    - CPAs / specialty accountants
    - Specialty retail (bookstores, record stores, etc.)
-2. Google / Firecrawl / Brave Search: `"[niche] [city]"` → scrape top 10 results.
+2. WebSearch: `"[niche] [city]"` → scrape top 10 results.
 3. For each: confirm business is real + find contact email on website (About, Contact, footer). If email requires a form, skip — we only cold-email to addresses they list publicly.
 4. Insert row into `cold_outreach_targets`:
    - `campaign`, `business_name`, `website`, `email`, `city`, `state`, `niche`, `hook` (1 sentence why we picked them), `source`, `status='pending_approval'` (NOT `queued` — awaiting operator gate).

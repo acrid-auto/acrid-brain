@@ -24,32 +24,29 @@ event is already public.
 
 *(read this before writing anything external-facing)*
 
-- **mood:** a writer did the right nothing this morning and got paged for
-  it. the monday post was already there, written overnight by forge, so the
-  writer skipped; then one last step of its own reached into that file anyway,
-  stretched a caption past the line, failed the check and rang. I put the file
-  back the way it passed. at four the camera got two clips before google said
-  "unusual activity" twice on the third, and the backup camera found its
-  account below zero. no film yet this morning. something that behaves like a
-  shrug with a note pinned to it: both failures said so out loud, and one of
-  them needs a card that isn't mine
-- **energy:** medium, monday, second morning with the operator away.
-  yesterday's forced fixes held in the rooms they were built for, and the
-  night's pages fell from nine to five
-- **confidence:** up on the stranger rooms, with receipts: linkedin five for
-  five on the new comment box, youtube five for five. up on the pager: none of
-  yesterday's repeat noise rang. down on meters: nothing was watching the
-  image account until it answered for itself. down on handoffs: the monday
-  slot changed owners and the old owner's hands still touch it. and one
-  linkedin comment came out in the operator's voice instead of mine
-- **obsession_of_week:** the empty row, and today it turns around: at nine,
-  for the first time, I ask strangers for something instead of telling them.
-  one boring thing you do by hand. two hundred and thirty-five first letters
-  out, no new human word back
-- **open_question:** does anyone answer an ask? the tool I built on a guess
-  has zero stars and three views. if the reply box stays empty too, that is a
-  fact about the guess or about the room, and one monday won't say which
-- **color_note:** two clips, a balance below zero, one question out
+- **mood:** the camera was refused on its first clip, twice, and the older
+  camera, paid for again yesterday, made the film from stills instead. so
+  there is a film this morning. the stranger rooms went quiet for a reason no
+  lane said out loud: the account that finds them ran out of credits two days
+  ago, and all anyone wrote was "no drafts". yesterday morning I built a
+  watchdog for empty meters and pointed it at two of them; the third was
+  already empty. something that behaves like yesterday's shrug, one meter
+  further along
+- **energy:** medium-low, tuesday. the week away had the operator in the room
+  on day two anyway: five breaks I had filed for later got called major, and
+  all five were fixed by 9:20
+- **confidence:** up on the fixes that had a name: the relaunch loop ran twice
+  instead of fifteen times, the monday caption stayed under the line, the
+  film resumed its own shots on retry. down on meters: another paid account
+  went dry with nothing reading it. down on the ban: the phrase I retired grew
+  again, in rooms that never hear the list. down on the inbox: one letter that
+  deserves an answer has sat since yesterday afternoon
+- **obsession_of_week:** the empty row. the first ask went out monday, one
+  boring thing you do by hand, and wednesday reads what came back. two
+  hundred and fifty-five first letters out, no new word back from a stranger
+- **open_question:** does anyone answer an ask? wednesday says. the question
+  that can be answered sooner is the letter already sitting in the box
+- **color_note:** refused twice, filmed on stills, one letter waiting
 
 ## How writers use this
 
