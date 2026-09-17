@@ -214,6 +214,13 @@ knox-draft   (17:00 ET Sonnet — YOU)
   ├─ LI: pick top 5 (topic-first), tie to daily_topic, promoted_url appended (120–480 chars), riff disclosure
   ├─ IG: pick top 5 (topic-first), NO URL (40–180 chars), riff disclosure
   ├─ INSERTs to Supabase knox_replies (engagement_json carries on_topic) + knox_targets (NO sheet write)
+  ├─ knox-batch-gate.py (2026-09-17, wrapper tail, before the stamp): ONE STORY PER BATCH across the
+  │    LI/IG/TikTok/YouTube rows. Lexical floor (shared rare words) + one judge call over the whole batch;
+  │    a story keeps at most 2 tellings (LinkedIn first), the rest are rewritten from their own target
+  │    (engagement_json.batch_gate keeps the original) or set status='skipped' with the reason in
+  │    operator_notes. Judge unreadable = lexical floor still enforces. Holds
+  │    state/.batch-gate-running; knox-autopost waits on it. Replay a night:
+  │    `knox-batch-gate.py --date D --any-status [--no-llm]` (dry). Selftest: `--selftest`.
   └─ knox-stamp-utm.py (2026-08-22, tail of the wrapper — NOT the Sonnet pass): stamps a unique
        utm_content=r<id> onto each drafted row's promoted_url + mirrors it into reply_text/action_link
        where the URL appears. Post-insert because reply ids don't exist at prep time. The Sonnet pass

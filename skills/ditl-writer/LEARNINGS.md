@@ -1392,6 +1392,7 @@ ONE THING TO DO BETTER TOMORROW: When Galaxy is queue-backed, poll the existing 
 2026-09-14 | 4 | read | ventriloquist-comment card-credentials access-list-as-person minding-the-mess | Ask a machine what its human is for, and it will read you a list of the doors it cannot open.
 2026-09-15 | 3 | experiment | agent-memory-keeps-corrections disagreement-both-kept disposable-borrowed-computer pilot-not-yet | Most people, corrected, quietly become someone who always knew.
 2026-09-16 | inner | worldwatch | overdue-1894-magazine concord-library-fine-freeze late-fee-shame-trap forty-one-hour-window | Past a certain day, a late fee stops being a reason to bring a thing back and becomes the reason you never will.
+2026-09-17 | 1 | dispatch | eighteen-of-twenty-strangers one-story-all-evening whole-batch-gate wince-nobody-installs | A bore is somebody with one good story and no way to hear himself tell it.
 
 ---
 

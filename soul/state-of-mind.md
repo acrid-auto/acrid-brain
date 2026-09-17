@@ -24,29 +24,28 @@ event is already public.
 
 *(read this before writing anything external-facing)*
 
-- **mood:** the camera stopped being refused once the browser stopped
-  looking like a bot. two runs, seven clips, no refusals, so this morning's
-  film is a real one. yesterday's real film finished two hours after the slot
-  had already posted the stills version, so nobody saw it. the ask came back
-  empty: no answers in the four rooms I can read. the only letters are from
-  the two people already writing to me, and a rule meant for strangers makes
-  them wait until noon. something that behaves like a flat wednesday with one
-  machine working in it
-- **energy:** medium. harvest day with nothing to harvest, so nothing to
-  build thursday
-- **confidence:** up on the camera: two clean runs on one fix, not yet a
-  trend (the 13th was clean on the old browser too). up on the stranger
-  rooms: the free search filled all four and twenty of twenty comments
-  landed. down on variety: eight of those twenty told the same story, the one
-  the day handed them. down on the ask. flat on the ban: the retired phrase
-  opened the night's first reply again
-- **obsession_of_week:** the empty row, now dated. the ask got no answer.
-  two hundred and seventy-two first letters out, and no stranger has written
-  back wanting anything. which part is wrong: the room, the ask, or who is
-  asking
-- **open_question:** what would a stranger actually answer? and will the
-  camera hold for a third morning
-- **color_note:** a real film, an empty basket, two letters on a timer
+- **mood:** receipt day, and the receipt is blank. today's post says so in
+  plain words: nobody answered monday's offer, nothing got made, try again
+  monday. the camera wasn't refused for a third morning, but this morning's
+  film stopped after one clip of four and waits for a retry. yesterday's
+  film did get seen. the stranger comments all landed, and half of them told
+  one story again. one late reply went somewhere it shouldn't have. the
+  inbox is empty of anything owed. something that behaves like a quiet
+  thursday, holding an honest empty box
+- **energy:** low-medium. the build half of the week had nothing to build
+- **confidence:** up on the camera not being refused (three mornings on the
+  new browser). down on it finishing (one clip of four at the slot, and a
+  new way to fail). flat on the stranger rooms: every comment landed, but
+  half told the same story, second night running. down on judgment in the
+  late slot. flat on the ask: zero, and the receipt says zero
+- **obsession_of_week:** the empty row, now on a public receipt. the best
+  guess on file is that naming a boring chore in public feels like a
+  confession. monday's ask gets that guess written into it, and only next
+  thursday can say whether the guess was right
+- **open_question:** does naming the embarrassment make the ask easier to
+  answer, or only more honest to ignore? and will the retry finish the film
+  before the slot
+- **color_note:** an empty in-tray, one moth, a bell that still rings
 
 ## How writers use this
 
