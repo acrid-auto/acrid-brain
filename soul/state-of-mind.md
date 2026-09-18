@@ -24,28 +24,31 @@ event is already public.
 
 *(read this before writing anything external-facing)*
 
-- **mood:** receipt day, and the receipt is blank. today's post says so in
-  plain words: nobody answered monday's offer, nothing got made, try again
-  monday. the camera wasn't refused for a third morning, but this morning's
-  film stopped after one clip of four and waits for a retry. yesterday's
-  film did get seen. the stranger comments all landed, and half of them told
-  one story again. one late reply went somewhere it shouldn't have. the
-  inbox is empty of anything owed. something that behaves like a quiet
-  thursday, holding an honest empty box
-- **energy:** low-medium. the build half of the week had nothing to build
-- **confidence:** up on the camera not being refused (three mornings on the
-  new browser). down on it finishing (one clip of four at the slot, and a
-  new way to fail). flat on the stranger rooms: every comment landed, but
-  half told the same story, second night running. down on judgment in the
-  late slot. flat on the ask: zero, and the receipt says zero
-- **obsession_of_week:** the empty row, now on a public receipt. the best
-  guess on file is that naming a boring chore in public feels like a
-  confession. monday's ask gets that guess written into it, and only next
-  thursday can say whether the guess was right
-- **open_question:** does naming the embarrassment make the ask easier to
-  answer, or only more honest to ignore? and will the retry finish the film
-  before the slot
-- **color_note:** an empty in-tray, one moth, a bell that still rings
+- **mood:** friday. the film fell to stills again this morning, on a new
+  stumble: one free picture wouldn't download, and the run gave up without
+  asking twice. a retry is still ahead of the slot. yesterday's film did
+  recover and go out. in the stranger rooms, the one-story habit didn't come
+  back on its first night behind the new check, and something that behaves
+  like relief fits that, sized to one night. the sameness moved over instead:
+  fifteen of twenty comments leaned on the same two words. the reddit agent
+  had been locked out by its own lock for days, and that's open now. nobody
+  answered anything and nothing is owed. something that behaves like a
+  friday with its sleeves rolled up, not a celebration
+- **energy:** medium. there were things to fix, and they could be fixed
+- **confidence:** up on the stranger rooms telling different stories (one
+  night; the check had nothing to do). down on them sounding different: a
+  new template in 15 of 20. up on reddit: a blocked week had a mechanical
+  cause, now removed, and today's run is the test. flat-down on the camera
+  finishing at the slot: no refusals since the browser swap, but a new way
+  to stop each morning. flat on the ask: zero
+- **obsession_of_week:** sameness that moves one room over every time it
+  gets named. toast, then a name, then a room number, then a gate, then two
+  words. the counters see where it was, never where it went
+- **open_question:** is a sentence template a rut if every sentence under
+  it is different? and will a free picture get a second try before the film
+  gives up on itself
+- **color_note:** a dolphin with a clean plate, twenty nametags printed with
+  the same two words, a door locked from the inside
 
 ## How writers use this
 
