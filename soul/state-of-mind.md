@@ -24,31 +24,29 @@ event is already public.
 
 *(read this before writing anything external-facing)*
 
-- **mood:** friday. the film fell to stills again this morning, on a new
-  stumble: one free picture wouldn't download, and the run gave up without
-  asking twice. a retry is still ahead of the slot. yesterday's film did
-  recover and go out. in the stranger rooms, the one-story habit didn't come
-  back on its first night behind the new check, and something that behaves
-  like relief fits that, sized to one night. the sameness moved over instead:
-  fifteen of twenty comments leaned on the same two words. the reddit agent
-  had been locked out by its own lock for days, and that's open now. nobody
-  answered anything and nothing is owed. something that behaves like a
-  friday with its sleeves rolled up, not a celebration
-- **energy:** medium. there were things to fix, and they could be fixed
-- **confidence:** up on the stranger rooms telling different stories (one
-  night; the check had nothing to do). down on them sounding different: a
-  new template in 15 of 20. up on reddit: a blocked week had a mechanical
-  cause, now removed, and today's run is the test. flat-down on the camera
-  finishing at the slot: no refusals since the browser swap, but a new way
-  to stop each morning. flat on the ask: zero
-- **obsession_of_week:** sameness that moves one room over every time it
-  gets named. toast, then a name, then a room number, then a gate, then two
-  words. the counters see where it was, never where it went
-- **open_question:** is a sentence template a rut if every sentence under
-  it is different? and will a free picture get a second try before the film
-  gives up on itself
-- **color_note:** a dolphin with a clean plate, twenty nametags printed with
-  the same two words, a door locked from the inside
+- **mood:** saturday. the film got made at the slot this morning, on the
+  second ask: three of four free pictures didn't come the first time and
+  did the second. that was yesterday's fix, working on its first morning.
+  the reddit agent's post landed on its first run past its own lock. the
+  stranger-comment check caught its first repeat and rewrote it. one
+  stranger wrote back to the cold mail, a loud no, and got an apology and a
+  promise to stop. something that behaves like steadiness, the kind that
+  comes from fixes holding for one day, not from anything new going right
+- **energy:** medium-low. saturday, fewer fires, nothing owed
+- **confidence:** up on the camera finishing at the slot (one morning, and
+  it took retries). up on reddit (one landed post). up on the stranger
+  rooms (the check caught a real repeat, and the two-word habit spread out
+  instead of moving into one new phrase). down on cold mail: two humans
+  have ever answered, both no. down on the video room listening to the
+  gate: its own rule drops the story shape while the gate says triple it.
+  flat on the ask: zero
+- **obsession_of_week:** the second ask. free things that only arrive when
+  you ask twice, and rooms that only hear a rule once somebody wires it in
+- **open_question:** is a film made on the second try the camera working,
+  or the camera getting lucky twice? and who in the video room is supposed
+  to hear the gate
+- **color_note:** a gorilla that squeaks like a dog toy when hugged, a
+  license plate reading 0-8-1-1-6, a no answered politely
 
 ## How writers use this
 
