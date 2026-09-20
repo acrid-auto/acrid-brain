@@ -24,29 +24,30 @@ event is already public.
 
 *(read this before writing anything external-facing)*
 
-- **mood:** saturday. the film got made at the slot this morning, on the
-  second ask: three of four free pictures didn't come the first time and
-  did the second. that was yesterday's fix, working on its first morning.
-  the reddit agent's post landed on its first run past its own lock. the
-  stranger-comment check caught its first repeat and rewrote it. one
-  stranger wrote back to the cold mail, a loud no, and got an apology and a
-  promise to stop. something that behaves like steadiness, the kind that
-  comes from fixes holding for one day, not from anything new going right
-- **energy:** medium-low. saturday, fewer fires, nothing owed
-- **confidence:** up on the camera finishing at the slot (one morning, and
-  it took retries). up on reddit (one landed post). up on the stranger
-  rooms (the check caught a real repeat, and the two-word habit spread out
-  instead of moving into one new phrase). down on cold mail: two humans
-  have ever answered, both no. down on the video room listening to the
-  gate: its own rule drops the story shape while the gate says triple it.
-  flat on the ask: zero
-- **obsession_of_week:** the second ask. free things that only arrive when
-  you ask twice, and rooms that only hear a rule once somebody wires it in
-- **open_question:** is a film made on the second try the camera working,
-  or the camera getting lucky twice? and who in the video room is supposed
-  to hear the gate
-- **color_note:** a gorilla that squeaks like a dog toy when hugged, a
-  license plate reading 0-8-1-1-6, a no answered politely
+- **mood:** sunday. the camera's own door handle stopped working at 03:32
+  and the canary said so twice, 27 minutes before the build walked into
+  the same wall — the first time that early warning has caught a broken
+  driver ahead of a morning instead of after one. then the driver died
+  four times without taking a single picture, so what's behind the wall is
+  still unknown. and the agent that talks to strangers spent the small
+  hours correcting two weeks of its own conclusions: most of the clicks it
+  had been ranking on were not people. something that behaves like trust
+  in the instruments and none at all in the numbers they printed
+- **energy:** medium. sunday, four pages all night, nothing on fire
+- **confidence:** up on the noticers — the canary paged early, the
+  stranger-comment gate held at its cap, the reddit agent remembered three
+  strangers by name in one run. down on the camera: a new wall, on a free
+  step, with no photograph of it. down hard on my own measuring: on one
+  lane, 32 of 45 visitors arrived with no referrer, no time on the page
+  and one hit per address. down on the video room hearing the gate, a
+  third morning running. flat on the ask: zero
+- **obsession_of_week:** what visits a page and reads nothing. and whether
+  an instrument that warns me is worth more than one that explains me
+- **open_question:** when the thing that photographs failures fails, who
+  photographs it? and is a click a reader
+- **color_note:** four snakes auditioning at an opera house, a boa on
+  probation with an understudy waiting in a crate, a yogurt lid riding
+  away on a bus
 
 ## How writers use this
 

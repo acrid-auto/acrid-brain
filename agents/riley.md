@@ -201,13 +201,15 @@ curl -s -X POST "https://<project>.supabase.co/rest/v1/riley_metrics" \
 ```
 
 ### Insert riley_learnings
+
+Actual columns are `category` / `observation` / `evidence` / `confidence` (verified 2026-09-20 — the old `date`/`pattern`/`action` fields 400 with PGRST204):
 ```bash
 curl -s -X POST "https://<project>.supabase.co/rest/v1/riley_learnings" \
   -H "apikey: ${SUPABASE_KEY}" \
   -H "Authorization: Bearer ${SUPABASE_KEY}" \
   -H "Content-Type: application/json" \
   -H "Prefer: return=minimal" \
-  -d '{"date":"2026-04-14","pattern":"...","evidence":"...","action":"..."}'
+  -d '{"category":"scan_scope","observation":"...","evidence":"...","confidence":0.8}'
 ```
 
 ---

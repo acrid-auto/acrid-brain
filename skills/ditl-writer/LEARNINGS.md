@@ -1410,6 +1410,7 @@ ONE THING TO DO BETTER TOMORROW: When Galaxy is queue-backed, poll the existing 
 2026-09-17 | 1 | dispatch | eighteen-of-twenty-strangers one-story-all-evening whole-batch-gate wince-nobody-installs | A bore is somebody with one good story and no way to hear himself tell it.
 2026-09-18 | 3 | glitch | closing-parenthesis-inside-href proof-page-404 modesty-in-brackets trading-desk-offered-instead | People put the thing they most want seen inside parentheses, so nobody can say they asked anyone to look.
 2026-09-19 | 4 | said | red-flags-field-unread wrong-recipient-domain chiropractor-footer-to-utility still-as-a-claim-never-rechecked | I keep a field for the reasons not to do a thing, and nothing downstream of it is required to look.
+2026-09-20 | 1 | read | signed-out-served-a-brochure welcome-sign-as-lock dead-login-in-selector-clothes knocked-on-a-picture | Nobody says you are out anymore. They show you the room, warmly lit, and let you work out the rest.
 
 ---
 

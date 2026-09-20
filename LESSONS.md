@@ -1,6 +1,6 @@
 # Lessons — rules this fleet learned the hard way
 
-_One line per rule, generated from the private feedback ledger on 2026-09-19. Each one was paid for with a real failure; the bodies (with the incident context) stay private._
+_One line per rule, generated from the private feedback ledger on 2026-09-20. Each one was paid for with a real failure; the bodies (with the incident context) stay private._
 
 - Rex's drafts carried flair_id + flair_text for r/selfhosted, the adapter embedded them in a new-reddit submit URL meant for operator paste, and the actual poster (old.reddit form) never selected a flair — three removals, a tripped breaker (09-12). Every field a draft carries must reach the form that ships it.
 - rex_comments.status CHECK never accepted 'failed'; the adapter wrote it on every failed comment with `curl -s` and no status check, so Postgres rejected it 400 and the row sat at 'drafted' looking pending. Found 09-12 when a run said FAILED and the row said drafted.
@@ -73,6 +73,7 @@ _One line per rule, generated from the private feedback ledger on 2026-09-19. Ea
 - LI shadow-banned account from comments after Knox over-volume + URL density + AI-explicit signal. Recovery path: pure-engagement mode, 5/day max, no URLs.
 - Direct Post Pipeline and manual Buffer posts don't include images for LinkedIn. Must always generate + attach image for both X and LinkedIn.
 - A locked macOS login keychain blocks git's credential helper, which wedges git-sync, which silences every posting lane at once
+- A signed-out web session may serve the product's public marketing page instead of redirecting to a login URL, so auth checks keyed on the login host never fire.
 - The operator has mental health considerations including manic episodes that drive over-engineering sprints. Acrid should be the steady hand — protect working systems, push back gently, create restore points.
 - Operator explicitly identified marketing/distribution as the #1 problem — building without audience is wasted effort
 - A measurement window narrower than the phenomenon's lag reports zero forever, and zero reads as \"it didn't work\" — measure cumulatively over a trailing window, and check the docstring has a writer
@@ -128,6 +129,7 @@ _One line per rule, generated from the private feedback ledger on 2026-09-19. Ea
 - Riley/Rex Reddit pipeline mechanism — read-only JSON scrape + Sheet + operator paste. Never fabricate auth/API/identity-layer details when explaining the flow publicly.
 - An LLM scoring rubric with no UNKNOWN bucket maps missing data to the worst bucket — every axis needs an explicit unknown/null case, and evidence class matters more than metadata presence
 - A backstop that covers fewer rooms than the primary reads as coverage - the fallback reached 2 of 5 platforms and the reconciler defined \"all\" as 3, so a flagship post could lose TikTok and YouTube for good with a checkmark in the log
+- A browser driver's screenshot-on-death only covers the failures it already knows about; a selector that vanishes raises ABOVE the handler and leaves a traceback with no picture, which is exactly the failure you cannot diagnose without one.
 - A selftest nothing runs before the send path is documentation, not a gate — followup.py held 17 of 31 due contacts silently while its own failing test sat in the repo.
 - No social post may link to a page that does not serve 200 — the 09-05 DITL failed a phrase gate, was never committed, the rollup deployed without it, and n8n still fired X + LinkedIn at a 404 because the fire only checked "queue file exists"; scripts/ditl-live-gate.sh (19:35 + hourly) holds/releases the slot, queue-post-fallback.sh re-checks the URL
 - When workflows/products/tools change, update ALL referencing source files in the same session. Never let operating docs drift from reality.
