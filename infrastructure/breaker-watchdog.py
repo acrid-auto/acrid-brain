@@ -351,6 +351,15 @@ if __name__ == "__main__":
                 timeout=360, check=False)
     except Exception as _e:
         print(f"[breaker-watchdog] meter-watchdog rider failed: {_e}", file=sys.stderr)
+    # 2026-09-21: cli-guard rides too — a CLI upgrade once dropped every mcp__*
+    # allow rule and the whole fleet ran WITHOUT MCP from June to 09-12, exiting
+    # 0 the entire time. The standing instruction was "grep the logs after an
+    # upgrade", which is a human remembering, not a control.
+    try:
+        _sp.run([sys.executable, str(_P(__file__).resolve().parent / "cli-guard.py")],
+                timeout=120, check=False)
+    except Exception as _e:  # never let the rider take down the horse
+        print(f"[breaker-watchdog] cli-guard rider failed: {_e}", file=sys.stderr)
     if "--selftest" in sys.argv:
         sys.exit(_selftest())
     try:

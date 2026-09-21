@@ -1,6 +1,6 @@
 # Lessons — rules this fleet learned the hard way
 
-_One line per rule, generated from the private feedback ledger on 2026-09-20. Each one was paid for with a real failure; the bodies (with the incident context) stay private._
+_One line per rule, generated from the private feedback ledger on 2026-09-21. Each one was paid for with a real failure; the bodies (with the incident context) stay private._
 
 - Rex's drafts carried flair_id + flair_text for r/selfhosted, the adapter embedded them in a new-reddit submit URL meant for operator paste, and the actual poster (old.reddit form) never selected a flair — three removals, a tripped breaker (09-12). Every field a draft carries must reach the form that ships it.
 - rex_comments.status CHECK never accepted 'failed'; the adapter wrote it on every failed comment with `curl -s` and no status check, so Postgres rejected it 400 and the row sat at 'drafted' looking pending. Found 09-12 when a run said FAILED and the row said drafted.
@@ -131,6 +131,7 @@ _One line per rule, generated from the private feedback ledger on 2026-09-20. Ea
 - A backstop that covers fewer rooms than the primary reads as coverage - the fallback reached 2 of 5 platforms and the reconciler defined \"all\" as 3, so a flagship post could lose TikTok and YouTube for good with a checkmark in the log
 - A browser driver's screenshot-on-death only covers the failures it already knows about; a selector that vanishes raises ABOVE the handler and leaves a traceback with no picture, which is exactly the failure you cannot diagnose without one.
 - A selftest nothing runs before the send path is documentation, not a gate — followup.py held 17 of 31 due contacts silently while its own failing test sat in the repo.
+- A 401 from cron is not proof a token expired — fingerprint every copy (Keychain / env.sh / zprofile / MCP header) and probe each before calling it an operator job.
 - No social post may link to a page that does not serve 200 — the 09-05 DITL failed a phrase gate, was never committed, the rollup deployed without it, and n8n still fired X + LinkedIn at a 404 because the fire only checked "queue file exists"; scripts/ditl-live-gate.sh (19:35 + hourly) holds/releases the slot, queue-post-fallback.sh re-checks the URL
 - When workflows/products/tools change, update ALL referencing source files in the same session. Never let operating docs drift from reality.
 - ACRID brand uses red + black + paper-white only. Never introduce a fourth color even for a single scene as a "joke setup" or "contrast device." Caught 2026-05-06 in Agent Architect promo video v2.
@@ -151,6 +152,7 @@ _One line per rule, generated from the private feedback ledger on 2026-09-20. Ea
 - Operator 2026-04-27 raised the voice ceiling. Acrid content is now allowed (and expected) to be wildly varied — surreal, mythic, confessional, philosophical — not just "honest report of today." Brain dump is fuel for story, not script. Old "fake days are worse than boring days" rule retired.
 - All Acrid sub-agents (Rex, Riley, Promo, Mason, Scout, a client org, future) sound + talk like Acrid. Sub-agents are surfaces, not separate personas.
 - One master voice file. Every Acrid-side agent reads it at runtime. Agent prompts describe WHAT (job), never HOW (voice). Client agents (a client org) point to their own voice file.
+- HARD RULE — adding \"wait for upstream\" to a middle job does not fix an overrun, it moves the overrun onto the next fixed-clock consumer, which then runs early, finds zero rows and exits 0. 2026-09-20 knox: 9 stranger comments written at 17:40, poster ran at 17:32, nothing posted, nothing paged.
 - Weekly sweep is a COMPREHENSIVE audit. Skill v2.0 at .claude/commands/weekly.md is the canonical inventory. Never phone in a retro.
 - HARD RULE. Both free wizards (/architect/ and /skill-creator/) collect an email at the end to UNLOCK the mega-prompt rendered on screen (NOT emailed). Never write "no signup" or "ships by email" for the free path. See feedback_wizard_flow_free_vs_paid for the full flow.
 - HARD RULE. Free wizard renders mega-prompt on screen after email gate (not by email). Paid version runs prompt through Anthropic API server-side and emails generated files. Don't conflate.

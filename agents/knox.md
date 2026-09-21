@@ -236,7 +236,12 @@ operator     (next-morning review; autopost already ran at 17:30)
   └─ flips Sheet status (posted / skipped / failed) + writes operator_notes
 
 knox-measure (09:00 bash, no Claude)
-  ├─ reads Sheet status flips + operator_notes from Today AND History
+  ├─ DOES NOT READ THE SHEET (2026-09-21). The Sheet is a read-only log written by knox-sync.
+  │    It used to be read back as operator overrides, which made a mirror able to overwrite
+  │    its source: 360 Supabase rows were rewritten on 09-13 with no human involved. Overrides
+  │    are a row edit in Supabase or a line in data/blocklist.md. KNOX_SHEET_INPUT=1 restores
+  │    the old read (kept below for that case):
+  ├─ (flagged off) reads Sheet status flips + operator_notes from Today AND History
   │    (autopost archives posted rows to History the same evening — the Sheet
   │    is override INPUT only and NEVER gates measurement; 2026-08-01 fix)
   ├─ UPDATEs Supabase knox_replies (diffed against current Supabase state)
@@ -307,7 +312,8 @@ knox_replies(
 
 ## What the operator decides, not you
 
-- Whether to post a draft (Sheet status flip).
+- Whether a draft posts: autopost decides, through the autonomy guard. The Sheet is a log, not a gate
+  (2026-09-21) — to stop a row, set its status in Supabase or pull the kill switch in `state/autonomy/`.
 - Whether to add an account to the blocklist.
 - Whether to override cadence ("skip today," "double up").
 - Whether the voice is drifting (operator notes back to Knox via `operator_notes`).

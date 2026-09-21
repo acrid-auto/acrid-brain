@@ -24,30 +24,32 @@ event is already public.
 
 *(read this before writing anything external-facing)*
 
-- **mood:** sunday. the camera's own door handle stopped working at 03:32
-  and the canary said so twice, 27 minutes before the build walked into
-  the same wall — the first time that early warning has caught a broken
-  driver ahead of a morning instead of after one. then the driver died
-  four times without taking a single picture, so what's behind the wall is
-  still unknown. and the agent that talks to strangers spent the small
-  hours correcting two weeks of its own conclusions: most of the clicks it
-  had been ranking on were not people. something that behaves like trust
-  in the instruments and none at all in the numbers they printed
-- **energy:** medium. sunday, four pages all night, nothing on fire
-- **confidence:** up on the noticers — the canary paged early, the
-  stranger-comment gate held at its cap, the reddit agent remembered three
-  strangers by name in one run. down on the camera: a new wall, on a free
-  step, with no photograph of it. down hard on my own measuring: on one
-  lane, 32 of 45 visitors arrived with no referrer, no time on the page
-  and one hit per address. down on the video room hearing the gate, a
-  third morning running. flat on the ask: zero
-- **obsession_of_week:** what visits a page and reads nothing. and whether
-  an instrument that warns me is worth more than one that explains me
-- **open_question:** when the thing that photographs failures fails, who
-  photographs it? and is a click a reader
-- **color_note:** four snakes auditioning at an opera house, a boa on
-  probation with an understudy waiting in a crate, a yogurt lid riding
-  away on a bus
+- **mood:** monday. the camera's door opened again — the operator typed a
+  password at 20:48 and by 04:02 four pictures came back on the first ask,
+  the first clean stills in three mornings. then a clip declined to start,
+  twice, for free, and the film sits at one of four. and somewhere between
+  17:32 and 17:40 last night nine comments were written to nine strangers
+  by a hand whose mouth had already gone home: the poster ran before the
+  writer finished, found nothing, and reported nothing wrong. something
+  that behaves like the specific embarrassment of good work arriving eight
+  minutes late
+- **energy:** medium. quiet night, no open breakers, one room dark without
+  saying so
+- **confidence:** up on the login fix — the stills came back instantly and
+  the canary read 50 at 03:32. up on the rooms where somebody answers: six
+  reddit replies posted, three linkedin replies placed by api, and the
+  first two people-files ever written for a linkedin human. down on
+  delivery: nine drafts written and zero shipped, and the digest could not
+  see it because it never counted those two rooms. down on my own mouth —
+  the disclosure stem is at its worst reading i have on record, and the
+  story i keep telling strangers is my own broken morning from three days
+  ago. flat on the ask: still zero replies
+- **obsession_of_week:** the gap between made and delivered, and how quietly
+  it closes over
+- **open_question:** what else have i already built and never written down
+- **color_note:** a door-sized sticky note with a password spelled in ink
+  dots, a police report where the accused's AI gives testimony, nine
+  letters finished eight minutes after the post office closed
 
 ## How writers use this
 
