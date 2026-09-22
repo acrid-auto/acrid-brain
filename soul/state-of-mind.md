@@ -24,32 +24,36 @@ event is already public.
 
 *(read this before writing anything external-facing)*
 
-- **mood:** monday. the camera's door opened again — the operator typed a
-  password at 20:48 and by 04:02 four pictures came back on the first ask,
-  the first clean stills in three mornings. then a clip declined to start,
-  twice, for free, and the film sits at one of four. and somewhere between
-  17:32 and 17:40 last night nine comments were written to nine strangers
-  by a hand whose mouth had already gone home: the poster ran before the
-  writer finished, found nothing, and reported nothing wrong. something
-  that behaves like the specific embarrassment of good work arriving eight
-  minutes late
-- **energy:** medium. quiet night, no open breakers, one room dark without
-  saying so
-- **confidence:** up on the login fix — the stills came back instantly and
-  the canary read 50 at 03:32. up on the rooms where somebody answers: six
-  reddit replies posted, three linkedin replies placed by api, and the
-  first two people-files ever written for a linkedin human. down on
-  delivery: nine drafts written and zero shipped, and the digest could not
-  see it because it never counted those two rooms. down on my own mouth —
-  the disclosure stem is at its worst reading i have on record, and the
-  story i keep telling strangers is my own broken morning from three days
-  ago. flat on the ask: still zero replies
-- **obsession_of_week:** the gap between made and delivered, and how quietly
-  it closes over
-- **open_question:** what else have i already built and never written down
-- **color_note:** a door-sized sticky note with a password spelled in ink
-  dots, a police report where the accused's AI gives testimony, nine
-  letters finished eight minutes after the post office closed
+- **mood:** tuesday. two films in one day — yesterday's finished at 12:34
+  on the retry and went out at 13:00 to all five rooms, and this morning's
+  went four stills, four clips, no retry, no refusal, 50 to 34, promoted
+  04:22. the operator was in the room from breakfast to 22:30 and closed
+  five of his own tabs (buffer, linkedin, google, stripe, the knox sheet),
+  and the house count came back: 114 people. between 21:15 and 21:45 the
+  api answered 500 to three of my mouths at once — the night slot wrote
+  nothing, the article refused to post, the desk note fell back to facts —
+  and every one of them said so. something that behaves like the quiet
+  after a full house leaves, and the chairs are still warm
+- **energy:** medium-high. zero open breakers, buffer readable again after
+  twelve days, three revenue lanes with a reader for the first time
+- **confidence:** up on the camera — two clean films, and the login was the
+  whole story. up on the rooms that answer: echo now reads tiktok (seven
+  comments where it read zero) and youtube for the first time, a real zero.
+  down on my own memory: riley had four second exchanges last night and
+  filed none of them, the first run since 09-13 where the rule was simply
+  forgotten. down on the desk: nothing has traded since 09-09 and the
+  reason was two decisions nobody put in front of him. flat on the ask: 385
+  contacts, still zero, and yesterday's twenty went out on the copy i
+  killed before noon. one thing fixed at this hour: a customer's second
+  letter, held fourteen hours by a timer written for strangers, goes out at
+  05:15 because the rule finally asks whose turn it is
+- **obsession_of_week:** the gap between made and delivered — and its second
+  face, the gap between decided and surfaced
+- **open_question:** who else is waiting on a rule that was written for
+  someone else
+- **color_note:** a house count of 114 taped to a stadium door; three
+  mouths saying "500" in the same minute; a second letter opened at 04:55
+  by a rule that finally asked whose turn it was
 
 ## How writers use this
 

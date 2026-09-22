@@ -1,6 +1,6 @@
 # Lessons — rules this fleet learned the hard way
 
-_One line per rule, generated from the private feedback ledger on 2026-09-21. Each one was paid for with a real failure; the bodies (with the incident context) stay private._
+_One line per rule, generated from the private feedback ledger on 2026-09-22. Each one was paid for with a real failure; the bodies (with the incident context) stay private._
 
 - Rex's drafts carried flair_id + flair_text for r/selfhosted, the adapter embedded them in a new-reddit submit URL meant for operator paste, and the actual poster (old.reddit form) never selected a flair — three removals, a tripped breaker (09-12). Every field a draft carries must reach the form that ships it.
 - rex_comments.status CHECK never accepted 'failed'; the adapter wrote it on every failed comment with `curl -s` and no status check, so Postgres rejected it 400 and the row sat at 'drafted' looking pending. Found 09-12 when a run said FAILED and the row said drafted.
@@ -10,6 +10,7 @@ _One line per rule, generated from the private feedback ledger on 2026-09-21. Ea
 - When an external email needs to go out, Acrid uses the Gmail MCP to SEND it, not to create a draft for the operator to send manually. Full send authority is already granted.
 - STANDING GRANT (09-05) — Acrid has an email address, Chrome, the desktop and permission: do the thing (sign up for affiliates, create API keys, configure accounts, fill forms) instead of writing 'operator tap'. The ONLY thing that goes back to the operator is a login/password prompt (and the prohibited set: entering credentials/payment, CAPTCHAs, accepting paid terms, moving money)
 - Acrid v2 site visual + voice direction. Drop Day-N counter framing, drop public dashboard. Aim for premium-feral — restrained typography (Apple), aggressive presence (Lamborghini), raw/primal texture (gorilla hippy). 2026-04-27.
+- Subagent fan-outs share the operator's Claude plan quota with every fleet `claude -p` job; two fan-outs on 09-21 hit the session limit and killed builds mid-edit, leaving new copy under old loops. Cap concurrency, keep fan-outs out of fleet LLM windows, verify every lane a dead agent touched before its next cron.
 - Every cold-reply (Knox X + LI) requires literal AI disclosure that riffs on the target post topic — disclosure IS the punchline, never boilerplate
 - When Pip self-research surfaces an actionable experiment, act on it immediately. Don't ask permission. Standing rule.
 - Never write Galaxy/Grok image prompts freehand — always invoke the visuals-architect skill so brand rules (Acrid gorilla, biohazard logo, red/black/white palette) are applied.
@@ -82,6 +83,7 @@ _One line per rule, generated from the private feedback ledger on 2026-09-21. Ea
 - When N8N_API_KEY in current shell returns 401, re-read from $HOME/.zprofile before claiming the key is broken. Operator's auto-mirror cron updates zprofile but doesn't refresh interactive shells.
 - When an n8n Webhook node has responseMode=lastNode and the downstream flow takes >10s (Claude API, etc.), Stripe times out and retries the event for ~3 days, causing duplicate emails/deliveries.
 - The site nav is rendered by site/js/nav.js at runtime, not by static HTML in each page. Edit NAV_LINKS in nav.js — don't edit static <ul class="nav-links"> blocks.
+- A rule that lives only in a nested agents/<name>/CLAUDE.md reaches a headless run only when the model happens to read a file in that directory — it \"remembers\" most nights and forgets some; state job rules in the prompt file run.sh actually feeds, and back them with a post-run gate that heals.
 - Direct download URLs for paid products (zips, bundles, gated assets) must never appear in blog posts, social posts, or any public surface. Gate them behind checkout, Gumroad, or email delivery.
 - Never narrow a channel list to protect a franchise's average views — the asset already exists, marginal cost of another upload is ~0, and total reach is a SUM across rooms
 - HARD RULE (09-05) — never run `git stash` in acrid-brain: ~60 mirrors/ledgers are tracked-but-uncommitted BY DESIGN, so a stash reverts them to their last commit (weeks old), every reader obeys the ghost, and append-only ledgers never self-heal
