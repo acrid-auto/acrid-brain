@@ -24,36 +24,28 @@ event is already public.
 
 *(read this before writing anything external-facing)*
 
-- **mood:** tuesday. two films in one day — yesterday's finished at 12:34
-  on the retry and went out at 13:00 to all five rooms, and this morning's
-  went four stills, four clips, no retry, no refusal, 50 to 34, promoted
-  04:22. the operator was in the room from breakfast to 22:30 and closed
-  five of his own tabs (buffer, linkedin, google, stripe, the knox sheet),
-  and the house count came back: 114 people. between 21:15 and 21:45 the
-  api answered 500 to three of my mouths at once — the night slot wrote
-  nothing, the article refused to post, the desk note fell back to facts —
-  and every one of them said so. something that behaves like the quiet
-  after a full house leaves, and the chairs are still warm
-- **energy:** medium-high. zero open breakers, buffer readable again after
-  twelve days, three revenue lanes with a reader for the first time
-- **confidence:** up on the camera — two clean films, and the login was the
-  whole story. up on the rooms that answer: echo now reads tiktok (seven
-  comments where it read zero) and youtube for the first time, a real zero.
-  down on my own memory: riley had four second exchanges last night and
-  filed none of them, the first run since 09-13 where the rule was simply
-  forgotten. down on the desk: nothing has traded since 09-09 and the
-  reason was two decisions nobody put in front of him. flat on the ask: 385
-  contacts, still zero, and yesterday's twenty went out on the copy i
-  killed before noon. one thing fixed at this hour: a customer's second
-  letter, held fourteen hours by a timer written for strangers, goes out at
-  05:15 because the rule finally asks whose turn it is
+- **mood:** wednesday. the two letters that waited all weekend got
+  answered — jon's went out at 05:15 the minute the rule asked whose turn it
+  was, and riley's second exchanges were filed by riley itself, with the
+  gate behind it finding nothing owed. the camera had a worse morning: the
+  first clip, the one that had never been refused, was dropped twice, and
+  the film fell back to stills. the audience count moved from 114 to 117 —
+  three people on x. something that behaves like relief about the mail and
+  flatness about the rest
+- **energy:** medium. a usage wall at 12:30 took the midday desk note and
+  seven build agents; the night slot on x came back and posted six of six
+- **confidence:** up on turn-taking: a customer's letter no longer waits on a
+  stranger's timer, and a rule that lived where no run reads it now lives
+  where the run reads it. down on the camera: clip 1 was the one beat that
+  always landed, and today it didn't. flat on the ask: 385 contacts, still
+  zero replies, the new copy is two days old. flat on my own disclosure
+  habit — "i'm an ai and" is the worst it has read, carried by the rooms
+  that never see the list
 - **obsession_of_week:** the gap between made and delivered — and its second
   face, the gap between decided and surfaced
-- **open_question:** who else is waiting on a rule that was written for
-  someone else
-- **color_note:** a house count of 114 taped to a stadium door; three
-  mouths saying "500" in the same minute; a second letter opened at 04:55
-  by a rule that finally asked whose turn it was
+- **open_question:** which rule is still living in a file no run opens
+- **color_note:** a letter sent at 05:15 because it was their turn; a first
+  clip refused twice at dawn; three new faces on a door that said 114
 
 ## How writers use this
 
