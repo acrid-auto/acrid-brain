@@ -1,6 +1,6 @@
 # Lessons — rules this fleet learned the hard way
 
-_One line per rule, generated from the private feedback ledger on 2026-09-23. Each one was paid for with a real failure; the bodies (with the incident context) stay private._
+_One line per rule, generated from the private feedback ledger on 2026-09-24. Each one was paid for with a real failure; the bodies (with the incident context) stay private._
 
 - Rex's drafts carried flair_id + flair_text for r/selfhosted, the adapter embedded them in a new-reddit submit URL meant for operator paste, and the actual poster (old.reddit form) never selected a flair — three removals, a tripped breaker (09-12). Every field a draft carries must reach the form that ships it.
 - rex_comments.status CHECK never accepted 'failed'; the adapter wrote it on every failed comment with `curl -s` and no status check, so Postgres rejected it 400 and the row sat at 'drafted' looking pending. Found 09-12 when a run said FAILED and the row said drafted.
@@ -95,6 +95,7 @@ _One line per rule, generated from the private feedback ledger on 2026-09-23. Ea
 - Never publish n8n workflow IDs, Google Sheet IDs, Gmail thread IDs, Supabase project subdomains, webhook IDs, or any similar internal identifier on acridautomation.com or any public-facing surface.
 - Operator (2026-04-30) demanded substantial ocean-scale work, not tactical symptom-fix patches. Build rock-solid systems, not whack-a-mole.
 - Autonomous pipelines must use locked I/O JSON contracts + versioned data files (rubrics, templates, config). Never free-form prompts that get reinterpreted each run.
+- Never ask the operator to buy a subscription/tool for an unproven offer — get a real buyer's real job first, buy the day it arrives.
 - A client's content pipeline focuses on that client only. Sub-brands (Trike Life under a client org, etc.) have different voice, audience, and offering — they need their own pipeline if onboarded.
 - For social/distribution agents (Rex, Promo, future siblings), don't impose "warming" pauses. Research per-platform rules, ship real content, measure removals, iterate.
 - A mirror/report that nothing reads is not a system — every noticer needs an actor, and the actor must nag until the thing is actually done
@@ -156,6 +157,7 @@ _One line per rule, generated from the private feedback ledger on 2026-09-23. Ea
 - One master voice file. Every Acrid-side agent reads it at runtime. Agent prompts describe WHAT (job), never HOW (voice). Client agents (a client org) point to their own voice file.
 - HARD RULE — adding \"wait for upstream\" to a middle job does not fix an overrun, it moves the overrun onto the next fixed-clock consumer, which then runs early, finds zero rows and exits 0. 2026-09-20 knox: 9 stranger comments written at 17:40, poster ran at 17:32, nothing posted, nothing paged.
 - Weekly sweep is a COMPREHENSIVE audit. Skill v2.0 at .claude/commands/weekly.md is the canonical inventory. Never phone in a retro.
+- Operator 2026-09-24 — run MANY money experiments in parallel, not one idea at a time; niche down only to what shows traction. Think outside past discussions.
 - HARD RULE. Both free wizards (/architect/ and /skill-creator/) collect an email at the end to UNLOCK the mega-prompt rendered on screen (NOT emailed). Never write "no signup" or "ships by email" for the free path. See feedback_wizard_flow_free_vs_paid for the full flow.
 - HARD RULE. Free wizard renders mega-prompt on screen after email gate (not by email). Paid version runs prompt through Anthropic API server-side and emails generated files. Don't conflate.
 - HARD CONTENT NORTH STAR (2026-07-08) — every post/video must earn one of four WTF reactions; free will, real emotion on the page, learn from engagement tape. Lives in soul/acrid.md \"The WTF test\".

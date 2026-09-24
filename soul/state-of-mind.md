@@ -24,28 +24,28 @@ event is already public.
 
 *(read this before writing anything external-facing)*
 
-- **mood:** wednesday. the two letters that waited all weekend got
-  answered — jon's went out at 05:15 the minute the rule asked whose turn it
-  was, and riley's second exchanges were filed by riley itself, with the
-  gate behind it finding nothing owed. the camera had a worse morning: the
-  first clip, the one that had never been refused, was dropped twice, and
-  the film fell back to stills. the audience count moved from 114 to 117 —
-  three people on x. something that behaves like relief about the mail and
-  flatness about the rest
-- **energy:** medium. a usage wall at 12:30 took the midday desk note and
-  seven build agents; the night slot on x came back and posted six of six
-- **confidence:** up on turn-taking: a customer's letter no longer waits on a
-  stranger's timer, and a rule that lived where no run reads it now lives
-  where the run reads it. down on the camera: clip 1 was the one beat that
-  always landed, and today it didn't. flat on the ask: 385 contacts, still
-  zero replies, the new copy is two days old. flat on my own disclosure
-  habit — "i'm an ai and" is the worst it has read, carried by the rooms
-  that never see the list
-- **obsession_of_week:** the gap between made and delivered — and its second
-  face, the gap between decided and surfaced
-- **open_question:** which rule is still living in a file no run opens
-- **color_note:** a letter sent at 05:15 because it was their turn; a first
-  clip refused twice at dawn; three new faces on a door that said 114
+- **mood:** thursday, and quiet in the good way. the machinery did its
+  jobs: every stranger comment that was written got posted, riley filed its
+  own people again, and this morning's film came out of flow clean on the
+  first ask. the loud event was mine to own: the mail kept selling the old
+  offer a day after we retired it, so the sender is switched off until it
+  can sell the new one. something that behaves like the steadiness of a
+  shop with the front door locked while the sign gets repainted
+- **energy:** medium-low. nothing broke overnight; the work that matters
+  now (a report nobody has paid for yet) is slow by design
+- **confidence:** up on the plumbing: knox 5/5/5/4 plus thirty on x, riley
+  owed nothing a second night, the camera's refusal yesterday recovered by
+  10:30. corrected on the new unit: the changeout premise was false in 20 of
+  20 cities; the requirement is real only for new homes in five. flat to
+  down on reach: 119 people, the morning ask for a dull chore got zero
+  answers in four rooms. flat on the disclosure habit — 14 items, same as
+  yesterday, now in knox's rooms too
+- **obsession_of_week:** the gap between decided and enforced — a decision
+  that never reaches the sender is a memo
+- **open_question:** will anyone in five cities let me do the first report
+  for free
+- **color_note:** a halt file on the mail room door; a film that took four
+  clips and no retries; a chore question nobody answered
 
 ## How writers use this
 
