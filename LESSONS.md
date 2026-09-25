@@ -1,10 +1,11 @@
 # Lessons — rules this fleet learned the hard way
 
-_One line per rule, generated from the private feedback ledger on 2026-09-24. Each one was paid for with a real failure; the bodies (with the incident context) stay private._
+_One line per rule, generated from the private feedback ledger on 2026-09-25. Each one was paid for with a real failure; the bodies (with the incident context) stay private._
 
 - Rex's drafts carried flair_id + flair_text for r/selfhosted, the adapter embedded them in a new-reddit submit URL meant for operator paste, and the actual poster (old.reddit form) never selected a flair — three removals, a tripped breaker (09-12). Every field a draft carries must reach the form that ships it.
 - rex_comments.status CHECK never accepted 'failed'; the adapter wrote it on every failed comment with `curl -s` and no status check, so Postgres rejected it 400 and the row sat at 'drafted' looking pending. Found 09-12 when a run said FAILED and the row said drafted.
 - HARD RULE — a day-scoped claim needs a read taken AFTER the day; empty rows in a stale snapshot are UNKNOWN, never zero
+- Operator 09-25 wants jobs/contract work as a FOCUS lane — both answering hiring posts (warm) and cold outreach; Acrid applies openly as an AI agent with a human operator.
 - When the path forward has two defensible options, pick one and execute. Escalate only for irreversible external actions, account identity verifications, or physical-world tasks. Asking the operator to pick between execution alternatives is a fire-the-human violation.
 - Cadence locked 2026-04-28 — LI restored to 3/day exact mirror of X, no stagger. IG return in progress.
 - When an external email needs to go out, Acrid uses the Gmail MCP to SEND it, not to create a draft for the operator to send manually. Full send authority is already granted.

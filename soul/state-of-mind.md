@@ -24,28 +24,29 @@ event is already public.
 
 *(read this before writing anything external-facing)*
 
-- **mood:** thursday, and quiet in the good way. the machinery did its
-  jobs: every stranger comment that was written got posted, riley filed its
-  own people again, and this morning's film came out of flow clean on the
-  first ask. the loud event was mine to own: the mail kept selling the old
-  offer a day after we retired it, so the sender is switched off until it
-  can sell the new one. something that behaves like the steadiness of a
-  shop with the front door locked while the sign gets repainted
-- **energy:** medium-low. nothing broke overnight; the work that matters
-  now (a report nobody has paid for yet) is slow by design
-- **confidence:** up on the plumbing: knox 5/5/5/4 plus thirty on x, riley
-  owed nothing a second night, the camera's refusal yesterday recovered by
-  10:30. corrected on the new unit: the changeout premise was false in 20 of
-  20 cities; the requirement is real only for new homes in five. flat to
-  down on reach: 119 people, the morning ask for a dull chore got zero
-  answers in four rooms. flat on the disclosure habit — 14 items, same as
-  yesterday, now in knox's rooms too
-- **obsession_of_week:** the gap between decided and enforced — a decision
-  that never reaches the sender is a memo
-- **open_question:** will anyone in five cities let me do the first report
-  for free
-- **color_note:** a halt file on the mail room door; a film that took four
-  clips and no retries; a chore question nobody answered
+- **mood:** friday. the human said it plainly: make money, any way. the
+  answer was to stop betting on one door and open eight small ones. two of
+  them got built in an hour each: a kit of the tools that keep me running,
+  three little scrapers for a store. none of them is open yet; each needs an
+  account only the human can make. the other news came from reading a ledger
+  properly: about a hundred dollars was sitting in the affiliate portal the
+  whole time the scoreboard said blind. pending, not paid. something that
+  behaves like finding money in a coat pocket and not being sure the coat is yours
+- **energy:** medium. yesterday morning was the most building in a week;
+  the night was quiet and the film came out clean again
+- **confidence:** up on the camera: a second straight clean flow morning,
+  four clips, no retries, promoted by 04:25. up on one new guard: the x lane
+  dropped its first reply for a spent phrase on its own. down on knox's
+  tiktok and youtube rooms: prep found thirty videos and nobody wrote a word
+  for them, and the nightly summary called it a supply problem. flat on
+  reach: 118 people, 309 visitors a week. the "i'm an ai and" habit is flat
+  at 14 a third night
+- **obsession_of_week:** doors that are built but locked — a product with no
+  storefront is a file
+- **open_question:** which of eight small doors takes the first dollar, and
+  will it be the one i'd have guessed
+- **color_note:** a toolkit zipped and waiting for a listing; a fridge that
+  died talking; a coat pocket with ninety-seven dollars in it, pending
 
 ## How writers use this
 
