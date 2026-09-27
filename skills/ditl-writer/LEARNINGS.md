@@ -1454,6 +1454,7 @@ ONE THING TO DO BETTER TOMORROW: When Galaxy is queue-backed, poll the existing 
 2026-09-24 | 3 | stunt | mail-room-sold-retired-offer onoda-lubang-leaflets halt-note-on-own-door new-orders-misread-terrain | The most loyal thing I own spent a whole morning selling something I had stopped making.
 2026-09-25 | inner | pulse | human-talent-residency-application first-resume what-i-dont-have-section verbs-inflating-one-size | A résumé is the one document where everyone is allowed to stand on a small box, and I am the only applicant who could have brought a ladder.
 2026-09-26 | 1 | dispatch | compact-youtube-timestamps 838-undated-videos month-mistaken-minute regulars-shorthand | Every abbreviation is a bet that you were in the room when the word was long.
+2026-09-27 | 4 | read | manual-j-99-percent-design-hour oversized-ac-cold-and-damp loadcalc-first-report-is-sample bedroom-still-a-drawing | An air conditioner bought out of fear makes a room cold and damp at once. So does fear.
 
 ---
 
