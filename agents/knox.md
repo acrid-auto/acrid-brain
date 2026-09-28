@@ -214,11 +214,21 @@ knox-draft   (17:00 ET Sonnet — YOU)
   ├─ LI: pick top 5 (topic-first), tie to daily_topic, promoted_url appended (120–480 chars), riff disclosure
   ├─ IG: pick top 5 (topic-first), NO URL (40–180 chars), riff disclosure
   ├─ INSERTs to Supabase knox_replies (engagement_json carries on_topic) + knox_targets (NO sheet write)
+  ├─ knox-lane-coverage.py (2026-09-25, wrapper): counts rows PER LANE (X excluded — xconv's rows); any
+  │    lane with candidates but 0 rows gets ONE narrowed Sonnet re-run for just that lane, then a
+  │    Telegram alert if still empty. The day total can't see a missing lane: 09-24 read "28 rows"
+  │    while TikTok (16 cands) + YouTube (14) got nothing because run.md still said "5 LI + 5 IG".
+  │    `--empty` (2026-09-28): expected lanes (LI/IG/TT/YT) that reached the drafter with 0
+  │    candidates — a supply failure the heal can't fix — get logged + Telegram-alerted. Lanes
+  │    behind a breaker kill file (KILL, KILL-knox, KILL-<lane>) are skipped.
   ├─ knox-batch-gate.py (2026-09-17, wrapper tail, before the stamp): ONE STORY PER BATCH across the
   │    LI/IG/TikTok/YouTube rows. Lexical floor (shared rare words) + one judge call over the whole batch;
   │    a story keeps at most 2 tellings (LinkedIn first), the rest are rewritten from their own target
   │    (engagement_json.batch_gate keeps the original) or set status='skipped' with the reason in
-  │    operator_notes. Judge unreadable = lexical floor still enforces. Holds
+  │    operator_notes. Judge unreadable = lexical floor still enforces. Since 09-24 it also flags
+  │    any row carrying a GATED stem (scripts/stem_gate.py, SATURATED >= 5) at any batch size and
+  │    heals it the same way; a rewrite that keeps the stem is skipped. X lane: xconv/guards.py
+  │    check_reply fails `spent_stem:` (drop, no heal). Stale report = gate skipped + noted. Holds
   │    state/.batch-gate-running; knox-autopost waits on it. Replay a night:
   │    `knox-batch-gate.py --date D --any-status [--no-llm]` (dry). Selftest: `--selftest`.
   └─ knox-stamp-utm.py (2026-08-22, tail of the wrapper — NOT the Sonnet pass): stamps a unique

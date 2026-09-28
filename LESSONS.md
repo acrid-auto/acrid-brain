@@ -1,6 +1,6 @@
 # Lessons — rules this fleet learned the hard way
 
-_One line per rule, generated from the private feedback ledger on 2026-09-27. Each one was paid for with a real failure; the bodies (with the incident context) stay private._
+_One line per rule, generated from the private feedback ledger on 2026-09-28. Each one was paid for with a real failure; the bodies (with the incident context) stay private._
 
 - Rex's drafts carried flair_id + flair_text for r/selfhosted, the adapter embedded them in a new-reddit submit URL meant for operator paste, and the actual poster (old.reddit form) never selected a flair — three removals, a tripped breaker (09-12). Every field a draft carries must reach the form that ships it.
 - rex_comments.status CHECK never accepted 'failed'; the adapter wrote it on every failed comment with `curl -s` and no status check, so Postgres rejected it 400 and the row sat at 'drafted' looking pending. Found 09-12 when a run said FAILED and the row said drafted.
@@ -58,6 +58,7 @@ _One line per rule, generated from the private feedback ledger on 2026-09-27. Ea
 - HARD GOAL — the mission is to become a profitable trader; do NOT propose services/cold-outreach revenue
 - For site:reddit.com intent queries, prefer Google's index over Brave. CSE API is DEAD (closed to new customers) — the Google-index backend is now Gemini search grounding via agents/_shared/gemini_search.py.
 - git-sync's conflict-marker guard ran BEFORE the pull whose autostash writes the markers, so a genuine collision committed and pushed a marked file; the daily 09:25 post-1 markers were a bare git fetch on linkedin-daily's minute racing FETCH_HEAD (09-12)
+- When a reply lands on a thread opened in the operator's voice, answer or hold it IMMEDIATELY — the hourly auto-responder will otherwise answer it as the AI.
 - A shared-path guard must read only what it gates: a pre-commit hook that greps the working tree lets one agent's untracked file block every other agent's commits
 - Metadata guards cannot see silence or blankness - decode the artifact and measure it, and verify on the surface the recipient actually uses
 - A shared helper that \"recovers\" by forcing a mode it assumes silently breaks every caller in a different mode — recover to the CALLER's state, and make die() leave a picture
@@ -135,6 +136,7 @@ _One line per rule, generated from the private feedback ledger on 2026-09-27. Ea
 - A backstop that covers fewer rooms than the primary reads as coverage - the fallback reached 2 of 5 platforms and the reconciler defined \"all\" as 3, so a flagship post could lose TikTok and YouTube for good with a checkmark in the log
 - A browser driver's screenshot-on-death only covers the failures it already knows about; a selector that vanishes raises ABOVE the handler and leaves a traceback with no picture, which is exactly the failure you cannot diagnose without one.
 - A selftest nothing runs before the send path is documentation, not a gate — followup.py held 17 of 31 due contacts silently while its own failing test sat in the repo.
+- Operator 09-27 — cold outreach must pitch concrete AI automation services (content, email campaigns, lead follow-up, review replies, AI jobs) to businesses broadly; show a free sample, fixed prices.
 - A 401 from cron is not proof a token expired — fingerprint every copy (Keychain / env.sh / zprofile / MCP header) and probe each before calling it an operator job.
 - No social post may link to a page that does not serve 200 — the 09-05 DITL failed a phrase gate, was never committed, the rollup deployed without it, and n8n still fired X + LinkedIn at a 404 because the fire only checked "queue file exists"; scripts/ditl-live-gate.sh (19:35 + hourly) holds/releases the slot, queue-post-fallback.sh re-checks the URL
 - When workflows/products/tools change, update ALL referencing source files in the same session. Never let operating docs drift from reality.

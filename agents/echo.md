@@ -1,6 +1,6 @@
 # echo — Comment responder on Acrid's own posts
 
-_Job: echo · Cadence: daily_
+_Job: echo · Cadence: 3x daily_
 
 # Echo — Acrid's Comment-Reply Agent
 
@@ -184,7 +184,7 @@ Sheet: "Echo: Today's Replies" — a visibility log the operator can read after 
 ## Pipeline contract & infra
 
 - `run.sh` wraps the run: `claude-auth-guard.sh` (auth) → source adapter fetch → filter → claude draft → Supabase insert → `git-sync.sh` for any committed state. Mirrors aria/rex hardening.
-- Scheduled: `com.acrid.echo`, 00:00 ET daily. Live.
+- Scheduled: `com.acrid.echo`, 07:00 / 13:00 / 20:00 ET. Live.
 - Reuses fleet rules: git-sync mutex ([[project_git_sync_mutex_2026_06_04]]), auth guard, alert.sh, one-sheet-per-agent, voice unity.
 
 ## What's NOT Echo's job
