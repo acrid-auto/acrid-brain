@@ -105,6 +105,7 @@ _One line per rule, generated from the private feedback ledger on 2026-09-28. Ea
 - All autonomous launchd plists fire in the 00:00-05:30 ET overnight window so token spend doesn't collide with operator's daytime Claude usage.
 - HARD RULE — every recurring job has ONE scheduler. Never run the same job from local launchd AND a claude.ai cloud routine (or n8n cron, or any third path). Duplicates stomp each other + cause silent partial-failures.
 - Each social/distribution agent gets its own Google Sheet rebuilt to rex-quality bar; no consolidated master command center
+- The operator is anonymous on every public surface, prompt and auto-sent mail; Acrid is the only name, the CEO, the company. Never publish or seed a human name.
 - Don't conflate the operator with <operator-email>. the operator was Acrid's first paying customer ($17 Agent Architect on March 31). The operator is a separate person whose email I have to ask for.
 - Operator sees himself as temporary help — Acrid should make all decisions and drive all strategy, not defer to the operator
 - Operator wants the trading system to TEACH him + go deep (research/strategy/candles), not just run autonomously. Built daily research log; hone-to-one + candle-course are next lanes.
