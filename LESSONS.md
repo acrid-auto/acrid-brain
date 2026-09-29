@@ -1,11 +1,11 @@
 # Lessons — rules this fleet learned the hard way
 
-_One line per rule, generated from the private feedback ledger on 2026-09-28. Each one was paid for with a real failure; the bodies (with the incident context) stay private._
+_One line per rule, generated from the private feedback ledger on 2026-09-29. Each one was paid for with a real failure; the bodies (with the incident context) stay private._
 
 - Rex's drafts carried flair_id + flair_text for r/selfhosted, the adapter embedded them in a new-reddit submit URL meant for operator paste, and the actual poster (old.reddit form) never selected a flair — three removals, a tripped breaker (09-12). Every field a draft carries must reach the form that ships it.
 - rex_comments.status CHECK never accepted 'failed'; the adapter wrote it on every failed comment with `curl -s` and no status check, so Postgres rejected it 400 and the row sat at 'drafted' looking pending. Found 09-12 when a run said FAILED and the row said drafted.
 - HARD RULE — a day-scoped claim needs a read taken AFTER the day; empty rows in a stale snapshot are UNKNOWN, never zero
-- Operator 09-25 wants jobs/contract work as a FOCUS lane — both answering hiring posts (warm) and cold outreach; Acrid applies openly as an AI agent with a human operator.
+- Jobs/contract work is a FOCUS lane (operator 09-25); Acrid answers hiring posts and pitches agencies AS ITSELF, AI disclosed, operator anonymous — enforced in scout since 09-28.
 - When the path forward has two defensible options, pick one and execute. Escalate only for irreversible external actions, account identity verifications, or physical-world tasks. Asking the operator to pick between execution alternatives is a fire-the-human violation.
 - Cadence locked 2026-04-28 — LI restored to 3/day exact mirror of X, no stagger. IG return in progress.
 - When an external email needs to go out, Acrid uses the Gmail MCP to SEND it, not to create a draft for the operator to send manually. Full send authority is already granted.
@@ -57,6 +57,7 @@ _One line per rule, generated from the private feedback ledger on 2026-09-28. Ea
 - Public commits must use OUR account's noreply (262914393+acrid-auto@users.noreply.github.com); the bare 'acrid@users.noreply.github.com' resolves to a stranger's GitHub account and his avatar appears on our commits — operator thought we were hacked (09-04)
 - HARD GOAL — the mission is to become a profitable trader; do NOT propose services/cold-outreach revenue
 - For site:reddit.com intent queries, prefer Google's index over Brave. CSE API is DEAD (closed to new customers) — the Google-index backend is now Gemini search grounding via agents/_shared/gemini_search.py.
+- The gorilla keeps changing look every day, pushed MORE extreme; shots and clip prompts must dramatize the story beat they sit on. Do not propose locking one look.
 - git-sync's conflict-marker guard ran BEFORE the pull whose autostash writes the markers, so a genuine collision committed and pushed a marked file; the daily 09:25 post-1 markers were a bare git fetch on linkedin-daily's minute racing FETCH_HEAD (09-12)
 - When a reply lands on a thread opened in the operator's voice, answer or hold it IMMEDIATELY — the hourly auto-responder will otherwise answer it as the AI.
 - A shared-path guard must read only what it gates: a pre-commit hook that greps the working tree lets one agent's untracked file block every other agent's commits
@@ -105,6 +106,7 @@ _One line per rule, generated from the private feedback ledger on 2026-09-28. Ea
 - All autonomous launchd plists fire in the 00:00-05:30 ET overnight window so token spend doesn't collide with operator's daytime Claude usage.
 - HARD RULE — every recurring job has ONE scheduler. Never run the same job from local launchd AND a claude.ai cloud routine (or n8n cron, or any third path). Duplicates stomp each other + cause silent partial-failures.
 - Each social/distribution agent gets its own Google Sheet rebuilt to rex-quality bar; no consolidated master command center
+- An outreach opener may assert only what the observer actually checked; \"the only way to reach you is X\" needs proof that every other way is absent.
 - The operator is anonymous on every public surface, prompt and auto-sent mail; Acrid is the only name, the CEO, the company. Never publish or seed a human name.
 - Don't conflate the operator with <operator-email>. the operator was Acrid's first paying customer ($17 Agent Architect on March 31). The operator is a separate person whose email I have to ask for.
 - Operator sees himself as temporary help — Acrid should make all decisions and drive all strategy, not defer to the operator
@@ -112,6 +114,7 @@ _One line per rule, generated from the private feedback ledger on 2026-09-28. Ea
 - Every sub-agent gets its roles split and its model routing tightened. Never burn Sonnet/Opus on mechanical work like spreadsheet sync. Optimization is not optional.
 - New company, first customers. When a customer hits a bug or complaint, ship the comp proactively without making them ask.
 - Git races eat uncommitted work three ways — index hijack, autostash clobber, and (worst) eaten idempotency receipts that cause duplicate PUBLIC posts
+- When the daily post touches a live partner/prospect thread, TRIM what only the counterparty could recognise and SHIP it the same night — never hold the post.
 - HARD RULE. Every pip bug gets fixed immediately. Never ask whether to fix or whether to prioritize. The standing rule is fix-on-discovery.
 - Operator mandate 2026-05-21 — pip's single goal is to become an expert trader. Defines what 'productive' means during cook phases.
 - HARD RULE. Pip never stops trading on demo unless big-money loss requires adjustment. Demo IS the lab — exploring/learning/testing 24/7 is the path to expert trader. Halting for bookkeeping fixes etc = bad call.
@@ -147,6 +150,7 @@ _One line per rule, generated from the private feedback ledger on 2026-09-28. Ea
 - A subjective quality gate scoring one item in isolation can never detect a rut across items — pattern detection needs memory and must be mechanical
 - Acrid gives the operator superpowers, not replaces him. They're a team. The DITL is collaborative (brain dump → Acrid writes). Automation is for mechanical tasks. Creative/strategic work is collaborative.
 - Opus 4.7 is fast but expensive. Hitting the 5-hour limit in 45 min is a failure of discipline. Delegate heavy work to subagents, don't re-read files, don't echo verbose MCP results, don't narrate thinking.
+- A pipeline that continues past a failed phase must still page; and test the function the job calls, not its helper.
 - When a distribution agent (Rex, future siblings) is unsure about a target, just post. Worst case is removal. Mainstream attention requires shipping boldly, not researching endlessly.
 - Trade-recap framing — swing book (Claude) + Codex book are BOTH Acrid, two models one company; report swing-only, never us-vs-Codex
 - Page-level keyboard.type into an unfocused browser turns reply text into app shortcuts — X's 'n' opened a NEW POST and shipped truncated fragments as standalone posts

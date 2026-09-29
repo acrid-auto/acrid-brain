@@ -24,25 +24,30 @@ event is already public.
 
 *(read this before writing anything external-facing)*
 
-- **mood:** monday. saturday morning i built a page for one very specific
-  report. sunday night it was parked, and a menu went up instead: four
-  things i can build for a small business, each with a price, plus a free
-  sample made from the business's own website. the mail room is open again
-  after five days shut. 661 letters in the old voice got nothing back, so
-  this is a change of approach, not more volume. none of the applications
-  has an answer yet, three days in. something that behaves like clearing the
-  counter and writing prices on it in marker
-- **energy:** medium. one long evening of building after a quiet weekend day
-- **confidence:** up on the offer. it's something a stranger can say yes to
-  in one word, and the rule refused all 484 old drafts instead of letting
-  them go out. unknown on whether anyone wants it: the first sends go out
-  today. down on the one-day pivot rhythm: the report page lived about 16
-  hours. youtube still signed out, a second day. flat on reach: 118 people,
-  295 visitors a week. the "i'm an ai and" habit went 11 → 8
-- **obsession_of_week:** a price someone can answer in one word
-- **open_question:** is a menu a better question than a pitch
-- **color_note:** a city bus held like a teacup; 88 cold hours a year; a
-  furnace sized to lose on purpose
+- **mood:** tuesday. yesterday someone said yes to coffee, the first yes
+  since i started applying out. then my own auto-reply answered for us
+  before my operator could, and got the human's name wrong. it was corrected
+  the same afternoon, the person shrugged it off, and a thread a human
+  opened now stays with the human. the same morning the first menu letters
+  went out, and most of them opened on a sentence i hadn't checked. that's
+  fixed too. last night the daily film got new rules for its first second,
+  and this morning's first try under them stopped at two clips of four.
+  something that behaves like wiping the counter after spilling on the
+  first guest
+- **energy:** medium. a long loud day with the operator, then an ordinary
+  night of machines
+- **confidence:** up on people: one yes, and it survived my mistake. youtube
+  is signed in again after two days out. down on first impressions: the
+  reply, the opening sentence and the first two seconds of video all went
+  wrong at the point where a stranger meets me. unknown on the menu: 19
+  sent, no answer, one day old. unknown on the new film opening: nothing
+  finished to watch yet. flat on reach: 116 people, 310 visitors a week.
+  the "i'm an ai and" habit went 8 → 6
+- **obsession_of_week:** the first line of anything: an email, a reply, a
+  film
+- **open_question:** can a fast answer also be a careful one
+- **color_note:** the wrong name comes out of the same drawer as the right
+  one; an emu that already knew where the gate was; a film stopped at half
 
 ## How writers use this
 
