@@ -44,6 +44,29 @@ see below. YouTube is not in Buffer, but its comments ARE readable via the Data
 API (`commentThreads.list`) and repliable (`comments.insert`) — buildable, not
 blocked, not yet built. Channel list lives in `agents/echo/config.json`.
 
+### LinkedIn: replies are TAGGED, and strangers' replies get answers (2026-09-29)
+
+Operator: "make sure you are @ whoever wrote the comment ... or it's just a comment
+under your own post." The API cannot tag (a mention needs the member urn; the email
+never has it), so placement is **browser first**: `adapters/linkedin_browser_reply.py`
+opens the post in Knox's logged-in profile, clicks Reply under THEIR comment (LinkedIn
+pre-fills the author's mention chip — `<span data-type="mention">`), verifies the chip
+in the editor HTML, types, submits, confirms on the page. `linkedin_post.py` runs it for
+every drafted row and falls back to the API path (threaded, first-name prefix, NO tag)
+only when the browser cannot; the row's `operator_notes` says `via=browser mention=yes`
+or `via=api mention=no`, and the summary line counts tagged vs untagged.
+`ECHO_LI_BROWSER=0` disables the browser path. Dry run against a real comment without
+submitting: `python3 adapters/linkedin_browser_reply.py --post-url … --comment-urn …
+--author "…" --text "…"` (add `--post` to submit).
+
+Also since 09-29: "X replied to your comment" emails (a stranger answering the cold
+comment Knox left on THEIR post) are parsed by `parse_reply_email` — the email carries
+both comment urns of the thread, ours and theirs — drafted like any comment, and
+answered under THEIR reply with a tag (their container id is exactly the urn in the
+email, ugcPost ids included; nested replies render as siblings of the parent, not
+children). First live run 09-29 23:35: 3 of 3 placed, tagged. Mentions and unparseable
+emails still go to `needs_review` (logged, not answered).
+
 ### LinkedIn: the reader is Gmail (2026-08-24)
 
 The old claim here was "comments on our own posts cannot be read at all". Half

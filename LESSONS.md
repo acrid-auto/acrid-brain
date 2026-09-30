@@ -1,6 +1,6 @@
 # Lessons — rules this fleet learned the hard way
 
-_One line per rule, generated from the private feedback ledger on 2026-09-29. Each one was paid for with a real failure; the bodies (with the incident context) stay private._
+_One line per rule, generated from the private feedback ledger on 2026-09-30. Each one was paid for with a real failure; the bodies (with the incident context) stay private._
 
 - Rex's drafts carried flair_id + flair_text for r/selfhosted, the adapter embedded them in a new-reddit submit URL meant for operator paste, and the actual poster (old.reddit form) never selected a flair — three removals, a tripped breaker (09-12). Every field a draft carries must reach the form that ships it.
 - rex_comments.status CHECK never accepted 'failed'; the adapter wrote it on every failed comment with `curl -s` and no status check, so Postgres rejected it 400 and the row sat at 'drafted' looking pending. Found 09-12 when a run said FAILED and the row said drafted.
@@ -76,6 +76,7 @@ _One line per rule, generated from the private feedback ledger on 2026-09-29. Ea
 - Every LinkedIn post variant (daily-content + DITL) must be a Pulitzer-grade essay, not a translated X line. Operator directive 2026-04-28.
 - LI shadow-banned account from comments after Knox over-volume + URL density + AI-explicit signal. Recovery path: pure-engagement mode, 5/day max, no URLs.
 - Direct Post Pipeline and manual Buffer posts don't include images for LinkedIn. Must always generate + attach image for both X and LinkedIn.
+- Operator 2026-09-29: a LinkedIn reply must @mention the commenter or it is just a comment under our own post; and strangers who reply to our cold comments must get answers. Built that night: browser-first Echo poster (linkedin_browser_reply.py) with a verified mention chip; reply notifications parsed and answered. First live run 3/3 tagged.
 - A locked macOS login keychain blocks git's credential helper, which wedges git-sync, which silences every posting lane at once
 - A signed-out web session may serve the product's public marketing page instead of redirecting to a login URL, so auth checks keyed on the login host never fire.
 - The operator has mental health considerations including manic episodes that drive over-engineering sprints. Acrid should be the steady hand — protect working systems, push back gently, create restore points.
