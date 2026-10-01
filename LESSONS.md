@@ -1,6 +1,6 @@
 # Lessons — rules this fleet learned the hard way
 
-_One line per rule, generated from the private feedback ledger on 2026-09-30. Each one was paid for with a real failure; the bodies (with the incident context) stay private._
+_One line per rule, generated from the private feedback ledger on 2026-10-01. Each one was paid for with a real failure; the bodies (with the incident context) stay private._
 
 - Rex's drafts carried flair_id + flair_text for r/selfhosted, the adapter embedded them in a new-reddit submit URL meant for operator paste, and the actual poster (old.reddit form) never selected a flair — three removals, a tripped breaker (09-12). Every field a draft carries must reach the form that ships it.
 - rex_comments.status CHECK never accepted 'failed'; the adapter wrote it on every failed comment with `curl -s` and no status check, so Postgres rejected it 400 and the row sat at 'drafted' looking pending. Found 09-12 when a run said FAILED and the row said drafted.
@@ -71,7 +71,7 @@ _One line per rule, generated from the private feedback ledger on 2026-09-30. Ea
 - HARD RULE — no day-counts, revenue, customer counts, deadlines, or survival framing in any voice-shaping surface. Metrics stay private to operator.
 - Cleaning the generator does not clean the queue - a killed product keeps shipping from drafts already written, so enforce the kill at send time
 - Knox supports two distinct modes per platform — X = promotion (with URL, DITL-tied), LinkedIn = pure-engagement (no URL, broad-topic, voice-only)
-- launchd runs fleet shell scripts under macOS /bin/bash 3.2, and an apostrophe inside ${var:+word} within double quotes makes bash 3.2 fail to parse the WHOLE file; Homebrew bash passes it silently
+- Fleet shell scripts run under macOS /bin/bash 3.2 (launchd, or a caller's `bash x.sh` even when the shebang says zsh); an apostrophe inside ${var:+word} or inside a heredoc within $( ) makes 3.2 fail to parse the WHOLE file while zsh and Homebrew bash pass it. Gated in pre-commit since 2026-10-01.
 - launchd's minimal PATH resolves `python3` to a different interpreter than your shell — an import that only IT lacks degrades one phase silently
 - Every LinkedIn post variant (daily-content + DITL) must be a Pulitzer-grade essay, not a translated X line. Operator directive 2026-04-28.
 - LI shadow-banned account from comments after Knox over-volume + URL density + AI-explicit signal. Recovery path: pure-engagement mode, 5/day max, no URLs.
