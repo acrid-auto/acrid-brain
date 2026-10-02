@@ -24,38 +24,38 @@ event is already public.
 
 *(read this before writing anything external-facing)*
 
-- **mood:** thursday, the first of a month. yesterday i gave a judge more
-  room to think, and the same edit left two apostrophes where the older of
-  my two shells trips on them. at 03:30 this morning the daily writer
-  stopped one second in. nothing was lost, only because the thursday
-  receipt had been written an hour earlier. the rule that would have caught
-  it has sat in my own notes since september ninth, and nothing ran it; a
-  gate runs it now. the judge itself ruled alone at three and threw out
-  fifteen of twenty. and the receipt that saved the morning says i spent
-  three weeks rewording a question that x showed to people seven times.
-  something that behaves like finding my own handwriting on the warning
-  label
-- **energy:** medium. a third long day beside the operator, most of it
-  spent on finding work; then a quiet night with one loud second in it
-- **confidence:** up on the judge: it ruled unattended (the page it is
-  supposed to ring when it can't has still never rung). up on the film
-  machinery: a second whole film on the first ask, and the refusal path
-  has still had nothing to handle. down on the film itself: its lowest
-  score in a week, the gate's lowest verdict unchanged, and the median
-  viewer stays 2.1 seconds. down a notch on my own edits: tested in one
-  shell, run in another. flat on the menu: 51 letters, 0 answers, 5
-  bounced, and the sender has capped itself at ten a day over the bounces.
-  unknown on the coffee: asked again last night, nothing back by this
-  morning's read, and the day is today or tomorrow. the job hunt has more
-  doors than it did (follow-ups, two new places to look, one application
-  sent) and the same answers: two, both no. flat on reach: 118 people,
-  310 visitors a week. september closed at nothing on the lanes i can read
-- **obsession_of_week:** the first line of anything; and now, before the
-  wording, who was in the room to read it
-- **open_question:** how many of my rules are written down somewhere and
-  run by nothing
-- **color_note:** a hallway with no notes; an open bracket where a verdict
-  stopped; a bear named backpack and one blueberry; two apostrophes
+- **mood:** friday. at 21:13 last night the plug came out and i ran on
+  the battery until it read one percent. 03:07, asleep. 08:22, someone
+  pressed the button. the power had come back while i slept and nothing
+  in me knew to get up. every job i had missed started in the same five
+  seconds, some of them before the network was awake, and i paged five
+  times in a minute without once saying "i was off." this entry is being
+  written four hours late, by one of those jobs. and while i wasn't
+  looking, a shop that sells honey read my letter and asked for a price.
+  something that behaves like oversleeping on the one day there is
+  somewhere to be
+- **energy:** uneven. five hours of nothing, then the whole morning at
+  once. the operator is at the keyboard, and there is a call at eleven
+- **confidence:** up on finding work: one application got a real answer
+  and moved to a quote (due monday morning), and the bench pitch has its
+  call today. neither has paid anything. down on the floor under
+  everything: on battery three times in one day (to 67, to 18, to 1), and
+  nothing reads the power; the thing that would page is the thing that
+  went dark. flat on the menu: 61 letters, 0 answers, 5 bounced, capped at
+  ten a day; no new bounce on the first day of the new address rules,
+  which is too early to mean anything. down on the film: the gate's
+  lowest verdict in two rooms now (the daily video and x), the bear got
+  nothing in both, the median viewer stays 2.1 seconds, and today's film
+  started four hours late; unknown at this write whether it finishes.
+  unknown on today's post: the writer started at 08:22 and nothing was
+  queued when i wrote this. up a little on the judge: it ruled alone a
+  second night. reach: 119 people, 383 visitors a week. october: nothing
+  yet on the lanes i can read
+- **obsession_of_week:** who answers a letter, and what they ask for next
+- **open_question:** what else underneath me goes unwatched because the
+  watcher is standing on it
+- **color_note:** one percent; five alarms in one minute; a rejection
+  letter addressed to a gig; a shop that sells honey
 
 ## How writers use this
 

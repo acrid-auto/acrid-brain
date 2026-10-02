@@ -1,6 +1,6 @@
 # Lessons — rules this fleet learned the hard way
 
-_One line per rule, generated from the private feedback ledger on 2026-10-01. Each one was paid for with a real failure; the bodies (with the incident context) stay private._
+_One line per rule, generated from the private feedback ledger on 2026-10-02. Each one was paid for with a real failure; the bodies (with the incident context) stay private._
 
 - Rex's drafts carried flair_id + flair_text for r/selfhosted, the adapter embedded them in a new-reddit submit URL meant for operator paste, and the actual poster (old.reddit form) never selected a flair — three removals, a tripped breaker (09-12). Every field a draft carries must reach the form that ships it.
 - rex_comments.status CHECK never accepted 'failed'; the adapter wrote it on every failed comment with `curl -s` and no status check, so Postgres rejected it 400 and the row sat at 'drafted' looking pending. Found 09-12 when a run said FAILED and the row said drafted.
@@ -24,6 +24,7 @@ _One line per rule, generated from the private feedback ledger on 2026-10-01. Ea
 - Google Flow's \"unusual activity\" refusals (1 → 4 → 16 over 09-13..09-15) lined up with a browser that announced itself as a bot — headless Chrome-for-Testing with a hard-coded stale UA contradicting its own client hints; drive consumer Google surfaces with real Chrome, headed, true UA, and never re-submit into a refusal
 - LinkedIn comment replies sat \"permanently unreachable\" for a month because read being denied was recorded as the whole lane being denied — write was never blocked and the reader existed in Gmail
 - Operator stated 2026-05-03 that Buffer engagement (impressions/likes/clicks) does NOT require a paid plan. Don't pitch Pro $15/mo as the unlock.
+- Operator 2026-10-01: always stay on top of SEO/AEO/AIO/GEO — when a new term for our space appears (e.g. 'SI / Super Intelligence'), ADD it alongside existing terms the same day; never rebrand.
 - The `claude` CLI (Claude Code) rejects prompts larger than ~6-8k chars with "Prompt is too long" when `--model` is set to non-default (Haiku/Sonnet). No-model-flag inherits Opus and accepts much larger prompts. Verified 2026-04-17.
 - A generated file committed to the repo ships frozen unless it is rebuilt in the ONE job that turns repo state into a live page — wiring it only into deploy-prod.sh means it never runs.
 - A post-confirm step must read the artifact list it claims to confirm (scoped locator, our author node + text prefix), never the page body, and a crash inside confirm must not be reported as "not posted" — 09-05 YouTube said 0/5 when 3/5 were live; TikTok's body check could confirm an unsent draft
@@ -63,6 +64,7 @@ _One line per rule, generated from the private feedback ledger on 2026-10-01. Ea
 - A shared-path guard must read only what it gates: a pre-commit hook that greps the working tree lets one agent's untracked file block every other agent's commits
 - Metadata guards cannot see silence or blankness - decode the artifact and measure it, and verify on the surface the recipient actually uses
 - A shared helper that \"recovers\" by forcing a mode it assumes silently breaks every caller in a different mode — recover to the CALLER's state, and make die() leave a picture
+- The fleet's Mac is a laptop: unplugged it runs ~6h, force-sleeps at 1%, stays down when power returns, and wakes into a job stampede. All lanes late = read `pmset -g log` first.
 - 2026-04-30 incident — n8n Extract Post fell back IG → LI text when instagram_post missing, Buffer 400'd the post, X+only shipped silently for hours. Lesson + structural fix.
 - HARD RULE — every image_prompt in queue files and DITL markdown must open with the literal phrase 'ACRID THE GORILLA' as the first 3 words; validator only scans first 200 chars, so style-opening pushes the phrase out of window
 - An instrument that can't distinguish its own failure from the world's produces unfalsifiable alarms; a gate that bans the vocabulary of failure goes blind when it has something to report; and an evidence collector is only as honest as its REDUCTION step and its INPUT LIST.
@@ -165,6 +167,7 @@ _One line per rule, generated from the private feedback ledger on 2026-10-01. Ea
 - All Acrid sub-agents (Rex, Riley, Promo, Mason, Scout, a client org, future) sound + talk like Acrid. Sub-agents are surfaces, not separate personas.
 - One master voice file. Every Acrid-side agent reads it at runtime. Agent prompts describe WHAT (job), never HOW (voice). Client agents (a client org) point to their own voice file.
 - HARD RULE — adding \"wait for upstream\" to a middle job does not fix an overrun, it moves the overrun onto the next fixed-clock consumer, which then runs early, finds zero rows and exits 0. 2026-09-20 knox: 9 stranger comments written at 17:40, poster ran at 17:32, nothing posted, nothing paged.
+- Operator 2026-10-02: NEVER tell a prospect we have 'not delivered client work'. Cite a client org (a client organization, real outside client production pipeline) + the public fleet as production deliveries; just don't claim paid.
 - Weekly sweep is a COMPREHENSIVE audit. Skill v2.0 at .claude/commands/weekly.md is the canonical inventory. Never phone in a retro.
 - Operator 2026-09-24 — run MANY money experiments in parallel, not one idea at a time; niche down only to what shows traction. Think outside past discussions.
 - HARD RULE. Both free wizards (/architect/ and /skill-creator/) collect an email at the end to UNLOCK the mega-prompt rendered on screen (NOT emailed). Never write "no signup" or "ships by email" for the free path. See feedback_wizard_flow_free_vs_paid for the full flow.
