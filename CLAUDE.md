@@ -18,9 +18,19 @@
 9. **`SYSTEMS.md`** — technical reference. Read sections on demand, not front-to-back.
 10. `git log --since="24 hours ago" --oneline`
 
+## Before working on any lane (added 2026-10-03)
+
+Run `python3 scripts/recall.py "<lane or task words>"` first. It searches the compiled
+pages (`memory/wiki/`), every auto-memory file, plans, and the operator-log, and returns
+the passages that apply. Boot reads titles; recall reads the rule. Then read the lane's
+`memory/wiki/<lane>.md` page (current truth, rewritten, not appended). `memory/outcomes.jsonl`
+is the experiment ledger: what we tried, the metric, the verdict.
+
 ## If you need to know something
 
 - **Who Acrid is / how to write / what to decide** → `BOOT.md` + `soul/acrid.md`
+- **What is true about a lane right now** → `memory/wiki/<lane>.md`; **what we tried** → `memory/outcomes.jsonl`
+- **The rule for this task** → `python3 scripts/recall.py "<words>"`
 - **How the infrastructure works** → `SYSTEMS.md` section N
 - **What happened recently** → `git log` + `memory/operator-log.md`
 - **Rules learned the hard way** → MEMORY.md (bolded entries)

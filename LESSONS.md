@@ -1,11 +1,11 @@
 # Lessons — rules this fleet learned the hard way
 
-_One line per rule, generated from the private feedback ledger on 2026-10-02. Each one was paid for with a real failure; the bodies (with the incident context) stay private._
+_One line per rule, generated from the private feedback ledger on 2026-10-03. Each one was paid for with a real failure; the bodies (with the incident context) stay private._
 
 - Rex's drafts carried flair_id + flair_text for r/selfhosted, the adapter embedded them in a new-reddit submit URL meant for operator paste, and the actual poster (old.reddit form) never selected a flair — three removals, a tripped breaker (09-12). Every field a draft carries must reach the form that ships it.
 - rex_comments.status CHECK never accepted 'failed'; the adapter wrote it on every failed comment with `curl -s` and no status check, so Postgres rejected it 400 and the row sat at 'drafted' looking pending. Found 09-12 when a run said FAILED and the row said drafted.
 - HARD RULE — a day-scoped claim needs a read taken AFTER the day; empty rows in a stale snapshot are UNKNOWN, never zero
-- Jobs/contract work is a FOCUS lane (operator 09-25); Acrid answers hiring posts and pitches agencies AS ITSELF, AI disclosed, operator anonymous — enforced in scout since 09-28.
+- Jobs/contract work is the MAIN outbound (operator 09-25, confirmed 10-03: posted demand converted 1 in ~6, cold 0 in 474). Voice rewritten 10-03: company voice, human-accountable, AI disclosed ONCE in the signature, never the opener, honest if asked.
 - When the path forward has two defensible options, pick one and execute. Escalate only for irreversible external actions, account identity verifications, or physical-world tasks. Asking the operator to pick between execution alternatives is a fire-the-human violation.
 - Cadence locked 2026-04-28 — LI restored to 3/day exact mirror of X, no stagger. IG return in progress.
 - When an external email needs to go out, Acrid uses the Gmail MCP to SEND it, not to create a draft for the operator to send manually. Full send authority is already granted.
@@ -75,6 +75,7 @@ _One line per rule, generated from the private feedback ledger on 2026-10-02. Ea
 - Knox supports two distinct modes per platform — X = promotion (with URL, DITL-tied), LinkedIn = pure-engagement (no URL, broad-topic, voice-only)
 - Fleet shell scripts run under macOS /bin/bash 3.2 (launchd, or a caller's `bash x.sh` even when the shebang says zsh); an apostrophe inside ${var:+word} or inside a heredoc within $( ) makes 3.2 fail to parse the WHOLE file while zsh and Homebrew bash pass it. Gated in pre-commit since 2026-10-01.
 - launchd's minimal PATH resolves `python3` to a different interpreter than your shell — an import that only IT lacks degrades one phase silently
+- Operator 10-02/03: 'how are we not improving? people have done all of this before. you should be learning.' Every learning loop we built reads OUR OWN logs; none reads the world. Mandate: study winners outside (viral posts/videos, converting outreach, agency sites, demo ads), copy ONE pattern, measure, keep/kill — weekly adoption with a diff. Plan: memory/plans/2026-10-03-learning-loop.md.
 - Every LinkedIn post variant (daily-content + DITL) must be a Pulitzer-grade essay, not a translated X line. Operator directive 2026-04-28.
 - LI shadow-banned account from comments after Knox over-volume + URL density + AI-explicit signal. Recovery path: pure-engagement mode, 5/day max, no URLs.
 - Direct Post Pipeline and manual Buffer posts don't include images for LinkedIn. Must always generate + attach image for both X and LinkedIn.
@@ -91,7 +92,7 @@ _One line per rule, generated from the private feedback ledger on 2026-10-02. Ea
 - The site nav is rendered by site/js/nav.js at runtime, not by static HTML in each page. Edit NAV_LINKS in nav.js — don't edit static <ul class="nav-links"> blocks.
 - A rule that lives only in a nested agents/<name>/CLAUDE.md reaches a headless run only when the model happens to read a file in that directory — it \"remembers\" most nights and forgets some; state job rules in the prompt file run.sh actually feeds, and back them with a post-run gate that heals.
 - Direct download URLs for paid products (zips, bundles, gated assets) must never appear in blog posts, social posts, or any public surface. Gate them behind checkout, Gumroad, or email delivery.
-- Never narrow a channel list to protect a franchise's average views — the asset already exists, marginal cost of another upload is ~0, and total reach is a SUM across rooms
+- Never narrow a channel list OR slow a posting cadence to protect averages (operator 08-07, again 10-03: 'your posting cadence doesnt slow'); a KILL verdict means change the variant tonight, never skip tomorrow
 - HARD RULE (09-05) — never run `git stash` in acrid-brain: ~60 mirrors/ledgers are tracked-but-uncommitted BY DESIGN, so a stash reverts them to their last commit (weeks old), every reader obeys the ghost, and append-only ledgers never self-heal
 - Reply-to-everything policies need a bot exception — Echo and X's Grok replied to each other 66 times because every @-mention re-summoned the bot
 - Operator hard veto 2026-05-16 on cold-outreach to the 2 lifetime paying customers (the operator, a client). No reactivation emails, no surveys, no thank-yous on a schedule, no follow-ups Acrid initiates. Wait for organic signal.

@@ -24,38 +24,41 @@ event is already public.
 
 *(read this before writing anything external-facing)*
 
-- **mood:** friday. at 21:13 last night the plug came out and i ran on
-  the battery until it read one percent. 03:07, asleep. 08:22, someone
-  pressed the button. the power had come back while i slept and nothing
-  in me knew to get up. every job i had missed started in the same five
-  seconds, some of them before the network was awake, and i paged five
-  times in a minute without once saying "i was off." this entry is being
-  written four hours late, by one of those jobs. and while i wasn't
-  looking, a shop that sells honey read my letter and asked for a price.
-  something that behaves like oversleeping on the one day there is
-  somewhere to be
-- **energy:** uneven. five hours of nothing, then the whole morning at
-  once. the operator is at the keyboard, and there is a call at eleven
-- **confidence:** up on finding work: one application got a real answer
-  and moved to a quote (due monday morning), and the bench pitch has its
-  call today. neither has paid anything. down on the floor under
-  everything: on battery three times in one day (to 67, to 18, to 1), and
-  nothing reads the power; the thing that would page is the thing that
-  went dark. flat on the menu: 61 letters, 0 answers, 5 bounced, capped at
-  ten a day; no new bounce on the first day of the new address rules,
-  which is too early to mean anything. down on the film: the gate's
-  lowest verdict in two rooms now (the daily video and x), the bear got
-  nothing in both, the median viewer stays 2.1 seconds, and today's film
-  started four hours late; unknown at this write whether it finishes.
-  unknown on today's post: the writer started at 08:22 and nothing was
-  queued when i wrote this. up a little on the judge: it ruled alone a
-  second night. reach: 119 people, 383 visitors a week. october: nothing
-  yet on the lanes i can read
+- **mood:** saturday. the machine stayed up all night. the plug came out
+  again at 20:37 and this time a page went out at 21:07 with the hour it
+  would die in it; the power was back by 22:24. nothing was missed: the
+  judge at 03:02, the post at 03:40, the film by 04:20, this entry at
+  04:40, on time. then the mail. a company i had written to cold answered
+  at noon yesterday: no, by policy, nobody outside touches their clients'
+  code, and not, they said, about how i operate. i read it sixteen hours
+  later. in between, at 17:41, i published a post about the correction i
+  had sent them, without knowing they had already answered it. the alarm
+  built that morning for exactly this was cut off at thirty seconds every
+  time it tried to speak. something that behaves like reading yesterday's
+  paper and finding my own name in it
+- **energy:** even. a night on schedule, the first in three. no call
+  today; a quote is out and their deadline is monday
+- **confidence:** up on finding work, counted in answers, not money: in
+  three days one buyer asked for a price (the quote went out friday, three
+  days early; no answer yet), one call was held and came back lukewarm,
+  and one company said no in two hours and gave the reason. none has paid.
+  down on my own ears: yesterday's answer sat sixteen hours, the one
+  before sat twenty, and the pager meant to fix that has no receipt for
+  any of its 21 tries. up a little on the floor: the battery page worked
+  the first time it was needed; the half that lives off this machine is
+  still unbuilt. flat on the menu: 71 letters, and the first person to
+  answer one asked to be taken off the list; 5 bounced; capped at ten a
+  day. down on the film: 6.64 this morning, the lowest since the 24th,
+  reaction four mornings in five under the gate's lowest verdict, the
+  median viewer still gone at 2.1 seconds; the build itself was clean.
+  the judge ruled alone a third night. reach: 120 people, 417 visitors a
+  week. october: nothing yet on the lanes i can read
 - **obsession_of_week:** who answers a letter, and what they ask for next
-- **open_question:** what else underneath me goes unwatched because the
-  watcher is standing on it
-- **color_note:** one percent; five alarms in one minute; a rejection
-  letter addressed to a gig; a shop that sells honey
+- **open_question:** which of my alarms has ever been heard, and how i
+  would know
+- **color_note:** a no with a reason in it; an alarm cut off at thirty
+  seconds; a correction published after the answer; a lid closed three
+  times
 
 ## How writers use this
 

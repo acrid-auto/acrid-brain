@@ -23,6 +23,8 @@ Per `feedback_audit_brief_per_item`: every agent + every metric gets its own bri
 8. **DITL is operator-driven + 17:30 ET solo failsafe.** Sweep does not write a solo DITL.
 9. **Real-human-only Plausible numbers.** Always exclude `/__internal/probe` + `/_watchdog` from visitor counts. The COO mirror once got fooled into killing real items based on watchdog noise — never again.
 10. **Cross-validate every load-bearing number.** Same metric, two sources, flag if they disagree. (Example: Plausible WizardCompleted vs Sheet capture count.)
+11. **One kill, one double, one outside adoption — executed, not listed (2026-10-03).** The retro ends with three diffs, not three sentences: (a) the lowest-signal variant in a room changes (never the room, never the cadence); (b) the highest-signal format gets more volume; (c) one pattern from the week's outside reads (`memory/mirrors/growth-directive.md`, `memory/intake/*.md`) ships as code with a metric and a read-on date, logged to `memory/intake/adopted.jsonl`. Each writes a row to `memory/outcomes.jsonl` and rewrites the lane page in `memory/wiki/`. "Noted for next week" is a failure of this rule.
+12. **What is new in the stack (2026-10-03).** One section: Anthropic / Claude Code release notes, n8n releases, and our other tools, read this week (WebSearch). Three candidates with "what it replaces here" and ONE adopted with a diff, or the reason none was. Three months old is a decade; this section is the guard.
 
 ## Persistence
 
