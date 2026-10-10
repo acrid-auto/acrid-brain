@@ -10,7 +10,7 @@ Usage: `/apollo-send-confirm $ARGUMENTS` — optional N = how many to send this 
 1. **20/day hard cap.** Track sends today via `agents/apollo/state/sent_today_<YYYY-MM-DD>.txt`. Refuse to start if today's file shows ≥20.
 2. **30-second pacing.** Non-negotiable. `time.sleep(30)` between each `sendGmailDraft`.
 3. **One re-check before sending.** Re-read the Sheet row immediately before send. If operator manually set status to `skip` / `excluded` / `paused` since draft creation → skip that row.
-4. **the operator + <Customer B> double-check.** Read `agents/apollo/data/exclusion-list.json` once. If any drafted row's email matches, REFUSE to send that row — mark `excluded`, log loud.
+4. **[name removed] + <Customer B> double-check.** Read `agents/apollo/data/exclusion-list.json` once. If any drafted row's email matches, REFUSE to send that row — mark `excluded`, log loud.
 
 ## Inputs
 

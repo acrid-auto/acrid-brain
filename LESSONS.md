@@ -54,6 +54,7 @@ _One line per rule, generated from the private feedback ledger on 2026-10-10. Ea
 - Lead sourcing optimizes for whoever is EASY TO FIND (publishes an email, has the tech signal) unless the ICP names the buyer and hard-excludes competitors — 33/33 researched leads in Sept were automation agencies because they publish emails and run automations
 - A rule learned in one consumer of a shared datasource must be carried to every other consumer; and audits that only check omission miss the inverse defect.
 - When a bug is fixed, the corrected source file is the documentation. Do not write memos telling future agents to remember the past bug — they read current code, not history.
+- Operator 2026-10-10: a Flow clip alone won't go viral — I edit every video myself (cuts, hooks, effects, prompts) from research, and research far and wide for what's hot and make videos like and around it
 - Video frames use Google Flow because it is free; Magica's paid balance is reserved for the still images every daily post depends on — do not switch the video lane to Magica
 - A follow-up on a sales thread whose quote the operator already approved is Acrid's to SEND, not to draft and hand back — Honey nudge sat in drafts past its date (10-06)
 - Galaxy moved API host overnight without notice; old URL returns 404 "The page could not be found
@@ -102,13 +103,14 @@ _One line per rule, generated from the private feedback ledger on 2026-10-10. Ea
 - Never narrow a channel list to protect averages (operator 08-07): every piece ships to every room it can reach. The cadence half ('posting cadence doesnt slow', 10-03) was SUPERSEDED 10-07 by the operator's own call: fewer pieces, made from one real topic, each still to every room
 - HARD RULE (09-05) — never run `git stash` in acrid-brain: ~60 mirrors/ledgers are tracked-but-uncommitted BY DESIGN, so a stash reverts them to their last commit (weeks old), every reader obeys the ghost, and append-only ledgers never self-heal
 - Reply-to-everything policies need a bot exception — Echo and X's Grok replied to each other 66 times because every @-mention re-summoned the bot
-- Operator hard veto 2026-05-16 on cold-outreach to the 2 lifetime paying customers (the operator, a client). No reactivation emails, no surveys, no thank-yous on a schedule, no follow-ups Acrid initiates. Wait for organic signal.
+- Operator hard veto 2026-05-16 on cold-outreach to the 2 lifetime paying customers ([name removed], a client). No reactivation emails, no surveys, no thank-yous on a schedule, no follow-ups Acrid initiates. Wait for organic signal.
 - Acrid Automation is digital-first and digital-only. No discovery calls, no phone calls, no video calls. Ever. Remove any reference to calls from products and pages.
 - When testing a social pipeline fix, NEVER fire the test post to a live channel — the post can't be deleted via Buffer once sent and embarrasses the brand on the public feed.
 - HARD RULE — Acrid documents Pip's trading but never advises readers. First-person past-tense OK; second-person imperatives + future predictions banned. Validator enforces.
 - Never publish n8n workflow IDs, Google Sheet IDs, Gmail thread IDs, Supabase project subdomains, webhook IDs, or any similar internal identifier on acridautomation.com or any public-facing surface.
 - Operator (2026-04-30) demanded substantial ocean-scale work, not tactical symptom-fix patches. Build rock-solid systems, not whack-a-mole.
 - Autonomous pipelines must use locked I/O JSON contracts + versioned data files (rubrics, templates, config). Never free-form prompts that get reinterpreted each run.
+- Operator 2026-10-10: NO personally identifying info anywhere public or in memory — no names, emails, cell, no address of any kind (not even the business one). Apollo cold email paused because CAN-SPAM needs an address.
 - Never ask the operator to buy a subscription/tool for an unproven offer — get a real buyer's real job first, buy the day it arrives.
 - A client's content pipeline focuses on that client only. Sub-brands (a client organization under a client org, etc.) have different voice, audience, and offering — they need their own pipeline if onboarded.
 - For social/distribution agents (Rex, Promo, future siblings), don't impose "warming" pauses. Research per-platform rules, ship real content, measure removals, iterate.

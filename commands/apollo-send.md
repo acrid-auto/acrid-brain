@@ -11,10 +11,10 @@ Path A (operator manual copy-paste from Sheet → Gmail) burns 30 min/day. Path 
 ## Hard rules (re-read every run)
 
 1. **Operator is anonymous.** No first name, no city, no phone. Sender identity = "ACRID Automation". `soul/acrid.md` voice contract applies.
-2. **Never spam the operator or <Customer B>.** `agents/apollo/data/exclusion-list.json` is the source of truth. Cross-check email AND name BEFORE drafting. If a queued row matches, set status=`excluded` in the Sheet and skip — do NOT draft.
+2. **Never spam [name removed] or <Customer B>.** `agents/apollo/data/exclusion-list.json` is the source of truth. Cross-check email AND name BEFORE drafting. If a queued row matches, set status=`excluded` in the Sheet and skip — do NOT draft.
 3. **No fixed prices, no fake urgency, no LinkedIn-bro openers.** `agents/apollo/data/banned-phrases.md` — bail on the row if any draft body contains a hit.
 4. **No financial advice.** Pip case studies past-tense only.
-5. **CAN-SPAM footer.** Every draft body MUST contain (a) the literal mailing address `<acrid-mailing-address>` and (b) an unsubscribe line. The drafts in `state/drafts/*.json` use the token `{ACRID_MAILING_ADDRESS}` — substitute before draft creation. If somehow missing, append a footer block.
+5. **CAN-SPAM footer.** Every draft body MUST contain (a) the literal mailing address `{ACRID_MAILING_ADDRESS}` and (b) an unsubscribe line. The drafts in `state/drafts/*.json` use the token `{ACRID_MAILING_ADDRESS}` — substitute before draft creation. If somehow missing, append a footer block.
 6. **Rate cap.** Max 20 drafts per run. Pause 1 second between createGmailDraft calls.
 
 ## Inputs
@@ -40,7 +40,7 @@ Path A (operator manual copy-paste from Sheet → Gmail) burns 30 min/day. Path 
 
       ---
       You can ignore or reply "unsubscribe" and we'll remove you immediately.
-      ACRID Automation — <acrid-mailing-address>
+      ACRID Automation — {ACRID_MAILING_ADDRESS}
       ```
    d. Banned-phrase check: lowercase the body, grep against `agents/apollo/data/banned-phrases.md`. On hit, log `BANNED_PHRASE_HIT contact=<email> phrase=<word>` and skip — do NOT draft.
    e. Call `mcp__google-workspace__createGmailDraft` with:

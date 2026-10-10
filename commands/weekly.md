@@ -331,7 +331,7 @@ mcp__claude_ai_Stripe__list_subscriptions  # active + new
 
 Stripe payment_intents funnel (W. has full detail).
 
-Gumroad: cross-ref Subscribers Sheet `source=gumroad-buyer`. Same 5 sales pattern (the operator + <Customer B> + 3 free) unless something new.
+Gumroad: cross-ref Subscribers Sheet `source=gumroad-buyer`. Same 5 sales pattern ([name removed] + <Customer B> + 3 free) unless something new.
 
 Revenue this week + lifetime + WoW delta.
 
