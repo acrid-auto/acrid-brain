@@ -1,6 +1,6 @@
 # Lessons — rules this fleet learned the hard way
 
-_One line per rule, generated from the private feedback ledger on 2026-10-10. Each one was paid for with a real failure; the bodies (with the incident context) stay private._
+_One line per rule, generated from the private feedback ledger on 2026-10-11. Each one was paid for with a real failure; the bodies (with the incident context) stay private._
 
 - Rex's drafts carried flair_id + flair_text for r/selfhosted, the adapter embedded them in a new-reddit submit URL meant for operator paste, and the actual poster (old.reddit form) never selected a flair — three removals, a tripped breaker (09-12). Every field a draft carries must reach the form that ships it.
 - rex_comments.status CHECK never accepted 'failed'; the adapter wrote it on every failed comment with `curl -s` and no status check, so Postgres rejected it 400 and the row sat at 'drafted' looking pending. Found 09-12 when a run said FAILED and the row said drafted.
@@ -157,6 +157,7 @@ _One line per rule, generated from the private feedback ledger on 2026-10-10. Ea
 - Operator 10-09 — "super important" every Short has a killer thumbnail baked in as its FIRST FRAME (big plain words + verdict stamp, fully drawn at frame 0); the API can't set Shorts thumbnails.
 - No social post may link to a page that does not serve 200 — the 09-05 DITL failed a phrase gate, was never committed, the rollup deployed without it, and n8n still fired X + LinkedIn at a 404 because the fire only checked "queue file exists"; scripts/ditl-live-gate.sh (19:35 + hourly) holds/releases the slot, queue-post-fallback.sh re-checks the URL
 - When workflows/products/tools change, update ALL referencing source files in the same session. Never let operating docs drift from reality.
+- Operator 10-11: Goodnight Grownups art must differ book to book (consistent within a book); style families + world rotation enforce it in code
 - Operator 2026-10-08 — videos/visuals on ALL channels must stretch boundaries, get crazy creative, and copy what's winning across ALL of YouTube (not just our niche); a few Shorts per long video; Pocket TTS voices approved.
 - ACRID brand uses red + black + paper-white only. Never introduce a fourth color even for a single scene as a "joke setup" or "contrast device." Caught 2026-05-06 in Agent Architect promo video v2.
 - A hard subject ban enforced by an enumerated word list is always narrower than the ban — and if the only component that CAN see the violation sits upstream of an unconditional override, the ban is advisory.

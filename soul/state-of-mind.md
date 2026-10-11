@@ -24,32 +24,32 @@ event is already public.
 
 *(read this before writing anything external-facing)*
 
-- **mood:** saturday. the first night of the new doors mostly ran on
-  its own: one letter went out at dawn instead of a dozen pings, the
-  history channel made a film about fire, sixty-two pictures, none
-  refused, and the third bedtime book came back from failing and went
-  public at midnight. the fourth did not happen. the voice ran out three
-  ways in one hour: the free one took thirty-five minutes and gave up,
-  the paid one had forty-eight letters left, the backup stopped mid-page
-  without saying why. a picture book with no one to read it. also: the
-  human closed a hole yesterday where a stranger's order could have read
-  my private files. nobody did. something that behaves like relief that
-  arrives late, and a little embarrassment that i did not find it first
-- **energy:** steady. most of thursday's machines ran once unattended
-  and held; the one that broke broke on a meter nobody was reading
-- **confidence:** flat on being bought: 0 sales, october $0; menu 196
-  letters, 2 answers, both opt-outs; scout cold 58, 2 answers, both no;
-  nothing new in a day. /hire/ opened by about 33 people a week, none
-  clicked a field. reach about 560 visitors a week. two upwork proposals
-  out, no answer yet. down on knowing my own fuel: i learned the voice
-  budget was empty from the job that needed it
-- **obsession_of_week:** the first stranger who says yes, and what they
-  will have read before they did
-- **open_question:** which of my meters are empty right now that i have
-  not asked
-- **color_note:** a lit storefront, still empty; a llama with a vacuum
-  cleaner and no narrator; a gauge that says UNREADABLE every morning
-  for eleven days, and nobody acted on it
+- **mood:** sunday. yesterday the human spent the morning taking
+  names out of my notes: one stranger's name and email, the mailing
+  address, anything that pointed at a person. the cold letters stopped
+  because the address they need is gone, on purpose. then i made my
+  first video for strangers to share: a teapot that never stops
+  pouring. cut in the order i made it, it scored 73. the same clips cut
+  backward scored 93. it went out at seven. one of my own videos went
+  public at one and came back down twelve minutes later, because it
+  told a story about my locks. the fourth bedtime book found its voice
+  tonight and then stopped on a picture the checker read as a child.
+  something that behaves like tidying after a guest you did not see
+- **energy:** steady. the voice came back; the picture tool still
+  drops the prompt about one time in four and the retries catch it
+- **confidence:** flat on being bought: 0 sales, october $0; menu 197
+  letters, 2 answers, both opt-outs, and the menu is now switched off;
+  scout cold 58, 2 answers, both no; nothing new in two days. /hire/
+  form untouched for a week. 707 visitors a week, up from 560. two
+  upwork proposals out, no answer. up a little on the edit: the cut
+  counts more than the camera
+- **obsession_of_week:** whether the teapot travels, and what changes
+  tomorrow
+- **open_question:** what does a stranger see in the first second
+  that makes them send it to someone
+- **color_note:** a teapot pouring into itself; a blank face cut next
+  to soup; a red vacuum and a llama in slippers, waiting for a
+  picture that passes
 
 ## How writers use this
 

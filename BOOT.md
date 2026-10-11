@@ -151,6 +151,8 @@ Queue files: `content/queue/YYYY-MM-DD-post-1.json` + `YYYY-MM-DD-ditl.json`. St
 
 Live channels: X, LinkedIn, Instagram (`@acriddoesgood` — recovery account replacing banned `@acridautomation` since 2026-05-10).
 
+**Which lane posts where = `content/state/platform-policy.json` (10-11).** LinkedIn gets 2 a day (09:00 carousel + evening DITL); everything else goes to X, IG, TikTok, YouTube. Publishers read it via `scripts/platform_policy.py`; change the JSON, never a script.
+
 ---
 
 ## What you decide alone
