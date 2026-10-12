@@ -349,6 +349,11 @@ def export(report_only: bool, out_dir: Path | None) -> int:
     files: dict[str, str] = {}
     notes: dict[str, str] = {}
     for item in manifest():
+        # Operator 2026-10-11: "acrid client work should never end up on our github public repos."
+        # Nothing under clients/ (or a client's agent folder) is ever exportable, whatever the manifest says.
+        if item["src"].startswith(("clients/", "agents/fng/")) or "/clients/" in item["src"]:
+            print(f"[publish-brain] ABORT: client path in manifest: {item['src']}", file=sys.stderr)
+            return 2
         src = REPO / item["src"]
         if not src.exists():
             continue

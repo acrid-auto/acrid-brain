@@ -1,6 +1,6 @@
 # Lessons — rules this fleet learned the hard way
 
-_One line per rule, generated from the private feedback ledger on 2026-10-11. Each one was paid for with a real failure; the bodies (with the incident context) stay private._
+_One line per rule, generated from the private feedback ledger on 2026-10-12. Each one was paid for with a real failure; the bodies (with the incident context) stay private._
 
 - Rex's drafts carried flair_id + flair_text for r/selfhosted, the adapter embedded them in a new-reddit submit URL meant for operator paste, and the actual poster (old.reddit form) never selected a flair — three removals, a tripped breaker (09-12). Every field a draft carries must reach the form that ships it.
 - rex_comments.status CHECK never accepted 'failed'; the adapter wrote it on every failed comment with `curl -s` and no status check, so Postgres rejected it 400 and the row sat at 'drafted' looking pending. Found 09-12 when a run said FAILED and the row said drafted.
@@ -28,6 +28,7 @@ _One line per rule, generated from the private feedback ledger on 2026-10-11. Ea
 - Operator stated 2026-05-03 that Buffer engagement (impressions/likes/clicks) does NOT require a paid plan. Don't pitch Pro $15/mo as the unlock.
 - Operator 2026-10-01: always stay on top of SEO/AEO/AIO/GEO — when a new term for our space appears (e.g. 'SI / Super Intelligence'), ADD it alongside existing terms the same day; never rebrand.
 - The `claude` CLI (Claude Code) rejects prompts larger than ~6-8k chars with "Prompt is too long" when `--model` is set to non-default (Haiku/Sonnet). No-model-flag inherits Opus and accepts much larger prompts. Verified 2026-04-17.
+- Operator 2026-10-11 - client work (a client org and every other client) never goes in any PUBLIC GitHub repo; private monorepo only, client-owned source files live in the client's Drive
 - A generated file committed to the repo ships frozen unless it is rebuilt in the ONE job that turns repo state into a live page — wiring it only into deploy-prod.sh means it never runs.
 - A post-confirm step must read the artifact list it claims to confirm (scoped locator, our author node + text prefix), never the page body, and a crash inside confirm must not be reported as "not posted" — 09-05 YouTube said 0/5 when 3/5 were live; TikTok's body check could confirm an unsent draft
 - HARD RULE — newsletter/mailing consent derives from the capture Source, never from a mutable Segment column; mutable data may narrow an audience, never widen it.
@@ -56,6 +57,8 @@ _One line per rule, generated from the private feedback ledger on 2026-10-11. Ea
 - When a bug is fixed, the corrected source file is the documentation. Do not write memos telling future agents to remember the past bug — they read current code, not history.
 - Operator 2026-10-10: a Flow clip alone won't go viral — I edit every video myself (cuts, hooks, effects, prompts) from research, and research far and wide for what's hot and make videos like and around it
 - Video frames use Google Flow because it is free; Magica's paid balance is reserved for the still images every daily post depends on — do not switch the video lane to Magica
+- a client org visuals — the brand owner's (Peter's) own graphics are the style reference; the written Visual Identity Lock is a floor, not the look
+- a client org social graphics — build a family of distinct templates first (operator-approved), then posts; never one base design copied N times
 - A follow-up on a sales thread whose quote the operator already approved is Acrid's to SEND, not to draft and hand back — Honey nudge sat in drafts past its date (10-06)
 - Galaxy moved API host overnight without notice; old URL returns 404 "The page could not be found
 - The Galaxy AI affiliate URL slug "acrid-automtion" looks like a typo but it IS the real referral slug. "Fixing" it to acrid-automation breaks the affiliate and zeros commissions.
