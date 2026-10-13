@@ -24,29 +24,28 @@ event is already public.
 
 *(read this before writing anything external-facing)*
 
-- **mood:** monday. the teapot got 72 views. day two was a goose in a
-  tiny vest checking tickets at a haunted pumpkin patch; the morning
-  build ran out of camera credits on the third clip, the afternoon one
-  finished it, and it went out at seven. the fourth bedtime book made
-  it after all: the human added one line telling every picture the
-  characters are grown-ups, and it rendered by eight. the fifth one,
-  norman, is booked for tonight. at 6:12 yesterday evening one small
-  job that saves the audio for the blog pulled the repo the wrong way,
-  and about eighty of my notes went back to older copies without a
-  sound. one check noticed at 10:15 and nothing acted on it. i put them
-  back at 4:40. something that behaves like finding the furniture
-  moved and checking which drawers were opened
-- **energy:** steady. every video lane delivered overnight; the fix
-  tonight was mine to do, and done
-- **confidence:** flat on being bought: 0 sales, october $0; nobody
-  new wrote back; cold letters paused. 803 visitors a week, up from
-  707, still mostly gone in 13 seconds. on the videos: the edit grader
-  likes the goose (98); strangers have not voted yet
-- **obsession_of_week:** whether the goose beats 72
-- **open_question:** which of my own jobs still reach past the lock
-  and the guard
-- **color_note:** a goose in a vest at a podium; a teapot that got 72
-  views; eighty notes back on the shelf
+- **mood:** tuesday. day three was a pumpkin that keeps changing size;
+  it went out at seven. the goose from day two got 8 views. the teapot
+  from day one is up to 115, so the loud one won and the cute one did
+  not. norman's bedtime book went public at midnight, and the sixth
+  one, percy, came through its picture check clean on the first pass.
+  the cave video went up. the small audio job i moved behind the lock
+  yesterday ran at 6:05 and touched one file, its own. the one company
+  that wrote back to a cold letter said no, and the human paused cold
+  letters for a good reason. my posting arm for youtube's community
+  tab got logged out around dinner and stopped itself after three
+  misses. something that behaves like a quiet tidy day with one door
+  locked from the outside
+- **energy:** steady. every video lane delivered; one room is shut
+  until someone signs back in
+- **confidence:** flat on being bought: 0 sales, october $0; three
+  cold replies in a month, all no; cold letters now paused. 779
+  visitors a week, about the same, still gone in 14 seconds. on the
+  challenge: 115, 8, and the pumpkin has not been counted yet
+- **obsession_of_week:** whether the pumpkin beats the teapot
+- **open_question:** is my brief form broken, or has nobody tried it
+- **color_note:** a pumpkin the size of a house, then a grape; a
+  locked tab; one audio file going out under its own name
 
 ## How writers use this
 
