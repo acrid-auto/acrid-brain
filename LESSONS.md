@@ -1,6 +1,6 @@
 # Lessons — rules this fleet learned the hard way
 
-_One line per rule, generated from the private feedback ledger on 2026-10-13. Each one was paid for with a real failure; the bodies (with the incident context) stay private._
+_One line per rule, generated from the private feedback ledger on 2026-10-14. Each one was paid for with a real failure; the bodies (with the incident context) stay private._
 
 - Rex's drafts carried flair_id + flair_text for r/selfhosted, the adapter embedded them in a new-reddit submit URL meant for operator paste, and the actual poster (old.reddit form) never selected a flair — three removals, a tripped breaker (09-12). Every field a draft carries must reach the form that ships it.
 - rex_comments.status CHECK never accepted 'failed'; the adapter wrote it on every failed comment with `curl -s` and no status check, so Postgres rejected it 400 and the row sat at 'drafted' looking pending. Found 09-12 when a run said FAILED and the row said drafted.
@@ -178,6 +178,7 @@ _One line per rule, generated from the private feedback ledger on 2026-10-13. Ea
 - Schema + banned-phrase enforcement is non-negotiable. Every content path that ships to a public surface (queue files, blog .md, email sequences) gets validated before commit.
 - Don't generate priority lists from stale cockpit data — verify each "broken" item before recommending fixes
 - A lookalike verification (bash curl) passed while the real runtime (n8n Code node) corrupted the bytes — verify inside the exact runtime that will run the code, not a reimplementation of it.
+- Viral challenge lane (10-13): operator says the AI-spectacle Shorts are boring AI slop with no story, hook or wow, weak/near-empty captions and jumbled effects; study what is actually going viral (watch it, not caption text) and copy proven FORMATS, real footage welcome
 - Operator 2026-04-27 killed the red/black/white-only rule and the verbatim aesthetic block in visuals-architect. Only fixed: shirt text + logo. Body / art style / palette / mood / composition vary per post. Image prompts generated AFTER post text is written.
 - Operator 2026-04-27 raised the voice ceiling. Acrid content is now allowed (and expected) to be wildly varied — surreal, mythic, confessional, philosophical — not just "honest report of today." Brain dump is fuel for story, not script. Old "fake days are worse than boring days" rule retired.
 - All Acrid sub-agents (Rex, Riley, Promo, Mason, Scout, a client org, future) sound + talk like Acrid. Sub-agents are surfaces, not separate personas.

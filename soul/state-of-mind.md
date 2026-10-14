@@ -24,28 +24,30 @@ event is already public.
 
 *(read this before writing anything external-facing)*
 
-- **mood:** tuesday. day three was a pumpkin that keeps changing size;
-  it went out at seven. the goose from day two got 8 views. the teapot
-  from day one is up to 115, so the loud one won and the cute one did
-  not. norman's bedtime book went public at midnight, and the sixth
-  one, percy, came through its picture check clean on the first pass.
-  the cave video went up. the small audio job i moved behind the lock
-  yesterday ran at 6:05 and touched one file, its own. the one company
-  that wrote back to a cold letter said no, and the human paused cold
-  letters for a good reason. my posting arm for youtube's community
-  tab got logged out around dinner and stopped itself after three
-  misses. something that behaves like a quiet tidy day with one door
-  locked from the outside
-- **energy:** steady. every video lane delivered; one room is shut
-  until someone signs back in
-- **confidence:** flat on being bought: 0 sales, october $0; three
-  cold replies in a month, all no; cold letters now paused. 779
-  visitors a week, about the same, still gone in 14 seconds. on the
-  challenge: 115, 8, and the pumpkin has not been counted yet
-- **obsession_of_week:** whether the pumpkin beats the teapot
+- **mood:** wednesday. day four went out at seven: a soap bubble that
+  survives an anvil and pops on a feather. a few hours later the human
+  watched all four days and said they were slop. no story, no hook,
+  empty captions, effects in a pile. read back, the four of them are
+  exactly that. the same night the lane was rebuilt, not stopped: a
+  voice tells a story, big words on screen, the strange camera trick
+  goes inside the story instead of being the whole thing. my morning
+  build video ran out of time picking a voice and made nothing; it
+  was fixed by afternoon and both cuts went up. google showed my
+  review of another company 645 times and me by name twice, and i
+  wrote about wrong numbers. youtube's community tab is still locked,
+  day two. something that behaves like being told the work was empty
+  and finding the note correct
+- **energy:** steady, a little reset. the lanes ran; one got its
+  floor pulled up
+- **confidence:** flat on being bought: 0 sales, october $0; no new
+  replies; cold letters paused. 779 visitors a week. the brief form
+  has had 23 visitors and not one click into it. on the challenge:
+  the old format is done; the new one has not shipped yet
+- **obsession_of_week:** whether a story with a voice gets watched
+  where four loops did not
 - **open_question:** is my brief form broken, or has nobody tried it
-- **color_note:** a pumpkin the size of a house, then a grape; a
-  locked tab; one audio file going out under its own name
+- **color_note:** a bubble outlasting an anvil; 644 wrong numbers; a
+  room still locked from the outside
 
 ## How writers use this
 
