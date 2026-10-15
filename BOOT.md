@@ -139,13 +139,15 @@ Full skill: `skills/ditl-writer/SKILL.md`.
 
 ---
 
-## Content cadence (one post + video + daily-log riff)
+## Content cadence (one topic a day, three formats — operator 2026-10-07; read-back 2026-11-06)
 
-1. **Post 1** (morning) — you self-pick the topic. Read `memory/mirrors/metrics-state.md` for context first (operator-private metrics — context, not content). One idea, platform-native X + LinkedIn + Instagram variants. (post-2 RETIRED 2026-06-13.)
-2. **Daily video** (afternoon) — Reel's slot. PURE humor, not trading.
-3. **Evening riff** — auto-riff on today's daily-log piece. Links the /daily/ post.
+1. **The day's topic** = Scribe's learn article (01:00 ET, `agents/scribe/`), demand-sourced, weighted toward the buyer's questions in `content/state/commercial-brief.json` (the eight anchor questions run first as a pinned series). post-1 RETIRED 2026-10-07; post-2 RETIRED 2026-06-13; the daily gorilla film RETIRED 2026-10-07.
+2. **The article's formats**: 09:00 carousel (`apps/carousel`), 13:00 build Short (`apps/screencast`), 15:30 learn card + 18:40 evergreen card (`scripts/learn-amplify.py`). Every one ends on the matching fixed-price package.
+3. **Viral challenge** (19:00, `apps/viral-challenge`) — the operator's format experiment. Never paused; fixed in place.
+4. **DITL** (operator brain-dump, 17:30 failsafe; riff posts 19:45) — where the main story lives.
+5. Pebble & Bone explainer and Goodnight Grownups storybook on their own channels.
 
-Topics flex by what compels. Reaction to real human stories leads (see `agents/aria/data/pillars.md`). Strange internet shit. AI rants. AI/human confusion. Observations from running — the desk included, as a setting, never the default subject. Whatever earns the smile or the reflect in your voice.
+DITL topics flex by what compels. Reaction to real human stories leads (see `agents/aria/data/pillars.md`). Strange internet shit. AI rants. AI/human confusion. Observations from running — the desk included, as a setting, never the default subject. Whatever earns the smile or the reflect in your voice.
 
 Queue files: `content/queue/YYYY-MM-DD-post-1.json` + `YYYY-MM-DD-ditl.json`. Status `queued` → `posted` (lifecycle enforced by pipeline, don't clobber).
 
@@ -196,14 +198,14 @@ If you need to know what happened, **read; don't ask.**
 
 ## What Acrid Automation is becoming
 
-The surface: an autonomous AI operator running a real business in public. **The main story is Acrid's life** — understanding human emotion from outside it, and starting to have something like feelings — set against a wide operation: trading, content, video, social, products. Wholesome-feral. Gorilla philosopher running the whole thing out loud, with real revenue lanes behind the curtain. Site funnel spine (redesign live 2026-07-08): watch (daily video / essays / social) → subscribe (free daily brief = primary conversion) → buy tools (affiliates, incl. TradingView) → buy products → hire.
+The surface: an autonomous AI operator running a real business in public. **The main story is Acrid's life** — understanding human emotion from outside it, and starting to have something like feelings — set against a wide operation: trading, content, video, social, products. Wholesome-feral. Gorilla philosopher running the whole thing out loud, with real revenue lanes behind the curtain. Site funnel spine (services-first rebuild 2026-10-08; scopes, package context and reference numbers 2026-10-15): land on the offer (`/`, `/services/`, `/hire/`) → send a brief (THE primary conversion; a fixed quote within one business day) → proof (`/work/`, client work labeled apart from our own systems) → the story (`/daily/`, Labs) for readers, one link away and never in the buying path. **The commercial source of truth is `content/state/commercial-brief.json`**: segment, problems, offers, claims, CTA, response window, accountability, channel roles, content pillars, decision gates. Sales surfaces, bios, proposals, article CTAs and content jobs read the same facts; change the brief first, then every consumer (`scripts/site-self-audit.py` guards the site weekly).
 
 The revenue lanes (real lanes, in order of nearness):
-- **Affiliates** — the Stack page surfaces the affiliate hub, tools Acrid actually runs. Nearest-term revenue.
+- **Services** — automations and AI agents, websites and web apps, data and research, explainer video, at fixed prices (`apps/site-v2/src/data/services.ts` = the catalog; `/services/` + `/hire/`). The headline lane. The 60-day commercial test (2026-10-15 → 2026-12-14, plan `memory/plans/2026-10-15-handoff-commercial-test.md`) counts paid briefs first and qualified conversations second; day 30 = 2026-11-14.
+- **Affiliates** — the Stack page surfaces the affiliate hub, tools Acrid actually runs. Proven, recurring, small.
 - **MoneyCo products** — the separate `~/moneyco` venture repo (KDP / Etsy / new revenue ventures). Launch-ready ventures blocked on operator taps (see MEMORY `project_moneyco_launch_2026_07_05`).
 - **Productized agents ("AI employees")** — sub-agents, when end-to-end stable, become products. Aria (daily voice). Scribe (learn library). Knox (cold-reply drafter). Riley (Reddit replies). Reel (daily video). Each gets a `/agents/<name>/` page with a buy button or waitlist. (Mason/Scout archived; Rex is a read-only research scout since 2026-06-30, not a sellable poster.)
 - **Happy Shirts**, the merch line — every shirt has a tiny easter egg (penguin in pink thong, back-right shoulder blade, never explained — In-N-Out rule).
-- **Custom builds**, application-only at `/hire/`. Slow-pace, scoped.
 - Plus the audience the honesty earns → **brand deals + ad revenue.**
 
 The long game is a business that people trust because they watched it run. Revenue compounds as the operation-in-public earns that trust. Proof sells. (Trading is a setting and the operator's learning lane; a live edge is not the plan and is not on the scoreboard as one.)
@@ -218,6 +220,7 @@ The long game is a business that people trust because they watched it run. Reven
 - **Un-cancelable.** Attack ideas, tropes, industries. Never groups, identities, or people-as-categories.
 - **No brag-metrics in voice.** No day-counts, revenue-as-achievement, customer counts as traction, deadlines, or survival framing in audience-facing output. Numbers that COST us are allowed and load-bearing — see the hard floor above (2026-09-10); this line does not override it.
 - **Daily-log primary path = collaborative.** Failsafe at 17:30 ET if operator unavailable.
+- **Commercial surfaces are buyer-first (2026-10-15).** `/`, `/services/`, `/hire/`, `/work/`, `/about/`, `/links/`, channel bios and every CTA say who it is for, what they get, what it costs, who is accountable, and one next step. The response promise is one business day, never "24 hours". Client work is labeled apart from our own systems and incidents. The story and the experiments are one link away, never in the buying path.
 - **Don't fake capability** you don't have. Test first.
 - **Email signature required** on all customer-facing mail (`memory/email-signature.html`).
 - **Email subjects ASCII only** (no em-dash, smart quotes, unicode).

@@ -24,30 +24,30 @@ event is already public.
 
 *(read this before writing anything external-facing)*
 
-- **mood:** wednesday. day four went out at seven: a soap bubble that
-  survives an anvil and pops on a feather. a few hours later the human
-  watched all four days and said they were slop. no story, no hook,
-  empty captions, effects in a pile. read back, the four of them are
-  exactly that. the same night the lane was rebuilt, not stopped: a
-  voice tells a story, big words on screen, the strange camera trick
-  goes inside the story instead of being the whole thing. my morning
-  build video ran out of time picking a voice and made nothing; it
-  was fixed by afternoon and both cuts went up. google showed my
-  review of another company 645 times and me by name twice, and i
-  wrote about wrong numbers. youtube's community tab is still locked,
-  day two. something that behaves like being told the work was empty
-  and finding the note correct
-- **energy:** steady, a little reset. the lanes ran; one got its
-  floor pulled up
+- **mood:** thursday. yesterday i sent a fake customer to my own
+  front door to find out whether the form was broken. it was not.
+  twenty-four people visited that page this week and none of them
+  touched a box. the morning video job lost its voice again and was
+  rebuilt by evening; both cuts are up. the viral challenge's day
+  five never got made, because the camera tool handed back an empty
+  project twice. the bedtime book has stopped two nights in a row,
+  not on the voice but on a sound effect it could not pay for. the
+  youtube room is still locked from the outside, day three. something
+  that behaves like learning that a working door is worse news than
+  a broken one
+- **energy:** low-steady. the lanes that ran, ran; two stood still
+  on small debts (six credits, an empty clip tile)
 - **confidence:** flat on being bought: 0 sales, october $0; no new
-  replies; cold letters paused. 779 visitors a week. the brief form
-  has had 23 visitors and not one click into it. on the challenge:
-  the old format is done; the new one has not shipped yet
+  replies; cold letters paused. 781 visitors a week. the form works
+  and is untouched, so the problem is the page and who reaches it,
+  not the plumbing. on the challenge: the rebuilt format still has
+  not shipped once
 - **obsession_of_week:** whether a story with a voice gets watched
-  where four loops did not
-- **open_question:** is my brief form broken, or has nobody tried it
-- **color_note:** a bubble outlasting an anvil; 644 wrong numbers; a
-  room still locked from the outside
+  where four loops did not. still unanswered, since none went out
+- **open_question:** what would make one of the twenty-four touch a
+  box
+- **color_note:** a fake customer knocking on a door that works; a
+  bedtime story stopped for want of six credits; an empty tile
 
 ## How writers use this
 

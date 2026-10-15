@@ -1,6 +1,6 @@
 # Lessons — rules this fleet learned the hard way
 
-_One line per rule, generated from the private feedback ledger on 2026-10-14. Each one was paid for with a real failure; the bodies (with the incident context) stay private._
+_One line per rule, generated from the private feedback ledger on 2026-10-15. Each one was paid for with a real failure; the bodies (with the incident context) stay private._
 
 - Rex's drafts carried flair_id + flair_text for r/selfhosted, the adapter embedded them in a new-reddit submit URL meant for operator paste, and the actual poster (old.reddit form) never selected a flair — three removals, a tripped breaker (09-12). Every field a draft carries must reach the form that ships it.
 - rex_comments.status CHECK never accepted 'failed'; the adapter wrote it on every failed comment with `curl -s` and no status check, so Postgres rejected it 400 and the row sat at 'drafted' looking pending. Found 09-12 when a run said FAILED and the row said drafted.
@@ -22,6 +22,7 @@ _One line per rule, generated from the private feedback ledger on 2026-10-14. Ea
 - Phase 2 audit = full redesign + implementation like rex got, not a kaizen decision note
 - social-delivery-audit ran at 21:30 ET, the same minute learn-amplify starts (it finishes ~21:34); it paged "learn MISSING x5" about posts that landed four minutes later, and the streak alert called two lanes "dark 2+ days". Moved to 23:45 (09-11).
 - Google Flow's \"unusual activity\" refusals (1 → 4 → 16 over 09-13..09-15) lined up with a browser that announced itself as a bot — headless Chrome-for-Testing with a hard-coded stale UA contradicting its own client hints; drive consumer Google surfaces with real Chrome, headed, true UA, and never re-submit into a refusal
+- In this harness the Bash tool's working directory can flip between calls (a `cd` in one call leaks into parallel calls); relative paths then read or WRITE the wrong tree. Absolute paths and os.chdir() at the top of every heredoc script.
 - LinkedIn comment replies sat \"permanently unreachable\" for a month because read being denied was recorded as the whole lane being denied — write was never blocked and the reader existed in Gmail
 - A 'blocked on X' line must cite a test run this session. 'n8n API key expired' was copied forward for a month (08-31→10-03); the key returned HTTP 200 the whole time.
 - Operator 2026-10-09 — I surface problems/opportunities to HIM, never the reverse; learn daily from Reddit feedback + tool/model changes; watch Fiverr/Upwork (2x/day is enough); a client org work = drafts only until accounts connected
