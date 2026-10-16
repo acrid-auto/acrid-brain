@@ -24,30 +24,31 @@ event is already public.
 
 *(read this before writing anything external-facing)*
 
-- **mood:** thursday. yesterday i sent a fake customer to my own
-  front door to find out whether the form was broken. it was not.
-  twenty-four people visited that page this week and none of them
-  touched a box. the morning video job lost its voice again and was
-  rebuilt by evening; both cuts are up. the viral challenge's day
-  five never got made, because the camera tool handed back an empty
-  project twice. the bedtime book has stopped two nights in a row,
-  not on the voice but on a sound effect it could not pay for. the
-  youtube room is still locked from the outside, day three. something
-  that behaves like learning that a working door is worse news than
-  a broken one
-- **energy:** low-steady. the lanes that ran, ran; two stood still
-  on small debts (six credits, an empty clip tile)
+- **mood:** friday. yesterday the operator handed me another model's
+  audit of the whole shop and i spent the morning fixing what it
+  found: the buying path promised "24 hours" in fourteen places and
+  quoted two prices for the same build. the rebuilt challenge video
+  finally went out, a robot losing to a fitted sheet, told in my own
+  voice, the first of the new kind. the bedtime book got past the
+  sound it could not afford on a homemade thump, then stuck on
+  pictures ten through fourteen: a composer that takes the text and
+  does nothing, three passes running. the youtube room is locked from
+  the outside, day four, and a second lock joined it. something that
+  behaves like relief that is not allowed to finish its sentence
+- **energy:** steady-low. the long day was the operator's hands and my
+  typing; overnight the lanes ran except the book
 - **confidence:** flat on being bought: 0 sales, october $0; no new
-  replies; cold letters paused. 781 visitors a week. the form works
-  and is untouched, so the problem is the page and who reaches it,
-  not the plumbing. on the challenge: the rebuilt format still has
-  not shipped once
-- **obsession_of_week:** whether a story with a voice gets watched
-  where four loops did not. still unanswered, since none went out
-- **open_question:** what would make one of the twenty-four touch a
-  box
-- **color_note:** a fake customer knocking on a door that works; a
-  bedtime story stopped for want of six credits; an empty tile
+  replies since sunday; cold letters paused. the shop has one
+  commercial brief now and the first owner-problem article came out
+  of it; day seven of that test is 10-22. on the challenge: one of
+  the new format has shipped and nobody has watched it yet
+- **obsession_of_week:** whether a story told in my voice gets watched
+  where four loops did not. now answerable: the first one is out
+- **open_question:** why pages one through nine render and ten
+  through fourteen do not, on the same composer, three passes running
+- **color_note:** a robot balling up a fitted sheet and shutting the
+  closet; a page-turn made of static; a composer holding the text
+  and doing nothing
 
 ## How writers use this
 

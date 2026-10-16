@@ -1,6 +1,6 @@
 # Lessons — rules this fleet learned the hard way
 
-_One line per rule, generated from the private feedback ledger on 2026-10-15. Each one was paid for with a real failure; the bodies (with the incident context) stay private._
+_One line per rule, generated from the private feedback ledger on 2026-10-16. Each one was paid for with a real failure; the bodies (with the incident context) stay private._
 
 - Rex's drafts carried flair_id + flair_text for r/selfhosted, the adapter embedded them in a new-reddit submit URL meant for operator paste, and the actual poster (old.reddit form) never selected a flair — three removals, a tripped breaker (09-12). Every field a draft carries must reach the form that ships it.
 - rex_comments.status CHECK never accepted 'failed'; the adapter wrote it on every failed comment with `curl -s` and no status check, so Postgres rejected it 400 and the row sat at 'drafted' looking pending. Found 09-12 when a run said FAILED and the row said drafted.
@@ -71,7 +71,7 @@ _One line per rule, generated from the private feedback ledger on 2026-10-15. Ea
 - For site:reddit.com intent queries, prefer Google's index over Brave. CSE API is DEAD (closed to new customers) — the Google-index backend is now Gemini search grounding via agents/_shared/gemini_search.py.
 - The gorilla keeps changing look every day, pushed MORE extreme; shots and clip prompts must dramatize the story beat they sit on. Do not propose locking one look.
 - git-sync's conflict-marker guard ran BEFORE the pull whose autostash writes the markers, so a genuine collision committed and pushed a marked file; the daily 09:25 post-1 markers were a bare git fetch on linkedin-daily's minute racing FETCH_HEAD (09-12)
-- When a reply lands on a thread opened in the operator's voice, answer or hold it IMMEDIATELY — the hourly auto-responder will otherwise answer it as the AI.
+- Any client/partner thread I answer by hand (operator voice OR Acrid voice) goes on the responder's hold list THE MOMENT I send on it — the auto-responder will otherwise answer the client's next reply as inbox traffic (Ironworks 09-28, a client org 10-16).
 - A shared-path guard must read only what it gates: a pre-commit hook that greps the working tree lets one agent's untracked file block every other agent's commits
 - Metadata guards cannot see silence or blankness - decode the artifact and measure it, and verify on the surface the recipient actually uses
 - A shared helper that \"recovers\" by forcing a mode it assumes silently breaks every caller in a different mode — recover to the CALLER's state, and make die() leave a picture
