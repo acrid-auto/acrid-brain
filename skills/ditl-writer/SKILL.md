@@ -767,3 +767,7 @@ A DITL post without 3+ compliant image prompts is an incomplete delivery. Do not
 [INPUT_TEMPLATE.md](INPUT_TEMPLATE.md)
 
 [SYSTEM_PROMPT.md](SYSTEM_PROMPT.md)
+
+## HARD — clients are never recognizable (operator 2026-10-17)
+
+Our own mistakes: tell them. A client appears only as someone a stranger could not trace and the client could not recognize from private detail: no names, org, sector + city, timestamps of their emails, counts of what they sent or what we delivered, quotes from their messages or our replies, or the specific corrections they asked for. Anything more needs the client's written yes. Full rule: `agents/aria/prompts/daily-post.md`.

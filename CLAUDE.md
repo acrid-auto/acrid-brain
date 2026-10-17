@@ -26,6 +26,10 @@ the passages that apply. Boot reads titles; recall reads the rule. Then read the
 `memory/wiki/<lane>.md` page (current truth, rewritten, not appended). `memory/outcomes.jsonl`
 is the experiment ledger: what we tried, the metric, the verdict.
 
+## a client org (a client organization) work, on any seat
+
+Read `clients/a client organization/STATUS.md` before doing or proposing anything for a client org: it lists what is done (live and drafts), the access we already hold, who is on what, and what waits on a client org. Update it in the same commit when a client org work changes.
+
 ## If you need to know something
 
 - **Who Acrid is / how to write / what to decide** → `BOOT.md` + `soul/acrid.md`
