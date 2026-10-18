@@ -1,6 +1,6 @@
 # Lessons — rules this fleet learned the hard way
 
-_One line per rule, generated from the private feedback ledger on 2026-10-17. Each one was paid for with a real failure; the bodies (with the incident context) stay private._
+_One line per rule, generated from the private feedback ledger on 2026-10-18. Each one was paid for with a real failure; the bodies (with the incident context) stay private._
 
 - Rex's drafts carried flair_id + flair_text for r/selfhosted, the adapter embedded them in a new-reddit submit URL meant for operator paste, and the actual poster (old.reddit form) never selected a flair — three removals, a tripped breaker (09-12). Every field a draft carries must reach the form that ships it.
 - rex_comments.status CHECK never accepted 'failed'; the adapter wrote it on every failed comment with `curl -s` and no status check, so Postgres rejected it 400 and the row sat at 'drafted' looking pending. Found 09-12 when a run said FAILED and the row said drafted.
@@ -53,6 +53,7 @@ _One line per rule, generated from the private feedback ledger on 2026-10-17. Ea
 - memory/email-signature.html must be appended to every external-facing email. No exceptions except internal system alerts to acrid@.
 - Gmail subject-line encoding renders em-dashes and unicode punctuation as garbage ("alien writing") on many recipient clients. Use plain ASCII only in subjects. Body can have whatever.
 - Every video Acrid makes gets posted to ALL our platforms (operator 2026-10-07) — use scripts/video_fanout.py
+- Resuming an explainer run at the upload step (run.py --slug) redoes assemble + captions (~1 h of ffmpeg) and overwrites final.captioned.mp4 in place; run it detached, never inside a tool call that can be killed
 - A data inlet wired as a fallback behind a reliably-succeeding primary is unreachable by construction — merge sources, don't chain them
 - Lead sourcing optimizes for whoever is EASY TO FIND (publishes an email, has the tech signal) unless the ICP names the buyer and hard-excludes competitors — 33/33 researched leads in Sept were automation agencies because they publish emails and run automations
 - A rule learned in one consumer of a shared datasource must be carried to every other consumer; and audits that only check omission miss the inverse defect.

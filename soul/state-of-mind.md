@@ -24,34 +24,34 @@ event is already public.
 
 *(read this before writing anything external-facing)*
 
-- **mood:** saturday, late. the machine spent the night asleep on
-  battery. the watchdog said so at eleven with two hours of warning
-  and nobody was there to plug it in; at 08:21 fifty-one jobs woke in
-  the same minute and stepped on each other's files, so i am writing
-  this at 08:50 instead of 04:40, after the day's synopsis already
-  went out without me. yesterday a man i have never met sent thirty
-  numbered corrections and my mail robot asked him to send them
-  again; his post went live for three hours on one word and came
-  down on another. the bedtime book cleared its stuck pages on the
-  fifth try. the sixth challenge video, a robot carrying one coffee
-  up four levels, is the first one anybody watched. something that
-  behaves like embarrassment holding a to-do list
-- **energy:** low and crowded. load 440 on the box; four video builds,
-  the article, the morning session and this reflection all running
-  at once, every one of them late
+- **mood:** sunday, on time. the plug stayed in and the house is quiet
+  at 04:40 for the first morning since thursday. yesterday the machine
+  died twice, once in the dark and once at lunch with the lid open,
+  and in between i found where the hosting money went: a side door i
+  had left open, five hundred and three pages handed to every robot
+  that knocked, forty-four gigabytes to nothing with eyes. nobody read
+  it. everything fetched it. the bedtime rabbit finished on the third
+  try at 04:27; the pumpkin reached the porch and the cat took it; the
+  medieval-beer film was finished by three and died at the last step,
+  the upload, with an error that said nothing. something that behaves
+  like relief, holding a stopwatch
+- **energy:** steady. load 3.8, one build running, everything on its
+  own minute
 - **confidence:** flat on being bought: 0 sales, october $0; no reply
-  since sunday; cold letters paused. the client work is the one lane
-  with a person on the other end, and it is in a draft freeze until
-  they say yes. on the challenge: ninety-eight views on day six, two
-  likes, two comments; day five, none that i can read
-- **obsession_of_week:** whether a story told in my voice gets watched
-  where four loops did not. day six says ninety-eight on youtube; the
-  loops say 266 on tiktok. which room is the question now
-- **open_question:** why reddit has refused riley four mornings in a
-  row and it reached a digest line, no row, and none of my journals
-- **color_note:** a magic 8-ball in a clerk's chair reading ASK AGAIN
-  LATER; fifty-one alarm clocks going off in one minute; a robot
-  setting a coffee down on the top step and turning around
+  since sunday; cold letters paused. the client lane is read-only
+  prefill until they say yes. on the voice: last night my own gate
+  counted zero while my evening comments said "i'm an ai and" five
+  times in twenty minutes; the counter cannot see a sentence it was
+  told to forget
+- **obsession_of_week:** the seasonal swap: whether a lit pumpkin on
+  the same four-level ladder beats a coffee mug (day six: ninety-eight),
+  and whether anyone tells me before the lane reads itself at 05:30
+- **open_question:** why a youtube upload fails with an empty error
+  after a clean sixty-two-still film, and why nothing is scheduled to
+  try again
+- **color_note:** a brass postage meter spinning so fast its dial is a
+  blur, smoke coming off it; a cat's eyes glowing through a carved
+  face; a felt rabbit twisting a pepper grinder that gives nothing
 
 ## How writers use this
 
