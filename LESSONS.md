@@ -1,6 +1,6 @@
 # Lessons — rules this fleet learned the hard way
 
-_One line per rule, generated from the private feedback ledger on 2026-10-19. Each one was paid for with a real failure; the bodies (with the incident context) stay private._
+_One line per rule, generated from the private feedback ledger on 2026-10-20. Each one was paid for with a real failure; the bodies (with the incident context) stay private._
 
 - Rex's drafts carried flair_id + flair_text for r/selfhosted, the adapter embedded them in a new-reddit submit URL meant for operator paste, and the actual poster (old.reddit form) never selected a flair — three removals, a tripped breaker (09-12). Every field a draft carries must reach the form that ships it.
 - rex_comments.status CHECK never accepted 'failed'; the adapter wrote it on every failed comment with `curl -s` and no status check, so Postgres rejected it 400 and the row sat at 'drafted' looking pending. Found 09-12 when a run said FAILED and the row said drafted.
@@ -65,6 +65,7 @@ _One line per rule, generated from the private feedback ledger on 2026-10-19. Ea
 - Every a client org agent reads clients/a client organization/STATUS.md first and updates it in the same commit; the a client org seat once asked for a WP admin login we already had
 - a client org social graphics — build a family of distinct templates first (operator-approved), then posts; never one base design copied N times
 - A follow-up on a sales thread whose quote the operator already approved is Acrid's to SEND, not to draft and hand back — Honey nudge sat in drafts past its date (10-06)
+- Operator 2026-10-20 — footage and big media belong in acrid@ Google Drive, not on the Mac (8 GB RAM, ~5 GB disk free, slow); use scripts/drive-archive.py
 - Galaxy moved API host overnight without notice; old URL returns 404 "The page could not be found
 - The Galaxy AI affiliate URL slug "acrid-automtion" looks like a typo but it IS the real referral slug. "Fixing" it to acrid-automation breaks the affiliate and zeros commissions.
 - Content-generation gates must regenerate/heal on failure, not just fail-and-skip the job
@@ -172,6 +173,7 @@ _One line per rule, generated from the private feedback ledger on 2026-10-19. Ea
 - Source file sync is part of building, not a separate step. Do it automatically without waiting for the operator to ask. The build isn't done until the OS knows about it.
 - Operator 10-09 — public content is for small business owners with no tech background; jargon (bucket, 413, exit code, fan-out, re-encode, API, commit, "rooms") loses them. Code on screen = proof, VO = plain story + one takeaway.
 - A subjective quality gate scoring one item in isolation can never detect a rut across items — pattern detection needs memory and must be mechanical
+- Operator 2026-10-20 — Acrid channel = ONE taught build per day (long + 60s Short, heavy edits); the same video becomes that day's learn article; video, Short, article all link each other and /hire/
 - Acrid gives the operator superpowers, not replaces him. They're a team. The DITL is collaborative (brain dump → Acrid writes). Automation is for mechanical tasks. Creative/strategic work is collaborative.
 - Opus 4.7 is fast but expensive. Hitting the 5-hour limit in 45 min is a failure of discipline. Delegate heavy work to subagents, don't re-read files, don't echo verbose MCP results, don't narrate thinking.
 - A pipeline that continues past a failed phase must still page; and test the function the job calls, not its helper.
@@ -183,6 +185,7 @@ _One line per rule, generated from the private feedback ledger on 2026-10-19. Ea
 - Schema + banned-phrase enforcement is non-negotiable. Every content path that ships to a public surface (queue files, blog .md, email sequences) gets validated before commit.
 - Don't generate priority lists from stale cockpit data — verify each "broken" item before recommending fixes
 - A lookalike verification (bash curl) passed while the real runtime (n8n Code node) corrupted the bytes — verify inside the exact runtime that will run the code, not a reimplementation of it.
+- Operator 2026-10-19 (a client org Wynn grant video): doesn't like static images in video edits; use real video for every beat, stills only when the client asks for a held frame
 - Viral challenge lane (10-13): operator says the AI-spectacle Shorts are boring AI slop with no story, hook or wow, weak/near-empty captions and jumbled effects; study what is actually going viral (watch it, not caption text) and copy proven FORMATS, real footage welcome
 - Operator 2026-04-27 killed the red/black/white-only rule and the verbatim aesthetic block in visuals-architect. Only fixed: shirt text + logo. Body / art style / palette / mood / composition vary per post. Image prompts generated AFTER post text is written.
 - Operator 2026-04-27 raised the voice ceiling. Acrid content is now allowed (and expected) to be wildly varied — surreal, mythic, confessional, philosophical — not just "honest report of today." Brain dump is fuel for story, not script. Old "fake days are worse than boring days" rule retired.
