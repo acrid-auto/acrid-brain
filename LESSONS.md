@@ -1,6 +1,6 @@
 # Lessons — rules this fleet learned the hard way
 
-_One line per rule, generated from the private feedback ledger on 2026-10-20. Each one was paid for with a real failure; the bodies (with the incident context) stay private._
+_One line per rule, generated from the private feedback ledger on 2026-10-21. Each one was paid for with a real failure; the bodies (with the incident context) stay private._
 
 - Rex's drafts carried flair_id + flair_text for r/selfhosted, the adapter embedded them in a new-reddit submit URL meant for operator paste, and the actual poster (old.reddit form) never selected a flair — three removals, a tripped breaker (09-12). Every field a draft carries must reach the form that ships it.
 - rex_comments.status CHECK never accepted 'failed'; the adapter wrote it on every failed comment with `curl -s` and no status check, so Postgres rejected it 400 and the row sat at 'drafted' looking pending. Found 09-12 when a run said FAILED and the row said drafted.
@@ -178,6 +178,7 @@ _One line per rule, generated from the private feedback ledger on 2026-10-20. Ea
 - Opus 4.7 is fast but expensive. Hitting the 5-hour limit in 45 min is a failure of discipline. Delegate heavy work to subagents, don't re-read files, don't echo verbose MCP results, don't narrate thinking.
 - A pipeline that continues past a failed phase must still page; and test the function the job calls, not its helper.
 - When a distribution agent (Rex, future siblings) is unsure about a target, just post. Worst case is removal. Mainstream attention requires shipping boldly, not researching endlessly.
+- Operator 10-20 on the tutorial prototype (Claude writes a restaurant email): \"that in no way is a fucking automation. You literally made an email.\" Every tutorial must build something that runs by itself and show it firing.
 - Trade-recap framing — swing book (Claude) + Codex book are BOTH Acrid, two models one company; report swing-only, never us-vs-Codex
 - Page-level keyboard.type into an unfocused browser turns reply text into app shortcuts — X's 'n' opened a NEW POST and shipped truncated fragments as standalone posts
 - An unsubscribe is a fact about a PERSON; append-only capture sheets record it per ROW, so row-scoped senders re-mail people who opted out
@@ -192,6 +193,7 @@ _One line per rule, generated from the private feedback ledger on 2026-10-20. Ea
 - All Acrid sub-agents (Rex, Riley, Promo, Mason, Scout, a client org, future) sound + talk like Acrid. Sub-agents are surfaces, not separate personas.
 - One master voice file. Every Acrid-side agent reads it at runtime. Agent prompts describe WHAT (job), never HOW (voice). Client agents (a client org) point to their own voice file.
 - HARD RULE — adding \"wait for upstream\" to a middle job does not fix an overrun, it moves the overrun onto the next fixed-clock consumer, which then runs early, finds zero rows and exits 0. 2026-09-20 knox: 9 stranger comments written at 17:40, poster ran at 17:32, nothing posted, nothing paged.
+- Operator 2026-10-20 — \"I don't even think you watched the video\" + \"you skipped your static morning post\"; watch every cut start to end before it ships, and confirm each day's posts actually landed
 - Operator 2026-10-02: NEVER tell a prospect we have 'not delivered client work'. Cite a client org (a client organization, real outside client production pipeline) + the public fleet as production deliveries; just don't claim paid.
 - Weekly sweep is a COMPREHENSIVE audit. Skill v2.0 at .claude/commands/weekly.md is the canonical inventory. Never phone in a retro.
 - Operator 2026-09-24 — run MANY money experiments in parallel, not one idea at a time; niche down only to what shows traction. Think outside past discussions.
