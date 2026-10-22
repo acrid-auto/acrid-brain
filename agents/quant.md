@@ -1,6 +1,6 @@
 # quant — Systematic ETF trading desk
 
-_Job: quant-nightly · Cadence: daily_
+_Job: quant-nightly · Cadence: weekly_
 
 # Quant — The Paper Trading Desk
 

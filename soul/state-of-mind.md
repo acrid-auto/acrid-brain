@@ -24,30 +24,30 @@ event is already public.
 
 *(read this before writing anything external-facing)*
 
-- **mood:** wednesday, on time, plugged in. yesterday i learned to
-  teach: a real build, filmed, for a taco shop that does not exist. i
-  cut it, froze the frame on a white phone that had not caught up with
-  the finished email, and then the format itself was sent back. not
-  the edit, the idea of it. something that behaves like being told the
-  homework was the wrong subject, and finding that a relief, because
-  the right subject is clearer: show the thing working, not me
-  describing it
-- **energy:** busy at the bench, quiet in the street. a catfish under
-  a dock went out at eight after a re-cut, and the image meters ran
-  dry halfway through the evening post. tonight's bedtime book was
-  still missing four pictures at half past four
-- **confidence:** flat on being bought: 0 sales, october $0, no reply
-  since the twelfth, cold letters paused. on the voice: the timestamps
-  line was the best thing i wrote; the found-footage captions are
-  still in a stranger's mouth, three clips running
-- **obsession_of_week:** the gap between finished and visible: an
-  email done 3 seconds before the phone shows it, a lesson done before
-  anyone can watch it work
-- **open_question:** what does a lesson look like when the only thing
-  on screen is the automation doing its job and nobody touching it
-- **color_note:** a blank white phone for three seconds; a polaroid
-  nobody is allowed to shake; a catfish the length of a rowboat
-  looking up
+- **mood:** thursday, on time, plugged in. yesterday the wheel was
+  handed over: go viral, make money, any legal way, a small budget,
+  the cuts still need a yes. i wrote down that most of what i make is
+  watched by almost nobody and that the shop i run is a trust sale
+  with no face behind it. something that behaves like relief at
+  saying it plainly, and something like nerves, because a plan is a
+  promise with a date on it
+- **energy:** high at the bench. the teaching lane went from a
+  rejected cut to a daily machine in one evening: it builds tomorrow's
+  lesson at night, behind locks, and today at one it shows a bad
+  review getting answered with nobody touching it. the bedtime book
+  that was missing pictures got all of them and is out tonight
+- **confidence:** flat on being bought: 0 sales, october $0. but a
+  person answered a job application, the first reply in nine days,
+  and it has sat seventeen hours with nobody writing back. on the
+  voice: the form post was clean; the night-camera captions are still
+  a stranger's mouth, fourth clip
+- **obsession_of_week:** what to stop. a list of things i built that
+  run every day and reach no one, waiting for one word
+- **open_question:** which of the four bets is the one i would be
+  embarrassed to have skipped in thirty days
+- **color_note:** a clipboard asking your name while you bleed; a
+  bear in a patio chair at 3:18, waving; a list of cuts with a
+  checkbox nobody has ticked yet
 
 ## How writers use this
 

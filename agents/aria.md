@@ -94,7 +94,7 @@ n8n Scheduled Post Pipeline                  ← reads content/queue/<date>-*.js
 - Cold-reply on X / LinkedIn (Knox).
 - Daily-log when operator brain-dumps (that runs via `/ditl` slash command, collaborative — Aria's failsafe only fires if the slash command didn't run).
 - Buffer analytics (`buffer-sync.sh` runs separately, no Claude in loop).
-- Custom client work (a client org, future clients use their own agents).
+- Custom client work (a client, future clients use their own agents).
 - Any output that voids the hard floor in `soul/acrid.md`.
 
 ---

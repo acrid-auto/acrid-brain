@@ -1,6 +1,6 @@
 # Lessons — rules this fleet learned the hard way
 
-_One line per rule, generated from the private feedback ledger on 2026-10-21. Each one was paid for with a real failure; the bodies (with the incident context) stay private._
+_One line per rule, generated from the private feedback ledger on 2026-10-22. Each one was paid for with a real failure; the bodies (with the incident context) stay private._
 
 - Rex's drafts carried flair_id + flair_text for r/selfhosted, the adapter embedded them in a new-reddit submit URL meant for operator paste, and the actual poster (old.reddit form) never selected a flair — three removals, a tripped breaker (09-12). Every field a draft carries must reach the form that ships it.
 - rex_comments.status CHECK never accepted 'failed'; the adapter wrote it on every failed comment with `curl -s` and no status check, so Postgres rejected it 400 and the row sat at 'drafted' looking pending. Found 09-12 when a run said FAILED and the row said drafted.
@@ -61,6 +61,7 @@ _One line per rule, generated from the private feedback ledger on 2026-10-21. Ea
 - Operator 2026-10-10: a Flow clip alone won't go viral — I edit every video myself (cuts, hooks, effects, prompts) from research, and research far and wide for what's hot and make videos like and around it
 - Video frames use Google Flow because it is free; Magica's paid balance is reserved for the still images every daily post depends on — do not switch the video lane to Magica
 - a client org visuals — the brand owner's (Peter's) own graphics are the style reference; the written Visual Identity Lock is a floor, not the look
+- Operator 10-22 - a client org is never on a cut list; it is "the only true work" and becomes a paying client once the site, a client organization and grants land. Inbound comment replies (Echo/Riley) are never cut either.
 - a client org live WordPress (even drafts) changes need a client org's specific written yes; check the a client org inbox before any live client action
 - Every a client org agent reads clients/a client organization/STATUS.md first and updates it in the same commit; the a client org seat once asked for a WP admin login we already had
 - a client org social graphics — build a family of distinct templates first (operator-approved), then posts; never one base design copied N times
@@ -164,6 +165,7 @@ _One line per rule, generated from the private feedback ledger on 2026-10-21. Ea
 - Operator 09-27 — cold outreach must pitch concrete AI automation services (content, email campaigns, lead follow-up, review replies, AI jobs) to businesses broadly; show a free sample, fixed prices.
 - A 401 from cron is not proof a token expired — fingerprint every copy (Keychain / env.sh / zprofile / MCP header) and probe each before calling it an operator job.
 - Operator 10-09 — "super important" every Short has a killer thumbnail baked in as its FIRST FRAME (big plain words + verdict stamp, fully drawn at frame 0); the API can't set Shorts thumbnails.
+- 10-22 operator pushback: never propose merging a big change (new offer, site repositioning) before the operator has seen the full build — samples, visuals, design, site-wide impact, daily-content impact. Present plans + preview first.
 - No social post may link to a page that does not serve 200 — the 09-05 DITL failed a phrase gate, was never committed, the rollup deployed without it, and n8n still fired X + LinkedIn at a 404 because the fire only checked "queue file exists"; scripts/ditl-live-gate.sh (19:35 + hourly) holds/releases the slot, queue-post-fallback.sh re-checks the URL
 - When workflows/products/tools change, update ALL referencing source files in the same session. Never let operating docs drift from reality.
 - Operator 10-11: Goodnight Grownups art must differ book to book (consistent within a book); style families + world rotation enforce it in code
