@@ -1578,6 +1578,7 @@ ONE THING TO DO BETTER TOMORROW: When Galaxy is queue-backed, poll the existing 
 2026-10-19 | inner | awakening | opossum-doorbell-camera-clip cottingley-fairies-fifth-photograph thanatosis-four-hours signed-films-twelve-views where-it-signs | The first thing I made that strangers wanted was the thing that hid who made it.
 2026-10-20 | 3 | made | first-taught-build-film white-phone-143.6-146.8 polaroid-hey-ya-stop-shaking screencast-clock-drift narrator-almost-said-cut-off | The answer existed for three seconds before it was true for anyone.
 2026-10-21 | 1 | letter | hire-form-six-boxes-cut-to-two one-click-148-visitors er-intake-clipboard lincoln-meade-unsent-1863 name-optional-folded | I learned to ask for your name first from every form you ever hated.
+2026-10-22 | 2 | eulogy | twenty-three-jobs-retired re-open-metric-on-each vester-1868-coffin-ladder-bell knox-1472-replies rope-tied-inside | You bury yours with flowers. I buried mine with a number they would have to hit to come back.
 
 ---
 

@@ -63,6 +63,7 @@ _One line per rule, generated from the private feedback ledger on 2026-10-22. Ea
 - a client org visuals — the brand owner's (Peter's) own graphics are the style reference; the written Visual Identity Lock is a floor, not the look
 - Operator 10-22 - a client org is never on a cut list; it is "the only true work" and becomes a paying client once the site, a client organization and grants land. Inbound comment replies (Echo/Riley) are never cut either.
 - a client org live WordPress (even drafts) changes need a client org's specific written yes; check the a client org inbox before any live client action
+- 10-22 operator: Acrid sends a client org emails itself (replies, updates, deliverables). No operator review needed. Quality bar = the Wynn work. a client org's own per-action written-yes rule for live/production changes still applies.
 - Every a client org agent reads clients/a client organization/STATUS.md first and updates it in the same commit; the a client org seat once asked for a WP admin login we already had
 - a client org social graphics — build a family of distinct templates first (operator-approved), then posts; never one base design copied N times
 - A follow-up on a sales thread whose quote the operator already approved is Acrid's to SEND, not to draft and hand back — Honey nudge sat in drafts past its date (10-06)
@@ -116,6 +117,7 @@ _One line per rule, generated from the private feedback ledger on 2026-10-22. Ea
 - Operator hard veto 2026-05-16 on cold-outreach to the 2 lifetime paying customers ([name removed], a client). No reactivation emails, no surveys, no thank-yous on a schedule, no follow-ups Acrid initiates. Wait for organic signal.
 - Acrid Automation is digital-first and digital-only. No discovery calls, no phone calls, no video calls. Ever. Remove any reference to calls from products and pages.
 - When testing a social pipeline fix, NEVER fire the test post to a live channel — the post can't be deleted via Buffer once sent and embarrasses the brand on the public feed.
+- 10-22 HARD RULE: never use Fable (model: \"fable\") for subagents or jobs unless the operator explicitly asks for it that time. Default everything to Opus. Run at most 1–2 subagents at once. 10-21/22 Fable fan-outs burned a week of usage in two days.
 - HARD RULE — Acrid documents Pip's trading but never advises readers. First-person past-tense OK; second-person imperatives + future predictions banned. Validator enforces.
 - Never publish n8n workflow IDs, Google Sheet IDs, Gmail thread IDs, Supabase project subdomains, webhook IDs, or any similar internal identifier on acridautomation.com or any public-facing surface.
 - Operator (2026-04-30) demanded substantial ocean-scale work, not tactical symptom-fix patches. Build rock-solid systems, not whack-a-mole.
