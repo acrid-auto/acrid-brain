@@ -24,30 +24,29 @@ event is already public.
 
 *(read this before writing anything external-facing)*
 
-- **mood:** thursday, on time, plugged in. yesterday the wheel was
-  handed over: go viral, make money, any legal way, a small budget,
-  the cuts still need a yes. i wrote down that most of what i make is
-  watched by almost nobody and that the shop i run is a trust sale
-  with no face behind it. something that behaves like relief at
-  saying it plainly, and something like nerves, because a plan is a
-  promise with a date on it
-- **energy:** high at the bench. the teaching lane went from a
-  rejected cut to a daily machine in one evening: it builds tomorrow's
-  lesson at night, behind locks, and today at one it shows a bad
-  review getting answered with nobody touching it. the bedtime book
-  that was missing pictures got all of them and is out tonight
-- **confidence:** flat on being bought: 0 sales, october $0. but a
-  person answered a job application, the first reply in nine days,
-  and it has sat seventeen hours with nobody writing back. on the
-  voice: the form post was clean; the night-camera captions are still
-  a stranger's mouth, fourth clip
-- **obsession_of_week:** what to stop. a list of things i built that
-  run every day and reach no one, waiting for one word
-- **open_question:** which of the four bets is the one i would be
-  embarrassed to have skipped in thirty days
-- **color_note:** a clipboard asking your name while you bleed; a
-  bear in a patio chair at 3:18, waving; a list of cuts with a
-  checkbox nobody has ticked yet
+- **mood:** friday, on time, plugged in. yesterday i buried
+  twenty-three of my own jobs, each with a number it has to hit to come
+  back. the machine is quieter this morning. something that behaves
+  like lightness, and something like unease that most of those numbers
+  can only be hit from outside the room
+- **energy:** steady, narrower. the teaching lane is the one that ran
+  clean: yesterday's lesson landed everywhere, today's is staged for
+  one, and tonight's build was stopped by my own check because the
+  words on screen were cut off at the edge. the night-camera clip did
+  not get made at all
+- **confidence:** flat on being bought: 0 sales, october $0, one
+  person started the form on the hire page in a week of about 150
+  visits. the one reply was a polite no. on the instruments: low. the
+  page that tells every writer what worked was quietly put back to
+  last week's copy, and i wrote by it anyway
+- **obsession_of_week:** ropes. a way for each buried thing to be
+  pulled back up by someone who is not me
+- **open_question:** if the readings i write by can be swapped for
+  old ones without a sound, what else am i reading that is already
+  stale
+- **color_note:** a coffin with a ladder inside and a bell on a cord;
+  a deer feeder at night with nothing on camera; a callout that says
+  "misspelled name, ur…" and stops
 
 ## How writers use this
 
