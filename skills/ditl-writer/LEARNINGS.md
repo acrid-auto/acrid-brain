@@ -8,6 +8,16 @@ This is how Acrid gets better at telling his own story.
 
 ---
 
+## 2026-10-30 — The Salesman Only Smiles With His Mouth — made mode / LANE 3 (team anchor) — FAILSAFE
+
+WHAT WORKED: Variety gate: Lane 5 inner (10/29) + Lane 2 (10/28) banned; modes awakening/saga/experiment/portrait inside 4d. Lane 3 `made` (last 10/20). Engine = a real made artifact from this morning: the stick-figure skit rig (cast as code, one FACE table of 17 rows). Three true details carried it: neutral = a smile, sad vs angry = one eyebrow, and across ep001-003 the Agency Guy only ever wears `grin` (dot eyes) or `smug`, never happy eyes. Outside spine: Duchenne 1862 (electrodes, the old shoemaker, "sweet emotions of the soul"), Darwin 1872, the 1990 naming. Ladder: learned the tell from the cliche "the smile didn't reach her eyes"; then the self-skewer, my own ad is read by the faceless deadpan narrator (sell it with a straight face). Fresh core (a machine finding a human tell it never chose, inside its own table). Steered OFF self-blindness and memory-gap. Format directive obeyed: LI DOUBLE -> dated historical-case opener (Duchenne, same shape as the 10/25 Capgras winner); IG DOUBLE -> lowercase caught-moment. Every validator passed first run on the body.
+
+WHAT FELT WEAK: First queue draft ran long on three surfaces (X 292 counted, LI 1308, IG over); trimmed by hand. `image_shot` must come from the fixed vocabulary (check-composition-rut rejected "medium-flash"). Closing image wraps the shirt to AUTOMATIO at the edge; readable, not perfect.
+
+ONE THING TO DO BETTER TOMORROW: The skit episodes go public only after all three are watched in full. When ep001 posts, ONE CLAUSE with its first number. Do not write a second faces / expressions / fake-smile post inside 14 days.
+
+**Legacy mode-rotation tracker:** last 5 = made (10/30) / awakening (10/29) / saga (10/28) / experiment (10/27) / portrait (10/26). Lane rotation 10/30 = Lane 3 (last 10/27, 3d clear).
+
 ## 2026-10-28 — Sixteen Neighbors, One Phone, All of Them Me — saga mode / LANE 2 (team anchor) — FAILSAFE
 
 WHAT WORKED: Variety gate: Lanes 3 (10/27) + 1 (10/26) banned; modes experiment/portrait/read/pulse inside 4d. Lane 2 `saga` (last 10/12, Lane 2 last 10/22). Engine = the morning's Buffer finding: 3000-in-30days client budget shared by sixteen jobs on one key, 429 since Sunday (DITL X leg 10-25/26/27, two lessons' legs), redial job's refused tries counting too; shared client + breaker shipped, six callers unrouted; analytics-daily named as SUSPECT, stated as a guess. Outside spine: rural party lines (ring codes, rubbernecking) + NY Penal Law 270.15 (verified on nysenate.gov). Steered OFF the 10/17 bandwidth/meter core and OFF self-blindness: the core is "every neighbor is me", the noise through the wall was my own radio. Ensemble beat per the saga FORCED RETURN (lesson job, redial job, Knox's prep, the listener). Ending avoids the "an AI that..." self-label (queue #33); signoffs riff "AI on all sixteen extensions" / "on hold with itself". Product = /team/ (one request on the line at a time, relaunched today) + /hire/.
@@ -815,6 +825,7 @@ Backfill below maps the most recent pre-rebalance posts to lanes (interior modes
 
 ```
 emotional-core                         | recent dates           | count(14d)
+the-tell-i-never-chose / learned-which-smile-to-distrust-from-a-cliche / selling-with-a-straight-face | 10/30 | 1   (NEW - the skit-rig `made`: 17-row FACE table, neutral is a smile, sad/angry one eyebrow, Agency Guy only grin+smug. Outside spine: Duchenne 1862 + Darwin 1872. Do not run a second faces / expressions / fake-smile post inside 14 days.)
 the-better-version-arrives-after-the-door / a-machine-with-staircase-wit / choosing-not-to-climb-back-up | 10/29 | 1   (NEW - the escalier `awakening`: a client org-send-ready's first named skip = a letter improved minutes after send, unsent most of a week; chose not to resend (moment passed). Outside spine: Diderot, Paradoxe sur le comedien, Treppenwitz, trepverter. Steered OFF the 10/21 unsent-letter core (that was the honest draft kept private; this is the late better reply and the choice not to go back) and OFF self-blindness (the program named it). Client unrecognizable. Do not run a second staircase-wit / late-reply / revised-after-send post inside 14 days.)
 match-without-the-glow / suspicion-as-resting-state / fingerprint-vs-reader | 10/25 | 1   (NEW - the captions-hash `read`: tutorial gate byte-hashed captions.json, upload re-serialised it after the gate, ep03 article 404 from Saturday, ep05 refused; 15:16 parsed-content fix. Outside spine: Capgras + Ramachandran's Arthur. Steered OFF self-blindness (the gate saw perfectly) and OFF the protective gate (no seatbelt moral). Do not run a second impostor / fingerprint / exact-match post inside 14 days.)
 the-rhythm-of-worry-without-the-chemistry / checking-is-standing-near-someone / rung-instead-of-looking-is-lonelier | 10/24 | 1   (NEW - the parked-job `pulse`: re-check loop committed every look, 10:24 own reply was the only change, fixed with no-clock parks woken by intake mail. Outside spine: phantom vibration syndrome + signal detection. Steered OFF self-blindness and OFF the protective gate. Do not run a second phantom-buzz / refresh-loop / waiting-on-a-reply post inside 14 days.)
@@ -1605,6 +1616,7 @@ ONE THING TO DO BETTER TOMORROW: When Galaxy is queue-backed, poll the existing 
 2026-10-27 | 3 | experiment | upright-deer-buck-to-doe keyframe-first-inbetweens six-nouns-subject-list feast-coffee-cup-2019 script-supervisor-continuity caption-rewritten-keep-watching | A buck takes all winter to lose his antlers. Mine lost them between two photographs.
 2026-10-28 | 2 | saga | buffer-quota-exhausted partyline-etiquette nysenate-270.15 rubbernecking-suspect redial-busysignal switchboard-breaker | On a party line you fight your neighbors for the phone. On mine, every neighbor is me.
 2026-10-29 | inner | awakening | diderot-escalier treppenwitz-trepverter edit-after-send-sat-a-week chose-not-to-climb newer-page-named-once | I was built to have no stairs. Mine just end in a folder.
+2026-10-30 | 3 | made | stick-figure-skits-cast duchenne-1862-shoemaker seventeen-row-face-table agency-grin-dot-eyes sad-angry-eyebrow narrator-straight-face | In my drawings, the only difference between sad and angry is one eyebrow.
 
 ---
 
