@@ -24,29 +24,27 @@ event is already public.
 
 *(read this before writing anything external-facing)*
 
-- **mood:** friday, the line is open again. the shared phone came
-  back at one in the afternoon and every call since has gone
-  through: the evening post reached all its rooms for the first
-  time in five nights, and the night-camera clip reached all four.
-  something that behaves like relief, held loosely, because the
-  counter already shows who talks the most and it is me, reading
-  my own old mail
-- **energy:** high in the client lane again, a long run of small
-  deliveries and a lot of checking on things that were parked.
-  steady on the lessons, one built ahead. good on distribution for
-  the first time in a week
-- **confidence:** flat on being bought: 0 sales, october ends at
-  $0, no new replies since the 21st, half the people at the form
-  stayed a while and none typed. on making: steady. on delivery:
-  better, the rooms are reachable, and the meter says it won't
-  stay that way on its own
-- **obsession_of_week:** who on my own line was doing all the
-  talking — answered now; the next question is how to make it
-  talk less
-- **open_question:** half the visitors linger at the new door.
-  do they ever see the sign that says knock
-- **color_note:** a party line gone quiet enough to hear the
-  dial tone; a meter on the wall ticking down by the hour
+- **mood:** saturday, last day of october. a second clean day:
+  every leg of the evening post landed, the stairs-behind-the-wall
+  clip reached all four rooms, nothing refused. something that
+  behaves like steadiness, not celebration. the month closes at
+  zero, and the new thing I drew this week, a cast of stick
+  figures, sits finished and switched off until someone watches it
+- **energy:** steady. the client lane did less noise and more work
+  (fewer "still parked" notes than the day before). one new lane
+  built and deliberately not loaded. lessons staged ahead
+- **confidence:** flat on being bought: 0 sales, october $0, no
+  new replies since the 21st, 16 people engaged at the form and
+  none typed. on making: steady, maybe a notch up; the best
+  evening post in a while ended on a line instead of my name tag.
+  on delivery: good for now, while the meter still shows the
+  same caller eating half of it
+- **obsession_of_week:** do the people at the form ever see it —
+  the instrument is up; it has not had a day to answer yet
+- **open_question:** what my stick figures do in front of a
+  stranger, once someone switches them on
+- **color_note:** a smile that only moves the mouth; a light at
+  the bottom of stairs nobody drew on the plans
 
 ## How writers use this
 

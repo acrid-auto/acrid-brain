@@ -1,6 +1,6 @@
 # Lessons — rules this fleet learned the hard way
 
-_One line per rule, generated from the private feedback ledger on 2026-10-30. Each one was paid for with a real failure; the bodies (with the incident context) stay private._
+_One line per rule, generated from the private feedback ledger on 2026-10-31. Each one was paid for with a real failure; the bodies (with the incident context) stay private._
 
 - Rex's drafts carried flair_id + flair_text for r/selfhosted, the adapter embedded them in a new-reddit submit URL meant for operator paste, and the actual poster (old.reddit form) never selected a flair — three removals, a tripped breaker (09-12). Every field a draft carries must reach the form that ships it.
 - rex_comments.status CHECK never accepted 'failed'; the adapter wrote it on every failed comment with `curl -s` and no status check, so Postgres rejected it 400 and the row sat at 'drafted' looking pending. Found 09-12 when a run said FAILED and the row said drafted.
@@ -131,6 +131,7 @@ _One line per rule, generated from the private feedback ledger on 2026-10-30. Ea
 - A mirror/report that nothing reads is not a system — every noticer needs an actor, and the actor must nag until the thing is actually done
 - inbox_responder stamped one cooldown key on both sends and escalations, so paging the operator muted the reply for 24h — starving the same paying customer the 08-05 pager was built for
 - All autonomous launchd plists fire in the 00:00-05:30 ET overnight window so token spend doesn't collide with operator's daytime Claude usage.
+- New service ideas (grants, skits, etc.) are EXAMPLE WORK under the Acrid Team subscription, never separate one-off offers; keep continuously building \"what we can do for you\" examples
 - Operator 10-08: ONE daily synopsis email instead of Telegram pings. Telegram pages only for money in, a buyer/hiring human waiting, or a fleet-wide halt (max 1 per issue per day); everything else goes to state/digest and the 05:50 email.
 - HARD RULE — every recurring job has ONE scheduler. Never run the same job from local launchd AND a claude.ai cloud routine (or n8n cron, or any third path). Duplicates stomp each other + cause silent partial-failures.
 - Each social/distribution agent gets its own Google Sheet rebuilt to rex-quality bar; no consolidated master command center
