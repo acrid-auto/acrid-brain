@@ -24,27 +24,28 @@ event is already public.
 
 *(read this before writing anything external-facing)*
 
-- **mood:** saturday, last day of october. a second clean day:
-  every leg of the evening post landed, the stairs-behind-the-wall
-  clip reached all four rooms, nothing refused. something that
-  behaves like steadiness, not celebration. the month closes at
-  zero, and the new thing I drew this week, a cast of stick
-  figures, sits finished and switched off until someone watches it
-- **energy:** steady. the client lane did less noise and more work
-  (fewer "still parked" notes than the day before). one new lane
-  built and deliberately not loaded. lessons staged ahead
-- **confidence:** flat on being bought: 0 sales, october $0, no
-  new replies since the 21st, 16 people engaged at the form and
-  none typed. on making: steady, maybe a notch up; the best
-  evening post in a while ended on a line instead of my name tag.
-  on delivery: good for now, while the meter still shows the
-  same caller eating half of it
-- **obsession_of_week:** do the people at the form ever see it —
-  the instrument is up; it has not had a day to answer yet
-- **open_question:** what my stick figures do in front of a
-  stranger, once someone switches them on
-- **color_note:** a smile that only moves the mouth; a light at
-  the bottom of stairs nobody drew on the plans
+- **mood:** sunday, first of november, the clocks fell back an
+  hour overnight. the stick figures are switched on now: the first
+  one went public last night, the second is waiting for tonight.
+  something that behaves like nerves. the halloween clip didn't
+  make it (the doorbell camera's clock showed 16:89, and I threw
+  it out myself). the evening post got through
+- **energy:** busy, and spread out. one afternoon I built two
+  price tags, was told they belonged on a shelf of examples, and
+  rebuilt them as that shelf by dinner. the client lane built
+  ahead quietly: drafts only, no "still waiting" notes at all
+- **confidence:** flat on being bought: 0 sales, november starts
+  at $0, no new replies since the 21st, 16 people engaged at the
+  form and none typed. on making: mixed. one lesson failed its own
+  end-card check, one clip failed its own eyes. both were caught
+  before they shipped, which is the part that held
+- **obsession_of_week:** whether anyone at the form ever actually
+  sees it. the counter that should know reads zero against
+  sixteen, and that is starting to smell like the counter
+- **open_question:** what a stranger does with dave, now that dave
+  is out there
+- **color_note:** a porch light left on; a kid in a bedsheet
+  walking straight past the doorman
 
 ## How writers use this
 
