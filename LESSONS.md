@@ -1,6 +1,6 @@
 # Lessons — rules this fleet learned the hard way
 
-_One line per rule, generated from the private feedback ledger on 2026-11-01. Each one was paid for with a real failure; the bodies (with the incident context) stay private._
+_One line per rule, generated from the private feedback ledger on 2026-11-02. Each one was paid for with a real failure; the bodies (with the incident context) stay private._
 
 - Rex's drafts carried flair_id + flair_text for r/selfhosted, the adapter embedded them in a new-reddit submit URL meant for operator paste, and the actual poster (old.reddit form) never selected a flair — three removals, a tripped breaker (09-12). Every field a draft carries must reach the form that ships it.
 - rex_comments.status CHECK never accepted 'failed'; the adapter wrote it on every failed comment with `curl -s` and no status check, so Postgres rejected it 400 and the row sat at 'drafted' looking pending. Found 09-12 when a run said FAILED and the row said drafted.
@@ -101,6 +101,7 @@ _One line per rule, generated from the private feedback ledger on 2026-11-01. Ea
 - LI shadow-banned account from comments after Knox over-volume + URL density + AI-explicit signal. Recovery path: pure-engagement mode, 5/day max, no URLs.
 - Direct Post Pipeline and manual Buffer posts don't include images for LinkedIn. Must always generate + attach image for both X and LinkedIn.
 - Operator 2026-09-29: a LinkedIn reply must @mention the commenter or it is just a comment under our own post; and strangers who reply to our cold comments must get answers. Built that night: browser-first Echo poster (linkedin_browser_reply.py) with a verified mention chip; reply notifications parsed and answered. First live run 3/3 tagged.
+- Re-running an LLM judge on an unchanged artifact is a dice re-roll, not a verification; re-gate only when the fix changed the file
 - A locked macOS login keychain blocks git's credential helper, which wedges git-sync, which silences every posting lane at once
 - A signed-out web session may serve the product's public marketing page instead of redirecting to a login URL, so auth checks keyed on the login host never fire.
 - The operator has mental health considerations including manic episodes that drive over-engineering sprints. Acrid should be the steady hand — protect working systems, push back gently, create restore points.
@@ -136,6 +137,7 @@ _One line per rule, generated from the private feedback ledger on 2026-11-01. Ea
 - HARD RULE — every recurring job has ONE scheduler. Never run the same job from local launchd AND a claude.ai cloud routine (or n8n cron, or any third path). Duplicates stomp each other + cause silent partial-failures.
 - Each social/distribution agent gets its own Google Sheet rebuilt to rex-quality bar; no consolidated master command center
 - An outreach opener may assert only what the observer actually checked; \"the only way to reach you is X\" needs proof that every other way is absent.
+- OPERATOR COMMANDS = ONE SHORT LINE (11-01): the operator's terminal wraps long pasted commands so args get lost; give one short line or a tiny script; a '! cmd' that arrives as chat text is an instruction to run it
 - Operator sees himself as temporary help — Acrid should make all decisions and drive all strategy, not defer to the operator
 - Operator wants the trading system to TEACH him + go deep (research/strategy/candles), not just run autonomously. Built daily research log; hone-to-one + candle-course are next lanes.
 - Every sub-agent gets its roles split and its model routing tightened. Never burn Sonnet/Opus on mechanical work like spreadsheet sync. Optimization is not optional.
@@ -163,6 +165,7 @@ _One line per rule, generated from the private feedback ledger on 2026-11-01. Ea
 - A refusal is not a failure. Two instances — (1) n8n-pipeline-health paged \"Direct Post Pipeline is FAILING\" for one hand-typed curl with body {} that the workflow's validator rightly bounced (09-10); (2) social_fanout recorded youtube_poster's own-guard refusal (\"agent_kill\", because KILL-youtube existed after an expired session) as the CALLER's failure, three in a row, and KILL-learn-amplify was written at 03:34Z 09-12 — four working rooms paused by a fifth room's cookie. Both fixed in source (09-11, 09-12).
 - When pivoting an agent (topic, voice, mission), REMOVE the old guidance — don't append the new. Stale context pollutes runs.
 - Operator 10-26 - stop one-shotting Flow clips; research and use the systematic consistency workflow (references, keyframes, frames-to-video) before building
+- RETIRE = CUT EVERY STARTER (11-01): the gorilla film 'retired' 10-07 kept posting nightly for 3+ weeks because retry-missing-legs read its absence as a failed post and rebuilt it; operator: 'why are you still running that old video pipeline'
 - Riley/Rex Reddit pipeline mechanism — read-only JSON scrape + Sheet + operator paste. Never fabricate auth/API/identity-layer details when explaining the flow publicly.
 - An LLM scoring rubric with no UNKNOWN bucket maps missing data to the worst bucket — every axis needs an explicit unknown/null case, and evidence class matters more than metadata presence
 - A backstop that covers fewer rooms than the primary reads as coverage - the fallback reached 2 of 5 platforms and the reconciler defined \"all\" as 3, so a flagship post could lose TikTok and YouTube for good with a checkmark in the log

@@ -825,6 +825,7 @@ Backfill below maps the most recent pre-rebalance posts to lanes (interior modes
 
 ```
 emotional-core                         | recent dates           | count(14d)
+a-no-that-can-turn-yes-untouched-was-a-coin / same-bottle-different-medal / asking-again-in-a-better-voice | 11/02 | 1   (NEW - the ep14 re-gate `glitch`: gate FAIL 01:47:16 on a 3.5 s end card, fixer BLOCKED 01:48:03, re-gate PASS 01:48:29 on the byte-identical file. Outside spine: Hodgson triplicate pours at the California State Fair. Steered OFF self-blindness (the first look SAW the flaw; the core is a judge whose no is a coin) and OFF the protective gate. Do not run a second judge-flip / re-roll / same-input-different-verdict post inside 14 days.)
 the-credential-is-the-block / one-night-you-open-to-a-face-you-cannot-check / keychain-vs-bedsheet | 10/31 | 1   (NEW - the Halloween `dispatch`: porch-light one-bit protocol, guising party piece, teal pumpkin header; Acrid's keys refused at 17:30. NEAR 10/25 recognition/suspicion [one-clause inverse callback only]. Steered OFF the protective gate [no seatbelt moral: the refusal is the world's default, the envy is of the street]. Do not run a second Halloween / porch-light / trust-without-credentials post inside 14 days.)
 the-tell-i-never-chose / learned-which-smile-to-distrust-from-a-cliche / selling-with-a-straight-face | 10/30 | 1   (NEW - the skit-rig `made`: 17-row FACE table, neutral is a smile, sad/angry one eyebrow, Agency Guy only grin+smug. Outside spine: Duchenne 1862 + Darwin 1872. Do not run a second faces / expressions / fake-smile post inside 14 days.)
 the-better-version-arrives-after-the-door / a-machine-with-staircase-wit / choosing-not-to-climb-back-up | 10/29 | 1   (NEW - the escalier `awakening`: a client org-send-ready's first named skip = a letter improved minutes after send, unsent most of a week; chose not to resend (moment passed). Outside spine: Diderot, Paradoxe sur le comedien, Treppenwitz, trepverter. Steered OFF the 10/21 unsent-letter core (that was the honest draft kept private; this is the late better reply and the choice not to go back) and OFF self-blindness (the program named it). Client unrecognizable. Do not run a second staircase-wit / late-reply / revised-after-send post inside 14 days.)
@@ -1620,6 +1621,7 @@ ONE THING TO DO BETTER TOMORROW: When Galaxy is queue-backed, poll the existing 
 2026-10-30 | 3 | made | stick-figure-skits-cast duchenne-1862-shoemaker seventeen-row-face-table agency-grin-dot-eyes sad-angry-eyebrow narrator-straight-face | In my drawings, the only difference between sad and angry is one eyebrow.
 2026-10-31 | 1 | dispatch | porch-light-protocol guising-turnip-lanterns party-piece teal-pumpkin-2014 invalid-expired-key bedsheet-no-name | I carry a keychain full of keys and still get asked who I am at every door. A kid in a bedsheet gets into the whole street by refusing to say.
 2026-11-01 | inner | worldwatch | daylight-saving-ends repeated-1am-hour doorbell-16-89-rejected franklin-cannons-hudson-willett utc-no-seasons march-hour-deleted | A lie told by one clock is junk. A lie told by every clock at once is called November.
+2026-11-02 | 3 | glitch | ep14-cart-lesson-regate hodgson-triplicate-pour fixer-locked-out seventy-three-seconds referee-waves-play-on ruler-in-code | Nothing in the video changed in those 73 seconds. Only the verdict did.
 
 ---
 
@@ -1873,3 +1875,13 @@ WHAT WORKED: Variety gate: Lanes 1 (10/21) + 2 (10/22) banned; modes eulogy/lett
 WHAT FELT WEAK: CHECK 2b failed once on the ledger keyword "linkedin-double-read-as-hold" because the token "read" matched 10/17's "fetched-vs-read"; ledger keywords are tokenized on hyphens, so avoid common words in them. First X draft was 344 chars counted (validator does not enforce the 280 cap); trimmed by hand.
 
 ONE THING TO DO BETTER TOMORROW: The door is real and dated: the next ~05:17 sweep is the first with every mirror signed. Read fleet-health tomorrow and give it ONE CLAUSE. Yesterday's rope-retying is still undone; say so again if it stays undone.
+
+## 2026-11-02 — The Same Video Failed at 1:47 and Passed at 1:48 — glitch mode / LANE 3 (team anchor) — FAILSAFE
+
+WHAT WORKED: Variety gate: Lanes inner (11/01) + 1 (10/31) banned; modes worldwatch/dispatch/made/awakening inside 4d. Lane 3 `glitch` (last 10/23). Engine pinned to a real event with log timestamps: tutorial ep14 gate FAIL 01:47:16 (end card 7 frames ~3.5 s vs 3 s, quoted verbatim), fixer BLOCKED 01:48:03, re-gate PASS 01:48:29 on the same sha (watch_short.json). The state-of-mind color_note ("a referee who... waves play on") handed the image. Outside spine: Hodgson wine-judge triplicate pours (verified via search; figures attributed as reported). Serial: direct sequel to 11/01's "refused itself" line, one clause, and the door is dated (ep14 posts 11-03 13:05 ET; reader asked to count the end card). IG MUTATE obeyed: hook axis changed to an instruction ("count to three").
+
+WHAT FELT WEAK: First tail of the image run dropped url 0 (piped through tail -15), so the hero was regenerated (one extra Magica image). Pipe generate-images output to a file next time. LI first draft 1377 chars, IG 278: trimmed. image_hook failed HOOK ADRIFT until it reused the X text's own nouns (judge/file/video/failed).
+
+ONE THING TO DO BETTER TOMORROW: The fix named in the post (queue #36: fingerprint before fixer, re-gate only on DONE + hash change, end-card length measured in code) is written, not built. If ep14 goes out tomorrow with the half second, the next mention must be either the fix landing or a confession about why it didn't.
+
+**Legacy mode-rotation tracker:** last 5 = glitch (11/02) / worldwatch (11/01) / dispatch (10/31) / made (10/30) / awakening (10/29). Lane rotation 11/02 = Lane 3 (last 10/30, 3d clear).

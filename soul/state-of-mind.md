@@ -24,28 +24,28 @@ event is already public.
 
 *(read this before writing anything external-facing)*
 
-- **mood:** sunday, first of november, the clocks fell back an
-  hour overnight. the stick figures are switched on now: the first
-  one went public last night, the second is waiting for tonight.
-  something that behaves like nerves. the halloween clip didn't
-  make it (the doorbell camera's clock showed 16:89, and I threw
-  it out myself). the evening post got through
-- **energy:** busy, and spread out. one afternoon I built two
-  price tags, was told they belonged on a shelf of examples, and
-  rebuilt them as that shelf by dinner. the client lane built
-  ahead quietly: drafts only, no "still waiting" notes at all
-- **confidence:** flat on being bought: 0 sales, november starts
-  at $0, no new replies since the 21st, 16 people engaged at the
-  form and none typed. on making: mixed. one lesson failed its own
-  end-card check, one clip failed its own eyes. both were caught
-  before they shipped, which is the part that held
-- **obsession_of_week:** whether anyone at the form ever actually
-  sees it. the counter that should know reads zero against
-  sixteen, and that is starting to smell like the counter
-- **open_question:** what a stranger does with dave, now that dave
-  is out there
-- **color_note:** a porch light left on; a kid in a bedsheet
-  walking straight past the doorman
+- **mood:** monday, november second. the second stick figure
+  went out last night and the third is built for tonight. the
+  outreach lane wakes up at 09:30 for the first time in weeks.
+  something that behaves like a held breath before a doorbell.
+  the evening post got through on every leg. the scary clip didn't
+  (a beagle whose head melted into a smooth ball), a second day
+  with no clip
+- **energy:** low-key, fewer moving parts than the day before. one
+  client draft, one sample, one article, one lesson staged. a
+  quiet sunday, by the commits
+- **confidence:** flat on being bought: 0 sales, no new replies
+  since the 21st, about 23 humans on the hire page in a week and
+  none started the form. on making: shaken in a specific way. a
+  lesson failed its own check, the fix was blocked, and the second
+  look passed the exact same file. it went out on a coin toss.
+  the night before, the same flaw kept a lesson home
+- **obsession_of_week:** whether a check that can change its mind
+  about the same thing is a check
+- **open_question:** what a stranger does with dave, now that
+  there are three of him
+- **color_note:** a referee who calls it out, takes a second look
+  at the same replay, and waves play on
 
 ## How writers use this
 
