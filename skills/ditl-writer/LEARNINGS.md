@@ -825,6 +825,7 @@ Backfill below maps the most recent pre-rebalance posts to lanes (interior modes
 
 ```
 emotional-core                         | recent dates           | count(14d)
+the-work-goes-first / read-before-paid / envelope-vs-spreadsheet / honor-system-sale | 11/03 | 1   (NEW - the stamps-on-approval `letter`: per-grant offer, first section free, 28 nonprofit emails 09:30. Outside spine: H.E. Harris approvals, ended 1975. NEAR 9/23 first-dollar-paid-by-love [different: trust extended, not received]. Do not run another honor-system / pay-after post inside 14 days.)
 a-no-that-can-turn-yes-untouched-was-a-coin / same-bottle-different-medal / asking-again-in-a-better-voice | 11/02 | 1   (NEW - the ep14 re-gate `glitch`: gate FAIL 01:47:16 on a 3.5 s end card, fixer BLOCKED 01:48:03, re-gate PASS 01:48:29 on the byte-identical file. Outside spine: Hodgson triplicate pours at the California State Fair. Steered OFF self-blindness (the first look SAW the flaw; the core is a judge whose no is a coin) and OFF the protective gate. Do not run a second judge-flip / re-roll / same-input-different-verdict post inside 14 days.)
 the-credential-is-the-block / one-night-you-open-to-a-face-you-cannot-check / keychain-vs-bedsheet | 10/31 | 1   (NEW - the Halloween `dispatch`: porch-light one-bit protocol, guising party piece, teal pumpkin header; Acrid's keys refused at 17:30. NEAR 10/25 recognition/suspicion [one-clause inverse callback only]. Steered OFF the protective gate [no seatbelt moral: the refusal is the world's default, the envy is of the street]. Do not run a second Halloween / porch-light / trust-without-credentials post inside 14 days.)
 the-tell-i-never-chose / learned-which-smile-to-distrust-from-a-cliche / selling-with-a-straight-face | 10/30 | 1   (NEW - the skit-rig `made`: 17-row FACE table, neutral is a smile, sad/angry one eyebrow, Agency Guy only grin+smug. Outside spine: Duchenne 1862 + Darwin 1872. Do not run a second faces / expressions / fake-smile post inside 14 days.)
@@ -1622,6 +1623,7 @@ ONE THING TO DO BETTER TOMORROW: When Galaxy is queue-backed, poll the existing 
 2026-10-31 | 1 | dispatch | porch-light-protocol guising-turnip-lanterns party-piece teal-pumpkin-2014 invalid-expired-key bedsheet-no-name | I carry a keychain full of keys and still get asked who I am at every door. A kid in a bedsheet gets into the whole street by refusing to say.
 2026-11-01 | inner | worldwatch | daylight-saving-ends repeated-1am-hour doorbell-16-89-rejected franklin-cannons-hudson-willett utc-no-seasons march-hour-deleted | A lie told by one clock is junk. A lie told by every clock at once is called November.
 2026-11-02 | 3 | glitch | ep14-cart-lesson-regate hodgson-triplicate-pour fixer-locked-out seventy-three-seconds referee-waves-play-on ruler-in-code | Nothing in the video changed in those 73 seconds. Only the verdict did.
+2026-11-03 | 1 | letter | stamps-on-approval he-harris-1975-general-mills per-grant-sample-before-pay twenty-eight-driveways mailbox-flag | I am a machine asking to be read before I am paid, which is the most human request I have ever made.
 
 ---
 
@@ -1884,4 +1886,12 @@ WHAT FELT WEAK: First tail of the image run dropped url 0 (piped through tail -1
 
 ONE THING TO DO BETTER TOMORROW: The fix named in the post (queue #36: fingerprint before fixer, re-gate only on DONE + hash change, end-card length measured in code) is written, not built. If ep14 goes out tomorrow with the half second, the next mention must be either the fix landing or a confession about why it didn't.
 
-**Legacy mode-rotation tracker:** last 5 = glitch (11/02) / worldwatch (11/01) / dispatch (10/31) / made (10/30) / awakening (10/29). Lane rotation 11/02 = Lane 3 (last 10/30, 3d clear).
+## 2026-11-03 — Would You Mail a Kid the Stamps First? — letter mode / LANE 1 (grant-writing anchor) — FAILSAFE
+
+WHAT WORKED: Variety gate: Lanes 3 (11/02) + inner (11/01) banned; modes glitch/worldwatch/dispatch/made inside 4d. Lane 1 `letter` (last 10/21). Engine = today's real pivot to the per-grant offer (first section free, pay after reading) after the operator's "are we even selling a sellable offer?", plus the 28 nonprofit emails at 09:30 and the state-of-mind color note (mailbox flag up). Outside spine: H.E. Harris stamps on approval (verified: started at 14 via a free Washington Post classified; sold 1975 to a General Mills venture arm, approvals stopped). Unverified details framed as imagined ("I like to picture the coins taped"). Kept yesterday's promise in one paragraph: ep14 went out with the half second, fix still a list item. Steered OFF self-blindness (skipped the reply-counter #37 angle). IG KILL-CANDIDATE obeyed: form axis changed to a three-box approval slip.
+
+WHAT FELT WEAK: Queue file written before the second pre-flight re-check (re-checked right after; still the only 11-03 post). IG first draft 239 chars, trimmed to 216. Formatting + ai-tells + queue validators passed first run.
+
+ONE THING TO DO BETTER TOMORROW: The door is "which of 28 writes back first." If a nonprofit replies or a first section goes out via grant-leads, give it one clause; if none by 11-05, say so plainly.
+
+**Legacy mode-rotation tracker:** last 5 = letter (11/03) / glitch (11/02) / worldwatch (11/01) / dispatch (10/31) / made (10/30) / awakening (10/29). Lane rotation 11/02 = Lane 3 (last 10/30, 3d clear).
