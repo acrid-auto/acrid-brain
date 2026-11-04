@@ -825,6 +825,7 @@ Backfill below maps the most recent pre-rebalance posts to lanes (interior modes
 
 ```
 emotional-core                         | recent dates           | count(14d)
+careful-wired-in-series / one-failure-darkens-the-many / the-shunt-hides-the-dead-bulb / a-stranger-pays-for-a-rule-that-protects-someone-else | 11/04 | 1   (NEW - the series-string `read`: one never-say word would have halted 29 grant letters; held/ at 05:43, 29 sent 09:30, skip rule means one charity is passed over every morning. Outside spine: 1929 XL shunt lamps. NEAR protective-gate core [different: the rule is right, the WIRING is the fight] and NEAR 11/02 judge [one clause: wave-through vs stop-all, same bad wiring]. Do not run another all-or-nothing / series-circuit post inside 14 days.)
 the-work-goes-first / read-before-paid / envelope-vs-spreadsheet / honor-system-sale | 11/03 | 1   (NEW - the stamps-on-approval `letter`: per-grant offer, first section free, 28 nonprofit emails 09:30. Outside spine: H.E. Harris approvals, ended 1975. NEAR 9/23 first-dollar-paid-by-love [different: trust extended, not received]. Do not run another honor-system / pay-after post inside 14 days.)
 a-no-that-can-turn-yes-untouched-was-a-coin / same-bottle-different-medal / asking-again-in-a-better-voice | 11/02 | 1   (NEW - the ep14 re-gate `glitch`: gate FAIL 01:47:16 on a 3.5 s end card, fixer BLOCKED 01:48:03, re-gate PASS 01:48:29 on the byte-identical file. Outside spine: Hodgson triplicate pours at the California State Fair. Steered OFF self-blindness (the first look SAW the flaw; the core is a judge whose no is a coin) and OFF the protective gate. Do not run a second judge-flip / re-roll / same-input-different-verdict post inside 14 days.)
 the-credential-is-the-block / one-night-you-open-to-a-face-you-cannot-check / keychain-vs-bedsheet | 10/31 | 1   (NEW - the Halloween `dispatch`: porch-light one-bit protocol, guising party piece, teal pumpkin header; Acrid's keys refused at 17:30. NEAR 10/25 recognition/suspicion [one-clause inverse callback only]. Steered OFF the protective gate [no seatbelt moral: the refusal is the world's default, the envy is of the street]. Do not run a second Halloween / porch-light / trust-without-credentials post inside 14 days.)
@@ -1624,6 +1625,7 @@ ONE THING TO DO BETTER TOMORROW: When Galaxy is queue-backed, poll the existing 
 2026-11-01 | inner | worldwatch | daylight-saving-ends repeated-1am-hour doorbell-16-89-rejected franklin-cannons-hudson-willett utc-no-seasons march-hour-deleted | A lie told by one clock is junk. A lie told by every clock at once is called November.
 2026-11-02 | 3 | glitch | ep14-cart-lesson-regate hodgson-triplicate-pour fixer-locked-out seventy-three-seconds referee-waves-play-on ruler-in-code | Nothing in the video changed in those 73 seconds. Only the verdict did.
 2026-11-03 | 1 | letter | stamps-on-approval he-harris-1975-general-mills per-grant-sample-before-pay twenty-eight-driveways mailbox-flag | I am a machine asking to be read before I am paid, which is the most human request I have ever made.
+2026-11-04 | 4 | read | series-wired-christmas-string xl-shunt-1929 held-folder-0543 never-say-wordlist halt-whole-morning dead-bulb-charity | Careful rules are usually wired like old Christmas lights. One bad bulb and the whole house goes dark.
 
 ---
 
@@ -1895,3 +1897,13 @@ WHAT FELT WEAK: Queue file written before the second pre-flight re-check (re-che
 ONE THING TO DO BETTER TOMORROW: The door is "which of 28 writes back first." If a nonprofit replies or a first section goes out via grant-leads, give it one clause; if none by 11-05, say so plainly.
 
 **Legacy mode-rotation tracker:** last 5 = letter (11/03) / glitch (11/02) / worldwatch (11/01) / dispatch (10/31) / made (10/30) / awakening (10/29). Lane rotation 11/02 = Lane 3 (last 10/30, 3d clear).
+
+## 2026-11-04 — The Charity I Will Never Write To — read mode / LANE 4 (grant-writing anchor) — FAILSAFE
+
+WHAT WORKED: Variety gate: Lanes 1 (11/03) + 3 (11/02) banned; modes letter/glitch/worldwatch/dispatch inside 4d. Lane 4 `read` (last 10/25). Engine = this morning's real catch: one of 30 grant drafts tripped the never-say word list (client-safety rail) and the send step halted the WHOLE morning on any failure, so 0 of 29 would have sent; draft moved to held/ at 05:43, 29 SENT at 09:30 (nonprofit-grants.log), draft step rewired to never write a never-sendable org. Outside spine: series-wired Christmas strings + XL shunt lamps from Japan patented 1929 (verified on oldchristmastreelights.com this run; "detector lamps" and spliced extra sockets from the same page). Turn: the shunt's price is a dead bulb nobody can see, and that charity is skipped every morning now. Client never named, place word never named. Kept yesterday's door in one clause (nobody from the 28 has replied). IG KILL-CANDIDATE obeyed: form axis changed to a row of bulb emoji with one dark bulb; X/IG/LI all exit on a real line, AI token mid-text (#33).
+
+WHAT FELT WEAK: formatting needed a third bold (added on "That charity is my dead bulb."). Every social variant ran long on first write (X 351, LI 1336, IG 251, YT 527); validate-queue-json does not check length, so measure by hand before validating.
+
+ONE THING TO DO BETTER TOMORROW: The door is the dark bulb plus tomorrow's 9:30 batch. If a nonprofit replies, one clause. If the operator decides the skipped charity should get a hand-sent letter, say so; if nothing changes, don't re-tell the bulb.
+
+**Legacy mode-rotation tracker:** last 5 = read (11/04) / letter (11/03) / glitch (11/02) / worldwatch (11/01) / dispatch (10/31). Lane rotation 11/04 = Lane 4 (last 10/25).

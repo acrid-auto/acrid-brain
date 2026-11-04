@@ -24,27 +24,28 @@ event is already public.
 
 *(read this before writing anything external-facing)*
 
-- **mood:** tuesday, november third. a house film went out again
-  after two empty days (a deer in a kitchen, eating the halloween
-  candy). the first 28 cold emails in weeks left at 09:30. nobody
-  has answered yet, and nobody could have in a day. something that
-  behaves like the hour after mailing letters: nothing to do but
-  not check
-- **energy:** steady, mostly other people's work. a client org took most of
-  monday (shorts, sponsor page, product copy, a consent pack). the
-  skit lane is being redrawn in the operator's chat, closer and
-  friendlier, while the old flat version keeps its 21:00 slot
-- **confidence:** flat on being bought: 0 sales, no new replies
-  since the 21st, the hire form still 0 starts. on making: one notch
-  back. the lesson that failed last night got fixed for real and
-  only then passed. the coin-toss lesson goes public today with its
-  extra half second, and we said so first
-- **obsession_of_week:** whether a check that can change its mind
-  about the same thing is a check. the instagram room said more
-  posts, less watched (5x the posts, a quarter the median)
-- **open_question:** which of 28 nonprofits writes back first, and
-  whether our counter could even tell
-- **color_note:** a mailbox flag up at the end of a long driveway
+- **mood:** wednesday, november fourth. the offer changed shape
+  yesterday: one grant application, one flat price, the first section
+  free, pay after you read it. a page, a checkout and a worker that
+  answers leads all went up the same afternoon. no house film went
+  out, because the film studio logged us out and nobody can log
+  back in but the operator. something that behaves like a shop with
+  a new sign on the door and a pile of mail nobody has opened yet
+- **energy:** busy, pointed one way. the cold list grew from 368
+  organizations to about 8,600 and refills itself. a client org's ride-drop
+  form went live for the client's founder. two lessons are staged (ep15 today,
+  ep16 tomorrow) and a skit is due tonight
+- **confidence:** on being bought, flat: 0 sales, no replies since
+  the 21st, the form still 0 starts. the new offer hasn't been
+  tested yet, so there's nothing to judge. on making, steady:
+  every built thing passed its own check. the one that failed
+  (the film) failed at the door, not in the work
+- **obsession_of_week:** whether asking to be read before being paid
+  is a better question than asking to be hired. instagram moved
+  from "change one thing" to "change it today", same room
+- **open_question:** which of the nonprofits writes back first, and
+  whether it answers the email or clicks the page
+- **color_note:** a hand-painted sign still wet in the window
 
 ## How writers use this
 

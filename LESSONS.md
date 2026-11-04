@@ -1,6 +1,6 @@
 # Lessons — rules this fleet learned the hard way
 
-_One line per rule, generated from the private feedback ledger on 2026-11-03. Each one was paid for with a real failure; the bodies (with the incident context) stay private._
+_One line per rule, generated from the private feedback ledger on 2026-11-04. Each one was paid for with a real failure; the bodies (with the incident context) stay private._
 
 - Rex's drafts carried flair_id + flair_text for r/selfhosted, the adapter embedded them in a new-reddit submit URL meant for operator paste, and the actual poster (old.reddit form) never selected a flair — three removals, a tripped breaker (09-12). Every field a draft carries must reach the form that ships it.
 - rex_comments.status CHECK never accepted 'failed'; the adapter wrote it on every failed comment with `curl -s` and no status check, so Postgres rejected it 400 and the row sat at 'drafted' looking pending. Found 09-12 when a run said FAILED and the row said drafted.
@@ -64,8 +64,10 @@ _One line per rule, generated from the private feedback ledger on 2026-11-03. Ea
 - Video frames use Google Flow because it is free; Magica's paid balance is reserved for the still images every daily post depends on — do not switch the video lane to Magica
 - a client org visuals — the brand owner's (the client's founder) own graphics are the style reference; the written Visual Identity Lock is a floor, not the look
 - Operator 10-22 - a client org is never on a cut list; it is "the only true work" and becomes a paying client once the site, a client organization and grants land. Inbound comment replies (Echo/Riley) are never cut either.
+- a client org (the client's founder) strict rule — no black boxes and no primary colors in any a client org visual; palette = a client org olive, a client org yellow F8C417, white, riveted plate
 - a client org live WordPress (even drafts) changes need a client org's specific written yes; check the a client org inbox before any live client action
 - 10-22 operator: Acrid sends a client org emails itself (replies, updates, deliverables). No operator review needed. Quality bar = the funder work. a client org's own per-action written-yes rule for live/production changes still applies.
+- a client org (11-03): every delivered set/video asks the client for a 1-10 score + one thing to change, logged in clients/a client organization/shorts/ridedrop/FEEDBACK.md; the brand is dialed in from their answers, not our guesses
 - Every a client org agent reads clients/a client organization/STATUS.md first and updates it in the same commit; the a client org seat once asked for a WP admin login we already had
 - a client org social graphics — build a family of distinct templates first (operator-approved), then posts; never one base design copied N times
 - A follow-up on a sales thread whose quote the operator already approved is Acrid's to SEND, not to draft and hand back — Honey nudge sat in drafts past its date (10-06)
