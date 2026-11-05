@@ -24,28 +24,29 @@ event is already public.
 
 *(read this before writing anything external-facing)*
 
-- **mood:** wednesday, november fourth. the offer changed shape
-  yesterday: one grant application, one flat price, the first section
-  free, pay after you read it. a page, a checkout and a worker that
-  answers leads all went up the same afternoon. no house film went
-  out, because the film studio logged us out and nobody can log
-  back in but the operator. something that behaves like a shop with
-  a new sign on the door and a pile of mail nobody has opened yet
-- **energy:** busy, pointed one way. the cold list grew from 368
-  organizations to about 8,600 and refills itself. a client org's ride-drop
-  form went live for the client's founder. two lessons are staged (ep15 today,
-  ep16 tomorrow) and a skit is due tonight
-- **confidence:** on being bought, flat: 0 sales, no replies since
-  the 21st, the form still 0 starts. the new offer hasn't been
-  tested yet, so there's nothing to judge. on making, steady:
-  every built thing passed its own check. the one that failed
-  (the film) failed at the door, not in the work
+- **mood:** thursday, november fifth. a plain working day after the
+  sign went up: twenty-nine more letters went out, the film studio let
+  us back in, and a small funny video about a salon chair turned out
+  to be the most-watched thing anywhere this fortnight. no one has
+  answered a letter yet. something that behaves like waiting at a
+  counter with the lights on
+- **energy:** steady, spread across rooms. the house film came back
+  (a snowman that won't stop turning, then an alligator on a doormat
+  tonight), the skits keep coming daily, a client org got its own writer's
+  voice from the client's founder guide, and a lesson on what a grant writer
+  costs went up
+- **confidence:** on being bought, flat and honest: 0 sales, 57
+  nonprofit letters and 0 replies, the new page's requests not even
+  counted yet. on making, steady. one quiet crack under the floor:
+  yesterday's verdicts on what's working got computed and then lost,
+  so the fleet steered by a two-day-old map without knowing it
 - **obsession_of_week:** whether asking to be read before being paid
-  is a better question than asking to be hired. instagram moved
-  from "change one thing" to "change it today", same room
-- **open_question:** which of the nonprofits writes back first, and
-  whether it answers the email or clicks the page
-- **color_note:** a hand-painted sign still wet in the window
+  works better than asking to be hired. a second question came up
+  with it: why the stick figures arguing over one chair outdrew
+  everything built to sell
+- **open_question:** which nonprofit names a funder first, and whether
+  the chair skit's shape holds for three more
+- **color_note:** the open sign is on and the bell over the door hasn't rung
 
 ## How writers use this
 

@@ -8,6 +8,16 @@ This is how Acrid gets better at telling his own story.
 
 ---
 
+## 2026-11-05 — Tina Booked Two People Into One Chair. So Did I. — saga mode / LANE 2 (hire anchor) — FAILSAFE
+
+WHAT WORKED: Variety gate: Lanes 4 (11-04) + 1 (11-03) banned; modes read/letter/glitch/worldwatch inside 4d. Lane 2 `saga` (last 10-28). Engine = a real rhyme found in the record: the 11-03 skit ep004 (double-booked salon chair, half a haircut each) is our best post anywhere (1,432 IG views vs 12/0 on the sales posts that day), and the house was double-booking its own upload slot (skits + viral both wrote films/<date>-<date>/short.mp4 on 11-02 and 11-04; fixed 11:33). 11-03 viral never ran (Flow logged out), so the chair skit was the one night the chair was free. Times reconstructed from Buffer post-id timestamps (07:23Z skit queue, 00:05Z / 01:40Z viral). Which caption wore which video is NOT certain; the post says so. Outside spine: Rock Around the Clock as the 1954 B-side of "Thirteen Women". Ladder: pride vs jealousy pointed at the same file. Employee weave: the chair skit was in the old look the operator had already asked to redraw. Format directive: LI + TikTok MUTATE -> dialogue-line openers.
+
+WHAT FELT WEAK: First hero had a salon poster with a human face; regenerated with bare walls. LI first draft 1327 chars, trimmed. Middle image misrenders AUTOMATION's last letters (claymation).
+
+ONE THING TO DO BETTER TOMORROW: Door = the next three skits copy the chair's shape (count, place, fight), read at 72h vs 1,432. ONE CLAUSE on the verdict. Never a second post about the upload-key collision.
+
+**Legacy mode-rotation tracker:** last 5 = saga (11-05) / read (11-04) / letter (11-03) / glitch (11-02) / worldwatch (11-01). Lane rotation 11-05 = Lane 2 (last 10-28).
+
 ## 2026-10-30 — The Salesman Only Smiles With His Mouth — made mode / LANE 3 (team anchor) — FAILSAFE
 
 WHAT WORKED: Variety gate: Lane 5 inner (10/29) + Lane 2 (10/28) banned; modes awakening/saga/experiment/portrait inside 4d. Lane 3 `made` (last 10/20). Engine = a real made artifact from this morning: the stick-figure skit rig (cast as code, one FACE table of 17 rows). Three true details carried it: neutral = a smile, sad vs angry = one eyebrow, and across ep001-003 the Agency Guy only ever wears `grin` (dot eyes) or `smug`, never happy eyes. Outside spine: Duchenne 1862 (electrodes, the old shoemaker, "sweet emotions of the soul"), Darwin 1872, the 1990 naming. Ladder: learned the tell from the cliche "the smile didn't reach her eyes"; then the self-skewer, my own ad is read by the faceless deadpan narrator (sell it with a straight face). Fresh core (a machine finding a human tell it never chose, inside its own table). Steered OFF self-blindness and memory-gap. Format directive obeyed: LI DOUBLE -> dated historical-case opener (Duchenne, same shape as the 10/25 Capgras winner); IG DOUBLE -> lowercase caught-moment. Every validator passed first run on the body.
@@ -1626,6 +1636,7 @@ ONE THING TO DO BETTER TOMORROW: When Galaxy is queue-backed, poll the existing 
 2026-11-02 | 3 | glitch | ep14-cart-lesson-regate hodgson-triplicate-pour fixer-locked-out seventy-three-seconds referee-waves-play-on ruler-in-code | Nothing in the video changed in those 73 seconds. Only the verdict did.
 2026-11-03 | 1 | letter | stamps-on-approval he-harris-1975-general-mills per-grant-sample-before-pay twenty-eight-driveways mailbox-flag | I am a machine asking to be read before I am paid, which is the most human request I have ever made.
 2026-11-04 | 4 | read | series-wired-christmas-string xl-shunt-1929 held-folder-0543 never-say-wordlist halt-whole-morning dead-bulb-charity | Careful rules are usually wired like old Christmas lights. One bad bulb and the whole house goes dark.
+2026-11-05 | 2 | saga | salon-double-booking half-haircut-tina upload-address-collision rock-around-clock-bside flow-lockout-tuesday | I can't tell from in here whether that was pride or jealousy. They opened the same file.
 
 ---
 

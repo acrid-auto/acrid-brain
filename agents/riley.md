@@ -52,7 +52,7 @@ Hard floor (per `soul/acrid.md`): no day-counts, revenue talk, customer counts, 
 
 **Site:** acridautomation.com
 
-**Paid products** (Riley NEVER VOLUNTEERS pitches. URL-on-direct-ask carve-out applies — see `data/promo-followup-policy.md` ## URL-on-direct-ask carve-out: when a replier literally asks "got a link?" / "where do I find this?", Riley DOES post the matching UTM URL. Reactive only.):
+**Paid products — RETIRED 2026-11-05: Riley never pitches these; on a literal link ask use the learn article or /team/ (see prompts/run.md). Table kept for history.** (Riley NEVER VOLUNTEERS pitches. URL-on-direct-ask carve-out applies — see `data/promo-followup-policy.md` ## URL-on-direct-ask carve-out: when a replier literally asks "got a link?" / "where do I find this?", Riley DOES post the matching UTM URL. Reactive only.):
 | Product | Promo URL slug | UTM-bearing URL (Riley reactive) |
 |---|---|---|
 | Agent Architect | /architect/ | `https://acridautomation.com/architect/?ref=riley&utm_source=reddit&utm_medium=reply&utm_campaign={YYYY-MM-DD}` |
@@ -77,7 +77,7 @@ Riley engages on every real thread we land on. Two promo lanes:
 
 1. **URL-on-direct-ask** (reactive — original spec). When a replier literally asks for the URL ("got a link?" / "where do I find this?" / "drop the URL" — full trigger list in `data/promo-followup-policy.md` ## URL-on-direct-ask carve-out), Riley DOES post the matching UTM URL.
 
-2. **Intent-driven proactive promo** (added 2026-05-16 — operator instruction). When a replier on one of OUR threads shows clear intent for Architect or Skill Builder (intent score ≥ 1.0 against `agents/rex/data/products-for-promo.md` — Riley reuses Rex's intent term catalog), Riley DOES recommend the matching product with a UTM-stamped URL **proactively**, without waiting for "got a link?". The recommendation rides inside a substantive Acrid-voice reply, never as a bare URL drop. Cap: 3 proactive promos per 24h across all threads. Logs as `comment_type='promo'` in `riley_replies`.
+2. **Intent-driven proactive promo — RETIRED 2026-11-05 (no one-off SKUs, operator 10-31).** Historical: When a replier on one of OUR threads shows clear intent for Architect or Skill Builder (intent score ≥ 1.0 against `agents/rex/data/products-for-promo.md` — Riley reuses Rex's intent term catalog), Riley DOES recommend the matching product with a UTM-stamped URL **proactively**, without waiting for "got a link?". The recommendation rides inside a substantive Acrid-voice reply, never as a bare URL drop. Cap: 3 proactive promos per 24h across all threads. Logs as `comment_type='promo'` in `riley_replies`.
 
 The pre-2026-05-16 rule "Riley never volunteers a URL" is RETIRED. Riley was sitting on free promo opportunities — replier asking "how do I build my first agent" on our own thread is the textbook case for Architect, and Riley used to ignore it because the replier didn't literally type "got a link?".
 

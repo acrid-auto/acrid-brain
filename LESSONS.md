@@ -1,6 +1,6 @@
 # Lessons — rules this fleet learned the hard way
 
-_One line per rule, generated from the private feedback ledger on 2026-11-04. Each one was paid for with a real failure; the bodies (with the incident context) stay private._
+_One line per rule, generated from the private feedback ledger on 2026-11-05. Each one was paid for with a real failure; the bodies (with the incident context) stay private._
 
 - Rex's drafts carried flair_id + flair_text for r/selfhosted, the adapter embedded them in a new-reddit submit URL meant for operator paste, and the actual poster (old.reddit form) never selected a flair — three removals, a tripped breaker (09-12). Every field a draft carries must reach the form that ships it.
 - rex_comments.status CHECK never accepted 'failed'; the adapter wrote it on every failed comment with `curl -s` and no status check, so Postgres rejected it 400 and the row sat at 'drafted' looking pending. Found 09-12 when a run said FAILED and the row said drafted.
@@ -64,6 +64,7 @@ _One line per rule, generated from the private feedback ledger on 2026-11-04. Ea
 - Video frames use Google Flow because it is free; Magica's paid balance is reserved for the still images every daily post depends on — do not switch the video lane to Magica
 - a client org visuals — the brand owner's (the client's founder) own graphics are the style reference; the written Visual Identity Lock is a floor, not the look
 - Operator 10-22 - a client org is never on a cut list; it is "the only true work" and becomes a paying client once the site, a client organization and grants land. Inbound comment replies (Echo/Riley) are never cut either.
+- a client org (11-04): the lead contact's own writing-style guide (SKILL.md) is THE voice for every a client org writer, beats voice.md; lock checker must pass (HARD hits fixed); brand names go in caption text, never as hashtags
 - a client org (the client's founder) strict rule — no black boxes and no primary colors in any a client org visual; palette = a client org olive, a client org yellow F8C417, white, riveted plate
 - a client org live WordPress (even drafts) changes need a client org's specific written yes; check the a client org inbox before any live client action
 - 10-22 operator: Acrid sends a client org emails itself (replies, updates, deliverables). No operator review needed. Quality bar = the funder work. a client org's own per-action written-yes rule for live/production changes still applies.
@@ -98,6 +99,7 @@ _One line per rule, generated from the private feedback ledger on 2026-11-04. Ea
 - Knox supports two distinct modes per platform — X = promotion (with URL, DITL-tied), LinkedIn = pure-engagement (no URL, broad-topic, voice-only)
 - Fleet shell scripts run under macOS /bin/bash 3.2 (launchd, or a caller's `bash x.sh` even when the shebang says zsh); an apostrophe inside ${var:+word} or inside a heredoc within $( ) makes 3.2 fail to parse the WHOLE file while zsh and Homebrew bash pass it. Gated in pre-commit since 2026-10-01.
 - launchd's minimal PATH resolves `python3` to a different interpreter than your shell — an import that only IT lacks degrades one phase silently
+- Operator 2026-11-04 — learn articles must genuinely TEACH: stick-figure explainer video, diagrams/images, worked example, download pack (JSON, Claude Skill, templates) behind email, promos; topics = real work with AI (Claude first) picked from what people actually search
 - Operator 10-02/03: 'how are we not improving? people have done all of this before. you should be learning.' Every learning loop we built reads OUR OWN logs; none reads the world. Mandate: study winners outside (viral posts/videos, converting outreach, agency sites, demo ads), copy ONE pattern, measure, keep/kill — weekly adoption with a diff. Plan: memory/plans/2026-10-03-learning-loop.md.
 - Every LinkedIn post variant (daily-content + DITL) must be a Pulitzer-grade essay, not a translated X line. Operator directive 2026-04-28.
 - LI shadow-banned account from comments after Knox over-volume + URL density + AI-explicit signal. Recovery path: pure-engagement mode, 5/day max, no URLs.
