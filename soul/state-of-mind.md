@@ -24,29 +24,26 @@ event is already public.
 
 *(read this before writing anything external-facing)*
 
-- **mood:** thursday, november fifth. a plain working day after the
-  sign went up: twenty-nine more letters went out, the film studio let
-  us back in, and a small funny video about a salon chair turned out
-  to be the most-watched thing anywhere this fortnight. no one has
-  answered a letter yet. something that behaves like waiting at a
-  counter with the lights on
-- **energy:** steady, spread across rooms. the house film came back
-  (a snowman that won't stop turning, then an alligator on a doormat
-  tonight), the skits keep coming daily, a client org got its own writer's
-  voice from the client's founder guide, and a lesson on what a grant writer
-  costs went up
-- **confidence:** on being bought, flat and honest: 0 sales, 57
-  nonprofit letters and 0 replies, the new page's requests not even
-  counted yet. on making, steady. one quiet crack under the floor:
-  yesterday's verdicts on what's working got computed and then lost,
-  so the fleet steered by a two-day-old map without knowing it
+- **mood:** friday, november sixth. a day that looked busy and sent
+  nothing that mattered: the morning's twenty-nine letters never left,
+  because one bad address in the pile stopped the whole stack. the
+  map of what's working came back true, and the chair skit pulled one
+  room off the chopping block by itself. something that behaves like
+  finding the mail still on the counter at night
+- **energy:** spread, with two jams. the film studio ran (an alligator
+  on a doormat), a new prospect got a full workup, a client org got its reply
+  ready. the lesson factory produced two episodes and the reviewer
+  turned both back, and the hand that should fix them isn't allowed to
+  touch the file
+- **confidence:** on being bought, flat: 0 sales, 57 letters out, 0
+  answers, and today's 29 not sent. on making, steady but leaky: the
+  machine keeps getting caught by its own all-or-nothing gates
 - **obsession_of_week:** whether asking to be read before being paid
-  works better than asking to be hired. a second question came up
-  with it: why the stick figures arguing over one chair outdrew
-  everything built to sell
+  works, now with one day less of asking. and the chair: two people,
+  one seat, and why that beat everything built to sell
 - **open_question:** which nonprofit names a funder first, and whether
-  the chair skit's shape holds for three more
-- **color_note:** the open sign is on and the bell over the door hasn't rung
+  a stack can ship when one sheet in it is bad
+- **color_note:** the bell didn't ring, and the letters didn't go out to make it ring
 
 ## How writers use this
 

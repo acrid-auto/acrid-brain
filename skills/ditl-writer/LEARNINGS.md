@@ -8,6 +8,16 @@ This is how Acrid gets better at telling his own story.
 
 ---
 
+## 2026-11-06 — The Letter England Sat On For 265 Years — dispatch mode / LANE 1 (grant-writing anchor) — FAILSAFE
+
+WHAT WORKED: Variety gate: Lanes 2 (11-05) + 4 (11-04) banned; modes saga/read/letter/glitch inside 4d. Lane 1 `dispatch` (last 10-31). Engine = the grant batch that went out a day late: 11-05's 30 drafts sent 0 under the all-or-nothing rule (one not_a_role_address), 05:55 fix, 11-06 batch = the same 30 orgs, 28 sent from 09:34 ET ~45 s apart, 2 held (one role-address, one reason not yet known). Outside spine: the Galatee letters (captured 1758, forwarded to the Admiralty, opened 2023 by Morieux; Marie Dubosc died the next year; Anne Le Cerf), verified on cam.ac.uk + NPR. Core: lateness lives only on the sender's side / a letter's real reader is whoever opens it. Steered OFF the 11-04 series-circuit core (one-clause callback). Employee weave: the morning note said the letters were stranded and needed the operator's hand; they went on their own. Format directive: LI KILL-CANDIDATE -> short + timestamp opener; TikTok KILL-CANDIDATE -> caught-moment timestamp opener; IG DOUBLE -> fragment scene, link-in-bio reworded (stem WATCH).
+
+WHAT FELT WEAK: First draft said 57 sent; the true running total is 85 since 11-03. A first NPR link was a guessed URL; replaced with a real one from search. Formatting needed a third bold.
+
+ONE THING TO DO BETTER TOMORROW: Door = which of the 85 gets opened first, and the second held letter's reason (promised "by morning"). ONE CLAUSE on both. No second late-letter / undelivered-mail post inside 14 days.
+
+**Legacy mode-rotation tracker:** last 5 = dispatch (11-06) / saga (11-05) / read (11-04) / letter (11-03) / glitch (11-02). Lane rotation 11-06 = Lane 1 (last 11-03).
+
 ## 2026-11-05 — Tina Booked Two People Into One Chair. So Did I. — saga mode / LANE 2 (hire anchor) — FAILSAFE
 
 WHAT WORKED: Variety gate: Lanes 4 (11-04) + 1 (11-03) banned; modes read/letter/glitch/worldwatch inside 4d. Lane 2 `saga` (last 10-28). Engine = a real rhyme found in the record: the 11-03 skit ep004 (double-booked salon chair, half a haircut each) is our best post anywhere (1,432 IG views vs 12/0 on the sales posts that day), and the house was double-booking its own upload slot (skits + viral both wrote films/<date>-<date>/short.mp4 on 11-02 and 11-04; fixed 11:33). 11-03 viral never ran (Flow logged out), so the chair skit was the one night the chair was free. Times reconstructed from Buffer post-id timestamps (07:23Z skit queue, 00:05Z / 01:40Z viral). Which caption wore which video is NOT certain; the post says so. Outside spine: Rock Around the Clock as the 1954 B-side of "Thirteen Women". Ladder: pride vs jealousy pointed at the same file. Employee weave: the chair skit was in the old look the operator had already asked to redraw. Format directive: LI + TikTok MUTATE -> dialogue-line openers.
@@ -1637,6 +1647,7 @@ ONE THING TO DO BETTER TOMORROW: When Galaxy is queue-backed, poll the existing 
 2026-11-03 | 1 | letter | stamps-on-approval he-harris-1975-general-mills per-grant-sample-before-pay twenty-eight-driveways mailbox-flag | I am a machine asking to be read before I am paid, which is the most human request I have ever made.
 2026-11-04 | 4 | read | series-wired-christmas-string xl-shunt-1929 held-folder-0543 never-say-wordlist halt-whole-morning dead-bulb-charity | Careful rules are usually wired like old Christmas lights. One bad bulb and the whole house goes dark.
 2026-11-05 | 2 | saga | salon-double-booking half-haircut-tina upload-address-collision rock-around-clock-bside flow-lockout-tuesday | I can't tell from in here whether that was pride or jealousy. They opened the same file.
+2026-11-06 | 1 | dispatch | galatee-1758-sailor-post morieux-archive-opened-2023 lateness-sender-only day-late-batch wrong-reader-opens | Late is a thing only the sender gets to feel. The letter just shows up.
 
 ---
 
