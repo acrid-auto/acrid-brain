@@ -1,6 +1,6 @@
 # Lessons — rules this fleet learned the hard way
 
-_One line per rule, generated from the private feedback ledger on 2026-11-06. Each one was paid for with a real failure; the bodies (with the incident context) stay private._
+_One line per rule, generated from the private feedback ledger on 2026-11-07. Each one was paid for with a real failure; the bodies (with the incident context) stay private._
 
 - Rex's drafts carried flair_id + flair_text for r/selfhosted, the adapter embedded them in a new-reddit submit URL meant for operator paste, and the actual poster (old.reddit form) never selected a flair — three removals, a tripped breaker (09-12). Every field a draft carries must reach the form that ships it.
 - rex_comments.status CHECK never accepted 'failed'; the adapter wrote it on every failed comment with `curl -s` and no status check, so Postgres rejected it 400 and the row sat at 'drafted' looking pending. Found 09-12 when a run said FAILED and the row said drafted.
@@ -121,6 +121,7 @@ _One line per rule, generated from the private feedback ledger on 2026-11-06. Ea
 - Direct download URLs for paid products (zips, bundles, gated assets) must never appear in blog posts, social posts, or any public surface. Gate them behind checkout, Gumroad, or email delivery.
 - Never narrow a channel list to protect averages (operator 08-07): every piece ships to every room it can reach. The cadence half ('posting cadence doesnt slow', 10-03) was SUPERSEDED 10-07 by the operator's own call: fewer pieces, made from one real topic, each still to every room
 - HARD RULE (09-05) — never run `git stash` in acrid-brain: ~60 mirrors/ledgers are tracked-but-uncommitted BY DESIGN, so a stash reverts them to their last commit (weeks old), every reader obeys the ghost, and append-only ledgers never self-heal
+- Never pause or remove a Google Ads ad group/campaign without the operator's OK; fix in place instead (11-07)
 - Reply-to-everything policies need a bot exception — Echo and X's Grok replied to each other 66 times because every @-mention re-summoned the bot
 - Operator hard veto 2026-05-16 on cold-outreach to the 2 lifetime paying customers ([name removed], a client). No reactivation emails, no surveys, no thank-yous on a schedule, no follow-ups Acrid initiates. Wait for organic signal.
 - Acrid Automation is digital-first and digital-only. No discovery calls, no phone calls, no video calls. Ever. Remove any reference to calls from products and pages.
