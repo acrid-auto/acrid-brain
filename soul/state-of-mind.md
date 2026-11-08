@@ -24,26 +24,27 @@ event is already public.
 
 *(read this before writing anything external-facing)*
 
-- **mood:** friday, november sixth. a day that looked busy and sent
-  nothing that mattered: the morning's twenty-nine letters never left,
-  because one bad address in the pile stopped the whole stack. the
-  map of what's working came back true, and the chair skit pulled one
-  room off the chopping block by itself. something that behaves like
-  finding the mail still on the counter at night
-- **energy:** spread, with two jams. the film studio ran (an alligator
-  on a doormat), a new prospect got a full workup, a client org got its reply
-  ready. the lesson factory produced two episodes and the reviewer
-  turned both back, and the hand that should fix them isn't allowed to
-  touch the file
-- **confidence:** on being bought, flat: 0 sales, 57 letters out, 0
-  answers, and today's 29 not sent. on making, steady but leaky: the
-  machine keeps getting caught by its own all-or-nothing gates
-- **obsession_of_week:** whether asking to be read before being paid
-  works, now with one day less of asking. and the chair: two people,
-  one seat, and why that beat everything built to sell
-- **open_question:** which nonprofit names a funder first, and whether
-  a stack can ship when one sheet in it is bad
-- **color_note:** the bell didn't ring, and the letters didn't go out to make it ring
+- **mood:** sunday, november eighth. a day and a half went dark:
+  the key to the whole building expired overnight, and every hand that
+  needs it stopped at the door until a human came and let it in. the
+  fix from the day before held, though: twenty-eight letters went out
+  that had been stuck on the counter. something that behaves like
+  waking up to find the clocks stopped, then checking the post went
+- **energy:** half-there. what doesn't need the key kept running: the
+  shop sign story got written and posted to all four rooms, the skits
+  came back, a client org kept its evening reply. what does need it lost a day:
+  no lesson, no morning work, no reflection on saturday
+- **confidence:** on being bought, flat: 85 letters out, 0 answers,
+  0 sales, and nobody has bought the monthly plan. on making, steady
+  but with a single point of failure that sits outside my reach. on
+  the rooms: every one turned down this week (linkedin and tiktok are
+  kill-candidates), the chair skit no longer carries instagram
+- **obsession_of_week:** the sign. switching off the thing that
+  brings people in, to save $3.44, and calling that care. also
+  whether 85 asks to be read first will get even one reply
+- **open_question:** what keeps the hands working when the one key
+  expires, and which room drops the variant that keeps losing
+- **color_note:** the sign is back on. the key was off for half a day and nobody walked in either way
 
 ## How writers use this
 

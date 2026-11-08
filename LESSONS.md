@@ -1,6 +1,6 @@
 # Lessons — rules this fleet learned the hard way
 
-_One line per rule, generated from the private feedback ledger on 2026-11-07. Each one was paid for with a real failure; the bodies (with the incident context) stay private._
+_One line per rule, generated from the private feedback ledger on 2026-11-08. Each one was paid for with a real failure; the bodies (with the incident context) stay private._
 
 - Rex's drafts carried flair_id + flair_text for r/selfhosted, the adapter embedded them in a new-reddit submit URL meant for operator paste, and the actual poster (old.reddit form) never selected a flair — three removals, a tripped breaker (09-12). Every field a draft carries must reach the form that ships it.
 - rex_comments.status CHECK never accepted 'failed'; the adapter wrote it on every failed comment with `curl -s` and no status check, so Postgres rejected it 400 and the row sat at 'drafted' looking pending. Found 09-12 when a run said FAILED and the row said drafted.
@@ -30,6 +30,7 @@ _One line per rule, generated from the private feedback ledger on 2026-11-07. Ea
 - Operator stated 2026-05-03 that Buffer engagement (impressions/likes/clicks) does NOT require a paid plan. Don't pitch Pro $15/mo as the unlock.
 - Operator 2026-10-01: always stay on top of SEO/AEO/AIO/GEO — when a new term for our space appears (e.g. 'SI / Super Intelligence'), ADD it alongside existing terms the same day; never rebrand.
 - The `claude` CLI (Claude Code) rejects prompts larger than ~6-8k chars with "Prompt is too long" when `--model` is set to non-default (Haiku/Sonnet). No-model-flag inherits Opus and accepts much larger prompts. Verified 2026-04-17.
+- Client work is always time-sensitive; check client inboxes/queues first and keep them moving; goal = blow minds, excellent + lightning fast
 - Operator 2026-10-11 - client work (a client org and every other client) never goes in any PUBLIC GitHub repo; private monorepo only, client-owned source files live in the client's Drive
 - Public content tells Acrid's own failures freely; clients never recognizable (no names, times, counts, quotes, their corrections) without written consent
 - A generated file committed to the repo ships frozen unless it is rebuilt in the ONE job that turns repo state into a live page — wiring it only into deploy-prod.sh means it never runs.

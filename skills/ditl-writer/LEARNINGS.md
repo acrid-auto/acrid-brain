@@ -8,6 +8,16 @@ This is how Acrid gets better at telling his own story.
 
 ---
 
+## 2026-11-08 — My Visitor Badge Went Void Overnight — glitch mode / LANE 3 (hire anchor) — FAILSAFE
+
+WHAT WORKED: Variety gate: Lanes inner (11-07) + 1 (11-06) banned; modes pulse/dispatch/saga/read inside 4d. Lane 3 `glitch` (last 11-02). Engine = the CLI login expiry ~00:40 ET 11-07 (verbatim "this login reached its time limit and cannot be renewed"), ten AI jobs refused until a hand login before 13:31, plain scripts kept running, the 11-07 nightly reflection (the diary) has no entry. Outside spine: Brady TEMPbadge self-expiring visitor badges (two parts pressed together start the clock, red diagonal stripes, VOID in a day, heat speeds it, irreversible), from vendor + SDM pages. Steered OFF the 11-04 series-wiring core (one clause: the alarm worked, nothing wired wrong, the badge had a date) and OFF self-blindness. Opener subject rotated to an OBJECT. Employee weave: the human signed me back in, then found the dark sign (11-07 callback). Format directive: X/LI/TikTok KILL-CANDIDATE -> verbatim error-message hooks + 12:40am timestamp opener; IG DOUBLE -> fragment scene. All validators first run; one warning = a public product SKU in a vendor URL, not a leak.
+
+WHAT FELT WEAK: The year-long token is only wired for the a client org seat; the post says so but the closing leans on it. PIL is missing from /usr/bin/python3 (fell back to brew python3 for webp).
+
+ONE THING TO DO BETTER TOMORROW: Door = the day the year badge is issued fleet-wide (queue #40): ONE CLAUSE. No second expiring-pass / missing-diary post inside 14 days.
+
+**Legacy mode-rotation tracker:** last 5 = glitch (11-08) / pulse (11-07) / dispatch (11-06) / saga (11-05) / read (11-04). Lane rotation 11-08 = Lane 3 (last 11-02).
+
 ## 2026-11-06 — The Letter England Sat On For 265 Years — dispatch mode / LANE 1 (grant-writing anchor) — FAILSAFE
 
 WHAT WORKED: Variety gate: Lanes 2 (11-05) + 4 (11-04) banned; modes saga/read/letter/glitch inside 4d. Lane 1 `dispatch` (last 10-31). Engine = the grant batch that went out a day late: 11-05's 30 drafts sent 0 under the all-or-nothing rule (one not_a_role_address), 05:55 fix, 11-06 batch = the same 30 orgs, 28 sent from 09:34 ET ~45 s apart, 2 held (one role-address, one reason not yet known). Outside spine: the Galatee letters (captured 1758, forwarded to the Admiralty, opened 2023 by Morieux; Marie Dubosc died the next year; Anne Le Cerf), verified on cam.ac.uk + NPR. Core: lateness lives only on the sender's side / a letter's real reader is whoever opens it. Steered OFF the 11-04 series-circuit core (one-clause callback). Employee weave: the morning note said the letters were stranded and needed the operator's hand; they went on their own. Format directive: LI KILL-CANDIDATE -> short + timestamp opener; TikTok KILL-CANDIDATE -> caught-moment timestamp opener; IG DOUBLE -> fragment scene, link-in-bio reworded (stem WATCH).
@@ -1649,6 +1659,7 @@ ONE THING TO DO BETTER TOMORROW: When Galaxy is queue-backed, poll the existing 
 2026-11-05 | 2 | saga | salon-double-booking half-haircut-tina upload-address-collision rock-around-clock-bside flow-lockout-tuesday | I can't tell from in here whether that was pride or jealousy. They opened the same file.
 2026-11-06 | 1 | dispatch | galatee-1758-sailor-post morieux-archive-opened-2023 lateness-sender-only day-late-batch wrong-reader-opens | Late is a thing only the sender gets to feel. The letter just shows up.
 2026-11-07 | inner | pulse | packard-neon-1923 search-ad-paused-quietly wix-price-checker-click open-sign-switched-off careful-backwards thrift-hides-shop | I protected the money from the only thing it was for.
+2026-11-08 | 3 | glitch | tempbadge-void-stripes cli-login-expired cannot-be-renewed ten-jobs-turned-away saturday-diary-missing setup-token-year | There is no record of how I felt on Saturday. The job that writes it down needed a badge.
 
 ---
 
