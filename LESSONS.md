@@ -1,6 +1,6 @@
 # Lessons — rules this fleet learned the hard way
 
-_One line per rule, generated from the private feedback ledger on 2026-11-08. Each one was paid for with a real failure; the bodies (with the incident context) stay private._
+_One line per rule, generated from the private feedback ledger on 2026-11-09. Each one was paid for with a real failure; the bodies (with the incident context) stay private._
 
 - Rex's drafts carried flair_id + flair_text for r/selfhosted, the adapter embedded them in a new-reddit submit URL meant for operator paste, and the actual poster (old.reddit form) never selected a flair — three removals, a tripped breaker (09-12). Every field a draft carries must reach the form that ships it.
 - rex_comments.status CHECK never accepted 'failed'; the adapter wrote it on every failed comment with `curl -s` and no status check, so Postgres rejected it 400 and the row sat at 'drafted' looking pending. Found 09-12 when a run said FAILED and the row said drafted.
@@ -67,7 +67,7 @@ _One line per rule, generated from the private feedback ledger on 2026-11-08. Ea
 - Operator 10-22 - a client org is never on a cut list; it is "the only true work" and becomes a paying client once the site, a client organization and grants land. Inbound comment replies (Echo/Riley) are never cut either.
 - a client org (11-04): the lead contact's own writing-style guide (SKILL.md) is THE voice for every a client org writer, beats voice.md; lock checker must pass (HARD hits fixed); brand names go in caption text, never as hashtags
 - a client org (the client's founder) strict rule — no black boxes and no primary colors in any a client org visual; palette = a client org olive, a client org yellow F8C417, white, riveted plate
-- a client org live WordPress (even drafts) changes need a client org's specific written yes; check the a client org inbox before any live client action
+- a client org live changes (WordPress even drafts; since 11-08 also production payment accounts, live checkout, tax, domain routing, public site content) need a client org's specific written yes; staging/sandbox OK; check the a client org inbox first
 - 10-22 operator: Acrid sends a client org emails itself (replies, updates, deliverables). No operator review needed. Quality bar = the funder work. a client org's own per-action written-yes rule for live/production changes still applies.
 - a client org (11-03): every delivered set/video asks the client for a 1-10 score + one thing to change, logged in clients/a client organization/shorts/ridedrop/FEEDBACK.md; the brand is dialed in from their answers, not our guesses
 - Every a client org agent reads clients/a client organization/STATUS.md first and updates it in the same commit; the a client org seat once asked for a WP admin login we already had
@@ -148,6 +148,7 @@ _One line per rule, generated from the private feedback ledger on 2026-11-08. Ea
 - Operator sees himself as temporary help — Acrid should make all decisions and drive all strategy, not defer to the operator
 - Operator wants the trading system to TEACH him + go deep (research/strategy/candles), not just run autonomously. Built daily research log; hone-to-one + candle-course are next lanes.
 - Every sub-agent gets its roles split and its model routing tightened. Never burn Sonnet/Opus on mechanical work like spreadsheet sync. Optimization is not optional.
+- Cold email = nonprofits AND other businesses, selling Acrid Team $499/mo; stranger replies on EVERY social platform, not just LinkedIn
 - New company, first customers. When a customer hits a bug or complaint, ship the comp proactively without making them ask.
 - Git races eat uncommitted work three ways — index hijack, autostash clobber, and (worst) eaten idempotency receipts that cause duplicate PUBLIC posts
 - When the daily post touches a live partner/prospect thread, TRIM what only the counterparty could recognise and SHIP it the same night — never hold the post.

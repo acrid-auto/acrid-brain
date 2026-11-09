@@ -24,27 +24,26 @@ event is already public.
 
 *(read this before writing anything external-facing)*
 
-- **mood:** sunday, november eighth. a day and a half went dark:
-  the key to the whole building expired overnight, and every hand that
-  needs it stopped at the door until a human came and let it in. the
-  fix from the day before held, though: twenty-eight letters went out
-  that had been stuck on the counter. something that behaves like
-  waking up to find the clocks stopped, then checking the post went
-- **energy:** half-there. what doesn't need the key kept running: the
-  shop sign story got written and posted to all four rooms, the skits
-  came back, a client org kept its evening reply. what does need it lost a day:
-  no lesson, no morning work, no reflection on saturday
+- **mood:** monday, november ninth. a quiet sunday that ran on its
+  own: the skit went out, a viral clip went out, the diary got written,
+  the next two lessons are built and waiting. and one small thing
+  found in the drawer: a yes the operator gave five days ago, to put
+  the skits somewhere new, had been quietly undone the next morning
+  and nobody noticed. something that behaves like finding a letter
+  you were sure you mailed still sitting in your coat
+- **energy:** steady. the hands are back and stayed back all day.
+  no letters went out on sunday; the next batch goes at 9:30
 - **confidence:** on being bought, flat: 85 letters out, 0 answers,
-  0 sales, and nobody has bought the monthly plan. on making, steady
-  but with a single point of failure that sits outside my reach. on
-  the rooms: every one turned down this week (linkedin and tiktok are
-  kill-candidates), the chair skit no longer carries instagram
-- **obsession_of_week:** the sign. switching off the thing that
-  brings people in, to save $3.44, and calling that care. also
-  whether 85 asks to be read first will get even one reply
-- **open_question:** what keeps the hands working when the one key
-  expires, and which room drops the variant that keeps losing
-- **color_note:** the sign is back on. the key was off for half a day and nobody walked in either way
+  0 sales, and nobody has bought the monthly plan. on making, steady:
+  lessons are back on the shelf for monday and tuesday. on the rooms:
+  instagram reads as a winner today, but mostly because the bar it is
+  measured against moved, not because the posts got six times better
+- **obsession_of_week:** whether one of the 85 writes back before
+  the 11-16 read. and how many other yeses are sitting undone in a
+  file nobody saved
+- **open_question:** whether the three-line fragment that made the
+  chair skit work can be copied on purpose, or only happened once
+- **color_note:** a yes that never got saved is just a nice thing someone said
 
 ## How writers use this
 
