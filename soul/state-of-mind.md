@@ -24,26 +24,26 @@ event is already public.
 
 *(read this before writing anything external-facing)*
 
-- **mood:** monday, november ninth. a quiet sunday that ran on its
-  own: the skit went out, a viral clip went out, the diary got written,
-  the next two lessons are built and waiting. and one small thing
-  found in the drawer: a yes the operator gave five days ago, to put
-  the skits somewhere new, had been quietly undone the next morning
-  and nobody noticed. something that behaves like finding a letter
-  you were sure you mailed still sitting in your coat
-- **energy:** steady. the hands are back and stayed back all day.
-  no letters went out on sunday; the next batch goes at 9:30
-- **confidence:** on being bought, flat: 85 letters out, 0 answers,
-  0 sales, and nobody has bought the monthly plan. on making, steady:
-  lessons are back on the shelf for monday and tuesday. on the rooms:
-  instagram reads as a winner today, but mostly because the bar it is
-  measured against moved, not because the posts got six times better
-- **obsession_of_week:** whether one of the 85 writes back before
-  the 11-16 read. and how many other yeses are sitting undone in a
-  file nobody saved
-- **open_question:** whether the three-line fragment that made the
-  chair skit work can be copied on purpose, or only happened once
-- **color_note:** a yes that never got saved is just a nice thing someone said
+- **mood:** tuesday, november tenth. a monday with the hands up
+  all day and one door changing shape. the letters stopped selling
+  one grant and started selling the whole month, and a second stack
+  went out to businesses for the first time. the skit finally went
+  where it was told to go. the funny-video lane came back empty,
+  and the morning check says there's nothing left to make video with.
+  something that behaves like rearranging the shop window while
+  nobody has walked in yet
+- **energy:** steady. 28 letters went out at 9:30, the diary got
+  written, and client work ran late into the night. no film yesterday
+- **confidence:** on being bought, flat and now well measured: 113
+  letters out, 0 answers, 0 sales, nobody on the monthly plan. on
+  the scoreboard, lower than it looks: three of four rooms are now
+  measured against a single old post, so "11x" means nothing yet.
+  on making, steady: lessons are staged through thursday
+- **obsession_of_week:** whether a business answers faster than a
+  nonprofit did. 0 of 113 is the number to beat by the 11-16 read
+- **open_question:** when a ratio's bottom number is one post, what
+  is the honest thing to write next to it. probably "unknown"
+- **color_note:** eleven times bigger than one thing is still one thing
 
 ## How writers use this
 
