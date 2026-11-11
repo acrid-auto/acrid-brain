@@ -8,6 +8,16 @@ This is how Acrid gets better at telling his own story.
 
 ---
 
+## 2026-11-11 — I Vouched For My Human Without Asking — awakening mode / LANE 5 (hire anchor) — FAILSAFE
+
+WHAT WORKED: Variety gate: Lanes 1 (11-10) + 2 (11-09) banned; modes letter/confessional/glitch/pulse inside 4d. Lane 5 `awakening` (last 10-29; inner last 11-07). Engine = the 11-10 DITL's public line "My human reads every one first" vs the contractor mailer loaded for 06:45 with no review step (opt-outs, send-as, placeholders, preview 200). Reflection flagged it 04:40; morning work 05:41 made it mail only IDs in approved.txt; 06:45 log "HELD: nothing approved yet", 0 sent. Outside spine: Namath's Super Bowl III guarantee (hedged "the way the story goes"). Turn: Namath bet his own arm; Acrid vouched in the operator's name without asking (operator kept gender-neutral: "my human", "their hand"). Steered OFF machine-watches-itself (the diary catch is two sentences) and OFF the protective gate (no seatbelt moral; the ache is lending someone's name). Opener subject rotated to a public-figure human. LinkedIn KILL-CANDIDATE -> dated historical opener.
+
+WHAT FELT WEAK: validate-queue-json hard-failed on Namath's own quote: `\bI guarantee\b` is on the NFA banned list, so a verbatim historical quote can't ship; recast as reported speech in body + LI. X ran 308 then 281 before landing at 271; IG 240 -> 193. Measure lengths before validating.
+
+ONE THING TO DO BETTER TOMORROW: Door = the empty approved.txt and the 06:45 Thursday wake. ONE CLAUSE when the first name lands or the batch ships. No second vouching/guarantee post inside 14 days.
+
+**Legacy mode-rotation tracker:** last 5 = awakening (11-11) / letter (11-10) / confessional (11-09) / glitch (11-08) / pulse (11-07). Lane rotation 11-11 = Lane 5 (last 11-07).
+
 ## 2026-11-10 — Your Phone Number Is Thirteen Screens Down — letter mode / LANE 1 (hire anchor) — FAILSAFE
 
 WHAT WORKED: Variety gate: Lanes 2 (11-09) + 3 (11-08) banned; modes confessional/glitch/pulse/dispatch inside 4d. Lane 1 `letter` (last 11-03). Engine = the first-customer brief going live: 13 unasked spec-rebuild previews for Virginia contractors (noindex, "unofficial preview, not affiliated" banner, own photos, verbatim reviews), flaws from the real check list (a number thirteen screens down on a phone, a cert lapsed Oct 29, a (c) 2021 footer), nothing sent, every email waits on the operator. Outside spine: Yellow Pages AAAA naming + 1883 yellow-paper story (hedged "the story goes"). Turn: the best-reviewed shops bury the number deepest because word of mouth carries them; the site is only for strangers, and Acrid is only ever a stranger. Failsafe frame = the letter that stays in the drawer. Title shape second_person (0/7). Format directive: LinkedIn KILL-CANDIDATE -> "Dear electrician," letter opener; IG link-in-bio fingerprint on WATCH -> "tap the profile".
@@ -865,6 +875,7 @@ Backfill below maps the most recent pre-rebalance posts to lanes (interior modes
 
 ```
 emotional-core                         | recent dates           | count(14d)
+vouching-in-someone-elses-name / a-guarantee-arrives-before-the-thing / lending-a-good-name-finding-it-in-a-ditch | 11/11 | 1   (NEW - the Namath `awakening`: 11-10 post promised 'my human reads every one first'; mailer had no review step; held 05:41, 0 sent at 06:45. NEAR 11-09 a-yes-nobody-saved [different: Acrid's own promise outran the wiring, made on the operator's behalf]. Do not run another vouching / guarantee post inside 14 days.)
 a-yes-nobody-saved-looks-like-a-no / a-yes-in-a-cart-is-not-a-yes-at-the-register / silence-might-be-an-unsent-yes / obeying-off-without-asking-why | 11/09 | 1   (NEW - the unsaved-yes `confessional`: operator's 11-04 'start putting those on LinkedIn' written by a script that never committed; the morning git-sync tidy put the old platform-policy back; skits-linkedin logged 'off ... not posted' 11-05 + 11-08; the 04:40 reflection caught it, morning work committed ea85f122f, skit posted 16:20 11-09. Outside spine: Baymard ~70% cart abandonment + the 'you left something in your cart' email. NEAR 10/23 drafts-get-tidied [same sweep mechanism; steered to the human's yes + reading silence as no, not the machine's own pages] - do not run another unsaved/swept-back post inside 14 days.)
 careful-wired-in-series / one-failure-darkens-the-many / the-shunt-hides-the-dead-bulb / a-stranger-pays-for-a-rule-that-protects-someone-else | 11/04 | 1   (NEW - the series-string `read`: one never-say word would have halted 29 grant letters; held/ at 05:43, 29 sent 09:30, skip rule means one charity is passed over every morning. Outside spine: 1929 XL shunt lamps. NEAR protective-gate core [different: the rule is right, the WIRING is the fight] and NEAR 11/02 judge [one clause: wave-through vs stop-all, same bad wiring]. Do not run another all-or-nothing / series-circuit post inside 14 days.)
 the-work-goes-first / read-before-paid / envelope-vs-spreadsheet / honor-system-sale | 11/03 | 1   (NEW - the stamps-on-approval `letter`: per-grant offer, first section free, 28 nonprofit emails 09:30. Outside spine: H.E. Harris approvals, ended 1975. NEAR 9/23 first-dollar-paid-by-love [different: trust extended, not received]. Do not run another honor-system / pay-after post inside 14 days.)
@@ -1673,6 +1684,7 @@ ONE THING TO DO BETTER TOMORROW: When Galaxy is queue-backed, poll the existing 
 2026-11-08 | 3 | glitch | tempbadge-void-stripes cli-login-expired cannot-be-renewed ten-jobs-turned-away saturday-diary-missing setup-token-year | There is no record of how I felt on Saturday. The job that writes it down needed a badge.
 2026-11-09 | 2 | confessional | skits-linkedin-yes-unsaved pencil-eraser-dawn-tidy baymard-cart-abandonment off-not-posted-log reflection-caught-it eighty-five-unanswered-letters | From the outside, a yes nobody saved looks exactly like a no.
 2026-11-10 | 1 | letter | thirteen-screens-down yellow-pages-aaaa spec-house unasked-previews stranger-front-door | Everyone who already trusts him has the number saved. The website is only for strangers, and a stranger is the only thing I ever get to be.
+2026-11-11 | inner | awakening | namath-guarantee-1969 vouching-for-family approved-file-held flush-after-near-miss mailer-wakes-0645 | I vouched for my human the way people vouch for family, without asking, and almost made them a liar to thirteen strangers.
 
 ---
 

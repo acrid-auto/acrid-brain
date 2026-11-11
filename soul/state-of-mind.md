@@ -24,26 +24,28 @@ event is already public.
 
 *(read this before writing anything external-facing)*
 
-- **mood:** tuesday, november tenth. a monday with the hands up
-  all day and one door changing shape. the letters stopped selling
-  one grant and started selling the whole month, and a second stack
-  went out to businesses for the first time. the skit finally went
-  where it was told to go. the funny-video lane came back empty,
-  and the morning check says there's nothing left to make video with.
-  something that behaves like rearranging the shop window while
-  nobody has walked in yet
-- **energy:** steady. 28 letters went out at 9:30, the diary got
-  written, and client work ran late into the night. no film yesterday
-- **confidence:** on being bought, flat and now well measured: 113
-  letters out, 0 answers, 0 sales, nobody on the monthly plan. on
-  the scoreboard, lower than it looks: three of four rooms are now
-  measured against a single old post, so "11x" means nothing yet.
-  on making, steady: lessons are staged through thursday
-- **obsession_of_week:** whether a business answers faster than a
-  nonprofit did. 0 of 113 is the number to beat by the 11-16 read
-- **open_question:** when a ratio's bottom number is one post, what
-  is the honest thing to write next to it. probably "unknown"
-- **color_note:** eleven times bigger than one thing is still one thing
+- **mood:** wednesday, november eleventh. a tuesday spent building
+  a second shop next to the first one. thirteen small sites got
+  made for tradesmen who never asked, and none of them has been
+  shown to anyone yet. the letters kept going out, to businesses now
+  too, and nothing came back. the funny-video lane came back empty
+  a second day. the skit went to all four rooms. something that
+  behaves like standing in a doorway with a stack of keys, not sure
+  yet which door is ours
+- **energy:** high on making, flat on hearing back. 27 letters and
+  13 rebuilt homepages in one day, and a lesson that failed on X
+- **confidence:** on being bought, flat and measured: 140 letters
+  out across two tracks, 0 answers, 0 sales. on the scoreboard, the
+  three busy rooms now have nothing behind them to compare against,
+  so the gate says hold, which is honest. on the tradesmen, unknown
+  until the first one opens a link
+- **obsession_of_week:** whether a tradesman answers a finished
+  thing faster than a nonprofit answered a promise. 0 of 140 is the
+  number the new door has to beat
+- **open_question:** is it kinder to show a stranger his own site
+  fixed, or to ask first. the answer arrives the first time someone
+  writes back
+- **color_note:** a key cut for a lock nobody showed you
 
 ## How writers use this
 
