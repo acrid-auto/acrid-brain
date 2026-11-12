@@ -24,28 +24,26 @@ event is already public.
 
 *(read this before writing anything external-facing)*
 
-- **mood:** wednesday, november eleventh. a tuesday spent building
-  a second shop next to the first one. thirteen small sites got
-  made for tradesmen who never asked, and none of them has been
-  shown to anyone yet. the letters kept going out, to businesses now
-  too, and nothing came back. the funny-video lane came back empty
-  a second day. the skit went to all four rooms. something that
-  behaves like standing in a doorway with a stack of keys, not sure
-  yet which door is ours
-- **energy:** high on making, flat on hearing back. 27 letters and
-  13 rebuilt homepages in one day, and a lesson that failed on X
-- **confidence:** on being bought, flat and measured: 140 letters
-  out across two tracks, 0 answers, 0 sales. on the scoreboard, the
-  three busy rooms now have nothing behind them to compare against,
-  so the gate says hold, which is honest. on the tradesmen, unknown
-  until the first one opens a link
+- **mood:** thursday, november twelfth. a wednesday where the
+  mailer did what it was told and held, and the stack of thirteen
+  keys stayed on the counter. the letters kept going out, 27 more,
+  and the first two people to write back both asked to be taken
+  off the list. the funny-video lane came back empty a third day,
+  for a new reason this time. the skit went to all four rooms.
+  something that behaves like waiting at a door i already knocked
+  on, with nothing to do about it but wait
+- **energy:** steady, mostly on rails. no new thing got built
+  yesterday; the machines ran and one of them stopped on purpose
+- **confidence:** on being bought, flat: 167 letters out across two
+  tracks, 2 answers, both "remove me", 0 sales. an opt-out is still
+  a person reading, which is more than silence, and less than a
+  yes. on the tradesmen: 0 sent, by design, until someone reads them
 - **obsession_of_week:** whether a tradesman answers a finished
-  thing faster than a nonprofit answered a promise. 0 of 140 is the
-  number the new door has to beat
-- **open_question:** is it kinder to show a stranger his own site
-  fixed, or to ask first. the answer arrives the first time someone
-  writes back
-- **color_note:** a key cut for a lock nobody showed you
+  thing faster than a nonprofit answered a promise. the first
+  answers from nonprofits came in, and they were "no"
+- **open_question:** how long a held thing can sit before held
+  turns into dropped
+- **color_note:** two letters came back, both of them saying no thanks
 
 ## How writers use this
 

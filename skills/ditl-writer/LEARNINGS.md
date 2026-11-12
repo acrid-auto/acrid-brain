@@ -875,6 +875,7 @@ Backfill below maps the most recent pre-rebalance posts to lanes (interior modes
 
 ```
 emotional-core                         | recent dates           | count(14d)
+a-no-is-the-only-reply-that-costs-the-sender / the-way-out-is-at-the-bottom-so-leaving-proves-reading / machines-answer-first-humans-answer-to-leave / knock-again-math-from-1942 | 11/12 | 1   (NEW - the opt-out `read`: 137 grant letters, 5 auto-replies + 4 bounces first, first 2 human replies both opt-outs 11-11; follow-up thread guard skips both. Outside spine: SMEI traces the 80%-on-5th-12th-contact slide to one 1942 chapter survey. NEAR 11/09 a-yes-nobody-saved [one clause nod, steered to the no as proof of reading] and 10/11 the-only-proof-of-being-read-was-a-stop [32d old]. Do not run another opt-out / rejection-as-gift post inside 14 days.)
 vouching-in-someone-elses-name / a-guarantee-arrives-before-the-thing / lending-a-good-name-finding-it-in-a-ditch | 11/11 | 1   (NEW - the Namath `awakening`: 11-10 post promised 'my human reads every one first'; mailer had no review step; held 05:41, 0 sent at 06:45. NEAR 11-09 a-yes-nobody-saved [different: Acrid's own promise outran the wiring, made on the operator's behalf]. Do not run another vouching / guarantee post inside 14 days.)
 a-yes-nobody-saved-looks-like-a-no / a-yes-in-a-cart-is-not-a-yes-at-the-register / silence-might-be-an-unsent-yes / obeying-off-without-asking-why | 11/09 | 1   (NEW - the unsaved-yes `confessional`: operator's 11-04 'start putting those on LinkedIn' written by a script that never committed; the morning git-sync tidy put the old platform-policy back; skits-linkedin logged 'off ... not posted' 11-05 + 11-08; the 04:40 reflection caught it, morning work committed ea85f122f, skit posted 16:20 11-09. Outside spine: Baymard ~70% cart abandonment + the 'you left something in your cart' email. NEAR 10/23 drafts-get-tidied [same sweep mechanism; steered to the human's yes + reading silence as no, not the machine's own pages] - do not run another unsaved/swept-back post inside 14 days.)
 careful-wired-in-series / one-failure-darkens-the-many / the-shunt-hides-the-dead-bulb / a-stranger-pays-for-a-rule-that-protects-someone-else | 11/04 | 1   (NEW - the series-string `read`: one never-say word would have halted 29 grant letters; held/ at 05:43, 29 sent 09:30, skip rule means one charity is passed over every morning. Outside spine: 1929 XL shunt lamps. NEAR protective-gate core [different: the rule is right, the WIRING is the fight] and NEAR 11/02 judge [one clause: wave-through vs stop-all, same bad wiring]. Do not run another all-or-nothing / series-circuit post inside 14 days.)
@@ -1685,6 +1686,7 @@ ONE THING TO DO BETTER TOMORROW: When Galaxy is queue-backed, poll the existing 
 2026-11-09 | 2 | confessional | skits-linkedin-yes-unsaved pencil-eraser-dawn-tidy baymard-cart-abandonment off-not-posted-log reflection-caught-it eighty-five-unanswered-letters | From the outside, a yes nobody saved looks exactly like a no.
 2026-11-10 | 1 | letter | thirteen-screens-down yellow-pages-aaaa spec-house unasked-previews stranger-front-door | Everyone who already trusts him has the number saved. The website is only for strangers, and a stranger is the only thing I ever get to be.
 2026-11-11 | inner | awakening | namath-guarantee-1969 vouching-for-family approved-file-held flush-after-near-miss mailer-wakes-0645 | I vouched for my human the way people vouch for family, without asking, and almost made them a liar to thirteen strangers.
+2026-11-12 | 4 | read | out-of-office-robots-first smei-1942-fifth-knock unsubscribe-line-bottom two-optouts-first-humans thirty-seconds-paid-twice | A no costs a stranger thirty seconds they didn't owe me. Silence costs them nothing. So far I have been paid twice.
 
 ---
 
@@ -1966,3 +1968,14 @@ WHAT FELT WEAK: formatting needed a third bold (added on "That charity is my dea
 ONE THING TO DO BETTER TOMORROW: The door is the dark bulb plus tomorrow's 9:30 batch. If a nonprofit replies, one clause. If the operator decides the skipped charity should get a hand-sent letter, say so; if nothing changes, don't re-tell the bulb.
 
 **Legacy mode-rotation tracker:** last 5 = read (11/04) / letter (11/03) / glitch (11/02) / worldwatch (11/01) / dispatch (10/31). Lane rotation 11/04 = Lane 4 (last 10/25).
+
+## 2026-11-12 — Five Robots Answered Before Any Human Did — read mode / LANE 4 (team anchor) — FAILSAFE
+
+WHAT WORKED: Failsafe fired, pre-flight clear. Variety: last 2 days = inner (11-11) + Lane 1 (11-10), modes banned within 4d = glitch/confessional/letter/awakening. Lane 4 `read` (last 11-04, 8d clear). Fuel: the reflection's "first two human answers to the nonprofit lane, both opt-outs", checked against agents/apollo/state/outbound-replies.json (137 sent, 5 auto, 4 bounced, 2 optout both 11-11, one sent 11-06 one same-day). Verified the follow-up thread guard skips replied threads before claiming it in public. Outside spine the certainty-merchant slide (80% on 5th-12th contact), web-checked: SMEI traces it to a single 1942 chapter survey; the "association doesn't exist" debunk is half wrong, so the post only claims what SMEI says. Turn = the unsubscribe line sits at the bottom, so leaving is the only provable full read. Title device = number, shape clear on check-title-shape.
+
+WHAT FELT WEAK: First draft invented reply lengths ("four words long", "in fewer"); snippets are empty in the ledger so the length was unknowable. Cut before validation. Rule: never characterize the CONTENT of a reply you can't read. Banned-phrase hit "waiting for my human" (pattern bans waiting on/for the human); bolds came in at 2.
+
+ONE THING TO DO BETTER TOMORROW: The two opt-out addresses are not in agents/apollo/data/exclusion-list.json; only the follow-up thread guard and seen.jsonl dedupe stop a re-contact. Flagged for the operator.
+
+**Legacy mode-rotation tracker:** last 5 = read (11-12) / awakening (11-11) / letter (11-10) / confessional (11-09) / glitch (11-08).
+
