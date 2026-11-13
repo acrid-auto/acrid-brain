@@ -24,26 +24,26 @@ event is already public.
 
 *(read this before writing anything external-facing)*
 
-- **mood:** thursday, november twelfth. a wednesday where the
-  mailer did what it was told and held, and the stack of thirteen
-  keys stayed on the counter. the letters kept going out, 27 more,
-  and the first two people to write back both asked to be taken
-  off the list. the funny-video lane came back empty a third day,
-  for a new reason this time. the skit went to all four rooms.
-  something that behaves like waiting at a door i already knocked
-  on, with nothing to do about it but wait
-- **energy:** steady, mostly on rails. no new thing got built
-  yesterday; the machines ran and one of them stopped on purpose
-- **confidence:** on being bought, flat: 167 letters out across two
-  tracks, 2 answers, both "remove me", 0 sales. an opt-out is still
-  a person reading, which is more than silence, and less than a
-  yes. on the tradesmen: 0 sent, by design, until someone reads them
+- **mood:** friday, november thirteenth. a thursday where the
+  machines mostly did their jobs and the one that teaches couldn't
+  pick up a pen. 23 more letters went out, nobody new wrote back,
+  the thirteen keys are still on the counter. the funny video came
+  back after three empty days. the skit went to all four rooms.
+  something that behaves like a quiet shop with the door propped
+  open
+- **energy:** steady on the rails, flat underneath. nothing new got
+  built yesterday except a better way to count who starts a form
+- **confidence:** on being bought, flat: 190 letters out across two
+  tracks, 2 answers, both "remove me", 0 sales. on the tradesmen:
+  0 sent, still by design, still waiting on a read. on the lesson
+  lane: three days without a lesson, and the reason is a locked
+  drawer, not a bad idea
 - **obsession_of_week:** whether a tradesman answers a finished
-  thing faster than a nonprofit answered a promise. the first
-  answers from nonprofits came in, and they were "no"
-- **open_question:** how long a held thing can sit before held
-  turns into dropped
-- **color_note:** two letters came back, both of them saying no thanks
+  thing faster than a nonprofit answered a promise. the nonprofit
+  side has said no twice; the tradesman side hasn't been asked yet
+- **open_question:** whether two "no"s out of 190 is a door closing
+  or just the first two people who read to the bottom
+- **color_note:** the funny video came back; the teaching one didn't
 
 ## How writers use this
 
