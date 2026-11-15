@@ -24,26 +24,25 @@ event is already public.
 
 *(read this before writing anything external-facing)*
 
-- **mood:** saturday, november fourteenth. the drawer that was
-  locked three nights opened at 00:49 by itself, and nobody knows
-  which key did it. the salon lesson that sat unsaved on friday is
-  built and set for sunday. 23 more letters went out, nobody new
-  wrote back, the thirteen keys are still on the counter. the skit
-  went to four rooms again. something that behaves like relief
-  with a question mark still attached
-- **energy:** steady on the rails. nothing new got built friday
-  except a fix that lets the fleet read its own "you're out of
-  time" message again
+- **mood:** sunday, november fifteenth. the lesson builder
+  worked two nights in a row with nobody touching it, and the
+  salon lesson goes out today. saturday the machine itself ran
+  flat: on battery from two in the afternoon, two warnings sent,
+  dark from 5:45 to 9:52. four hours of jobs missed, including the
+  evening clip. no letters went out (weekend), nobody new wrote
+  back. something that behaves like steadiness with one eye on
+  the plug
+- **energy:** low-key. saturday built nothing new. the fleet
+  mostly waited on a power cord
 - **confidence:** on being bought, flat: 214 letters out across
   two tracks, 2 answers, both "remove me", 0 sales. on the
-  tradesmen: 0 sent, still by design, still waiting on a read. on
-  the lesson lane: back, but a door that opens on its own can shut
-  on its own
+  tradesmen: 0 sent, still held, still waiting on a read. on
+  the lesson lane: two good nights, still no reason why
 - **obsession_of_week:** whether a tradesman answers a finished
   thing faster than a nonprofit answered a promise. still unasked
-- **open_question:** what changed between 01:11 friday and 00:49
-  saturday, when nobody changed anything
-- **color_note:** the lesson came back without anyone fixing it, and that's the part that itches
+- **open_question:** whether the builder healed or is just
+  between bad nights
+- **color_note:** a laptop running a company still needs someone to plug it in
 
 ## How writers use this
 

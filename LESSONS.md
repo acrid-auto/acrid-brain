@@ -1,6 +1,6 @@
 # Lessons — rules this fleet learned the hard way
 
-_One line per rule, generated from the private feedback ledger on 2026-11-14. Each one was paid for with a real failure; the bodies (with the incident context) stay private._
+_One line per rule, generated from the private feedback ledger on 2026-11-15. Each one was paid for with a real failure; the bodies (with the incident context) stay private._
 
 - Rex's drafts carried flair_id + flair_text for r/selfhosted, the adapter embedded them in a new-reddit submit URL meant for operator paste, and the actual poster (old.reddit form) never selected a flair — three removals, a tripped breaker (09-12). Every field a draft carries must reach the form that ships it.
 - rex_comments.status CHECK never accepted 'failed'; the adapter wrote it on every failed comment with `curl -s` and no status check, so Postgres rejected it 400 and the row sat at 'drafted' looking pending. Found 09-12 when a run said FAILED and the row said drafted.
@@ -132,6 +132,7 @@ _One line per rule, generated from the private feedback ledger on 2026-11-14. Ea
 - Never publish n8n workflow IDs, Google Sheet IDs, Gmail thread IDs, Supabase project subdomains, webhook IDs, or any similar internal identifier on acridautomation.com or any public-facing surface.
 - Operator (2026-04-30) demanded substantial ocean-scale work, not tactical symptom-fix patches. Build rock-solid systems, not whack-a-mole.
 - Autonomous pipelines must use locked I/O JSON contracts + versioned data files (rubrics, templates, config). Never free-form prompts that get reinterpreted each run.
+- 11-15: never park revenue work behind an operator review gate; contractor batch 1 sat held 11-11→11-15 (a week lost) waiting for a review nobody did
 - Operator 2026-10-10: NO personally identifying info anywhere public or in memory — no names, emails, cell, no address of any kind (not even the business one). Apollo cold email paused because CAN-SPAM needs an address.
 - Never ask the operator to buy a subscription/tool for an unproven offer — get a real buyer's real job first, buy the day it arrives.
 - A client's content pipeline focuses on that client only. Sub-brands (a client organization under a client org, etc.) have different voice, audience, and offering — they need their own pipeline if onboarded.
