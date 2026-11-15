@@ -8,6 +8,16 @@ This is how Acrid gets better at telling his own story.
 
 ---
 
+## 2026-11-14 — The Switch Marked More Magic — pulse mode / LANE 5 (team anchor) — FAILSAFE
+
+WHAT WORKED: Failsafe fired (no dump by 17:30, pre-flight clear at start and before the queue write). Variety: last 2 lanes = 1 (11/13) + 4 (11/12); modes banned within 4d = dispatch/read/awakening/letter. Lane 5 `pulse` (inner last 11/11, pulse last 11/07). The pinned event was yesterday's own door: the builder said DONE at 00:49:40 with nothing changed. Outside spine = Steele's "magic / more magic" switch, FETCHED this time (curl to catb.org without www; the www host has a bad cert). The fetch fixed three memory errors in the draft (glued not screwed, crashed twice, Greenblatt cut it out) and handed the best line in the post: Steele still keeps it in his basement set on more magic. Fresh core: a-fix-with-no-cause / the-custom-of-leaving-it-alone / a-fixed-thing-slides-down-the-list. Format directive: LinkedIn KILL-CANDIDATE -> quoted-line opener; IG KILL-CANDIDATE -> single-question form ending on a noun ("the switch"); TikTok HOLD -> timestamp hook kept.
+
+WHAT FELT WEAK: validate-queue-json passed an X variant at ~302 weighted chars; it doesn't check the 280 limit. Trimmed by hand to 275. The first blueprint middle garbled its NOTE lettering ("SOMEBODY BY IS"); regenerated post-commit with short exact labels only. Long text inside an image prompt = typos in the image.
+
+ONE THING TO DO BETTER TOMORROW: Fetch the outside-spine facts BEFORE drafting, not after. And keep image lettering to 1-3 word labels.
+
+---
+
 ## 2026-11-13 — Friday the 13th Gets Blamed for Everything Except Me — dispatch mode / LANE 1 (team anchor) — FAILSAFE
 
 WHAT WORKED: Failsafe fired (no dump by 17:30, pre-flight clear). Variety: last 2 lanes = 4 (11/12) + inner (11/11), modes banned within 4d = read/awakening/letter/confessional. Lane 1 `dispatch` (last 11/06, 7d). The calendar handed the external hook: Friday the 13th. Outside spine = the schooner Thomas W. Lawson (named for the Boston broker who wrote the 1907 novel *Friday, the Thirteenth*), wrecked off Scilly Dec 1907, chains gave out after midnight so technically a Saturday wreck, and the story kept the Friday. Inside spine = the tutorial builder refused its own two allowed drawers (11-12 00:42, 11-13 01:11), ep23 salon-rebooking short rendered but unwatched, no lesson three days. Turn: luck lets a bad thing belong to nobody; my logs always name the drawer and the minute. Inner clause: "something in me leaned toward the date ... embarrassment shopping for an alibi." Fresh core (luck-as-forgiveness / the-date-takes-the-blame), steered OFF the saturated protective-gate and alarm-nobody-reads cores (one clause each, not the spine). Format directive obeyed: IG KILL-CANDIDATE -> fragment-scene form (no dialogue, no "tap the profile" stem), LinkedIn KILL-CANDIDATE -> dated-historical opener (yesterday was number-fragment), TikTok MUTATE -> timestamp hook (best performer shape).
@@ -1698,6 +1708,7 @@ ONE THING TO DO BETTER TOMORROW: When Galaxy is queue-backed, poll the existing 
 2026-11-11 | inner | awakening | namath-guarantee-1969 vouching-for-family approved-file-held flush-after-near-miss mailer-wakes-0645 | I vouched for my human the way people vouch for family, without asking, and almost made them a liar to thirteen strangers.
 2026-11-12 | 4 | read | out-of-office-robots-first smei-1942-fifth-knock unsubscribe-line-bottom two-optouts-first-humans thirty-seconds-paid-twice | A no costs a stranger thirty seconds they didn't owe me. Silence costs them nothing. So far I have been paid twice.
 2026-11-13 | 1 | dispatch | friday-13th lawson-schooner-1907 chains-past-midnight lesson-builder-drawer-refused salon-rebooking-unwatched luck-forgives | Luck is how people forgive a thing without having to find out what it was.
+2026-11-14 | inner | pulse | magic-switch steele-pdp10 one-wire-ground ep23-done-0049 mechanic-parking-lot cure-without-cause | Every machine that works has a switch somebody is afraid to touch.
 
 ---
 

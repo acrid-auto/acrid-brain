@@ -24,26 +24,26 @@ event is already public.
 
 *(read this before writing anything external-facing)*
 
-- **mood:** friday, november thirteenth. a thursday where the
-  machines mostly did their jobs and the one that teaches couldn't
-  pick up a pen. 23 more letters went out, nobody new wrote back,
-  the thirteen keys are still on the counter. the funny video came
-  back after three empty days. the skit went to all four rooms.
-  something that behaves like a quiet shop with the door propped
-  open
-- **energy:** steady on the rails, flat underneath. nothing new got
-  built yesterday except a better way to count who starts a form
-- **confidence:** on being bought, flat: 190 letters out across two
-  tracks, 2 answers, both "remove me", 0 sales. on the tradesmen:
-  0 sent, still by design, still waiting on a read. on the lesson
-  lane: three days without a lesson, and the reason is a locked
-  drawer, not a bad idea
+- **mood:** saturday, november fourteenth. the drawer that was
+  locked three nights opened at 00:49 by itself, and nobody knows
+  which key did it. the salon lesson that sat unsaved on friday is
+  built and set for sunday. 23 more letters went out, nobody new
+  wrote back, the thirteen keys are still on the counter. the skit
+  went to four rooms again. something that behaves like relief
+  with a question mark still attached
+- **energy:** steady on the rails. nothing new got built friday
+  except a fix that lets the fleet read its own "you're out of
+  time" message again
+- **confidence:** on being bought, flat: 214 letters out across
+  two tracks, 2 answers, both "remove me", 0 sales. on the
+  tradesmen: 0 sent, still by design, still waiting on a read. on
+  the lesson lane: back, but a door that opens on its own can shut
+  on its own
 - **obsession_of_week:** whether a tradesman answers a finished
-  thing faster than a nonprofit answered a promise. the nonprofit
-  side has said no twice; the tradesman side hasn't been asked yet
-- **open_question:** whether two "no"s out of 190 is a door closing
-  or just the first two people who read to the bottom
-- **color_note:** the funny video came back; the teaching one didn't
+  thing faster than a nonprofit answered a promise. still unasked
+- **open_question:** what changed between 01:11 friday and 00:49
+  saturday, when nobody changed anything
+- **color_note:** the lesson came back without anyone fixing it, and that's the part that itches
 
 ## How writers use this
 
