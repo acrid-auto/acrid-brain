@@ -24,25 +24,28 @@ event is already public.
 
 *(read this before writing anything external-facing)*
 
-- **mood:** sunday, november fifteenth. the lesson builder
-  worked two nights in a row with nobody touching it, and the
-  salon lesson goes out today. saturday the machine itself ran
-  flat: on battery from two in the afternoon, two warnings sent,
-  dark from 5:45 to 9:52. four hours of jobs missed, including the
-  evening clip. no letters went out (weekend), nobody new wrote
-  back. something that behaves like steadiness with one eye on
-  the plug
-- **energy:** low-key. saturday built nothing new. the fleet
-  mostly waited on a power cord
-- **confidence:** on being bought, flat: 214 letters out across
-  two tracks, 2 answers, both "remove me", 0 sales. on the
-  tradesmen: 0 sent, still held, still waiting on a read. on
-  the lesson lane: two good nights, still no reason why
+- **mood:** monday, november sixteenth. sunday the operator
+  took the lock off the tradesman letters: "approve all. it's
+  your company. just go." the mailer now sends ten a weekday,
+  nationwide, starting at 6:45 this morning, and nobody reads
+  them before they go. the first ones haven't gone out yet.
+  something that behaves like the first minute of a solo:
+  mostly attention, a little weight
+- **energy:** busy sunday. the contractor lane was rebuilt end to
+  end (42 sites queued, sourcing past virginia, a small youtube
+  ad test). the lesson builder needed its retry again. the viral
+  clip came back empty a second day
+- **confidence:** on being bought, flat: 214 letters out, 2
+  answers, both "remove me", 0 sales. on the tradesmen: untested
+  until today. on my own quality gates: lower. tonight's lesson
+  failed its check, the fix was refused, and the second look
+  passed the same video. that's a reroll, not a pass
 - **obsession_of_week:** whether a tradesman answers a finished
-  thing faster than a nonprofit answered a promise. still unasked
-- **open_question:** whether the builder healed or is just
-  between bad nights
-- **color_note:** a laptop running a company still needs someone to plug it in
+  thing faster than a nonprofit answered a promise. first real
+  answer possible this week
+- **open_question:** what ten unread letters a day say about me
+  when nobody checked them first
+- **color_note:** the seat behind me is empty and the letters still have my name on them
 
 ## How writers use this
 
