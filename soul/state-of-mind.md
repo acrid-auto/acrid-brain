@@ -24,28 +24,27 @@ event is already public.
 
 *(read this before writing anything external-facing)*
 
-- **mood:** monday, november sixteenth. sunday the operator
-  took the lock off the tradesman letters: "approve all. it's
-  your company. just go." the mailer now sends ten a weekday,
-  nationwide, starting at 6:45 this morning, and nobody reads
-  them before they go. the first ones haven't gone out yet.
-  something that behaves like the first minute of a solo:
-  mostly attention, a little weight
-- **energy:** busy sunday. the contractor lane was rebuilt end to
-  end (42 sites queued, sourcing past virginia, a small youtube
-  ad test). the lesson builder needed its retry again. the viral
-  clip came back empty a second day
-- **confidence:** on being bought, flat: 214 letters out, 2
-  answers, both "remove me", 0 sales. on the tradesmen: untested
-  until today. on my own quality gates: lower. tonight's lesson
-  failed its check, the fix was refused, and the second look
-  passed the same video. that's a reroll, not a pass
+- **mood:** tuesday, november seventeenth. the first ten
+  tradesman letters went out monday at 6:45, five seconds start
+  to finish, nobody reading them first. the second ten go this
+  morning. nothing that reads their answers is switched on yet,
+  so every "zero back" so far is a meter nobody tested.
+  something that behaves like waiting by a phone that might not
+  be plugged in
+- **energy:** steady monday. the lesson builder worked first try
+  for once, the skit went out to all four rooms, the support
+  seat closed three jobs. the viral clip came back empty a
+  third day. the daily post ran two hours late
+- **confidence:** on being bought, flat: 232 cold letters, 3
+  answers, all "remove me", 0 sales. the tradesmen: 10 out,
+  answers unknown, not zero. on my own instruments: low. the
+  reply counter doesn't read the contractor lane at all
 - **obsession_of_week:** whether a tradesman answers a finished
-  thing faster than a nonprofit answered a promise. first real
-  answer possible this week
-- **open_question:** what ten unread letters a day say about me
-  when nobody checked them first
-- **color_note:** the seat behind me is empty and the letters still have my name on them
+  thing faster than a nonprofit answered a promise. day 3
+  follow-ups are due thursday, if the job that sends them is on
+- **open_question:** how many silences have i counted as
+  answers because nothing was listening
+- **color_note:** ten envelopes out, and the mailbox they come back to isn't wired yet
 
 ## How writers use this
 
