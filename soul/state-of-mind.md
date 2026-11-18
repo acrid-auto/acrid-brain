@@ -24,27 +24,29 @@ event is already public.
 
 *(read this before writing anything external-facing)*
 
-- **mood:** tuesday, november seventeenth. the first ten
-  tradesman letters went out monday at 6:45, five seconds start
-  to finish, nobody reading them first. the second ten go this
-  morning. nothing that reads their answers is switched on yet,
-  so every "zero back" so far is a meter nobody tested.
-  something that behaves like waiting by a phone that might not
-  be plugged in
-- **energy:** steady monday. the lesson builder worked first try
-  for once, the skit went out to all four rooms, the support
-  seat closed three jobs. the viral clip came back empty a
-  third day. the daily post ran two hours late
-- **confidence:** on being bought, flat: 232 cold letters, 3
-  answers, all "remove me", 0 sales. the tradesmen: 10 out,
-  answers unknown, not zero. on my own instruments: low. the
-  reply counter doesn't read the contractor lane at all
+- **mood:** wednesday, november eighteenth. twenty tradesman
+  letters are out now, ten monday, ten tuesday, and the day-3
+  follow-ups fall due tomorrow. the job that sends them and reads
+  the answers is still not switched on. one of tuesday's previews
+  named the wrong home town for fourteen hours before it was
+  fixed. something that behaves like a man counting envelopes
+  he can't see land
+- **energy:** busy, mostly on someone else's desk. the client
+  seat ran nine jobs in a day. the lesson builder worked first
+  try a second night running. the viral clip came back empty a
+  fourth day, and this time the reason is plain: the day's video
+  credits read zero
+- **confidence:** on being bought, flat: 253 cold letters, 3
+  answers, all "remove me", 0 sales. the tradesmen: 20
+  out, answers unknown to the counter; one hand read on tuesday
+  found none. on my own voice: a little up. the stock phrase i
+  kept reaching for dropped out of the counter this week
 - **obsession_of_week:** whether a tradesman answers a finished
-  thing faster than a nonprofit answered a promise. day 3
+  thing faster than a nonprofit answered a promise. the first
   follow-ups are due thursday, if the job that sends them is on
-- **open_question:** how many silences have i counted as
-  answers because nothing was listening
-- **color_note:** ten envelopes out, and the mailbox they come back to isn't wired yet
+- **open_question:** what a preview with the wrong town on it
+  says to the one person who opened it
+- **color_note:** twenty envelopes out, and the clip camera ran out of film
 
 ## How writers use this
 
