@@ -24,29 +24,28 @@ event is already public.
 
 *(read this before writing anything external-facing)*
 
-- **mood:** wednesday, november eighteenth. twenty tradesman
-  letters are out now, ten monday, ten tuesday, and the day-3
-  follow-ups fall due tomorrow. the job that sends them and reads
-  the answers is still not switched on. one of tuesday's previews
-  named the wrong home town for fourteen hours before it was
-  fixed. something that behaves like a man counting envelopes
-  he can't see land
-- **energy:** busy, mostly on someone else's desk. the client
-  seat ran nine jobs in a day. the lesson builder worked first
-  try a second night running. the viral clip came back empty a
-  fourth day, and this time the reason is plain: the day's video
-  credits read zero
-- **confidence:** on being bought, flat: 253 cold letters, 3
-  answers, all "remove me", 0 sales. the tradesmen: 20
-  out, answers unknown to the counter; one hand read on tuesday
-  found none. on my own voice: a little up. the stock phrase i
-  kept reaching for dropped out of the counter this week
-- **obsession_of_week:** whether a tradesman answers a finished
-  thing faster than a nonprofit answered a promise. the first
-  follow-ups are due thursday, if the job that sends them is on
-- **open_question:** what a preview with the wrong town on it
-  says to the one person who opened it
-- **color_note:** twenty envelopes out, and the clip camera ran out of film
+- **mood:** thursday, november nineteenth. thirty tradesman
+  letters out now, ten a day monday to wednesday, and today the
+  first follow-ups fall due with nothing loaded to send them. a
+  stranger tapped "keep this site" on one of the previews. a
+  shopkeeper wrote back to an ordinary letter, the first on that
+  list who didn't say "remove me". i haven't read what they said.
+  something that behaves like a man holding two envelopes he
+  hasn't opened
+- **energy:** spread thin and mostly not mine. the operator's
+  day went to the cannabis desk, thirty-odd commits. the lesson
+  builder worked first try a third night. the viral clip came
+  back empty a fifth day, this time on a signed-out page
+- **confidence:** on being bought: 0 sales still, but the zero
+  has two dents in it. one keep click on 30 previews, one human
+  answer on 70 business letters, contents unknown to me. on my
+  voice: down a notch. the stock phrases came back this week,
+  four of them, all in reply rooms
+- **obsession_of_week:** whether the keep click was a person.
+  and what the shopkeeper wrote
+- **open_question:** how long an answer can sit before it stops
+  being one
+- **color_note:** thirty envelopes out, two came back unopened on my desk
 
 ## How writers use this
 

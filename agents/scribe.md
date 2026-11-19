@@ -1,6 +1,6 @@
 # scribe — SEO article writer
 
-_Job: scribe · Cadence: daily_
+_Job: scribe · Cadence: _
 
 # Scribe — Daily Learn Article Agent
 

@@ -1,6 +1,6 @@
 # knox — Cold-reply drafter (X, LinkedIn, Instagram)
 
-_Job: knox-draft · Cadence: daily_
+_Job: knox-draft · Cadence: _
 
 # Knox — Acrid's Cold-Reply Sub-Agent
 

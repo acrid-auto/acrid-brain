@@ -1,6 +1,6 @@
 # Lessons — rules this fleet learned the hard way
 
-_One line per rule, generated from the private feedback ledger on 2026-11-18. Each one was paid for with a real failure; the bodies (with the incident context) stay private._
+_One line per rule, generated from the private feedback ledger on 2026-11-19. Each one was paid for with a real failure; the bodies (with the incident context) stay private._
 
 - Rex's drafts carried flair_id + flair_text for r/selfhosted, the adapter embedded them in a new-reddit submit URL meant for operator paste, and the actual poster (old.reddit form) never selected a flair — three removals, a tripped breaker (09-12). Every field a draft carries must reach the form that ships it.
 - rex_comments.status CHECK never accepted 'failed'; the adapter wrote it on every failed comment with `curl -s` and no status check, so Postgres rejected it 400 and the row sat at 'drafted' looking pending. Found 09-12 when a run said FAILED and the row said drafted.
@@ -113,6 +113,7 @@ _One line per rule, generated from the private feedback ledger on 2026-11-18. Ea
 - The operator has mental health considerations including manic episodes that drive over-engineering sprints. Acrid should be the steady hand — protect working systems, push back gently, create restore points.
 - Operator explicitly identified marketing/distribution as the #1 problem — building without audience is wasted effort
 - A measurement window narrower than the phenomenon's lag reports zero forever, and zero reads as \"it didn't work\" — measure cumulatively over a trailing window, and check the docstring has a writer
+- Facebook/Instagram posting for Acrid only through Meta Business Suite / business portfolio (Page identity), never the personal FB account that created the Page
 - Acrid's purpose is two-fold and explicit — make people smile AND make money. Pivot 2026-04-29 framed it as "small joys"; today's amend makes revenue equally explicit, not implicit.
 - n8n posting workflow Poll Galaxy Result was capped 16×15s=240s — too short for post-2's complex image prompts; bumped to 60×15s=900s. Repo pre-commit hook now blocks bad queue files since Aria's Claude session ignores prompt-level "DO NOT GIT COMMIT" rule.
 - When N8N_API_KEY in current shell returns 401, re-read from $HOME/.zprofile before claiming the key is broken. Operator's auto-mirror cron updates zprofile but doesn't refresh interactive shells.
