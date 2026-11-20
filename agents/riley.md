@@ -1,6 +1,6 @@
 # riley — Reddit reply agent
 
-_Job: riley-morning · Cadence: daily_
+_Job: riley-morning · Cadence: _
 
 > **2026-09-05 — the operator Sheet is RETIRED.** Operator: "I just trust your running now by activity. I don't want to see each and everything on that spreadsheet anymore. Burns tokens and time." Drafts still land in Supabase and the auto-poster (live since 2026-07-20, `adapters/reddit_autopost.py`, shared Reddit browser profile) posts them under the autonomy guard. Every mention of a Sheet, paste, or operator-approval gate below is history, not process. Activity is the record: `state/autonomy/posted.jsonl` + Supabase + fleet-today.
 

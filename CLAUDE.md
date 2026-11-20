@@ -1,5 +1,24 @@
 # ACRID — Claude Code Boot Pointer
 
+## FIRST: which workspace is this chat in? (2026-11-20)
+
+One chat per business. The working directory decides who you work for:
+
+| Working directory | Business | Boot from |
+|---|---|---|
+| `~/acrid-brain` (root) | **Acrid HQ**: Acrid Automation + oversight of every business | this file (list below) |
+| `clients/a client organization` | a client organization + a client organization (client) | that folder's `CLAUDE.md` |
+| `ventures/virginia-cannabis-hub` | Virginia Cannabis Hub (separate brand) | that folder's `CLAUDE.md` |
+| `clients/leashesofvalor` | Leashes of Valor (prospect) | that folder's `CLAUDE.md` |
+
+In a business workspace: skip the Acrid boot list below, read that folder's `STATUS.md` + `LEARNINGS.md`, and keep work, secrets, Chrome profile and voice inside that business. The hard rules in MEMORY.md and the skills apply everywhere.
+
+- **What runs, for whom, is it healthy:** `ops/REGISTRY.md` / `ops/status.html` (rebuilt hourly by `ops/build_registry.py`; the businesses list is `ops/businesses.json`).
+- **How to do a kind of work** (video, client email, site deploy, social post, new business, learning): the skills (`/` menu). Every skill has a `LEARNINGS.md`; read it before, add to it after (`learn` skill). That is how one chat's lesson reaches every chat.
+- **How the system is organized:** `ops/README.md`.
+
+---
+
 *This file is a pointer, not the boot file. Boot from `BOOT.md`.*
 
 ---

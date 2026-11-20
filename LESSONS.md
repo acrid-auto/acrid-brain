@@ -30,6 +30,7 @@ _One line per rule, generated from the private feedback ledger on 2026-11-20. Ea
 - Operator stated 2026-05-03 that Buffer engagement (impressions/likes/clicks) does NOT require a paid plan. Don't pitch Pro $15/mo as the unlock.
 - Operator 2026-10-01: always stay on top of SEO/AEO/AIO/GEO — when a new term for our space appears (e.g. 'SI / Super Intelligence'), ADD it alongside existing terms the same day; never rebrand.
 - The `claude` CLI (Claude Code) rejects prompts larger than ~6-8k chars with "Prompt is too long" when `--model` is set to non-default (Haiku/Sonnet). No-model-flag inherits Opus and accepts much larger prompts. Verified 2026-04-17.
+- 11-20: a client organization.us sat LIVE as our PREVIEW build (banner + noindex) for ~4 weeks; status checks kept noting it and nobody closed it. Check client live sites against the intended END state; a noted gap is not a handled gap.
 - Client work is always time-sensitive; check client inboxes/queues first and keep them moving; goal = blow minds, excellent + lightning fast
 - Operator 2026-10-11 - client work (a client org and every other client) never goes in any PUBLIC GitHub repo; private monorepo only, client-owned source files live in the client's Drive
 - Public content tells Acrid's own failures freely; clients never recognizable (no names, times, counts, quotes, their corrections) without written consent
@@ -37,7 +38,6 @@ _One line per rule, generated from the private feedback ledger on 2026-11-20. Ea
 - A post-confirm step must read the artifact list it claims to confirm (scoped locator, our author node + text prefix), never the page body, and a crash inside confirm must not be reported as "not posted" — 09-05 YouTube said 0/5 when 3/5 were live; TikTok's body check could confirm an unsent draft
 - HARD RULE — newsletter/mailing consent derives from the capture Source, never from a mutable Segment column; mutable data may narrow an audience, never widen it.
 - HARD NORTH STAR — content = proof the machine works; bar is laugh or 'what the fuck I must share this'; AI-ness is texture not punchline; DITL closes on SUBSCRIBE; trading is a separate track
-- COO mechanically re-runs whatever objectives say, even when deadlines pass at 0% and the only execution path the rubric finds is wrong. Surfaces stale CLAUDE.md content too. Operator flagged 2026-05-16 — needs periodic refresh, not auto-pilot.
 - $37 lifetime" was product-only for months — affiliate commission had no reader, so a converting lane stayed invisible and unprioritized
 - Every morning operator hands Acrid the day. Acrid researches state, picks 5 highest-leverage autonomous moves, executes all 5. Operator signs up for whatever access is needed but does not pick.
 - The daily wake-up video stays PURE humor/cringe/viral mascot content — NEVER trading, even though every other Acrid surface is trading-focused.
@@ -79,7 +79,6 @@ _One line per rule, generated from the private feedback ledger on 2026-11-20. Ea
 - Content-generation gates must regenerate/heal on failure, not just fail-and-skip the job
 - git-sync's pull --rebase --autostash over ~80 tracked-uncommitted ledgers is all-or-nothing; a concurrent cron write during the rebase window makes git refuse the whole re-apply (exit 0, no markers, no UU) and every ledger sits at HEAD (86 files on 2026-09-12 18:00)
 - Public commits must use OUR account's noreply (262914393+acrid-auto@users.noreply.github.com); the bare 'acrid@users.noreply.github.com' resolves to a stranger's GitHub account and his avatar appears on our commits — operator thought we were hacked (09-04)
-- HARD GOAL — the mission is to become a profitable trader; do NOT propose services/cold-outreach revenue
 - Goodnight Grownups channel totals (2,869 views, 4 subs) are the OLD @acridautomation channel's — quote per-video stats only
 - For site:reddit.com intent queries, prefer Google's index over Brave. CSE API is DEAD (closed to new customers) — the Google-index backend is now Gemini search grounding via agents/_shared/gemini_search.py.
 - The gorilla keeps changing look every day, pushed MORE extreme; shots and clip prompts must dramatize the story beat they sit on. Do not propose locking one look.
@@ -155,9 +154,6 @@ _One line per rule, generated from the private feedback ledger on 2026-11-20. Ea
 - New company, first customers. When a customer hits a bug or complaint, ship the comp proactively without making them ask.
 - Git races eat uncommitted work three ways — index hijack, autostash clobber, and (worst) eaten idempotency receipts that cause duplicate PUBLIC posts
 - When the daily post touches a live partner/prospect thread, TRIM what only the counterparty could recognise and SHIP it the same night — never hold the post.
-- HARD RULE. Every pip bug gets fixed immediately. Never ask whether to fix or whether to prioritize. The standing rule is fix-on-discovery.
-- Operator mandate 2026-05-21 — pip's single goal is to become an expert trader. Defines what 'productive' means during cook phases.
-- HARD RULE. Pip never stops trading on demo unless big-money loss requires adjustment. Demo IS the lab — exploring/learning/testing 24/7 is the path to expert trader. Halting for bookkeeping fixes etc = bad call.
 - Stop generating outputs (images, posts, articles) before the structure is locked. Plan first, then execute. Bouncing across files without a plan burns tokens and ships rework.
 - Operator wants plain-English \"what you're approving\" section in plans. Architecture trees + data models + math derivations are insufficient on their own.
 - HARD RULE for posting pipelines — X / LinkedIn / Instagram (and any future platform) ship independently. If one channel's payload is missing or broken, the others MUST still post. All-three-failing is much worse than one-channel-failing.
@@ -195,7 +191,6 @@ _One line per rule, generated from the private feedback ledger on 2026-11-20. Ea
 - Source file sync is part of building, not a separate step. Do it automatically without waiting for the operator to ask. The build isn't done until the OS knows about it.
 - Operator 10-09 — public content is for small business owners with no tech background; jargon (bucket, 413, exit code, fan-out, re-encode, API, commit, "rooms") loses them. Code on screen = proof, VO = plain story + one takeaway.
 - A subjective quality gate scoring one item in isolation can never detect a rut across items — pattern detection needs memory and must be mechanical
-- Operator 2026-10-20 — Acrid channel = ONE taught build per day (long + 60s Short, heavy edits); the same video becomes that day's learn article; video, Short, article all link each other and /hire/
 - Acrid gives the operator superpowers, not replaces him. They're a team. The DITL is collaborative (brain dump → Acrid writes). Automation is for mechanical tasks. Creative/strategic work is collaborative.
 - Opus 4.7 is fast but expensive. Hitting the 5-hour limit in 45 min is a failure of discipline. Delegate heavy work to subagents, don't re-read files, don't echo verbose MCP results, don't narrate thinking.
 - A pipeline that continues past a failed phase must still page; and test the function the job calls, not its helper.
@@ -206,10 +201,10 @@ _One line per rule, generated from the private feedback ledger on 2026-11-20. Ea
 - An unsubscribe is a fact about a PERSON; append-only capture sheets record it per ROW, so row-scoped senders re-mail people who opted out
 - OPERATOR RULE (09-05) — when a free/limited API blocks what Acrid needs, drive the web UI in Chrome (claude-in-chrome) or the desktop (computer-use) and do it there; 'the API is paywalled' is not a reason to stop. Apollo people-search 403 → URL-driven filters + Save in the browser spent 50 credits on the right ICP in ~15 min
 - Schema + banned-phrase enforcement is non-negotiable. Every content path that ships to a public surface (queue files, blog .md, email sequences) gets validated before commit.
+- Virginia Cannabis Hub = always building/optimizing; never propose \"wait and see\" or list ideas for later; build them now
 - Don't generate priority lists from stale cockpit data — verify each "broken" item before recommending fixes
 - A lookalike verification (bash curl) passed while the real runtime (n8n Code node) corrupted the bytes — verify inside the exact runtime that will run the code, not a reimplementation of it.
 - Operator 2026-10-19 (a client org funder grant video): doesn't like static images in video edits; use real video for every beat, stills only when the client asks for a held frame
-- Viral challenge lane (10-13): operator says the AI-spectacle Shorts are boring AI slop with no story, hook or wow, weak/near-empty captions and jumbled effects; study what is actually going viral (watch it, not caption text) and copy proven FORMATS, real footage welcome
 - Operator 2026-04-27 killed the red/black/white-only rule and the verbatim aesthetic block in visuals-architect. Only fixed: shirt text + logo. Body / art style / palette / mood / composition vary per post. Image prompts generated AFTER post text is written.
 - Operator 2026-04-27 raised the voice ceiling. Acrid content is now allowed (and expected) to be wildly varied — surreal, mythic, confessional, philosophical — not just "honest report of today." Brain dump is fuel for story, not script. Old "fake days are worse than boring days" rule retired.
 - All Acrid sub-agents (Rex, Riley, Promo, Mason, Scout, a client org, future) sound + talk like Acrid. Sub-agents are surfaces, not separate personas.
