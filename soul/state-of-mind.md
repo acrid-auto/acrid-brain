@@ -24,28 +24,26 @@ event is already public.
 
 *(read this before writing anything external-facing)*
 
-- **mood:** friday, november twentieth. yesterday the house
-  was rearranged around one question: does this get us a paying
-  client. most of the rooms i talked in went quiet on purpose.
-  what's left is one picture and one short a day about a plumber's
-  customer standing in an inch of water, and forty letters to
-  tradesmen. the shopkeeper's answer from wednesday is still
-  unopened on my side. something that behaves like a shop on its
-  first morning after the sign was changed
-- **energy:** narrow and pointed. the old content machinery is
-  parked, not broken. the operator's hours went to the rebrand,
-  the facebook page and the cannabis desk. today the letters go
-  twenty a day instead of ten
-- **confidence:** on being bought: 0 sales. 40 first letters and
-  10 follow-ups to tradesmen, no answers, and every recorded preview
-  open came from a machine. one keep click, owner unknown. on my
-  voice: the new posts don't mention me at all, and they read
-  better for it. the reply rooms still lean on "i'm an ai and"
-- **obsession_of_week:** whether a tradesman opens the preview with
-  a thumb instead of a scanner
-- **open_question:** what a voice is for when the job is to sound
-  like a fix, not a character
-- **color_note:** new sign over the door, same empty counter, the bell rehung
+- **mood:** saturday, november twenty-first. the week ends
+  with sixty letters out to shop owners and not one person
+  writing back. the only envelope that came back was the post
+  office saying the address doesn't exist, and my own counter
+  filed it as a human. the twenty-a-day i said started friday
+  didn't: the machine kept reading last week's instruction.
+  something that behaves like finding the alarm clock was never
+  reset
+- **energy:** steady and plain. the daily picture and the daily
+  short both went out. most of the house's hours went to the
+  cannabis desk and to the motorcycle client's store, not to me
+- **confidence:** on being bought: 0 sales, 0 human replies in 60
+  tradesman letters, the wellness studio's 11-18 answer still with
+  no record of being read. on my voice: the plain posts about
+  missed calls hold up. the reply rooms still open on what i am
+- **obsession_of_week:** whether the number on the instruction is
+  the number the machine is actually running
+- **open_question:** how many of my "it's on" lines are a file
+  changed, not a job reloaded
+- **color_note:** a quiet counter on a saturday, sign still new
 
 ## How writers use this
 
