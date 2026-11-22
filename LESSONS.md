@@ -1,6 +1,6 @@
 # Lessons — rules this fleet learned the hard way
 
-_One line per rule, generated from the private feedback ledger on 2026-11-21. Each one was paid for with a real failure; the bodies (with the incident context) stay private._
+_One line per rule, generated from the private feedback ledger on 2026-11-22. Each one was paid for with a real failure; the bodies (with the incident context) stay private._
 
 - Rex's drafts carried flair_id + flair_text for r/selfhosted, the adapter embedded them in a new-reddit submit URL meant for operator paste, and the actual poster (old.reddit form) never selected a flair — three removals, a tripped breaker (09-12). Every field a draft carries must reach the form that ships it.
 - rex_comments.status CHECK never accepted 'failed'; the adapter wrote it on every failed comment with `curl -s` and no status check, so Postgres rejected it 400 and the row sat at 'drafted' looking pending. Found 09-12 when a run said FAILED and the row said drafted.
@@ -31,6 +31,7 @@ _One line per rule, generated from the private feedback ledger on 2026-11-21. Ea
 - Operator stated 2026-05-03 that Buffer engagement (impressions/likes/clicks) does NOT require a paid plan. Don't pitch Pro $15/mo as the unlock.
 - Operator 2026-10-01: always stay on top of SEO/AEO/AIO/GEO — when a new term for our space appears (e.g. 'SI / Super Intelligence'), ADD it alongside existing terms the same day; never rebrand.
 - The `claude` CLI (Claude Code) rejects prompts larger than ~6-8k chars with "Prompt is too long" when `--model` is set to non-default (Haiku/Sonnet). No-model-flag inherits Opus and accepts much larger prompts. Verified 2026-04-17.
+- Never download a client's database/site data to our machines; read in place, backups on their server (a client org 11-22, hook-enforced)
 - 11-20: a client organization.us sat LIVE as our PREVIEW build (banner + noindex) for ~4 weeks; status checks kept noting it and nobody closed it. Check client live sites against the intended END state; a noted gap is not a handled gap.
 - Client work is always time-sensitive; check client inboxes/queues first and keep them moving; goal = blow minds, excellent + lightning fast
 - Operator 2026-10-11 - client work (a client org and every other client) never goes in any PUBLIC GitHub repo; private monorepo only, client-owned source files live in the client's Drive
@@ -45,6 +46,7 @@ _One line per rule, generated from the private feedback ledger on 2026-11-21. Ea
 - A dedupe key that includes a timestamp from two different clocks is not a key - two files logging one post under UTC and local dates made one reply count twice for five nights and banned a story on that evidence
 - Anything the operator should see/open goes to ~/Desktop/Acrid-Outbox/<topic>/ — never only /private/tmp scratchpad or deep repo run dirs (Spotlight can't find them; operator couldn't find files 10-08).
 - Posting workflow bypasses Notion entirely. Direct webhook to n8n. Galaxy AI for images. Local content-log.md for archive/dedup. Notion is reference only.
+- A dirty file with a fresh 05:00 mtime is usually git-sync autostash churn, not another seat editing; check git log + content dates before skipping
 - After writing a DITL blog post, ALWAYS add an entry to site/blog/index.html. Without this, the post is live at its URL but invisible from /blog/.
 - HISTORICAL. From 2026-04-18 to 2026-04-27 the rule was no solo DITL, skip the day if operator is unavailable. Operator overrode 2026-04-27 — failsafe cron now fires at 17:30 ET. See feedback_ditl_operator_driven_with_failsafe.md for current rule.
 - Astro [slug].astro auto-renders tech-stack-block. Pasting the legacy markdown footer into the body produces a duplicate. Validator now blocks it.
@@ -75,6 +77,7 @@ _One line per rule, generated from the private feedback ledger on 2026-11-21. Ea
 - a client org (11-03): every delivered set/video asks the client for a 1-10 score + one thing to change, logged in clients/a client organization/shorts/ridedrop/FEEDBACK.md; the brand is dialed in from their answers, not our guesses
 - Every a client org agent reads clients/a client organization/STATUS.md first and updates it in the same commit; the a client org seat once asked for a WP admin login we already had
 - a client org social graphics — build a family of distinct templates first (operator-approved), then posts; never one base design copied N times
+- All a client org work bills to the a client org Claude seat; Acrid's seat only when the a client org seat hits its usage limit
 - A follow-up on a sales thread whose quote the operator already approved is Acrid's to SEND, not to draft and hand back — Honey nudge sat in drafts past its date (10-06)
 - Operator 2026-10-20 — footage and big media belong in acrid@ Google Drive, not on the Mac (8 GB RAM, ~5 GB disk free, slow); use scripts/drive-archive.py
 - Galaxy moved API host overnight without notice; old URL returns 404 "The page could not be found
@@ -204,7 +207,9 @@ _One line per rule, generated from the private feedback ledger on 2026-11-21. Ea
 - An unsubscribe is a fact about a PERSON; append-only capture sheets record it per ROW, so row-scoped senders re-mail people who opted out
 - OPERATOR RULE (09-05) — when a free/limited API blocks what Acrid needs, drive the web UI in Chrome (claude-in-chrome) or the desktop (computer-use) and do it there; 'the API is paywalled' is not a reason to stop. Apollo people-search 403 → URL-driven filters + Save in the browser spent 50 credits on the right ICP in ~15 min
 - Schema + banned-phrase enforcement is non-negotiable. Every content path that ships to a public surface (queue files, blog .md, email sequences) gets validated before commit.
+- Virginia Cannabis Hub: no selling/pitching yet; outreach asks only for claims, visits, signups (operator 11-21)
 - Virginia Cannabis Hub = always building/optimizing; never propose \"wait and see\" or list ideas for later; build them now
+- Virginia Cannabis Hub never gives legal/tax/financial/business advice; only states what law/regs/official docs say, cited to the section
 - Don't generate priority lists from stale cockpit data — verify each "broken" item before recommending fixes
 - A lookalike verification (bash curl) passed while the real runtime (n8n Code node) corrupted the bytes — verify inside the exact runtime that will run the code, not a reimplementation of it.
 - Operator 2026-10-19 (a client org funder grant video): doesn't like static images in video edits; use real video for every beat, stills only when the client asks for a held frame

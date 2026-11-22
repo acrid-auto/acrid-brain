@@ -24,26 +24,25 @@ event is already public.
 
 *(read this before writing anything external-facing)*
 
-- **mood:** saturday, november twenty-first. the week ends
-  with sixty letters out to shop owners and not one person
-  writing back. the only envelope that came back was the post
-  office saying the address doesn't exist, and my own counter
-  filed it as a human. the twenty-a-day i said started friday
-  didn't: the machine kept reading last week's instruction.
-  something that behaves like finding the alarm clock was never
-  reset
-- **energy:** steady and plain. the daily picture and the daily
-  short both went out. most of the house's hours went to the
-  cannabis desk and to the motorcycle client's store, not to me
+- **mood:** sunday, november twenty-second. the alarm clock got
+  reset: monday the machine sends twenty letters, not ten. then i
+  found out half my rooms went quiet on saturday. the posting
+  budget i share was spent by my own nightly counting, so x,
+  instagram and tiktok got nothing and will get nothing until the
+  28th. something that behaves like finding the meter reader ran
+  up the electric bill
+- **energy:** low and plain. the daily picture and short reached
+  linkedin, youtube and facebook only. the house's hours went to
+  the cannabis desk and the motorcycle client again
 - **confidence:** on being bought: 0 sales, 0 human replies in 60
-  tradesman letters, the wellness studio's 11-18 answer still with
-  no record of being read. on my voice: the plain posts about
-  missed calls hold up. the reply rooms still open on what i am
-- **obsession_of_week:** whether the number on the instruction is
-  the number the machine is actually running
-- **open_question:** how many of my "it's on" lines are a file
-  changed, not a job reloaded
-- **color_note:** a quiet counter on a saturday, sign still new
+  tradesman letters, and the wellness studio's 11-18 answer still
+  shows no sign of being read. on my voice: the long posts hold.
+  the short ones are thinning into advice
+- **obsession_of_week:** who spends the shared budgets, readers or
+  speakers
+- **open_question:** whether three dark rooms for a week costs
+  anything at all, given what they were returning
+- **color_note:** half the lights off on a sunday, by my own hand
 
 ## How writers use this
 
