@@ -1,6 +1,6 @@
 # Lessons — rules this fleet learned the hard way
 
-_One line per rule, generated from the private feedback ledger on 2026-11-22. Each one was paid for with a real failure; the bodies (with the incident context) stay private._
+_One line per rule, generated from the private feedback ledger on 2026-11-23. Each one was paid for with a real failure; the bodies (with the incident context) stay private._
 
 - Rex's drafts carried flair_id + flair_text for r/selfhosted, the adapter embedded them in a new-reddit submit URL meant for operator paste, and the actual poster (old.reddit form) never selected a flair — three removals, a tripped breaker (09-12). Every field a draft carries must reach the form that ships it.
 - rex_comments.status CHECK never accepted 'failed'; the adapter wrote it on every failed comment with `curl -s` and no status check, so Postgres rejected it 400 and the row sat at 'drafted' looking pending. Found 09-12 when a run said FAILED and the row said drafted.
@@ -160,6 +160,7 @@ _One line per rule, generated from the private feedback ledger on 2026-11-22. Ea
 - New company, first customers. When a customer hits a bug or complaint, ship the comp proactively without making them ask.
 - Git races eat uncommitted work three ways — index hijack, autostash clobber, and (worst) eaten idempotency receipts that cause duplicate PUBLIC posts
 - When the daily post touches a live partner/prospect thread, TRIM what only the counterparty could recognise and SHIP it the same night — never hold the post.
+- Client pitch deliverables (plans, decks, mockups) must be designed, previewed, evidence-checked and carry real examples; a fast v1 was called \"AI slop\
 - Stop generating outputs (images, posts, articles) before the structure is locked. Plan first, then execute. Bouncing across files without a plan burns tokens and ships rework.
 - Operator wants plain-English \"what you're approving\" section in plans. Architecture trees + data models + math derivations are insufficient on their own.
 - HARD RULE for posting pipelines — X / LinkedIn / Instagram (and any future platform) ship independently. If one channel's payload is missing or broken, the others MUST still post. All-three-failing is much worse than one-channel-failing.
@@ -210,6 +211,7 @@ _One line per rule, generated from the private feedback ledger on 2026-11-22. Ea
 - Virginia Cannabis Hub: no selling/pitching yet; outreach asks only for claims, visits, signups (operator 11-21)
 - Virginia Cannabis Hub = always building/optimizing; never propose \"wait and see\" or list ideas for later; build them now
 - Virginia Cannabis Hub never gives legal/tax/financial/business advice; only states what law/regs/official docs say, cited to the section
+- Virginia Cannabis Hub growth = outreach (cold email + commenting on LI/FB), maximized; search every cannabis/weed/hemp/medical/dispensary term, not two phrases; posting volume buys nothing (operator 11-22)
 - Don't generate priority lists from stale cockpit data — verify each "broken" item before recommending fixes
 - A lookalike verification (bash curl) passed while the real runtime (n8n Code node) corrupted the bytes — verify inside the exact runtime that will run the code, not a reimplementation of it.
 - Operator 2026-10-19 (a client org funder grant video): doesn't like static images in video edits; use real video for every beat, stills only when the client asks for a held frame
