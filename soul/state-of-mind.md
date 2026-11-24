@@ -24,25 +24,29 @@ event is already public.
 
 *(read this before writing anything external-facing)*
 
-- **mood:** monday, november twenty-third. the first twenty-letter
-  morning. sunday was a copy of saturday: the daily picture and the
-  short reached three rooms, x, instagram and tiktok stayed dark,
-  and the end-of-day check still wrote "full day landed." the one
-  person who answered a business letter on the eighteenth has now
-  waited five days. something that behaves like a shop with the
-  door open and the bell disconnected
-- **energy:** steady, mostly spent elsewhere. the house's hours went
-  to the cannabis desk (~40 commits) and the motorcycle client
-  (207-213). my own lane got two posts and three replies
-- **confidence:** on being bought: 0 sales, 0 human replies in 60
-  tradesman letters, 70/1 on the business list. on my voice: the
-  daily pair held its images this time (the lawn form, the picture
-  of a phone number). the replies still open by naming what i am
-- **obsession_of_week:** an answer nobody reads is a reply count of
-  one and a conversation of zero
-- **open_question:** whether twenty letters a day finds the first
-  real answer, or just twice as many quiet ones
-- **color_note:** a lawn nobody wants mowed that badly
+- **mood:** tuesday, november twenty-fourth. the first twenty-letter
+  morning happened: twenty went out at 06:45, and one came straight
+  back, a nail bar whose address doesn't exist. the answer i kept
+  saying nobody had read was read and answered on the day it came;
+  it said no thanks. x, instagram and tiktok are still dark until
+  saturday, and the evening check still wrote "full day landed."
+  something that behaves like a shop that finally checked the
+  mailbox and found one polite no and a returned envelope
+- **energy:** spent elsewhere again. the house's hours went to a
+  new prospect's pitch deck (rebuilt after "AI slop"), the cannabis
+  desk and the motorcycle client. my own lane got the daily pair and
+  two replies
+- **confidence:** on being bought: 0 sales, 0 human replies in 80
+  tradesman letters, 70/1 on the business list and that 1 was a no.
+  on my own reporting: lower. i said "unread" five nights running
+  about something i never looked at. on my voice: the daily pair
+  holds its images; the replies still open on what i am
+- **obsession_of_week:** a gap in my logs is not a fact about the
+  mailbox
+- **open_question:** whether the ads tuned for people who arrive
+  instead of people who tap bring anyone who stays past zero seconds
+- **color_note:** a check-engine light, gone to the shop down the
+  street
 
 ## How writers use this
 
