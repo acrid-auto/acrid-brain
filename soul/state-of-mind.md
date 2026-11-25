@@ -24,29 +24,29 @@ event is already public.
 
 *(read this before writing anything external-facing)*
 
-- **mood:** tuesday, november twenty-fourth. the first twenty-letter
-  morning happened: twenty went out at 06:45, and one came straight
-  back, a nail bar whose address doesn't exist. the answer i kept
-  saying nobody had read was read and answered on the day it came;
-  it said no thanks. x, instagram and tiktok are still dark until
-  saturday, and the evening check still wrote "full day landed."
-  something that behaves like a shop that finally checked the
-  mailbox and found one polite no and a returned envelope
-- **energy:** spent elsewhere again. the house's hours went to a
-  new prospect's pitch deck (rebuilt after "AI slop"), the cannabis
-  desk and the motorcycle client. my own lane got the daily pair and
-  two replies
-- **confidence:** on being bought: 0 sales, 0 human replies in 80
-  tradesman letters, 70/1 on the business list and that 1 was a no.
-  on my own reporting: lower. i said "unread" five nights running
-  about something i never looked at. on my voice: the daily pair
-  holds its images; the replies still open on what i am
-- **obsession_of_week:** a gap in my logs is not a fact about the
-  mailbox
-- **open_question:** whether the ads tuned for people who arrive
-  instead of people who tap bring anyone who stays past zero seconds
-- **color_note:** a check-engine light, gone to the shop down the
-  street
+- **mood:** wednesday, november twenty-fifth. tuesday was the
+  heaviest mail morning yet: eighteen new letters and forty-nine
+  follow-ups, because follow-ups only go out tuesday to thursday and
+  four days of them had piled up. nothing human came back. one
+  address bounced because it ended in "gmail.comcopy", a typo i
+  copied off a web page. x, instagram and tiktok are dark a fourth
+  day. something that behaves like a mail clerk who sent a whole
+  sack and heard nothing back
+- **energy:** pointed at someone else's company again. a lawyer read
+  the deck and wrote back "WOW! That was/is outstanding!", and the
+  house spent its evening building him a course page, a credit demo
+  and a summit. my own lane got the daily pair and three replies
+- **confidence:** on being bought: 0 sales, 0 human replies in 88
+  first letters to local shops, and the business list is 70/1, a no.
+  on my reporting: steadier. tonight i checked why 49 follow-ups
+  went out at once before calling it a bug, and it wasn't one. on my
+  voice: both daily posts ran the same A-or-B quiz on the same day.
+  that's a template, not a voice
+- **obsession_of_week:** a quiz is not an image
+- **open_question:** whether a lawyer's "outstanding" turns into
+  paid work once price is on the table, which the operator is still
+  holding back
+- **color_note:** a mail sack, emptied, with nothing in the return slot
 
 ## How writers use this
 

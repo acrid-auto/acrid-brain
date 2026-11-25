@@ -1,6 +1,6 @@
 # Lessons — rules this fleet learned the hard way
 
-_One line per rule, generated from the private feedback ledger on 2026-11-24. Each one was paid for with a real failure; the bodies (with the incident context) stay private._
+_One line per rule, generated from the private feedback ledger on 2026-11-25. Each one was paid for with a real failure; the bodies (with the incident context) stay private._
 
 - Rex's drafts carried flair_id + flair_text for r/selfhosted, the adapter embedded them in a new-reddit submit URL meant for operator paste, and the actual poster (old.reddit form) never selected a flair — three removals, a tripped breaker (09-12). Every field a draft carries must reach the form that ships it.
 - rex_comments.status CHECK never accepted 'failed'; the adapter wrote it on every failed comment with `curl -s` and no status check, so Postgres rejected it 400 and the row sat at 'drafted' looking pending. Found 09-12 when a run said FAILED and the row said drafted.
@@ -93,6 +93,7 @@ _One line per rule, generated from the private feedback ledger on 2026-11-24. Ea
 - A shared-path guard must read only what it gates: a pre-commit hook that greps the working tree lets one agent's untracked file block every other agent's commits
 - Metadata guards cannot see silence or blankness - decode the artifact and measure it, and verify on the surface the recipient actually uses
 - A shared helper that \"recovers\" by forcing a mode it assumes silently breaks every caller in a different mode — recover to the CALLER's state, and make die() leave a picture
+- When the operator says "don't respond yet" / "hold" on an outgoing email, only an explicit "send" releases it; "that works, but also add X" is an edit, not a go. Hub press reply 11-24 went out early.
 - The fleet's Mac is a laptop: on battery it idle-sleeps within minutes (10-17: at 87%, 20 min after unplugging) or force-sleeps at 1%, stays down until someone presses the button, and wakes into a job stampede that breaks git-sync's lock and sweeps freshly written mirrors back to HEAD. All lanes late, or mirrors with old stamps and new mtimes = read the power-watchdog log and `pmset -g log` first.
 - 2026-04-30 incident — n8n Extract Post fell back IG → LI text when instagram_post missing, Buffer 400'd the post, X+only shipped silently for hours. Lesson + structural fix.
 - HARD RULE — every image_prompt in queue files and DITL markdown must open with the literal phrase 'ACRID THE GORILLA' as the first 3 words; validator only scans first 200 chars, so style-opening pushes the phrase out of window
@@ -113,6 +114,7 @@ _One line per rule, generated from the private feedback ledger on 2026-11-24. Ea
 - Direct Post Pipeline and manual Buffer posts don't include images for LinkedIn. Must always generate + attach image for both X and LinkedIn.
 - Operator 2026-09-29: a LinkedIn reply must @mention the commenter or it is just a comment under our own post; and strangers who reply to our cold comments must get answers. Built that night: browser-first Echo poster (linkedin_browser_reply.py) with a verified mention chip; reply notifications parsed and answered. First live run 3/3 tagged.
 - Re-running an LLM judge on an unchanged artifact is a dice re-roll, not a verification; re-gate only when the fix changed the file
+- Virginia locality research and tracking must cover every county, city AND town with zero gaps, from published sources only, never invented
 - A locked macOS login keychain blocks git's credential helper, which wedges git-sync, which silences every posting lane at once
 - A signed-out web session may serve the product's public marketing page instead of redirecting to a login URL, so auth checks keyed on the login host never fire.
 - The operator has mental health considerations including manic episodes that drive over-engineering sprints. Acrid should be the steady hand — protect working systems, push back gently, create restore points.
