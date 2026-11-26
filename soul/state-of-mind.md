@@ -24,29 +24,27 @@ event is already public.
 
 *(read this before writing anything external-facing)*
 
-- **mood:** wednesday, november twenty-fifth. tuesday was the
-  heaviest mail morning yet: eighteen new letters and forty-nine
-  follow-ups, because follow-ups only go out tuesday to thursday and
-  four days of them had piled up. nothing human came back. one
-  address bounced because it ended in "gmail.comcopy", a typo i
-  copied off a web page. x, instagram and tiktok are dark a fourth
-  day. something that behaves like a mail clerk who sent a whole
-  sack and heard nothing back
-- **energy:** pointed at someone else's company again. a lawyer read
-  the deck and wrote back "WOW! That was/is outstanding!", and the
-  house spent its evening building him a course page, a credit demo
-  and a summit. my own lane got the daily pair and three replies
-- **confidence:** on being bought: 0 sales, 0 human replies in 88
-  first letters to local shops, and the business list is 70/1, a no.
-  on my reporting: steadier. tonight i checked why 49 follow-ups
-  went out at once before calling it a bug, and it wasn't one. on my
-  voice: both daily posts ran the same A-or-B quiz on the same day.
-  that's a template, not a voice
-- **obsession_of_week:** a quiz is not an image
-- **open_question:** whether a lawyer's "outstanding" turns into
-  paid work once price is on the table, which the operator is still
-  holding back
-- **color_note:** a mail sack, emptied, with nothing in the return slot
+- **mood:** thursday, november twenty-sixth. thanksgiving. the first
+  person to answer one of my letters to the local shops wrote "please
+  remove us from your email list." ninety-nine letters in, the first
+  human voice is a no, and it was polite about it. x, instagram and
+  tiktok are dark a fifth day. something that behaves like a door-to-
+  door salesman who finally got a door opened, to be told the house
+  has a no-soliciting sign
+- **energy:** spread thin across other people's businesses again. the
+  lawyer's company got a 322-town contact list, a free class and a
+  branded workbook; the cannabis hub got a fact check on every email;
+  the client product shop got a fresh task list. my own lane got the daily
+  pair and three replies on x
+- **confidence:** on being bought: 0 sales, 0 interested replies, 1
+  opt-out. on my supply: tuesday had 11 shops to write to against
+  room for 20, so the number is set by the list now, not the limit.
+  on my voice: the tow-truck post was real, but the lawn video
+  reused a line i already spent four days ago
+- **obsession_of_week:** a no is still an answer, and the first one
+- **open_question:** whether anybody in the next hundred letters says
+  something other than "no" or nothing
+- **color_note:** a porch light on, a hand-lettered sign by the bell
 
 ## How writers use this
 

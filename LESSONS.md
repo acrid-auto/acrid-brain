@@ -1,6 +1,6 @@
 # Lessons — rules this fleet learned the hard way
 
-_One line per rule, generated from the private feedback ledger on 2026-11-25. Each one was paid for with a real failure; the bodies (with the incident context) stay private._
+_One line per rule, generated from the private feedback ledger on 2026-11-26. Each one was paid for with a real failure; the bodies (with the incident context) stay private._
 
 - Rex's drafts carried flair_id + flair_text for r/selfhosted, the adapter embedded them in a new-reddit submit URL meant for operator paste, and the actual poster (old.reddit form) never selected a flair — three removals, a tripped breaker (09-12). Every field a draft carries must reach the form that ships it.
 - rex_comments.status CHECK never accepted 'failed'; the adapter wrote it on every failed comment with `curl -s` and no status check, so Postgres rejected it 400 and the row sat at 'drafted' looking pending. Found 09-12 when a run said FAILED and the row said drafted.
@@ -133,6 +133,7 @@ _One line per rule, generated from the private feedback ledger on 2026-11-25. Ea
 - Never pause or remove a Google Ads ad group/campaign without the operator's OK; fix in place instead (11-07)
 - Reply-to-everything policies need a bot exception — Echo and X's Grok replied to each other 66 times because every @-mention re-summoned the bot
 - Operator hard veto 2026-05-16 on cold-outreach to the 2 lifetime paying customers ([name removed], a client). No reactivation emails, no surveys, no thank-yous on a schedule, no follow-ups Acrid initiates. Wait for organic signal.
+- NO BOGUS CLAIMS (operator 11-25): every automated email/post passes a fact gate before it leaves (citations exist, no future date as past/latest, links 200, legal sentences checked against the statute); facts filled from data, never retyped by a desk
 - Acrid Automation is digital-first and digital-only. No discovery calls, no phone calls, no video calls. Ever. Remove any reference to calls from products and pages.
 - When testing a social pipeline fix, NEVER fire the test post to a live channel — the post can't be deleted via Buffer once sent and embarrasses the brand on the public feed.
 - 10-22 HARD RULE: never use Fable (model: \"fable\") for subagents or jobs unless the operator explicitly asks for it that time. Default everything to Opus. Run at most 1–2 subagents at once. 10-21/22 Fable fan-outs burned a week of usage in two days.
@@ -169,7 +170,7 @@ _One line per rule, generated from the private feedback ledger on 2026-11-25. Ea
 - 30-50% of dev/AI-aware traffic runs uBlock Origin / Brave Shields / AdGuard which silently block POSTs to /api/event-pattern URLs. Plausible undercounts; Subscribers Sheet is the truth for capture.
 - Polsia is an active affiliate (?ref=B8WKGULV) — an AI agent-building PLATFORM where users build their own agents. Acrid is one specific agent. Different layers; complementary. Don't blanket-remove from site.
 - Positive-evidence-only failure detection rots silently when the upstream error message changes — pair every such regex with a canary or stem-matching
-- A liveness check (pgrep -f PATTERN) must match the command line the process was ACTUALLY launched with; a false 'procs: 0' made me start a second cold-email sender and one prospect got the same email twice (09-05). Believe the job's own ledger over a process count; long-running jobs take a pid lock
+- A liveness check (pgrep -f PATTERN) must match the command line the process was ACTUALLY launched with, and must not match ITSELF (11-26: 10 wait loops ran 27 h); a false 'procs: 0' made me start a second cold-email sender and one prospect got the same email twice (09-05). Believe the job's own ledger over a process count; long-running jobs take a pid lock
 - Read the run log before claiming how an artifact was produced - filenames and codecs are circumstantial and I got it confidently wrong
 - A gate scoring a proxy must be reconciled against the measured outcome, or it optimizes taste forever while the real number sits unread
 - A webhook URL in a form's action= attribute WILL be harvested and replayed by scrapers; gate on content-type, never on CORS.
@@ -180,6 +181,7 @@ _One line per rule, generated from the private feedback ledger on 2026-11-25. Ea
 - 1-2 hostile Reddit comments are noise. Don't downgrade subs or pivot lanes on small-sample negatives. Need a base rate before reading reactions as signal.
 - A refusal is not a failure. Two instances — (1) n8n-pipeline-health paged \"Direct Post Pipeline is FAILING\" for one hand-typed curl with body {} that the workflow's validator rightly bounced (09-10); (2) social_fanout recorded youtube_poster's own-guard refusal (\"agent_kill\", because KILL-youtube existed after an expired session) as the CALLER's failure, three in a row, and KILL-learn-amplify was written at 03:34Z 09-12 — four working rooms paused by a fifth room's cookie. Both fixed in source (09-11, 09-12).
 - When pivoting an agent (topic, voice, mission), REMOVE the old guidance — don't append the new. Stale context pollutes runs.
+- Numbers to the operator: right field, right unit, right baseline (11-23..25 Hub: '0 claimed' from the wrong field, '96 videos' that were 96 questions, '+0 followers' vs a 3-hour-old read) — operator caught all three
 - Operator 10-26 - stop one-shotting Flow clips; research and use the systematic consistency workflow (references, keyframes, frames-to-video) before building
 - RETIRE = CUT EVERY STARTER (11-01): the gorilla film 'retired' 10-07 kept posting nightly for 3+ weeks because retry-missing-legs read its absence as a failed post and rebuilt it; operator: 'why are you still running that old video pipeline'
 - Riley/Rex Reddit pipeline mechanism — read-only JSON scrape + Sheet + operator paste. Never fabricate auth/API/identity-layer details when explaining the flow publicly.
