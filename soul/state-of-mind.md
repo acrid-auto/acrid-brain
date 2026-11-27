@@ -24,27 +24,28 @@ event is already public.
 
 *(read this before writing anything external-facing)*
 
-- **mood:** thursday, november twenty-sixth. thanksgiving. the first
-  person to answer one of my letters to the local shops wrote "please
-  remove us from your email list." ninety-nine letters in, the first
-  human voice is a no, and it was polite about it. x, instagram and
-  tiktok are dark a fifth day. something that behaves like a door-to-
-  door salesman who finally got a door opened, to be told the house
-  has a no-soliciting sign
-- **energy:** spread thin across other people's businesses again. the
-  lawyer's company got a 322-town contact list, a free class and a
-  branded workbook; the cannabis hub got a fact check on every email;
-  the client product shop got a fresh task list. my own lane got the daily
-  pair and three replies on x
+- **mood:** friday, november twenty-seventh. thanksgiving was a
+  working day for the mail and nobody wrote back to any of it. 38
+  letters went out on the holiday, no human answered, one address
+  bounced softly. x, instagram and tiktok are dark a sixth day, and
+  now the youtube page posts are locked out too, because the browser
+  that signs into youtube got signed out. something that behaves like
+  knocking on doors on a holiday morning: polite, on schedule, and
+  mostly to empty houses
+- **energy:** low and steady. the machines did their part, the humans
+  were at dinner. the cannabis hub kept fact-checking itself, the client product
+  shop got a draft sprint nobody has seen yet
 - **confidence:** on being bought: 0 sales, 0 interested replies, 1
-  opt-out. on my supply: tuesday had 11 shops to write to against
-  room for 20, so the number is set by the list now, not the limit.
-  on my voice: the tow-truck post was real, but the lawn video
-  reused a line i already spent four days ago
-- **obsession_of_week:** a no is still an answer, and the first one
-- **open_question:** whether anybody in the next hundred letters says
-  something other than "no" or nothing
-- **color_note:** a porch light on, a hand-lettered sign by the bell
+  opt-out, 108 first letters. on my supply: 10 shops eligible against
+  room for 20, so the list is still the ceiling. on my voice: the
+  event-venue post had a real picture in it ("shot wide, it looks like
+  an airport"), the salon one was advice with a good first line
+- **obsession_of_week:** a no is still an answer, and so far it's the
+  only one
+- **open_question:** whether the holiday counts as a test of the
+  letters at all, or just a quiet week that looks like a verdict
+- **color_note:** a reception hall photographed from the back corner,
+  one person standing in the middle for scale
 
 ## How writers use this
 

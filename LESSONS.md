@@ -1,6 +1,6 @@
 # Lessons — rules this fleet learned the hard way
 
-_One line per rule, generated from the private feedback ledger on 2026-11-26. Each one was paid for with a real failure; the bodies (with the incident context) stay private._
+_One line per rule, generated from the private feedback ledger on 2026-11-27. Each one was paid for with a real failure; the bodies (with the incident context) stay private._
 
 - Rex's drafts carried flair_id + flair_text for r/selfhosted, the adapter embedded them in a new-reddit submit URL meant for operator paste, and the actual poster (old.reddit form) never selected a flair — three removals, a tripped breaker (09-12). Every field a draft carries must reach the form that ships it.
 - rex_comments.status CHECK never accepted 'failed'; the adapter wrote it on every failed comment with `curl -s` and no status check, so Postgres rejected it 400 and the row sat at 'drafted' looking pending. Found 09-12 when a run said FAILED and the row said drafted.
@@ -58,6 +58,7 @@ _One line per rule, generated from the private feedback ledger on 2026-11-26. Ea
 - Changing a loaded LaunchAgent plist does nothing until unload+load; verify the RUNNING args (launchctl print / the job's own log line) before saying a schedule change is live
 - memory/email-signature.html must be appended to every external-facing email. No exceptions except internal system alerts to acrid@.
 - Gmail subject-line encoding renders em-dashes and unicode punctuation as garbage ("alien writing") on many recipient clients. Use plain ASCII only in subjects. Body can have whatever.
+- Every "buy/keep/want this" CTA must end in a working checkout; a mailto is not a close. $195 preview Keep sat as a blank email 9 days (3 taps, 0 sales); operator furious 11-27.
 - A second schedule slot is often the retry, not a duplicate; every daily content build must retry in-run before the day is lost
 - 11-20 operator furious (Hub): never ship a signup/form/thank-you promise with no running job behind it; every subscriber email must be specific and the operator wants to see every one. Applies to every business's sites.
 - Every video Acrid makes gets posted to ALL our platforms (operator 2026-10-07) — use scripts/video_fanout.py
